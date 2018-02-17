@@ -1,0 +1,37 @@
+{% if page.bg %}
+  <aside class="sidebar" role="note" style="background-image: url({{ site.images | relative_url }}/{{ page.bg }})">
+{% else %}
+  <aside class="sidebar" role="note" style="background-image: url({{ site.images | relative_url }}/bg.svg)">
+{% endif %}
+
+  <div class="cover">
+
+    <div class="cover-text">
+      <div class="heading">
+
+        {% if page.title %}
+          {{ page.title }}
+        {% endif %}
+
+      </div>
+
+      <p>
+        {% if page.summary %}
+          {{ page.summary }}
+        {% endif %}
+      </p>
+
+      <p>
+        {% if page.github %}
+          <a href="https://github.com/hadrienj">
+            <img src="./assets/images/github.png" alt="github" width=15% />
+          </a>
+        {% endif %}
+      </p>
+
+    </div>
+
+  </div>
+
+  <div id="switcher"></div>
+</aside>

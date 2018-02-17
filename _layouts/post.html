@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<article class="post">
+
+  <h1 class="post-title">{{ page.title }}</h1>
+
+  <p class="post-meta">
+    <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d-%m-%Y" }}</time>
+
+    {% if page.author %}
+      &nbsp;/&nbsp;
+      <span>{{ page.author }}</span>
+    {% endif %}
+
+    {% if page.tags %} | {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+    {% endfor %}
+    {% endif %}
+
+
+  </p>
+
+  <div class="post-content">
+
+    {% if page.jupyter %}
+      <p>
+        <a href="{{ page.jupyter }}">
+           <img src="../../assets/images/notebook.png" alt="notebook">
+        </a>
+      </p>
+    {% endif %}
+
+    {{ content }}
+
+    <div class="post-links">
+      {% if page.next.url %}
+        <a class="link-to-post" href="{{ page.next.url | relative_url}}">
+          <span class="link-to-post__next">&#10535; &nbsp;Next post</span>
+          <span class="link-to-post__title">{{ page.next.title }}</span>
+        </a>
+      {% endif %}
+
+      {% if page.previous.url %}
+        <a class="link-to-post" href="{{ page.previous.url | relative_url}}">
+          <span class="link-to-post__prev">&#10535; &nbsp;Previous post</span>
+          <span class="link-to-post__title">{{ page.previous.title }}</span>
+        </a>
+      {% endif %}
+    </div>
+
+  </div>
+
+</article>

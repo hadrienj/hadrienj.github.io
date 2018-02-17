@@ -1,0 +1,16 @@
+---
+bg: "mountainsByPlane.jpg"
+layout: default
+crawlertitle: "Jekyll blog"
+title: "Hadrien.j"
+summary: "PhD student Cognitive Sciences. Programming. Data Sciences."
+mathjax: true
+github: true
+---
+
+{% for post in site.posts limit: 20 %}
+  <article class="index-page">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {{ post.excerpt }}
+  </article>
+{% endfor %}
