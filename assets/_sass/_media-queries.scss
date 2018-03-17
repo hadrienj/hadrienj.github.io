@@ -98,24 +98,6 @@
 }
 
 
-@media screen and (min-width: 2000px) {
-  .sidebar {
-    width: $aside-width;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-attachment: scroll;
-    z-index: 200;
-    display: block;
-  }
-
-    .content-wrapper {
-    width: $content-wrapper-width;
-    max-width: $article-max-width;
-    margin-left: $post-margin-left;
-  }
-}
 
 @media screen and (min-width: $break-point) {
   table {
@@ -142,13 +124,26 @@
     }
   }
 
-
+  .sidebar {
+    width: $aside-width;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-attachment: scroll;
+    z-index: 200;
+    display: block;
+  }
 
   .cover {
     height: 100%;
   }
 
-
+  .content-wrapper {
+    width: $content-wrapper-width;
+    max-width: $article-max-width;
+    margin-left: $post-margin-left;
+  }
 
   main {
     padding-top: 1em;
