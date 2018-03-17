@@ -13,7 +13,7 @@
 
 
 body {
-  font: normal 17px/1.5 'PT Serif', "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font: normal 17px/1.5 Avenir;
   width: 100%;
   height: 100%;
   background: #fdfdfd;
@@ -23,11 +23,11 @@ body {
 }
 
 article p {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: Avenir;
   font-weight: bold;
   a:link, a:hover, a:focus, a:visited { color: #333; text-decoration: none; }
   a:hover { text-decoration: underline; }
@@ -43,7 +43,7 @@ h6 { font-size: .6em; }
 .heading {
   font-size: 2.3em;
   font-weight: bold;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: Avenir;
   margin: .67em 0;
   a:link, a:hover, a:focus, a:visited {
     color: #fff;
@@ -120,7 +120,7 @@ table tr:nth-child(even) {
 }
 table th {
   background: #f5f5f5;
-  font-family: sans-serif;
+  font-family: Avenir;
 }
 th,
 td {

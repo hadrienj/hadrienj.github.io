@@ -134,3 +134,21 @@ color:#9ac39f;
 .highlight .nb,.preview-zenburn .highlight .nc,.preview-zenburn .highlight .nf,.preview-zenburn .highlight .bp,.preview-zenburn .highlight .vc {
 color:#efef8f;
 }
+
+
+
+.output {
+  border-left: 10px solid #afedca;
+  margin: 0;
+}
+.flexOutside {
+  display: flex;
+}
+.flexInside {
+  flex: 1;
+  margin-left: -30px;
+  padding-top: 1em;
+}
+.flexInsideLarge {
+  flex: 20;
+}

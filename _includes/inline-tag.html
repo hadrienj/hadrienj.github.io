@@ -1,0 +1,14 @@
+{% if page.tags %}
+  {% assign tags = page.tags
+    {% for tag in tags %}
+      {% assign inline-tag = post.content | split:"{{ tag }}" %}
+
+
+{% assign tags = post.content | split:"<img " %}
+{% for image in images %}
+  {% if image contains 'src=' %}
+    {% assign imageMarkup = image | split:">" | first | remove: '../' %}
+    <img {{ imageMarkup }}>
+    {% break %}
+  {% endif %}
+{% endfor %}

@@ -197,13 +197,6 @@ main {
 
 .index-page {
   position: relative;
-  &:after {
-    content: "***";
-    position: absolute;
-    margin-top: 1em;
-    width: 100px;
-    left: 50%;
-  }
 }
 
 article {
@@ -252,6 +245,23 @@ article {
     color: #333;
   }
 
+}
+
+.inline-tag {
+  padding-bottom: .5em;
+  text-transform: uppercase;
+  font-size: 70%;
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+  a, a:hover, a:focus, a:visited {
+    color: #333;
+  }
+
+  .meta-black {
+    color: #333;
+  }
+
+  color: #333;
 }
 
 
