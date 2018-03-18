@@ -2,6 +2,13 @@
 * Media Queries
 * ========================================================================== */
 
+
+@media screen and (max-width: $md-break-point) {
+  .MathJax {
+    font-size: 70% !important;
+  }
+}
+
 @media screen and (min-width: $md-break-point) {
   body { font-size: 17px; }
   h1 { font-size: 2em; }

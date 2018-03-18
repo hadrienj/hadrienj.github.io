@@ -152,3 +152,20 @@ color:#efef8f;
 .flexInsideLarge {
   flex: 20;
 }
+blockquote {
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #123453;
+  border-bottom: 1px solid #ccc;
+  color: #a5a4a4;
+  font-style: italic;
+  margin: 30px;
+  padding: 30px;
+  text-align: center;
+}
+.pquote {
+    margin: 0 0 0 auto;
+    width: 200px;
+    font-size: 26px;
+    font-style: italic;
+}
