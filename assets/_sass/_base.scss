@@ -20,6 +20,7 @@ body {
   color: #222;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  text-align: justify;
 }
 
 article p {
@@ -27,6 +28,7 @@ article p {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  text-align: left;
   font-family: Avenir;
   font-weight: bold;
   a:link, a:hover, a:focus, a:visited { color: #333; text-decoration: none; }

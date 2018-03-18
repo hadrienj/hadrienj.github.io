@@ -152,20 +152,24 @@ color:#efef8f;
 .flexInsideLarge {
   flex: 20;
 }
-blockquote {
-  border-left: none;
-  border-right: none;
-  border-top: 1px solid #123453;
-  border-bottom: 1px solid #ccc;
-  color: #a5a4a4;
-  font-style: italic;
-  margin: 30px;
-  padding: 30px;
-  text-align: center;
-}
+
 .pquote {
-    margin: 0 0 0 auto;
-    width: 200px;
-    font-size: 26px;
-    font-style: italic;
+  text-align: left;
+  margin: 0 0 0 auto;
+  width: 70%;
+  font-size: 1.5em;
+  font-style: italic;
+  display: block;
+  line-height: 1.3em;
+  color: #5a75a7;
+  font-weight: 600;
+  border-left: 5px solid rgba(90, 117, 167, .1);
+  padding-left: 6px;
+}
+.noDeco {
+  text-decoration: initial;
+}
+
+.borderAppears:hover {
+  background-color: rgba(90, 117, 167, .05);
 }

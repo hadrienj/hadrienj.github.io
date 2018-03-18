@@ -1,5 +1,5 @@
 ---
-bg: "mountainsByPlane.jpg"
+bg: "leaves.jpg"
 layout: default
 title: "Code . Data Sciences"
 mathjax: true
@@ -8,10 +8,12 @@ mathjax: true
 {% for post in site.posts limit: 20 %}
   <article class="index-page">
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    <a href="{{ post.url | relative_url }}">
+    <div class="borderAppears">
+    <a href="{{ post.url | relative_url }}" class='noDeco'>
       {{ post.content | strip_html | truncatewords: 40 }}
       {% include firstImage.html %}
     </a>
+    </div>
   </article>
   <p style='text-align: center'>&#10568; &#10568; &#10568;</p>
 {% endfor %}
