@@ -2,7 +2,7 @@
 bg: "road.jpg"
 layout: post
 mathjax: true
-title: Linear Algebra for deep learning with practical code and visualizations
+title: Deep Learning Book Series · Introduction
 crawlertitle: "deep learning machine learning linear algebra python getting started numpy data sciences"
 categories: posts
 tags: ['linear-algebra', 'deep-learning', 'machine-learning']

@@ -2,7 +2,7 @@
 bg: "flower.jpg"
 layout: post
 mathjax: true
-title: 2.1 Scalars Vectors Matrices and Tensors
+title: Deep Learning Book Series · 2.1 Scalars Vectors Matrices and Tensors
 crawlertitle: "deep learning machine learning linear algebra python getting started numpy data sciences"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
@@ -21,7 +21,7 @@ This first chapter is quite light and concerns the basic elements used in linear
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts.
 </span>
 
-# 2.1 Scalars, Vectors, Matrices and Tensors
+# Deep Learning Book Series · 2.1 Scalars Vectors Matrices and Tensors
 
 Let's start with some basic definitions:
 
