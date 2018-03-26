@@ -2,8 +2,8 @@
 bg: "galoped.jpg"
 layout: post
 mathjax: true
-title: Deep Learning Book Series 2.2 Multiplying Matrices and Vectors
-crawlertitle: "deep learning machine learning linear algebra python getting started numpy data sciences"
+title: Deep Learning Book Series · 2.2 Multiplying Matrices and Vectors
+crawlertitle: "Deep Learning Book Series · 2.2 Multiplying Matrices and Vectors"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj

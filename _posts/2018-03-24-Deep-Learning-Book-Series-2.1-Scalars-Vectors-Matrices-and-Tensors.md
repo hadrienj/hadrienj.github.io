@@ -2,14 +2,15 @@
 bg: "horse.jpg"
 layout: post
 mathjax: true
-title: Deep Learning Book Series 2.1 Scalars Vectors Matrices and Tensors
-crawlertitle: "deep learning machine learning linear algebra python getting started numpy data sciences"
+title: Deep Learning Book Series · 2.1 Scalars Vectors Matrices and Tensors
+crawlertitle: "Deep Learning Book Series · 2.1 Scalars Vectors Matrices and Tensors"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.1%20Scalars%2C%20Vectors%2C%20Matrices%20and%20Tensors/2.1%20Scalars%20Vectors%20Matrices%20and%20Tensors.ipynb
 date: 2018-03-24 10:00:00
 skip_span: true
+comments: true
 ---
 
 <span class='notes'>

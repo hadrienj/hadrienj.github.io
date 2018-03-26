@@ -2,8 +2,8 @@
 bg: "river.jpg"
 layout: post
 mathjax: true
-title: Deep Learning Book Series 2.12 Example   Principal Components Analysis
-crawlertitle: "deep learning machine learning linear algebra python getting started numpy data sciences"
+title: Deep Learning Book Series · 2.12 Example   Principal Components Analysis
+crawlertitle: "Deep Learning Book Series · 2.12 Example   Principal Components Analysis"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj

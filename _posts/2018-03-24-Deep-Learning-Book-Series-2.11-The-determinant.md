@@ -2,8 +2,8 @@
 bg: "craterLake_orig.jpg"
 layout: post
 mathjax: true
-title: Deep Learning Book Series 2.11 The determinant
-crawlertitle: "deep learning machine learning linear algebra python getting started numpy data sciences"
+title: Deep Learning Book Series · 2.11 The determinant
+crawlertitle: "Deep Learning Book Series · 2.11 The determinant"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj

@@ -3,7 +3,7 @@ bg: "road.jpg"
 layout: post
 mathjax: true
 title: Deep Learning Book Series · Introduction
-crawlertitle: "deep learning machine learning linear algebra python getting started numpy data sciences"
+crawlertitle: "Deep Learning Book Series · Introduction"
 categories: posts
 tags: ['linear-algebra', 'deep-learning', 'machine-learning']
 author: hadrienj
@@ -51,49 +51,73 @@ The syllabus follow exactly the [Deep Learning Book](http://www.deeplearningbook
 
 1. [Scalars, Vectors, Matrices and Tensors](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.1-Scalars-Vectors-Matrices-and-Tensors/)
 
+    <img src="../../assets/images/2.1/scalar-tensor.png" width="400" alt="scalar-tensor">
+
     Light introduction to vectors, matrices, transpose and basic operations (addition of vectors of matrices). Introduces also Numpy functions and finally a word on broadcasting.
 
 2. [Multiplying Matrices and Vectors](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.2-Multiplying-Matrices-and-Vectors/){:target="_blank"}
+
+    <img src="../../assets/images/2.2/dotProduct.png" width="400" alt="dotProduct">
 
     This chapter is mainly on the dot product (vector and/or matrix multiplication). We will also see some of its properties. Then, we will see how to synthesize a system of linear equations using matrix notation. This is a major process for the following chapters.
 
 3. [Identity and Inverse Matrices](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/){:target="_blank"}
 
+    <img src="../../assets/images/2.3/identity.png" width="200" alt="identity">
+
     We will see two important matrices: the identity matrix and the inverse matrix. We will see why they are important in linear algebra and how to use it with Numpy. Finally, we will see an example on how to solve a system of linear equations with the inverse matrix.
 
 4. [Linear Dependence and Span](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.4-Dependence-and-Span/){:target="_blank"}
+
+    <img src="../../assets/images/2.4/numberSolutions.png" width="700" alt="numberSolutions">
 
     In this chapter we will continue to study systems of linear equations. We will see that such systems can't have more than one solution and less than an infinite number of solutions. We will see the intuition, the graphical representation and the proof behind this statement. Then we will go back to the matrix form of the system and consider what Gilbert Strang call the *row figure* (we are looking at the rows, that is to say multiple equations) and the *column figure* (looking at the columns, that is to say the linear combination of the coefficients). We will also see what is linear combination. Finally, we will see examples of overdetermined and underdetermined systems of equations.
 
 5. [Norms](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.5-Norms/){:target="_blank"}
 
+    <img src="../../assets/images/2.5/squaredL2Norm.png" width="400" alt="squaredL2Norm">
+
     The norm of a vector is a function that takes a vector in input and outputs a positive value. It can be thinks as the *length* of the vector. It is for example used to evaluate the distance between the prediction of a model and the actual value. We will see different kind of norms ($L^0$, $L^1$, $L^2$...) with examples.
 
 6. [Special Kinds of Matrices and Vectors](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.6-Special-Kinds-of-Matrices-and-Vectors/){:target="_blank"}
+
+    <img src="../../assets/images/2.6/diagonalSymmetric.png" width="400" alt="diagonalSymmetric">
 
     We have seen in [2.3](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/) some special matrices that are very interesting. We will see other type of vectors and matrices in this chapter. It is not a big chapter but it is important to understand the next ones.
 
 7. [Eigendecomposition](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.7-Eigendecomposition/){:target="_blank"}
 
+    <img src="../../assets/images/2.7/output_59_0.png" width="300" alt="output_59_0">
+
     We will see some major concepts of linear algebra in this chapter. We will start by getting some ideas on eigenvectors and eigenvalues. We will see that a matrix can be seen as a linear transformation and that applying a matrix on its eigenvectors gives new vectors with same direction. Then we will see how to express quadratic equations into a matrix form. We will see that the eigendecomposition of the matrix corresponding to the quadratic equation can be used to find its minimum and maximum. As a bonus, we will also see how to visualize linear transformation in Python!
 
 8. [Singular Value Decomposition](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.8-Singular-Value-Decomposition/){:target="_blank"}
+
+    <img src="../../assets/images/2.8/output_35_7.png" width="300" alt="output_35_7">
 
     We will see another way to decompose matrices: the Singular Value Decomposition or SVD. Since the beginning of this series, I emphasized the fact that you can see matrices as linear transformation in space. With the SVD, you decompose a matrix in three other matrices. We will see that we can see these new matrices as *sub-transformation* of the space. Instead of doing the transformation in one movement, we decompose it in three movements. As a bonus, we will apply the SVD to image processing. We will see the effect of SVD on an example image of Lucy the goose so keep on reading!
 
 9. [The Moore-Penrose Pseudoinverse](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.9-The-Moore-Penrose-Pseudoinverse/){:target="_blank"}
 
+    <img src="../../assets/images/2.9/output_44_0.png" width="300" alt="output_44_0">
+
     We saw that not all matrices have an inverse. It is unfortunate because the inverse is used to solve system of equations. In some cases, a system of equation has no solution, and thus the inverse doesn’t exist. However it can be useful to find a value that is almost a solution (in term of minimizing the error). This can be done with the pseudoinverse! We will see for instance how we can find the best-fit line of a set of data points with the pseudoinverse.
 
 10. [The Trace Operator](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.10-The-Trace-Operator/){:target="_blank"}
+
+    <img src="../../assets/images/2.10/trace.png" width="200" alt="trace">
 
     We will see what is the Trace of a matrix. It will be needed for the last chapter on the Principal Component Analysis (PCA).
 
 11. [The Determinant](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.11-The-determinant/){:target="_blank"}
 
+    <img src="../../assets/images/2.11/rotationVsMirror.png" width="400" alt="rotationVsMirror">
+
     This chapter is about the determinant of a matrix. This special number can tell us a lot of things about our matrix!
 
 12. [Example: Principal Components Analysis](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.12-Example-Principal-Components-Analysis/){:target="_blank"}
+
+    <img src="../../assets/images/2.12/gradientDescent.png" width="400" alt="gradientDescent">
 
     This is the last chapter of this series on linear algebra! It is about Principal Components Analysis (PCA). We will use some knowledge that we acquired along the preceding chapters to understand this important data analysis tool!
 

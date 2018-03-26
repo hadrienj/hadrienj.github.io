@@ -2,8 +2,8 @@
 bg: "path.jpg"
 layout: post
 mathjax: true
-title: Deep Learning Book Series 2.5 Norms
-crawlertitle: "deep learning machine learning linear algebra python getting started numpy data sciences"
+title: Deep Learning Book Series · 2.5 Norms
+crawlertitle: "Deep Learning Book Series · 2.5 Norms"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj

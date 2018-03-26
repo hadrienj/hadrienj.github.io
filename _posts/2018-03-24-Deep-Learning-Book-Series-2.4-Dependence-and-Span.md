@@ -2,8 +2,8 @@
 bg: "moss.jpg"
 layout: post
 mathjax: true
-title: Deep Learning Book Series 2.4 Linear Dependence and Span
-crawlertitle: "deep learning machine learning linear algebra python getting started numpy data sciences"
+title: Deep Learning Book Series · 2.4 Linear Dependence and Span
+crawlertitle: "Deep Learning Book Series · 2.4 Linear Dependence and Span"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj

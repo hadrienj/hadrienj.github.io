@@ -2,8 +2,8 @@
 bg: "flower1.jpg"
 layout: post
 mathjax: true
-title: Deep Learning Book Series 2.8 Singular Value Decomposition
-crawlertitle: "deep learning machine learning linear algebra python getting started numpy data sciences"
+title: Deep Learning Book Series · 2.8 Singular Value Decomposition
+crawlertitle: "Deep Learning Book Series · 2.8 Singular Value Decomposition"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj

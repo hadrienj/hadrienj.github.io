@@ -2,8 +2,8 @@
 bg: "deadTrees.jpg"
 layout: post
 mathjax: true
-title: Deep Learning Book Series 2.9 The Moore Penrose Pseudoinverse
-crawlertitle: "deep learning machine learning linear algebra python getting started numpy data sciences"
+title: Deep Learning Book Series · 2.9 The Moore Penrose Pseudoinverse
+crawlertitle: "Deep Learning Book Series · 2.9 The Moore Penrose Pseudoinverse"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj

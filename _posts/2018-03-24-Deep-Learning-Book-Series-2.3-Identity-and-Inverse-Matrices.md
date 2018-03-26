@@ -2,8 +2,8 @@
 bg: "lucy.jpg"
 layout: post
 mathjax: true
-title: Deep Learning Book Series 2.3 Identity and Inverse Matrices
-crawlertitle: "deep learning machine learning linear algebra python getting started numpy data sciences"
+title: Deep Learning Book Series · 2.3 Identity and Inverse Matrices
+crawlertitle: "Deep Learning Book Series · 2.3 Identity and Inverse Matrices"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
