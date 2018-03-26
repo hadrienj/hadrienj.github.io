@@ -24,7 +24,11 @@ mathjax: true
     </p>
     <div class="borderAppears">
     <a href="{{ post.url | relative_url }}" class='noDeco'>
-      {{ post.content | strip_html | truncatewords: 40 }}
+      {% if post.skip_span==true %}
+        {{ post.content | slice: 562, 400 | strip_html | truncatewords: 40 }}
+      {% else %}
+        {{ post.content | strip_html | truncatewords: 40 }}
+      {% endif %}
       {% include firstImage.html %}
     </a>
     </div>
