@@ -102,7 +102,7 @@ This content is aimed at beginners but it should be easier for people with at le
 
 # Enjoy
 
-I hope that will find something interesting in that series. I tried to be as accurate as I could. If you find errors/misunderstandings/typos… Please report it! You can send me emails or open issues and pull request in the notebooks Github.
+I hope that you will find something interesting in that series. I tried to be as accurate as I could. If you find errors/misunderstandings/typos… Please report it! You can send me emails or open issues and pull request in the notebooks Github.
 
 # References
 
