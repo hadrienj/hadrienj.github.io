@@ -18,7 +18,7 @@ skip_span: true
 
 # Introduction
 
-This chapter is very light! I can assure you that you will read it in 1 minute! It is nice after the last two chapters that were quite big! We will see what is the Trace of a matrix. It will be needed for the last chapter on the Principal Component Analysis (PCA).
+I can assure you that you will read this chapter in 2 minutes! It is nice after the last two chapters that were quite big! We will see what is the Trace of a matrix. It will be needed for the last chapter on the Principal Component Analysis (PCA).
 
 # 2.10 The Trace Operator
 
@@ -229,12 +229,12 @@ $$
 $$
 </div>
 
-<span class='notes'>
-    Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
-</span>
-
 # References
 
 - [Trace (linear algebra) - Wikipedia](https://en.wikipedia.org/wiki/Trace_(linear_algebra))
 
 - [Numpy Trace operator](https://docs.scipy.org/doc/numpy/reference/generated/numpy.trace.html)
+
+<span class='notes'>
+    Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
+</span>

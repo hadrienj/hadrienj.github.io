@@ -18,7 +18,7 @@ skip_span: true
 
 # Introduction
 
-This chapter is also very light! We will see what is the meaning of the determinant of a matrix. This special number can tell us a lot of things about our matrix!
+In this chapter, we will see what is the meaning of the determinant of a matrix. This special number can tell us a lot of things about our matrix!
 
 # 2.11 The determinant
 
@@ -212,10 +212,6 @@ You can see that the transformation mirrored the initial shape.
 
 We have seen that the determinant of a matrix is a special value telling a lot of things on the transformation corresponding to this matrix. Now hang on and go to the *last chapter* on the Principal Component Analysis (PCA).
 
-<span class='notes'>
-    Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
-</span>
-
 # References
 
 ## Linear transformations
@@ -228,4 +224,6 @@ We have seen that the determinant of a matrix is a special value telling a lot o
 
 - [Numpy determinant](https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.linalg.det.html)
 
-
+<span class='notes'>
+    Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
+</span>

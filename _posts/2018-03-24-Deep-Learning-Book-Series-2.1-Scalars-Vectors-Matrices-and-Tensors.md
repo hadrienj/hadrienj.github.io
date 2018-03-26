@@ -461,10 +461,6 @@ array([[ 3,  4],
 
 You can find basics operations on matrices simply explained [here](https://www.mathsisfun.com/algebra/matrix-introduction.html).
 
-<span class='notes'>
-    Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
-</span>
-
 # References
 
 - [Broadcasting in Numpy](https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html)
@@ -472,3 +468,7 @@ You can find basics operations on matrices simply explained [here](https://www.m
 - [Discussion on Arrays and matrices](https://stackoverflow.com/questions/4151128/what-are-the-differences-between-numpy-arrays-and-matrices-which-one-should-i-u)
 
 - [Math is fun - Matrix introduction](https://www.mathsisfun.com/algebra/matrix-introduction.html)
+
+<span class='notes'>
+    Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
+</span>

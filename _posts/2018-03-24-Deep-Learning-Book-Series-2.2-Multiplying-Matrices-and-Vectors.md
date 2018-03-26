@@ -945,10 +945,10 @@ $$
 
 We will see at the end of the [the next chapter](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/) that this compact way of writing sets of linear equations can be very usefull. It provides actually a way to solve the equations.
 
-<span class='notes'>
-    Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
-</span>
-
 # References
 
 - [Math is fun - Multiplying matrices](https://www.mathsisfun.com/algebra/matrix-multiplying.html)
+
+<span class='notes'>
+    Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
+</span>

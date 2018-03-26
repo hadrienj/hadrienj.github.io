@@ -985,10 +985,6 @@ The inverse of a matrix exists only if the set of equations has one and only one
 
 For more details about the row and the column figure, have a look at the books of Gilbert Strang (there are some ressources [here](http://math.mit.edu/~gs/dela/dela_4-1.pdf)). There are tons of really great examples and graphical explanations! And the *1.2 Geometry of linear equations* in 'Linear algebra and its applications' also from Gilbert Strang.
 
-<span class='notes'>
-    Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
-</span>
-
 # References
 
 ## Books and videos of Gilbert Strang
@@ -1006,3 +1002,7 @@ For more details about the row and the column figure, have a look at the books o
 ## Numpy
 
 - [Numpy arange()](https://docs.scipy.org/doc/numpy/reference/generated/numpy.arange.html)
+
+<span class='notes'>
+    Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
+</span>

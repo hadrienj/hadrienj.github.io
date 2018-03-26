@@ -18,7 +18,7 @@ skip_span: true
 
 # Introduction
 
-This chapter is the last chapter of this series on linear algebra! It is about Principal Components Analysis. We will use some knowledge that we acquired along the preceding chapters of the series to understand this important data analysis tool! Feel free to check out the preceding chapters!
+This is the last chapter of this series on linear algebra! It is about Principal Components Analysis (PCA). We will use some knowledge that we acquired along the preceding chapters to understand this important data analysis tool! Feel free to check out the preceding chapters!
 
 # 2.12 Example - Principal Components Analysis
 
@@ -729,10 +729,6 @@ eigVecs[:,1].dot(eigVecs[:,1].T)
 
 And... This is the end! We have gone through a lot of things during this series on linear algebra! I hope that it was a useful introduction to this topic which is of large importance in the data science/machine learning/deep learning fields.
 
-<span class='notes'>
-    Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
-</span>
-
 # References
 
 ## PCA
@@ -776,3 +772,7 @@ And... This is the end! We have gone through a lot of things during this series 
 ## Unit norm constraint
 
 - [https://stats.stackexchange.com/questions/117695/why-is-the-eigenvector-in-pca-taken-to-be-unit-norm](https://stats.stackexchange.com/questions/117695/why-is-the-eigenvector-in-pca-taken-to-be-unit-norm)
+
+<span class='notes'>
+    Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
+</span>

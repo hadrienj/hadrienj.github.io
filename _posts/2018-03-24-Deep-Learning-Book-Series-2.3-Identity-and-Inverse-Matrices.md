@@ -18,7 +18,7 @@ skip_span: true
 
 # Introduction
 
-This chapter is light but contains some important definitions. The identity matrix or the inverse of a matrix are concepts that will be very useful in the next chapters. We will see at the end of this chapter that we can solve systems of linear equations by using the inverse matrix. So hang on!
+We will see two types of matrices in this chapter. The identity matrix or the inverse of a matrix are concepts that will be very useful in the next chapters. We will see at the end of this chapter that we can solve systems of linear equations by using the inverse matrix. So hang on!
 
 # 2.3 Identity and Inverse Matrices
 

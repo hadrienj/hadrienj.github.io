@@ -18,7 +18,7 @@ skip_span: true
 
 # Introduction
 
-We will see some major concepts of linear algebra in this chapter. It is also quite heavy so hang on! We will start with getting some ideas on eigenvectors and eigenvalues. We will develop on the idea that a matrix can be seen as a linear transformation and that applying a matrix on its eigenvectors gives new vectors with the same direction. Then we will see how to express quadratic equations into the matrix form. We will see that the eigendecomposition of the matrix corresponding to a quadratic equation can be used to find the minimum and maximum of this function. As a bonus, we will also see how to visualize linear transformations in Python!
+We will see some major concepts of linear algebra in this chapter. We will start with getting some ideas on eigenvectors and eigenvalues. We will develop on the idea that a matrix can be seen as a linear transformation and that applying a matrix on its eigenvectors gives new vectors with the same direction. Then we will see how to express quadratic equations into the matrix form. We will see that the eigendecomposition of the matrix corresponding to a quadratic equation can be used to find the minimum and maximum of this function. As a bonus, we will also see how to visualize linear transformations in Python!
 
 # 2.7 Eigendecomposition
 
@@ -1495,7 +1495,7 @@ Graphically, these functions can take one of three general shapes (click on the 
 
 1.[Positive-definite form](https://academo.org/demos/3d-surface-plotter/?expression=x*x%2By*y&xRange=-50%2C+50&yRange=-50%2C+50&resolution=49) | 2.[Negative-definite form](https://academo.org/demos/3d-surface-plotter/?expression=-x*x-y*y&xRange=-50%2C+50&yRange=-50%2C+50&resolution=25) | 3.[Indefinite form](https://academo.org/demos/3d-surface-plotter/?expression=x*x-y*y&xRange=-50%2C+50&yRange=-50%2C+50&resolution=49)
 :-------------------------:|:-------------------------:|:-------:
-<img src="../../assets/images/2.7/positiveDefiniteForm.png"> | <img src="../../assets/images/2.7/negativeDefiniteForm.png"> | <img src="../../assets/images/2.7/IndefiniteForm.png">
+<img src="../../assets/images/2.7/positiveDefiniteForm.png"> | <img src="../../assets/images/2.7/negativeDefiniteForm.png"> | <img src="../../assets/images/2.7/indefiniteForm.png">
 
 
 
@@ -1595,10 +1595,6 @@ linearTransformation(A)
 
 In this case, the eigenvectors are not orthogonal!
 
-<span class='notes'>
-    Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
-</span>
-
 # References
 
 ## Videos of Gilbert Strang
@@ -1622,3 +1618,7 @@ In this case, the eigenvectors are not orthogonal!
 - [Gilbert Strang - Linear transformation](http://ia802205.us.archive.org/18/items/MIT18.06S05_MP4/30.mp4)
 
 - [Linear transformation - demo video](https://www.youtube.com/watch?v=wXCRcnbCsJA)
+
+<span class='notes'>
+    Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
+</span>
