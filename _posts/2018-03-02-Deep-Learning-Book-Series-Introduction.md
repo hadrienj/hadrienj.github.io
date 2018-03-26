@@ -28,10 +28,10 @@ You can find all the notebooks on [Github](https://github.com/hadrienj/deepLearn
 
 # Getting started with linear algebra
 
-The goal of this series is to provide content for beginners who wants to understand enough linear algebra to be confortable with machine learning and deep learning. However, I think that the chapter on linear algebra from the [Deep Learning book](http://www.deeplearningbook.org/){:target="_blank"} is a bit tough for beginners. So I decided to produce code, examples and drawings on each part of this chapter in order to add steps that may not be obvious for beginners. I also think that you can convey as much information and knowledge through examples than through general definitions. The illustrations are a way to see the big picture of an idea. Finally, I think that coding is a great tool to experiment concretly these abstract mathematical notions. Along with pen and paper, it adds a layer of what you can try to push your understanding through new horizons.
+The goal of this series is to provide content for beginners who wants to understand enough linear algebra to be confortable with machine learning and deep learning. However, I think that the chapter on linear algebra from the [Deep Learning book](http://www.deeplearningbook.org/){:target="_blank"} is a bit tough for beginners. So I decided to produce code, examples and drawings on each part of this chapter in order to add steps that may not be obvious for beginners. I also think that you can convey as much information and knowledge through examples than through general definitions. The illustrations are a way to see the big picture of an idea. Finally, I think that coding is a great tool to experiment concretely these abstract mathematical notions. Along with pen and paper, it adds a layer of what you can try to push your understanding through new horizons.
 
 <span class='pquote'>
-    Coding is a great tool to concretly experiment abstract mathematical notions
+    Coding is a great tool to concretely experiment abstract mathematical notions
 </span>
 
 Graphical representation is also very helpful to understand linear algebra. I tried to bind the concepts with plots (and code to produce it). The type of representation I liked most by doing this series is the fact that you can see any matrix as linear transformation of the space. In several chapters we will extend this idea and see how it can be useful to understand eigendecomposition, Singular Value Decomposition (SVD) or the Principal Components Analysis (PCA).
@@ -98,11 +98,11 @@ The syllabus follow exactly the [Deep Learning Book](http://www.deeplearningbook
 
 # Requirements
 
-This content is aimed at begginners but it should be easier for people with at least some experience with mathematics.
+This content is aimed at beginners but it should be easier for people with at least some experience with mathematics.
 
 # Enjoy
 
-I tried to be as accurate as I could. However, if you encounter errors/misunderstandings/typos... Please report it! It is very valuable! You can send me emails or open issues and pull request in the notebooks gihub.
+I hope that will find something interesting in that series. I tried to be as accurate as I could. If you find errors/misunderstandings/typos… Please report it! You can send me emails or open issues and pull request in the notebooks Github.
 
 # References
 
