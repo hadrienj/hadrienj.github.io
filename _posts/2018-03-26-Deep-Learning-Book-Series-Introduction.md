@@ -19,10 +19,10 @@ date: 2018-03-26 09:00:00
 </span>
 
 <span class='pquote'>
-    Boost your data sciences skills. Learn linear algebra.
+    Boost your data science skills. Learn linear algebra.
 </span>
 
-I'd like to introduce a series of blog posts and their corresponding Python Notebooks gathering notes on [the Deep Learning Book](http://www.deeplearningbook.org/){:target="_blank"} from Ian Goodfellow, Yoshua Bengio, and Aaron Courville (2016). The aim of these notebooks is to help beginners/advanced beginners to grasp linear algebra concepts underlying deep learning and machine learning. Acquiring these skills can boost your ability to understand and apply various data sciences algorithms. In my opinion, it is one of the bedrock of machine learning, deep learning and data sciences.
+I'd like to introduce a series of blog posts and their corresponding Python Notebooks gathering notes on [the Deep Learning Book](http://www.deeplearningbook.org/){:target="_blank"} from Ian Goodfellow, Yoshua Bengio, and Aaron Courville (2016). The aim of these notebooks is to help beginners/advanced beginners to grasp linear algebra concepts underlying deep learning and machine learning. Acquiring these skills can boost your ability to understand and apply various data science algorithms. In my opinion, it is one of the bedrock of machine learning, deep learning and data science.
 
 These notes cover the chapter 2 on Linear Algebra. I liked this chapter because it gives a sense of what is most used in the domain of machine learning and deep learning. It is thus a great syllabus for anyone who want to dive in deep learning and acquire the concepts of linear algebra useful to better understand deep learning algorithms.
 
@@ -42,7 +42,7 @@ Graphical representation is also very helpful to understand linear algebra. I tr
 
 In addition, I noticed that creating and reading examples is really helpful to understand the theory. It is why I built Python notebooks. The goal is two folds:
 
-1. To provide a starting point to use Python/Numpy to apply linear algebra concepts. And since the final goal is to use linear algebra concepts for data sciences it seems natural to continuously go between theory and code. All you will need is a working Python installation with major mathematical librairies like Numpy/Scipy/Matplotlib.
+1. To provide a starting point to use Python/Numpy to apply linear algebra concepts. And since the final goal is to use linear algebra concepts for data science it seems natural to continuously go between theory and code. All you will need is a working Python installation with major mathematical librairies like Numpy/Scipy/Matplotlib.
 
 2. Give a more concrete vision of the underlying concepts. I found hugely useful to play and experiment with these notebooks in order to build my understanding of somewhat complicated theoretical concepts or notations. I hope that reading them will be as useful.
 
