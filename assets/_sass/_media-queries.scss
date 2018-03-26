@@ -11,7 +11,9 @@
     width: 80%;
     font-size: 1em;
   }
-  .sidebar { display: block; }
+  body {
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: $md-break-point) {
@@ -119,10 +121,6 @@
 
   #switcher {
     display: block;
-  }
-
-  .main-header {
-    position: static;
   }
 
   .nav-main {

@@ -138,7 +138,7 @@ color:#efef8f;
 
 
 .output {
-  border-left: 10px solid #afedca;
+  border-left: 10px solid #7f9f7fa8;
   margin: 0;
 }
 .flexOutside {
@@ -155,7 +155,7 @@ color:#efef8f;
 
 .pquote {
   text-align: left;
-  margin: 0 0 0 auto;
+  margin: 40px 0 40px auto;
   width: 70%;
   font-size: 1.5em;
   font-style: italic;
@@ -169,7 +169,25 @@ color:#efef8f;
 .noDeco {
   text-decoration: initial;
 }
-
 .borderAppears:hover {
   background-color: rgba(90, 117, 167, .05);
+}
+.notes {
+  font-style: italic;
+  display: block;
+  margin: 40px 10%;
+}
+.copyright {
+  z-index: 100;
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  right: 5px;
+  color: white;
+  font-size: 0.6em;
+}
+.salient {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8em;
 }

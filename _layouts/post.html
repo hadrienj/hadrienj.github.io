@@ -25,7 +25,7 @@ layout: default
 
     {% if page.jupyter %}
       <p>
-        <a href="{{ page.jupyter }}">
+        <a href="{{ page.jupyter }}" target="_blank">
            <img src="../../assets/images/notebook.png" alt="notebook">
         </a>
       </p>
@@ -33,18 +33,22 @@ layout: default
 
     {{ content }}
 
-    <div class="post-links">
-      {% if page.next.url %}
-        <a class="link-to-post" href="{{ page.next.url | relative_url}}">
-          <span class="link-to-post__next">&#10016; &nbsp;Next</span>
-          <span class="link-to-post__title">{{ page.next.title }}</span>
-        </a>
-      {% endif %}
+    {% if page.comments %}
+      {% include disqus.html %}
+    {% endif %}
 
+    <div class="post-links">
       {% if page.previous.url %}
         <a class="link-to-post" href="{{ page.previous.url | relative_url}}">
           <span class="link-to-post__prev">&#10016; &nbsp;Previous</span>
           <span class="link-to-post__title">{{ page.previous.title }}</span>
+        </a>
+      {% endif %}
+
+      {% if page.next.url %}
+        <a class="link-to-post" href="{{ page.next.url | relative_url}}">
+          <span class="link-to-post__next">&#10016; &nbsp;Next</span>
+          <span class="link-to-post__title">{{ page.next.title }}</span>
         </a>
       {% endif %}
     </div>

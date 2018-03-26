@@ -2,10 +2,10 @@
 bg: "bird1.jpg"
 layout: page
 permalink: /posts/
-title: "Archive"
+title: "Tags"
 crawlertitle: "All articles"
 summary: "All posts."
-active: archive
+active: Tags
 ---
 
 {% for tag in site.tags %}

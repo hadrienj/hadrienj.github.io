@@ -11,6 +11,16 @@
     });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML-full"></script>
+  <div style="display: none">
+    <!-- add latex commands -->
+      $$
+        \newcommand\bs[1]{\boldsymbol{#1}}
+        \newcommand\norm[1]{\left\lVert#1\right\rVert}
+        \DeclareMathOperator{\Tr}{Tr}
+        \newcommand\argmin[1]{\underset{\bs{#1}}{\arg\min}}
+        \newcommand\argmax[1]{\underset{\bs{#1}}{\arg\max}}
+      $$
+  </div>
 {% endif %}
 
   <meta charset="utf-8">
