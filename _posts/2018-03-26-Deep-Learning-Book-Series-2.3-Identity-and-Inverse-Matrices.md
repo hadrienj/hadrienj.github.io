@@ -8,7 +8,7 @@ categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.3%20Identity%20and%20Inverse%20Matrices/2.3%20Identity%20and%20Inverse%20Matrices.ipynb
-date: 2018-03-24 12:00:00
+date: 2018-03-26 12:00:00
 skip_span: true
 comments: true
 ---

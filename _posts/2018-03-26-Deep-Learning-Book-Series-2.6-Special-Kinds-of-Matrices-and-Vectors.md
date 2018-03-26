@@ -8,7 +8,7 @@ categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.6%20Special%20Kinds%20of%20Matrices%20and%20Vectors/2.6%20Special%20Kinds%20of%20Matrices%20and%20Vectors.ipynb
-date: 2018-03-24 15:00:00
+date: 2018-03-26 15:00:00
 skip_span: true
 comments: true
 ---

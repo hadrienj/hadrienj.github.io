@@ -8,7 +8,7 @@ categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.8%20Singular%20Value%20Decomposition/2.8%20Singular%20Value%20Decomposition.ipynb
-date: 2018-03-24 16:00:00
+date: 2018-03-26 16:00:00
 skip_span: true
 comments: true
 ---

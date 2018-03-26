@@ -8,7 +8,7 @@ categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.12%20Example%20-%20Principal%20Components%20Analysis/2.12%20Example%20-%20Principal%20Components%20Analysis.ipynb
-date: 2018-03-24 18:00:00
+date: 2018-03-26 18:00:00
 skip_span: true
 comments: true
 ---

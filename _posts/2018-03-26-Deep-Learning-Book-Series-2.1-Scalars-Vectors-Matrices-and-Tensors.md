@@ -8,7 +8,7 @@ categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.1%20Scalars%2C%20Vectors%2C%20Matrices%20and%20Tensors/2.1%20Scalars%20Vectors%20Matrices%20and%20Tensors.ipynb
-date: 2018-03-24 10:00:00
+date: 2018-03-26 10:00:00
 skip_span: true
 comments: true
 ---

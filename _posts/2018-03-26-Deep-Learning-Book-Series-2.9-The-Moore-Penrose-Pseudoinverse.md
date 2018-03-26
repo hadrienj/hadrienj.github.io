@@ -8,7 +8,7 @@ categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.9%20The%20Moore-Penrose%20Pseudoinverse/2.9%20The%20Moore-Penrose%20Pseudoinverse.ipynb
-date: 2018-03-24 16:30:00
+date: 2018-03-26 16:30:00
 skip_span: true
 comments: true
 ---
