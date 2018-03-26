@@ -10,6 +10,7 @@ author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.7%20Eigendecomposition/2.7%20Eigendecomposition.ipynb
 date: 2018-03-24 15:30:00
 skip_span: true
+comments: true
 ---
 
 <span class='notes'>

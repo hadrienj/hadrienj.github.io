@@ -10,6 +10,7 @@ author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.4%20Linear%20Dependence%20and%20Span/2.4%20Linear%20Dependence%20and%20Span.ipynb
 date: 2018-03-24 13:00:00
 skip_span: true
+comments: true
 ---
 
 <span class='notes'>

@@ -8,6 +8,7 @@ categories: posts
 tags: ['linear-algebra', 'deep-learning', 'machine-learning']
 author: hadrienj
 skip_span: true
+comments: true
 ---
 
 <img src="../../assets/images/dpl_cover.jpg" width="400">

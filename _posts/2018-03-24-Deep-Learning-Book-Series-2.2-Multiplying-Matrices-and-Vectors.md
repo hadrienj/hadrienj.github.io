@@ -10,6 +10,7 @@ author: hadrienj
 jupyter: deepLearningBook-Notes/blob/master/2.2%20Multiplying%20Matrices%20and%20Vectors/2.2%20Multiplying%20Matrices%20and%20Vectors.ipynb
 date: 2018-03-24 11:00:00
 skip_span: true
+comments: true
 ---
 
 <span class='notes'>

@@ -10,6 +10,7 @@ author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.8%20Singular%20Value%20Decomposition/2.8%20Singular%20Value%20Decomposition.ipynb
 date: 2018-03-24 16:00:00
 skip_span: true
+comments: true
 ---
 
 <span class='notes'>
