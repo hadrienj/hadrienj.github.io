@@ -7,7 +7,7 @@ crawlertitle: "Deep Learning Book Series · 2.2 Multiplying Matrices and Vectors
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: deepLearningBook-Notes/blob/master/2.2%20Multiplying%20Matrices%20and%20Vectors/2.2%20Multiplying%20Matrices%20and%20Vectors.ipynb
+jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.2%20Multiplying%20Matrices%20and%20Vectors/2.2%20Multiplying%20Matrices%20and%20Vectors.ipynb
 date: 2018-03-26 11:00:00
 skip_span: true
 comments: true
