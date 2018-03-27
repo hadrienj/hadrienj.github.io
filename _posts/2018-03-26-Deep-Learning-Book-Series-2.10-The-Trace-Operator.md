@@ -7,7 +7,7 @@ crawlertitle: "Deep Learning Book Series · 2.10 The Trace Operator"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.10%20The%20Trace%20Operator.ipynb/2.10%20The%20Trace%20Operator.ipynb
+jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.10%20The%20Trace%20Operator/2.10%20The%20Trace%20Operator.ipynb
 date: 2018-03-26 17:00:00
 skip_span: true
 comments: true

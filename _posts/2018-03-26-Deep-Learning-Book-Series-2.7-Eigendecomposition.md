@@ -1606,7 +1606,7 @@ In this case, the eigenvectors are not orthogonal!
 
 ## Quadratic forms
 
-- [Eric Sullivan from University of Colorado, Denver](http://math.ucdenver.edu/~esulliva/LinearAlgebra/SlideShows/07_02.pdf)
+- [David Lay, University of Colorado, Denver](http://math.ucdenver.edu/~esulliva/LinearAlgebra/SlideShows/07_02.pdf)
 
 - [math.stackexchange QA](https://math.stackexchange.com/questions/2207111/eigendecomposition-optimization-of-quadratic-expressions)
 
