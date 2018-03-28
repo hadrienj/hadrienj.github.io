@@ -79,13 +79,13 @@ $$
 $$
 </div>
 
-In that case, we will see that $\bs{z}=\alpha \bs{x} + (1-\alpha \bs{y})$ is also a solution for any value of $\alpha$. If $\bs{z}$ is a solution, we can say that $\bs{Az}=\bs{b}$. Indeed, if we plug $\bs{z}$ into the left hand side of the equation we obtain:
+In that case, we will see that $\bs{z}=\alpha \bs{x} + (1-\alpha)\bs{y}$ is also a solution for any value of $\alpha$. If $\bs{z}$ is a solution, we can say that $\bs{Az}=\bs{b}$. Indeed, if we plug $\bs{z}$ into the left hand side of the equation we obtain:
 
 <div>
 $$
 \begin{align*}
-\bs{Az}&=\bs{A}(\alpha x + (1-\alpha y))\\\\
-    &=\bs{Ax}\alpha + \bs{A}(1-\alpha y)\\\\
+\bs{Az}&=\bs{A}(\alpha \bs{x} + (1-\alpha)\bs{y})\\\\
+    &=\bs{Ax}\alpha + \bs{Ay}(1-\alpha)\\\\
     &=\bs{Ax}\alpha + \bs{Ay}(1-\alpha)
 \end{align*}
 $$
