@@ -93,25 +93,30 @@ We will have:
 
 <div>
 $$
+\begin{align*}
 \begin{bmatrix}
     x'\\\\
     y'
-\end{bmatrix}=\begin{bmatrix}
+\end{bmatrix}
+&=\begin{bmatrix}
     2 & 0\\\\
     0 & 2
 \end{bmatrix}
 \begin{bmatrix}
     x\\\\
     y
-\end{bmatrix}=
+\end{bmatrix}\\\\
+&=
 \begin{bmatrix}
     2x + 0y\\\\
     0x + 2y
-\end{bmatrix}=
+\end{bmatrix}\\\\
+&=
 \begin{bmatrix}
     2x\\\\
     2y
 \end{bmatrix}
+\end{align*}
 $$
 </div>
 
@@ -339,10 +344,12 @@ This matrix will rotate our vectors or matrices counterclockwise through an angl
 
 <div>
 $$
+\begin{align*}
 \begin{bmatrix}
     x'\\\\
     y'
-\end{bmatrix}=
+\end{bmatrix}
+&=
 \begin{bmatrix}
     cos(\theta) & -sin(\theta)\\\\
     sin(\theta) & cos(\theta)
@@ -350,11 +357,13 @@ $$
 \begin{bmatrix}
     x\\\\
     y
-\end{bmatrix}=
+\end{bmatrix}\\\\
+&=
 \begin{bmatrix}
     xcos(\theta) - ysin(\theta)\\\\
     xsin(\theta) + ycos(\theta)
 \end{bmatrix}
+\end{align*}
 $$
 </div>
 
@@ -1048,15 +1057,15 @@ I like this chapter on the SVD because it uses what we have learned so far in a 
 
 ## Drawing a circle with Matplotlib
 
-- https://stackoverflow.com/questions/32092899/plot-equation-showing-a-circle
+- [SE - Plot equation showing a circle](https://stackoverflow.com/questions/32092899/plot-equation-showing-a-circle)
 
 ## Rotation matrix
 
-- https://en.wikipedia.org/wiki/Rotation_matrix)
+- [Wikipedia - Rotation matrix](https://en.wikipedia.org/wiki/Rotation_matrix)
 
 ## Basis vectors
 
-- https://en.wikipedia.org/wiki/Basis_(linear_algebra)
+- <a href="https://en.wikipedia.org/wiki/Basis_(linear_algebra)">Wikipedia - Basis</a>
 
 ## Linear transformation
 
