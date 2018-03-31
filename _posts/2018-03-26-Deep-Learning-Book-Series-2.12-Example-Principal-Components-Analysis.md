@@ -738,41 +738,41 @@ And... This is the end! We have gone through a lot of things during this series 
 
 - [Principal Component Analysis](https://brilliant.org/wiki/principal-component-analysis/#from-approximate-equality-to-minimizing-function)
 
-- [http://www4.ncsu.edu/~slrace/LinearAlgebra2017/Slides/PCAPrint.pdf](http://www4.ncsu.edu/~slrace/LinearAlgebra2017/Slides/PCAPrint.pdf)
+- [Linear algebra - ncsu](http://www4.ncsu.edu/~slrace/LinearAlgebra2017/Slides/PCAPrint.pdf)
 
-- [https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c](https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c)
+- [A one stop shop for PCA](https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c)
 
-- [https://www.cs.bgu.ac.il/~inabd171/wiki.files/lecture14_handouts.pdf](https://www.cs.bgu.ac.il/~inabd171/wiki.files/lecture14_handouts.pdf)
+- [PCA - Ben-Gurion University](https://www.cs.bgu.ac.il/~inabd171/wiki.files/lecture14_handouts.pdf)
 
 ## Semi-orthogonal matrix
 
-- [https://en.wikipedia.org/wiki/Semi-orthogonal_matrix](https://en.wikipedia.org/wiki/Semi-orthogonal_matrix)
+- [Wikipedia - Semi orthogonal matrix](https://en.wikipedia.org/wiki/Semi-orthogonal_matrix)
 
 ## Intuition about PCA
 
-- [https://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/](https://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/)
+- [Blog George M Dallas](https://georgemdallas.wordpress.com/2013/10/30/principal-component-analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/)
 
 ## Derivatives
 
-- [https://math.stackexchange.com/questions/1377764/derivative-of-vector-and-vector-transpose-product](https://math.stackexchange.com/questions/1377764/derivative-of-vector-and-vector-transpose-product)
+- [SE - Derivative of vector and vector transpose product](https://math.stackexchange.com/questions/1377764/derivative-of-vector-and-vector-transpose-product)
 
 ## Link between variance maximized and error minimized:
 
-- [https://stats.stackexchange.com/questions/130721/what-norm-of-the-reconstruction-error-is-minimized-by-the-low-rank-approximation](https://stats.stackexchange.com/questions/130721/what-norm-of-the-reconstruction-error-is-minimized-by-the-low-rank-approximation)
+- [SE - What norm of the reconstruction error is minimized by the low rank approximation](https://stats.stackexchange.com/questions/130721/what-norm-of-the-reconstruction-error-is-minimized-by-the-low-rank-approximation)
 
-- [https://stats.stackexchange.com/questions/32174/pca-objective-function-what-is-the-connection-between-maximizing-variance-and-m](https://stats.stackexchange.com/questions/32174/pca-objective-function-what-is-the-connection-between-maximizing-variance-and-m)
+- [SE - PCA objective function](https://stats.stackexchange.com/questions/32174/pca-objective-function-what-is-the-connection-between-maximizing-variance-and-m)
 
-- [https://stats.stackexchange.com/questions/318625/why-do-the-leading-eigenvectors-of-a-maximize-texttrdtad](https://stats.stackexchange.com/questions/32174/pca-objective-function-what-is-the-connection-between-maximizing-variance-and-m)
+- [SE - Why do the leading eigenvectors of A maximize...](https://stats.stackexchange.com/questions/318625/why-do-the-leading-eigenvectors-of-a-maximize-texttrdtad)
 
 ## Centering data
 
-- [https://www.quora.com/Why-do-we-need-to-center-the-data-for-Principle-Components-Analysis](https://www.quora.com/Why-do-we-need-to-center-the-data-for-Principle-Components-Analysis)
+- [Quora - Why do we need to center the data for PCA](https://www.quora.com/Why-do-we-need-to-center-the-data-for-Principle-Components-Analysis)
 
-- [https://stats.stackexchange.com/questions/22329/how-does-centering-the-data-get-rid-of-the-intercept-in-regression-and-pca](https://stats.stackexchange.com/questions/22329/how-does-centering-the-data-get-rid-of-the-intercept-in-regression-and-pca)
+- [SE - How does centering the data get rid of the intercept in regression and PCA](https://stats.stackexchange.com/questions/22329/how-does-centering-the-data-get-rid-of-the-intercept-in-regression-and-pca)
 
 ## Unit norm constraint
 
-- [https://stats.stackexchange.com/questions/117695/why-is-the-eigenvector-in-pca-taken-to-be-unit-norm](https://stats.stackexchange.com/questions/117695/why-is-the-eigenvector-in-pca-taken-to-be-unit-norm)
+- [SE - Why is the eigenvector in PCA taken to be unit norm](https://stats.stackexchange.com/questions/117695/why-is-the-eigenvector-in-pca-taken-to-be-unit-norm)
 
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
