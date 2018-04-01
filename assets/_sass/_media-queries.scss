@@ -3,7 +3,13 @@
 * ========================================================================== */
 
 
-@media screen and (max-width: $md-break-point) {
+@media screen and (max-width: $sm-break-point) {
+  .MathJax {
+    font-size: 40% !important;
+  }
+}
+
+@media screen and (min-width: $sm-break-point) and (max-width: $md-break-point) {
   .MathJax {
     font-size: 60% !important;
   }

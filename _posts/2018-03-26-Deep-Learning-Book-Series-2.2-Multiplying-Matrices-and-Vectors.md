@@ -19,7 +19,7 @@ comments: true
 
 # Introduction
 
-We will see some very important concepts in this chapter. The dot product is used in every equation explaining data science algorithms so it's worth the effort to understand it. Then we will see some properties of this operation. Finally, we will to get some intuition on the link between matrices and systems of linear equations.
+We will see some very important concepts in this chapter. The dot product is used in every equation explaining data science algorithms so it's worth the effort to understand it. Then we will see some properties of this operation. Finally, we will get some intuition on the link between matrices and systems of linear equations.
 
 # 2.2 Multiplying Matrices and Vectors
 
@@ -37,17 +37,31 @@ As a starter we will see the multiplication of a matrix and a vector.
 $$\bs{A} \times \bs{b} = \bs{C}$$
 </div>
 
-with $
+with:
+
+<div>
+$$
 \bs{A}=
 \begin{bmatrix}
     1 & 2\\\\
     3 & 4\\\\
     5 & 6
 \end{bmatrix}
-$ and $\bs{b}=\begin{bmatrix}
+$$
+</div>
+
+and:
+
+<div>
+$$
+\bs{b}=\begin{bmatrix}
     2\\\\
     4
-\end{bmatrix}$. We saw that the formula is the following:
+\end{bmatrix}
+$$
+</div>
+
+We saw that the formula is the following:
 
 <div>
 $$
@@ -98,7 +112,7 @@ $$
 $$
 </div>
 
-It is a good habit to check the dimensions of the matrix so see what is going on. We can see in this example that the shape of $\bs{A}$ is ($3 \times 2$) and the shape of $\bs{b}$ is ($2 \times 1$). So the dimensions of $\bs{C}$ are ($3 \times 1$).
+It is a good habit to check the dimensions of the matrix to see what is going on. We can see in this example that the shape of $\bs{A}$ is ($3 \times 2$) and the shape of $\bs{b}$ is ($2 \times 1$). So the dimensions of $\bs{C}$ are ($3 \times 1$).
 
 ### With Numpy
 
