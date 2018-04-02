@@ -23,7 +23,7 @@ We will see some very important concepts in this chapter. The dot product is use
 
 # 2.2 Multiplying Matrices and Vectors
 
-The standard way to multiply matrices is not to multiply each element of one with each elements of the other (this is the element-wise product) but to calculate the sum of the products between rows and columns. The matrix product, also called **dot product**, is calculated as following:
+The standard way to multiply matrices is not to multiply each element of one with each element of the other (this is the element-wise product) but to calculate the sum of the products between rows and columns. The matrix product, also called **dot product**, is calculated as following:
 
 <img src="../../assets/images/2.2/dotProduct.png" width="400" alt="dotProduct">
 
@@ -485,7 +485,7 @@ array([[33],
 ## Matrices mutliplication is associative
 
 <div>
-$$\bs{A}(\bs{BC}) = \bs{AB}(\bs{C})$$
+$$\bs{A}(\bs{BC}) = (\bs{AB})\bs{C}$$
 </div>
 
 
@@ -530,7 +530,7 @@ array([[100],
 </pre>
 
 
-is equivalent to $\bs{AB}(\bs{C})$:
+is equivalent to $(\bs{AB})\bs{C}$:
 
 
 ```python
