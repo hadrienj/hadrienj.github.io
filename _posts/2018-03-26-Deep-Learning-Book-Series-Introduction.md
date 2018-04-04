@@ -28,6 +28,8 @@ These notes cover the chapter 2 on Linear Algebra. I liked this chapter because 
 
 You can find all the notebooks on [Github](https://github.com/hadrienj/deepLearningBook-Notes){:target="_blank"}.
 
+<iframe src="https://ghbtns.com/github-btn.html?user=hadrienj&repo=deepLearningBook-Notes&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="20px !important"></iframe>
+
 # Getting started with linear algebra
 
 The goal of this series is to provide content for beginners who wants to understand enough linear algebra to be confortable with machine learning and deep learning. However, I think that the chapter on linear algebra from the [Deep Learning book](http://www.deeplearningbook.org/){:target="_blank"} is a bit tough for beginners. So I decided to produce code, examples and drawings on each part of this chapter in order to add steps that may not be obvious for beginners. I also think that you can convey as much information and knowledge through examples than through general definitions. The illustrations are a way to see the big picture of an idea. Finally, I think that coding is a great tool to experiment concretely these abstract mathematical notions. Along with pen and paper, it adds a layer of what you can try to push your understanding through new horizons.

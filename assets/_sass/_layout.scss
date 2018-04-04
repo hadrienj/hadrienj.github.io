@@ -206,10 +206,9 @@ article {
   object,
   video,
   iframe {
-    display: block;
+    display: inline-block;
     margin: 0 auto;
     max-width: 100%;
-    height: auto;
   }
 
   &:after {

@@ -39,3 +39,6 @@ sass:
 
 images: '/assets/images'
 tag_page: '/tags'
+
+plugins:
+  - jekyll-seo-tag
