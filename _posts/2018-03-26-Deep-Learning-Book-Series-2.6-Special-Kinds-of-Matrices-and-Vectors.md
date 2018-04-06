@@ -10,7 +10,6 @@ author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.6%20Special%20Kinds%20of%20Matrices%20and%20Vectors/2.6%20Special%20Kinds%20of%20Matrices%20and%20Vectors.ipynb
 date: 2018-03-26 15:00:00
 skip_span: true
-comments: true
 ---
 
 <span class='notes'>

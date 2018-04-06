@@ -8,7 +8,6 @@ categories: posts
 tags: ['linear-algebra', 'deep-learning', 'machine-learning']
 author: hadrienj
 skip_span: true
-comments: true
 date: 2018-03-26 09:00:00
 ---
 

@@ -10,7 +10,6 @@ author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.5%20Norms/2.5%20Norms.ipynb
 date: 2018-03-26 14:00:00
 skip_span: true
-comments: true
 ---
 
 <span class='notes'>
