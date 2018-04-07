@@ -26,13 +26,13 @@ We saw in [2.8](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.8-S
 
 <img src="../../assets/images/2.11/rotationVsMirror.png" alt="rotationVsMirror" width="400">
 
-You can see that the second transformation can't be obtained through rotation and rescaling. Thus the sign can tells you the nature of the transformation!
+You can see that the second transformation can't be obtained through rotation and rescaling. Thus the sign can tell you the nature of the transformation associated with the matrix!
 
 In addition, the determinant also gives you the *amount* of transformation. If you take the *n*-dimensional unit cube and apply the matrix $\bs{A}$ on it, the absolute value of the determinant corresponds to the area of the transformed figure. You might believe me more easily after the following example.
 
 ### Example 1.
 
-To calculate the area of the shapes, we will use simple squares in 2 dimensions. The unit square area can be calculated with the Pythagorean theorem taking the unit vectors
+To calculate the area of the shapes, we will use simple squares in 2 dimensions. The unit square area can be calculated with the Pythagorean theorem taking the two unit vectors.
 
 <img src="../../assets/images/2.11/unitSquare.png" alt="unitSquare" width="300">
 
@@ -70,7 +70,7 @@ $$
 $$
 </div>
 
-to $i$ and $j$. You can notice that this matrix is special: it is diagonal. So it will only rescale our space without rotations. More precisely, it will rescale each dimension the same way because the diagonal values are identical. Let's create the matrix $\bs{A}$:
+to $i$ and $j$. You can notice that this matrix is special: it is diagonal. So it will only rescale our space. No rotation here. More precisely, it will rescale each dimension the same way because the diagonal values are identical. Let's create the matrix $\bs{A}$:
 
 
 ```python
@@ -100,7 +100,7 @@ plt.show()
 ![png](../../assets/images/2.11/output_13_0.png)
 
 
-As expected, we see that the square corresponding to $i$ and $j$ didn't rotate but the lengths of $i$ and $j$ have doubled. We will now calculate the determinant of $\bs{A}$ (you can go to the [Wikipedia article](https://en.wikipedia.org/wiki/Determinant) to see how to calculate the determinant):
+As expected, we can see that the square corresponding to $i$ and $j$ didn't rotate but the lengths of $i$ and $j$ have doubled. We will now calculate the determinant of $\bs{A}$ (you can go to the [Wikipedia article](https://en.wikipedia.org/wiki/Determinant) for more details about the calculation of the determinant):
 
 <img src="../../assets/images/2.11/unitSquareTrans.png" alt="unitSquareTrans" width="300">
 
@@ -120,7 +120,7 @@ And yes, the transformation have multiplied the area of the unit square by 4. Th
 
 Let's see now an example of negative determinant.
 
-We will transform the unit square with the matrix
+We will transform the unit square with the matrix:
 
 <div>
 $$
@@ -160,7 +160,7 @@ plt.show()
 
 <img src="../../assets/images/2.11/unitSquareTrans1.png" alt="unitSquareTrans1" width="300">
 
-The absolute value of the determinant show that as in the first example, the area of the new square is 4 times the area of the unit square. But this time, it was not just a rescaling but also a transformation. It is not obvious with only the unit vectors so let's transform some random points. We will use the matrix
+The absolute value of the determinant shows that, as in the first example, the area of the new square is 4 times the area of the unit square. But this time, it was not just a rescaling but also a transformation. It is not obvious with only the unit vectors so let's transform some random points. We will use the matrix
 
 <div>
 $$
@@ -210,7 +210,7 @@ You can see that the transformation mirrored the initial shape.
 
 # Conclusion
 
-We have seen that the determinant of a matrix is a special value telling a lot of things on the transformation corresponding to this matrix. Now hang on and go to the *last chapter* on the Principal Component Analysis (PCA).
+We have seen that the determinant of a matrix is a special value telling us a lot of things on the transformation corresponding to this matrix. Now hang on and go to the *last chapter* on the Principal Component Analysis (PCA).
 
 # References
 
