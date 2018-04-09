@@ -60,7 +60,7 @@ Simply because we deal with **linear** systems! Two lines can't cross more than 
 To be able to visualize it, let's take two dimensions and two equations. The solutions of the system correspond to the intersection of the lines. One option is that the two lines never cross (parallel). Another option is that they cross once. And finally, the last option is that they cross everywhere (superimposed):
 
 <img src="../../assets/images/2.4/number-solutions-system-equations.png" width="700" alt="Examples of systems of equations with 0, 1 and an infinite number of solutions" title="System of equations with 0, 1 and an infinite number of solutions">
-<em>A system of equation has no solution, 1 solution or an infinite number of solutions</em>
+<em>A system of equations has no solution, 1 solution or an infinite number of solutions</em>
 
 <span class='pquote'>
     Two lines can't cross more than once but can be either parallel or superimposed
