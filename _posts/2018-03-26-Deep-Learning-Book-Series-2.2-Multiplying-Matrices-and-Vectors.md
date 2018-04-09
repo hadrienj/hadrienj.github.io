@@ -24,7 +24,8 @@ We will see some very important concepts in this chapter. The dot product is use
 
 The standard way to multiply matrices is not to multiply each element of one with each element of the other (this is the element-wise product) but to calculate the sum of the products between rows and columns. The matrix product, also called **dot product**, is calculated as following:
 
-<img src="../../assets/images/2.2/dotProduct.png" width="400" alt="dotProduct">
+<img src="../../assets/images/2.2/dot-product.png" width="400" alt="An example of how to calculate the dot product between a matrix and a vector" title="The dot product between a matrix and a vector">
+<em>The dot product between a matrix and a vector</em>
 
 The number of columns of the first matrix must be equal to the number of rows of the second matrix. Thus, if the dimensions, or the shape of the first matrix, is ($m \times n$) the second matrix need to be of shape ($n \times x$). The resulting matrix will have the shape ($m \times x$).
 
@@ -307,11 +308,11 @@ $$
     2 & 3 \\\\
     1 & 4 \\\\
     7 & 6
-\end{bmatrix}, 
+\end{bmatrix},
 \bs{B}=\begin{bmatrix}
     5 \\\\
     2
-\end{bmatrix}, 
+\end{bmatrix},
 \bs{C}=\begin{bmatrix}
     4 \\\\
     3
@@ -734,7 +735,8 @@ $$
 
 A system of equations is defined by its number of equations and its number of unknowns. In our example above, the system has 2 equations and 2 unknowns ($x$ and $y$). In addition we call this a system of **linear** equations because each equations is linear. It is easy to see that in 2 dimensions: we will have one straight line per equation and the dimensions are the unknowns. Here is the plot of the first one:
 
-<img src="../../assets/images/2.2/equation.png" width="300" alt="equation">
+<img src="../../assets/images/2.2/plot-linear-equation.png" width="300" alt="Representation of a line from an equation" title="Plot of a linear equation">
+<em>Representation of a linear equation</em>
 
 <span class='pquote'>
     In our system of equations, the unknowns are the dimensions and the number of equations is the number of lines (in 2D) or $n$-dimensional planes.
@@ -789,7 +791,8 @@ $$
 
 The dot product of $\bs{A}$ and $\bs{x}$ gives a set of equations. Here is a simple example:
 
-<img src="../../assets/images/2.2/equationSystem.png" width="400" alt="equationSystem">
+<img src="../../assets/images/2.2/system-linear-equations-matrix-form.png" width="400" alt="Matrix form of a system of linear equation" title="Matrix form of a system of linear equation">
+<em>Matrix form of a system of linear equations</em>
 
 We have a set of two equations with two unknowns. So the number of rows of $\bs{A}$ gives the number of equations and the number of columns gives the number of unknowns.
 
@@ -917,7 +920,7 @@ $$
 $$
 </div>
 
-This system of equations is thus very simple and contains only 1 equation ($\bs{A}$ has 1 row) and 2 variables ($\bs{A}$ has 2 columns). 
+This system of equations is thus very simple and contains only 1 equation ($\bs{A}$ has 1 row) and 2 variables ($\bs{A}$ has 2 columns).
 
 To summarise, $\bs{A}$ will be the matrix of dimensions $m\times n$ containing scalars multiplying these variables (here $x_1$ is multiplied by 2 and $x_2$ by -1). The vector $\bs{x}$ contains the variables $x_1$ and $x_2$. And the right hand term is the constant $\bs{b}$:
 

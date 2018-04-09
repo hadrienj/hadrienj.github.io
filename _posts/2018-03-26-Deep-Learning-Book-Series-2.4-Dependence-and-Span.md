@@ -46,11 +46,11 @@ So we have multiple equations with multiple unknowns. We know $A_{1,1}...A_{m,n}
 The first thing to ask when we face such a system of equations is: what is the number of solutions ?
 
 Three cases can represent the number of solutions of the system of equations $\bs{Ax}=\bs{b}$.
- 
+
  1. No solution
  2. 1 solution
  3. An infinite number of solutions
- 
+
 ## Why there can't be more than 1 solution and less than an infinite number of solutions ?
 
 ### Intuition
@@ -59,7 +59,8 @@ Simply because we deal with **linear** systems! Two lines can't cross more than 
 
 To be able to visualize it, let's take two dimensions and two equations. The solutions of the system correspond to the intersection of the lines. One option is that the two lines never cross (parallel). Another option is that they cross once. And finally, the last option is that they cross everywhere (superimposed):
 
-<img src="../../assets/images/2.4/numberSolutions.png" width="800" alt="numberSolutions">
+<img src="../../assets/images/2.4/number-solutions-system-equations.png" width="700" alt="Examples of systems of equations with 0, 1 and an infinite number of solutions" title="System of equations with 0, 1 and an infinite number of solutions">
+<em>A system of equation has no solution, 1 solution or an infinite number of solutions</em>
 
 <span class='pquote'>
     Two lines can't cross more than once but can be either parallel or superimposed
@@ -179,7 +180,8 @@ We said that the solutions of the linear system of equations are the sets of val
 
 Note that associating one direction in space to one parameter is only one way to represent the equations. There are number of ways to represent more than 3 parameters systems. For instance, you can add colors to have the representation of a fourth dimension. It is all about **representation**.
 
-<img src="../../assets/images/2.4/3dAxes.png" width="900" alt="3dAxes">
+<img src="../../assets/images/2.4/representing-features.png" width="900" alt="Different ways of representing features" title="Feature representation">
+<em>Graphical representations of features</em>
 
 ### Overdetermined and underdetermined systems
 
@@ -187,16 +189,17 @@ A linear system of equations can be viewed as a set of $(n-1)$-dimensional hyper
 
 - If there are more equations than unknows the system is called **overdetermined**. In the following example we can see a system of 3 equations (represented by 3 lines) and 2 unknowns (corresponding to 2 dimensions). In this example there is no solution since there is no point belonging to the three lines:
 
-<img src="../../assets/images/2.4/overdeterminedSystem.png" width="300" alt="overdeterminedSystem">
+<img src="../../assets/images/2.4/overdetermined-system-linear-equations.png" width="300" alt="Example of an overdetermined system of linear equations with no solution" title="Example of an overdetermined system of linear equations with no solution">
+<em>Example of an overdetermined system of linear equations with no solution</em>
 
 - If there is more unknowns than equations the system is called **underdetermined**. In the following picture, there is only 1 equation (1 line) and 2 dimensions. Each point that is on the line is a solution of the system. In this case there is an infinite number of solutions:
 
-<img src="../../assets/images/2.4/underdeterminedSystem.png" width="300" alt="underdeterminedSystem">
-
+<img src="../../assets/images/2.4/underdetermined-system-linear-equations.png" width="300" alt="Example of an underdetermined system of linear equations with an infinite number of solutions" title="Example of an underdetermined system of linear equations with an infinite number of solutions">
+<em>Example of an underdetermined system of linear equations with an infinite number of solutions</em>
 
 Let's see few examples of these different cases to clarify that.
 
-### Example 1. 
+### Example 1.
 
 $m=1$, $n=2$: **1 equation and 2 variables**
 
@@ -245,8 +248,7 @@ plt.close()
 ```
 
 
-![png](../../assets/images/2.4/output_13_0.png)
-
+<img src="../../assets/images/2.4/python-one-equation.png" width="300" alt="Python output: plot of one equation" title="Plot of one equation">
 
 #### Solutions
 
@@ -296,8 +298,7 @@ plt.close()
 ```
 
 
-![png](../../assets/images/2.4/output_17_0.png)
-
+<img src="../../assets/images/2.4/python-two-equations.png" width="300" alt="Python output: plot of two equations" title="Plot of two equations">
 
 As we have seen, with 2 lines in a 2-D space, there are multiple possible cases. On the above figure, the two lines are crossing so there is one unique solution. If they are superimposed (same equation or equivalent, *cf*. linear dependance bellow) there are a infinite number of solutions since each points of the lines corresponds to an intersection. If they are parallel, there is no solution.
 
@@ -349,7 +350,7 @@ plt.close()
 ```
 
 
-![png](../../assets/images/2.4/output_20_0.png)
+<img src="../../assets/images/2.4/python-three-equations.png" width="300" alt="Python output: plot of three equations" title="Plot of three equations">
 
 
 In the above case, there is 3 equations and no solution because there is no point in space that is on each of these lines.
@@ -444,8 +445,7 @@ plt.ylim(0, 5)
 </pre>
 
 
-
-![png](../../assets/images/2.4/output_23_1.png)
+<img src="../../assets/images/2.4/python-two-vectors.png" width="300" alt="Python output: plot of two vectors" title="Plot of two vectors">
 
 
 We will now add these vectors and their weights. This gives:
@@ -479,8 +479,7 @@ plt.close()
 ```
 
 
-![png](../../assets/images/2.4/output_25_0.png)
-
+<img src="../../assets/images/2.4/python-adding-vectors-combination.png" width="300" alt="Python output: linear combination of vectors" title="Linear combination of vectors">
 
 We can see that we end up with the coordinates ($4$, $7$).
 
@@ -556,7 +555,7 @@ On a graphical point of view, we have to travel from the origin (zero on every d
      The columns of $\bs{A}$ give us the directions we can travel by and their weights are the length of the way in each direction.
 </span>
 
-### Example 5. 
+### Example 5.
 
 $m=2$, $n=2$: 2 equations and 2 variables
 
@@ -638,7 +637,7 @@ $$
 $$
 </div>
 
-gives the vector 
+gives the vector:
 
 <div>
 $$
@@ -671,8 +670,7 @@ plt.close()
 ```
 
 
-![png](../../assets/images/2.4/output_31_0.png)
-
+<img src="../../assets/images/2.4/python-two-equations-1.png" width="300" alt="Python output: plot of two equations" title="Finding the solution graphically">
 
 We can see that the solution (the intersection of the lines representing our two equations) is $x=2$ and $y=2$. This means that the linear combination is the following:
 
@@ -697,7 +695,7 @@ $$
 $$
 </div>
 
-Let's say that 
+Let's say that:
 
 <div>
 $$
@@ -709,7 +707,7 @@ $$
 $$
 </div>
 
-and
+and:
 
 <div>
 $$
@@ -751,8 +749,7 @@ plt.close()
 ```
 
 
-![png](../../assets/images/2.4/output_33_0.png)
-
+<img src="../../assets/images/2.4/python-adding-vectors-combination-1.png" width="300" alt="Python output: linear combination of vectors" title="Linear combination of vectors">
 
 We can see that it is working! We arrive to the point ($-1$, $4$).
 
@@ -862,8 +859,7 @@ plt.close()
 ```
 
 
-![png](../../assets/images/2.4/output_38_0.png)
-
+<img src="../../assets/images/2.4/python-two-equations-no-solution.png" width="300" alt="Python output: plot of two equations with no solution" title="System of equations with no solution">
 
 Since the lines are parallel, there is no point at their intersection.
 
@@ -913,8 +909,7 @@ plt.close()
 ```
 
 
-![png](../../assets/images/2.4/output_41_0.png)
-
+<img src="../../assets/images/2.4/python-system-equations-with-linear-dependence.png" width="300" alt="Python output: System of equations with linear dependence showing that it is impossible to travel in 2 dimensions" title="impossible to reach points outside the span of vectors">
 
 We would like to go to $b$ but the only path we can take is the blue/orange line. The second equation doesn't provide us with a new direction to take since it is just a linear combination of the first one.
 
@@ -967,7 +962,8 @@ $$
 
 Here is the representation of the planes plotted with the help of this [website](https://technology.cpm.org/general/3dgraph/):
 
-<img src="../../assets/images/2.4/2planes.png" alt="2planes" width="500">
+<img src="../../assets/images/2.4/intersection-2-planes-line.png" alt="Plot showing two planes. The intersection of the two planes is a line" title="The intersection of the two planes is a line" width="500">
+<em>The intersection of the two planes is a line</em>
 
 We can see that in the best case the two planes are not parallel and there are solutions to the set of equations. It means that it exists some points that rely on both planes. But we can also see that there is inevitably an infinite number of points on the intersection (a line that we can see on the figure). We need a third plane to have a unique solution.
 

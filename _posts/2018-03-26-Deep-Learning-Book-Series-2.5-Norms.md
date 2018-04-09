@@ -478,7 +478,7 @@ $L^2$ norm:
 
 Squared $L^2$ norm:
 
-<img src="../../assets/images/2.5/squaredL2Norm.png" alt="squaredL2Norm" width="500">
+<img src="../../assets/images/2.5/squared-L2-Norm.png" alt="squaredL2Norm" width="500">
 
 $L^1$ norm:
 

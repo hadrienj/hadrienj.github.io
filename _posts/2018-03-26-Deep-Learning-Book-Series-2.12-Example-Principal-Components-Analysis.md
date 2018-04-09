@@ -231,7 +231,7 @@ $$
 
 So far so good! Now the goal is to find the minimum of the function $- 2\bs{x}^\text{T}\bs{Dc} + \bs{c}^\text{T}\bs{c}$. One widely used way of doing that is to use the **gradient descent** algorithm. It is not the focus of this chapter but we will say a word about it (see [4.3](http://www.deeplearningbook.org/contents/numerical.html) of the Deep Learning Book for more details). The main idea is that the sign of the derivative of the function at a specific value of $x$ tells you if you need to increase or decrease $x$ to reach the minimum. When the slope is near $0$, the minimum should have been reached.
 
-<img src="../../assets/images/2.12/gradientDescent.png" alt="gradientDescent" width="400">
+<img src="../../assets/images/2.12/gradient-descent.png" alt="gradientDescent" width="400">
 
 However, functions with local minima can trouble the descent:
 

@@ -22,7 +22,7 @@ We have seen in [2.3](https://hadrienj.github.io/posts/Deep-Learning-Book-Series
 
 # 2.6 Special Kinds of Matrices and Vectors
 
-<img src="../../assets/images/2.6/diagonalSymmetric.png" width="400" alt="diagonalSymmetric">
+<img src="../../assets/images/2.6/diagonal-and-symmetric-matrices.png" width="400" alt="diagonalSymmetric">
 
 
 # Diagonal matrices

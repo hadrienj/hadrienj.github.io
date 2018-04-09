@@ -303,4 +303,10 @@ article a.btn {
   font-weight: bold;
   font-size: 0.8em;
 }
-
+img + em {
+  text-align: center;
+  display: block;
+  color: gray;
+  font-size: 0.9em;
+  font-weight: 600;
+}

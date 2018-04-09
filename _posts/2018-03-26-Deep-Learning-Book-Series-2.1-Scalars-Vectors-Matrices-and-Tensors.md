@@ -10,7 +10,6 @@ author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.1%20Scalars%2C%20Vectors%2C%20Matrices%20and%20Tensors/2.1%20Scalars%20Vectors%20Matrices%20and%20Tensors.ipynb
 date: 2018-03-26 10:00:00
 skip_span: true
-comments: true
 ---
 
 <span class='notes'>
@@ -27,7 +26,8 @@ This first chapter is quite light and concerns the basic elements used in linear
 
 Let's start with some basic definitions:
 
-<img src="../../assets/images/2.1/scalar-tensor.png" width="400" alt="scalar-tensor">
+<img src="../../assets/images/2.1/scalar-vector-matrix-tensor.png" width="400" alt="An example of a scalar, a vector, a matrix and a tensor" title="Difference between a scalar, a vector, a matrix and a tensor">
+<em>Difference between a scalar, a vector, a matrix and a tensor</em>
 
 - A scalar is a single number
 - A vector is an array of numbers.
@@ -147,16 +147,18 @@ len(x)
 
 With transposition you can convert a row vector to a column vector and vice versa:
 
-<img src="../../assets/images/2.1/transposeVector.png" alt="transposeVector" width="200">
+<img src="../../assets/images/2.1/vector-transposition.png" alt="Transposition of a vector" title="Vector transposition" width="200">
+<em>Vector transposition</em>
 
 The transpose $\bs{A}^{\text{T}}$ of the matrix $\bs{A}$ corresponds to the mirrored axes. If the matrix is a square matrix (same number of columns and rows):
 
-<img src="../../assets/images/2.1/transposeMatrixSquare.png" alt="transposeMatrixSquare" width="300">
+<img src="../../assets/images/2.1/square-matrix-transposition.png" alt="Transposition of a square matrix" title="Square matrix transposition" width="300">
+<em>Square matrix transposition</em>
 
 If the matrix is not square the idea is the same:
 
-<img src="../../assets/images/2.1/transposeMatrix.png" alt="transposeMatrix" width="300">
-
+<img src="../../assets/images/2.1/non-squared-matrix-transposition.png" alt="Transposition of a square matrix" title="Non square matrix transposition" width="300">
+<em>Non-square matrix transposition</em>
 
 The superscript $^\text{T}$ is used for transposed matrices.
 
@@ -183,7 +185,8 @@ $$
 
 The shape ($m \times n$) is inverted and becomes ($n \times m$).
 
-<img src="../../assets/images/2.1/transposeMatrixDim.png" alt="transposeMatrixDim" width="300">
+<img src="../../assets/images/2.1/dimensions-transposition-matrix.png" alt="Dimensions of matrix transposition" title="Dimensions of matrix transposition" width="300">
+<em>Dimensions of matrix transposition</em>
 
 ### Example 3.
 
@@ -240,7 +243,8 @@ We can see that the number of columns becomes the number of rows with transposit
 
 # Addition
 
-<img src="../../assets/images/2.1/additionMatrix.png" alt="additionMatrix" width="300">
+<img src="../../assets/images/2.1/matrix-addition.png" alt="Addition of two matrices" title="Addition of two matrices" width="300">
+<em>Addition of two matrices</em>
 
 Matrices can be added if they have the same shape:
 

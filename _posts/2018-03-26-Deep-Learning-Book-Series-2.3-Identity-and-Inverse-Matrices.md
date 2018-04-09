@@ -27,7 +27,8 @@ We will see two types of matrices in this chapter. The identity matrix or the in
 
 The identity matrix $\bs{I}_n$ is a special matrix of shape ($n \times n$) that is filled with $0$ except the diagonal that is filled with 1.
 
-<img src="../../assets/images/2.3/identity.png" width="150" alt="identity">
+<img src="../../assets/images/2.3/identity-matrix.png" width="150" alt="Example of an identity matrix" title="Identity matrix">
+<em>A 3 by 3 identity matrix</em>
 
 An identity matrix can be created with the Numpy function `eye()`:
 
@@ -339,7 +340,7 @@ array([[ 1.],
 </pre>
 
 
-This is our solution! 
+This is our solution!
 
 <div>
 $$
@@ -372,7 +373,7 @@ plt.close()
 ```
 
 
-![png](../../assets/images/2.3/output_30_0.png)
+<img src="../../assets/images/2.3/system-linear-equations.png" width="300" alt="Representation of a system of equations" title="Representation of a system of equations">
 
 
 We can see that the solution (corresponding to the line crossing) is when $x=1$ and $y=2$. It confirms what we found with the matrix inversion!
