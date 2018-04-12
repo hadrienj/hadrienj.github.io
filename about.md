@@ -2,7 +2,7 @@
 bg: "mi2.JPG"
 layout: page
 title: "About"
-crawlertitle: "Why and how this blog was created"
+crawlertitle: "About"
 permalink: /about/
 summary: "hadrienj. <br>PhD student . Cognitive Science <br>ENS - Paris, France"
 active: about

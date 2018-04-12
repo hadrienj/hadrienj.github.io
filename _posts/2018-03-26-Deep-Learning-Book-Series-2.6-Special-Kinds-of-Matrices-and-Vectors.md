@@ -22,12 +22,13 @@ We have seen in [2.3](https://hadrienj.github.io/posts/Deep-Learning-Book-Series
 
 # 2.6 Special Kinds of Matrices and Vectors
 
-<img src="../../assets/images/2.6/diagonal-and-symmetric-matrices.png" width="400" alt="diagonalSymmetric">
-
+<img src="../../assets/images/2.6/diagonal-and-symmetric-matrices.png" width="400" alt="Diagonal and symmetric matrices" title="Diagonal and symmetric matrices">
+<em>Example of diagonal and symmetric matrices</em>
 
 # Diagonal matrices
 
-<img src="../../assets/images/2.6/diagonal.png" width="150" alt="diagonal">
+<img src="../../assets/images/2.6/diagonal-matrix.png" width="150" alt="Example of a diagonal matrix" title="Diagonal matrix">
+<em>Example of a diagonal matrix</em>
 
 A matrix $\bs{A}_{i,j}$ is diagonal if its entries are all zeros except on the diagonal (when $i=j$).
 
@@ -334,10 +335,11 @@ Great! This gives the identity matrix
 
 # Symmetric matrices
 
-<img src="../../assets/images/2.6/symmetric.png" width="150" alt="symmetric">
+<img src="../../assets/images/2.6/symmetric-matrix.png" width="150" alt="Illustration of a symmetric matrix" title="Symmetric matrix">
+<em>Illustration of a symmetric matrix</em>
 
 The matrix $A$ is symmetric if it is equal to its transpose:
-    
+
 <div>
 $$
 \bs{A} = \bs{A}^\text{T}
@@ -418,12 +420,12 @@ plt.close()
 ```
 
 
-![png](../../assets/images/2.6/output_22_0.png)
-
+<img src="../../assets/images/2.6/orthogonal-vectors.png" width="300" alt="Orthogonal vectors" title="Orthogonal vectors">
+<em>Orthogonal vectors</em>
 
 <div>
 $$
-\bs{x}= 
+\bs{x}=
 \begin{bmatrix}
     2\\\\
     2
@@ -470,14 +472,14 @@ It is impossible to have more than $n$ vectors mutually orthogonal in $\mathbb{R
 
 # Orthogonal matrices
 
-Orthogonal matrices are important because they have interesting properties. A matrix is orthogonal if columns are mutually orthogonal and have a unit norm (orthonormal) and rows are mutually orthonormal and have unit norm. 
+Orthogonal matrices are important because they have interesting properties. A matrix is orthogonal if columns are mutually orthogonal and have a unit norm (orthonormal) and rows are mutually orthonormal and have unit norm.
 
-
-<img src="../../assets/images/2.6/ortho.png" width="300" alt="ortho">
+<img src="../../assets/images/2.6/orthogonal-matrix.png" width="300" alt="Under the hood of an orthogonal matrix" title="Under the hood of an orthogonal matrix">
+<em>Under the hood of an orthogonal matrix</em>
 
 <div>
 $$
-\bs{A}= 
+\bs{A}=
 \begin{bmatrix}
     A_{1,1} & A_{1,2}\\\\
     A_{2,1} & A_{2,2}
@@ -485,7 +487,7 @@ $$
 $$
 </div>
 
-This means that 
+This means that
 
 <div>
 $$
@@ -496,7 +498,7 @@ $$
 $$
 </div>
 
-and 
+and
 
 <div>
 $$

@@ -160,8 +160,8 @@ plt.close()
 ```
 
 
-![png](../../assets/images/2.5/output_13_0.png)
-
+<img src="../../assets/images/2.5/triangle-inequity.png" width="300" alt="Vector illustration of the triangle inequity" title="Triangle inequity">
+<em>Vector illustration of the triangle inequity</em>
 
 <span class='pquote'>
     Geometrically, this simply means that the shortest path between two points is a line
@@ -282,8 +282,8 @@ plt.close()
 ```
 
 
-![png](../../assets/images/2.5/output_22_0.png)
-
+<img src="../../assets/images/2.5/l2-norm-vectors.png" width="300" alt="Vector illustration of the l2 norm" title="Vectors of the example 2.">
+<em>Vectors of the example 2.</em>
 
 In this case, the vector is in a 2-dimensional space but this stands also for more dimensions.
 
@@ -474,15 +474,18 @@ We can see this by graphically comparing the squared $L^2$ norm with the $L^2$ n
 
 $L^2$ norm:
 
-<img src="../../assets/images/2.5/L2Norm.png" alt="L2Norm" width="500">
+<img src="../../assets/images/2.5/l2-norm.png" width="500" alt="Representation of the L2 norm" title="The L2 norm">
+<em>The L2 norm</em>
 
 Squared $L^2$ norm:
 
-<img src="../../assets/images/2.5/squared-L2-Norm.png" alt="squaredL2Norm" width="500">
+<img src="../../assets/images/2.5/squared-l2-norm.png" width="500" alt="Representation of the squared L2 norm" title="The squared L2 norm">
+<em>The squared L2 norm</em>
 
 $L^1$ norm:
 
-<img src="../../assets/images/2.5/L1Norm.png" alt="L1Norm" width="500">
+<img src="../../assets/images/2.5/l1-norm.png" alt="Representation of the L1 norm" title="The L1 norm" width="500">
+<em>The L1 norm</em>
 
 These plots are done with the help of this [website](https://academo.org/demos/3d-surface-plotter/). Go and plot these norms if you need to move them in order to catch their shape.
 
@@ -552,7 +555,7 @@ $$
 $$
 </div>
 
-and 
+and
 
 <div>
 $$
@@ -588,8 +591,8 @@ plt.close()
 ```
 
 
-![png](../../assets/images/2.5/output_37_0.png)
-
+<img src="../../assets/images/2.5/dot-product-norm.png" width="300" alt="Expression of the dot product with norms" title="Expression of the dot product with norms">
+<em>Expression of the dot product with norms</em>
 
 We took this example for its simplicity. As we can see, the angle $\theta$ is equal to 45°.
 

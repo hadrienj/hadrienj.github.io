@@ -67,9 +67,8 @@ plt.xlim(-1, 4)
 (-1, 4)
 </pre>
 
-
-
-![png](../../assets/images/2.7/output_12_1.png)
+<img src="../../assets/images/2.7/simple-vector.png" width="250" alt="Example of a simple vector" title="A simple vector">
+<em>A simple vector</em>
 
 
 Now, we will apply the matrix $\bs{A}$ to this vector and plot the old vector (light blue) and the new one (orange):
@@ -92,9 +91,8 @@ plt.xlim(-1, 4)
 </pre>
 
 
-
-![png](../../assets/images/2.7/output_14_2.png)
-
+<img src="../../assets/images/2.7/simple-vector-and-transformation.png" width="250" alt="A simple vector and its transformation" title="A simple vector and its transformation">
+<em>A simple vector and its transformation</em>
 
 We can see that applying the matrix $\bs{A}$ has the effect of modifying the vector.
 
@@ -218,10 +216,8 @@ plt.xlim(-1, 7)
 (-1, 7)
 </pre>
 
-
-
-![png](../../assets/images/2.7/output_21_1.png)
-
+<img src="../../assets/images/2.7/eigenvector-transformation.png" width="250" alt="The direction of the eigenvector after transformation by its matrix is the same as the original vector direction" title="Eigenvector direction">
+<em>Eigenvector doesn't change its direction when we apply the corresponding matrix</em>
 
 We can see that their directions are the same!
 
@@ -297,8 +293,8 @@ plt.xlim(-1, 3)
 </pre>
 
 
-
-![png](../../assets/images/2.7/output_25_1.png)
+<img src="../../assets/images/2.7/eigenvector-transformation1.png" width="250" alt="Another eigenvector and its transformation" title="Another eigenvector and its transformation">
+<em>Another eigenvector and its transformation</em>
 
 
 This example shows that the eigenvectors $\bs{v}$ are vectors that change only in scale when we apply the matrix $\bs{A}$ to them. Here the scales were 6 for the first eigenvector and 2 to the second but $\lambda$ can take any real or even complex value.
@@ -406,9 +402,8 @@ plt.xlim(-1, 3)
 </pre>
 
 
-
-![png](../../assets/images/2.7/output_31_1.png)
-
+<img src="../../assets/images/2.7/eigenvector-numpy.png" width="250" alt="Eigenvectors found in numpy" title="Eigenvectors found in numpy">
+<em>Eigenvectors found in numpy have identical directions</em>
 
 We can see that the vector found with Numpy (in dark blue) is a scaled version of our preceding $\begin{bmatrix}
     1\\\\
@@ -1515,7 +1510,7 @@ Graphically, these functions can take one of three general shapes (click on the 
 
 1.[Positive-definite form](https://academo.org/demos/3d-surface-plotter/?expression=x*x%2By*y&xRange=-50%2C+50&yRange=-50%2C+50&resolution=49) | 2.[Negative-definite form](https://academo.org/demos/3d-surface-plotter/?expression=-x*x-y*y&xRange=-50%2C+50&yRange=-50%2C+50&resolution=25) | 3.[Indefinite form](https://academo.org/demos/3d-surface-plotter/?expression=x*x-y*y&xRange=-50%2C+50&yRange=-50%2C+50&resolution=49)
 :-------------------------:|:-------------------------:|:-------:
-<img src="../../assets/images/2.7/positiveDefiniteForm.png"> | <img src="../../assets/images/2.7/negativeDefiniteForm.png"> | <img src="../../assets/images/2.7/indefiniteForm.png">
+<img src="../../assets/images/2.7/quadratic-functions-positive-definite-form.png" alt="Quadratic function with a positive definite form" title="Quadratic function with a positive definite form"> | <img src="../../assets/images/2.7/quadratic-functions-negative-definite-form.png" alt="Quadratic function with a negative definite form" title="Quadratic function with a negative definite form"> | <img src="../../assets/images/2.7/quadratic-functions-indefinite-form.png" alt="Quadratic function with a indefinite form" title="Quadratic function with a indefinite form">
 
 
 
@@ -1543,8 +1538,8 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.7/output_56_0.png)
-
+<img src="../../assets/images/2.7/unit-circle.png" width="250" alt="Plot of the unit circle" title="Unit circle">
+<em>Unit circle</em>
 
 Then, we will transform each of these points by applying a matrix $\bs{A}$. This is the goal of the function bellow that takes a matrix as input and will draw
 
@@ -1566,7 +1561,7 @@ def linearTransformation(transformMatrix):
     # Calculate eigenvectors and eigenvalues
     eigVecs = np.linalg.eig(transformMatrix)[1]
     eigVals = np.diag(np.linalg.eig(transformMatrix)[0])
-    
+
     # Create vectors of 0 to store new transformed values
     newX = np.zeros(len(x))
     newY = np.zeros(len(x))
@@ -1576,7 +1571,7 @@ def linearTransformation(transformMatrix):
         newXY = transformMatrix.dot(unitVector_i)
         newX[i] = newXY[0]
         newY[i] = newXY[1]
-    
+
     plotVectors([eigVecs[:,0], eigVecs[:,1]],
                 cols=[blue, blue])
     plt.plot(x, y)
@@ -1596,8 +1591,8 @@ linearTransformation(A)
 ```
 
 
-![png](../../assets/images/2.7/output_59_0.png)
-
+<img src="../../assets/images/2.7/unit-circle-eigenvectors.png" width="250" alt="Plot of the unit circle and its transformation by the matrix A" title="Transformation of the unit circle by the matrix A">
+<em>The unit circle and its transformation by the matrix A. The vectors are the eigenvectors of A.</em>
 
 We can see the unit circle in dark blue, the non scaled eigenvectors in light blue, the transformed unit circle in green and the scaled eigenvectors in yellow.
 
@@ -1610,8 +1605,8 @@ linearTransformation(A)
 ```
 
 
-![png](../../assets/images/2.7/output_61_0.png)
-
+<img src="../../assets/images/2.7/unit-circle-eigenvectors-non-symmetric-matrix.png" width="250" alt="Plot of the unit circle and its transformation by the matrix A in the case of a non symmetric matrix" title="Transformation of the unit circle by the matrix A - Non symmetric matrix">
+<em>The unit circle and its transformation by the matrix A. The vectors are the eigenvectors of A (with A non symmetric).</em>
 
 In this case, the eigenvectors are not orthogonal!
 
