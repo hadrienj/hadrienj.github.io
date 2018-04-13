@@ -22,13 +22,15 @@ We will see another way to decompose matrices: the Singular Value Decomposition 
 
 # 2.8 Singular Value Decomposition
 
-<img src="../../assets/images/2.8/unitCircleTrans1.png" width="400">
+<img src="../../assets/images/2.8/unit-circle-transformation1.png" width="400" alt="Plot of the unit circle and its transformation" title="Transformation of the unit circle">
+<em>The unit circle and its transformation by a matrix</em>
 
 We saw in [2.7](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.7-Eigendecomposition/) that the eigendecomposition can be done only for square matrices. The way to go to decompose other types of matrices that can't be decomposed with eigendecomposition is to use **Singular Value Decomposition** (SVD).
 
 We will decompose $\bs{A}$ into 3 matrices (instead of two with eigendecomposition):
 
-<img src="../../assets/images/2.8/singularValues.png" width="300">
+<img src="../../assets/images/2.8/singular-value-decomposition.png" width="300" alt="Illustration of the singular value decomposition" title="The singular value decomposition">
+<em>The singular value decomposition</em>
 
 The matrices $\bs{U}$, $\bs{D}$, and $\bs{V}$ have the following properties:
 
@@ -40,8 +42,8 @@ The columns of $\bs{U}$ are called the left-singular vectors of $\bs{A}$ while t
 
 Here are the dimensions of the factorization:
 
-<img src="../../assets/images/2.8/SVD_dimensions.png" width="300">
-
+<img src="../../assets/images/2.8/singular-value-decomposition-understanding-dimensions.png" width="300" alt="Dimensions of the singular value decomposition (SVD)" title="The dimensions of the singular value decomposition (SVD)">
+<em>The dimensions of the singular value decomposition</em>
 
 The diagonal matrix of singular values is not square but have the shape of $\bs{A}$. Look at the example provided in the [Numpy doc](https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.svd.html) to see that they create a matrix of zeros with the same shape as $\bs{A}$ and fill it with the singular values:
 
@@ -132,7 +134,8 @@ $$
 
 just doubled each coordinate of our vector. Here are the graphical representation of $\bs{v}$ and its transformation $\bs{w}$:
 
-<img src="../../assets/images/2.8/vectorTransform.png" width="400">
+<img src="../../assets/images/2.8/transformation-vector-by-matrix.png" width="400" alt="Plot of a vector and its transformation" title="The matrix increased both coordinates of the vector">
+<em>Applying the matrix on the vector multiplied each coordinate by two</em>
 
 You can look at other examples of simple transformations on vectors and unit circle in [this video](https://www.youtube.com/watch?v=kJIUbtSowRg).
 
@@ -141,7 +144,8 @@ You can look at other examples of simple transformations on vectors and unit cir
 
 To represent the linear transformation associated with matrices we can also draw the unit circle and see how a matrix can transform it (see the BONUS in [2.7](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.7-Eigendecomposition/)). The unit circle represents the coordinates of every unit vectors (vector of length 1, see [2.6](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.6-Special-Kinds-of-Matrices-and-Vectors/)).
 
-<img src="../../assets/images/2.8/unitCircle.png" width="200">
+<img src="../../assets/images/2.8/unit-circle.png" width="200" alt="Representation of the unit circle" title="The unit circle">
+<em>The unit circle</em>
 
 It is then possible to apply a matrix to all these unit vectors to see the kind of deformation it will produce.
 
@@ -179,7 +183,8 @@ $$
 $$
 </div>
 
-<img src="../../assets/images/2.8/unitCircleTrans.png" width="400">
+<img src="../../assets/images/2.8/unit-circle-transformation.png" width="400" alt="Representation of the unit circle and its transformation" title="The unit circle and its transformation">
+<em>Another representation of the effect of the matrix: each coordinate of the unit circle was multiplied by two</em>
 
 We can see that the matrix doubled the size of the circle. But in some transformations, the change applied to the $x$ coordinate is different from the change applied to the $y$ coordinate. Let's see what it means graphically.
 
@@ -221,7 +226,8 @@ $$
 
 This gives the following new circle:
 
-<img src="../../assets/images/2.8/unitCircleTrans1.png" width="400">
+<img src="../../assets/images/2.8/unit-circle-transformation1.png" width="400" alt="Representation of the unit circle and its transformation" title="The unit circle and its transformation">
+<em>This time the matrix didn't rescale each coordinate with the same weight</em>
 
 We can check that with the equations associated with this matrix transformation. Let's say that the coordinates of the new circle (after transformation) are $x'$ and $y'$. The relation between the old coordinates ($x$, $y$) and the new coordinates ($x'$, $y'$) is:
 
@@ -280,8 +286,8 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.8/output_15_0.png)
-
+<img src="../../assets/images/2.8/unit-circle-python.png" width="300" alt="The unit circle ploted with python, numpy and matplotlib" title="The unit circle in python">
+<em>The unit circle plotted in Python</em>
 
 So far so good!
 
@@ -310,14 +316,15 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.8/output_17_0.png)
-
+<img src="../../assets/images/2.8/unit-circle-python-transformation.png" width="300" alt="The unit circle ploted with python, numpy and matplotlib and its transformation" title="The unit circle in python and its transformation">
+<em>The transformed circle from the equation</em>
 
 This shows that our transformation was correct.
 
 Note that these examples used **diagonal matrices** (all zeros except the diagonal). The general rule is that the transformation associated with diagonal matrices imply only a rescaling of each coordinate **without rotation**. This is a first element to understand the SVD. Look again at the decomposition
 
-<img src="../../assets/images/2.8/singularValues.png" width="300">
+<img src="../../assets/images/2.8/singular-value-decomposition.png" width="300" alt="Illustration of the singular value decomposition" title="The singular value decomposition">
+<em>The singular value decomposition</em>
 
 <span class='pquote'>
     The transformation associated with diagonal matrices imply only a rescaling of each coordinate **without rotation**
@@ -370,7 +377,8 @@ Let's rotate some vectors through an angle of $\theta = 45^\circ$.
 
 Let's start with the vector $\bs{u}$ of coordinates $x=0$ and $y=1$ and the vector $\bs{v}$ of coordinates $x=1$ and $y=0$. The vectors $\bs{u'}$ $\bs{v'}$ are the rotated vectors.
 
-<img src="../../assets/images/2.8/vectorRot.png" width="200">
+<img src="../../assets/images/2.8/unit-vectors-rotation.png" width="200" alt="Rotation of the unit vectors through matrix operation" title="Rotation of the unit vectors">
+<em>Counter clockwise rotation of the unit vectors with $\theta = 45^\circ$</em>
 
 First, let's plot $\bs{u}$ and $\bs{v}$.
 
@@ -393,8 +401,8 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.8/output_20_0.png)
-
+<img src="../../assets/images/2.8/unit-vectors-python.png" width="300" alt="Unit vectors plotted with Python, Numpy and Matplotlib" title="Unit vectors plotted with Python">
+<em>Unit vectors plotted with Python</em>
 
 They are the <a href="https://en.wikipedia.org/wiki/Basis_(linear_algebra)">basis vectors</a> of our space. We will calculate the transformation of these vectors:
 
@@ -443,14 +451,15 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.8/output_22_0.png)
-
+<img src="../../assets/images/2.8/unit-vectors-python-rotated.png" width="300" alt="Unit vectors rotated plotted with Python, Numpy and Matplotlib" title="Unit vectors rotated plotted with Python">
+<em>Unit vectors rotated plotted with Python</em>
 
 *Coding tip:* the numpy functions `sin` and `cos` take input in radians. We can convert our angle from degrees to radians with the function `np.radians()`.
 
 We can also transform a circle. We will take a rescaled circle (the one from the example 3.) to be able to see the effect of the rotation.
 
-<img src="../../assets/images/2.8/circleRot.png" width="200">
+<img src="../../assets/images/2.8/rescaled-circle-rotated.png" width="300" alt="A rescaled circle (not the same hight and width) rotated" title="Rescaled circle rotated">
+<em>The effect of a rotation matrix on a rescaled circle</em>
 
 
 ```python
@@ -480,8 +489,8 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.8/output_24_0.png)
-
+<img src="../../assets/images/2.8/rescaled-circle-rotated-python.png" width="300" alt="A rescaled circle rotated plotted in python" title="Rescaled circle rotated plotted in Python">
+<em>The effect of a rotation matrix on a rescaled circle plotted in Python</em>
 
 We can see that the circle has been rotated by an angle of $45^\circ$. We have chosen the length of the vectors from the rescaling weight from example 3 (factor 3 and 2) to match the circle.
 
@@ -491,7 +500,8 @@ I hope that you got how vectors and matrices can be transformed by rotating or s
 
 Note that we took only square matrices. The SVD can be done even with non square matrices but it is harder to represent transformation associated with non square matrices. For instance, a 3 by 2 matrix will map a 2D space to a 3D space.
 
-<img src="../../assets/images/2.8/nonSquareMatrix.png" width="200">
+<img src="../../assets/images/2.8/non-square-matrix-change-dimensions.png" width="250" alt="A non square matrix change the number of dimensions of the input" title="Example of a change of dimensions">
+<em>A non square matrix change the number of dimensions of the input</em>
 
 # The three transformations
 
@@ -521,17 +531,17 @@ def matrixToPlot(matrix, vectorsCol=['#FF9A13', '#1190FF']):
     # Unit circle
     x = np.linspace(-1, 1, 100000)
     y = np.sqrt(1-(x**2))
-    
+
     # Modified unit circle (separate negative and positive parts)
     x1 = matrix[0,0]*x + matrix[0,1]*y
     y1 = matrix[1,0]*x + matrix[1,1]*y
     x1_neg = matrix[0,0]*x - matrix[0,1]*y
     y1_neg = matrix[1,0]*x - matrix[1,1]*y
-    
+
     # Vectors
     u1 = [matrix[0,0],matrix[1,0]]
     v1 = [matrix[0,1],matrix[1,1]]
-    
+
     plotVectors([u1, v1], cols=[vectorsCol[0], vectorsCol[1]])
 
     plt.plot(x1, y1, 'g', alpha=0.5)
@@ -573,16 +583,15 @@ plt.show()
     Unit circle:
 
 
-
-![png](../../assets/images/2.8/output_29_1.png)
+<img src="../../assets/images/2.8/unit-circle-vectors-python.png" width="300" alt="The unit circle and unit vectors plotted with Python, Numpy and Matplotlib" title="The unit vectors and circle">
+<em>The unit circle and vectors plotted in Python</em>
 
 
     Unit circle transformed by A:
 
 
-
-![png](../../assets/images/2.8/output_29_3.png)
-
+<img src="../../assets/images/2.8/unit-circle-transformed-python.png" width="300" alt="The unit circle transformed by the matrix A" title="The unit circle transformed by the matrix A">
+<em>The unit circle transformed by the matrix $\bs{A}$</em>
 
 This is what we get when we apply the matrix $\bs{A}$ to the unit circle and the basis vectors. We can see that the two base vectors are not necessarily rotated the same way. This is related to the sign of the determinent of the matrix (see [2.11](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.11-The-determinant/)).
 
@@ -655,31 +664,29 @@ plt.show()
 
 
 
-![png](../../assets/images/2.8/output_35_1.png)
-
+<img src="../../assets/images/2.8/unit-circle-vectors-python.png" width="300" alt="The unit circle and unit vectors plotted with Python, Numpy and Matplotlib" title="The unit vectors and circle">
+<em>The unit circle and vectors plotted in Python</em>
 
     First rotation:
 
 
-
-![png](../../assets/images/2.8/output_35_3.png)
+<img src="../../assets/images/2.8/unit-circle-rotation-python.png" width="300" alt="The unit circle rotated by the matrix V" title="The unit circle rotated by the matrix V">
+<em>The unit circle rotated by the matrix $\bs{V}$</em>
 
 
     Scaling:
 
 
-
-![png](../../assets/images/2.8/output_35_5.png)
-
+<img src="../../assets/images/2.8/unit-circle-rotation-rescaled-python.png" width="300" alt="The unit circle rotated by the matrix V and rescaled by the matrix D" title="The unit circle rotated by the matrix V and rescaled by the matrix D">
+<em>After the rotation, the unit circle is rescaled by $\bs{D}$</em>
 
     Second rotation:
 
 
+<img src="../../assets/images/2.8/unit-circle-singular-value-decompositon-transformation-python.png" width="300" alt="The unit circle after the three transformations of the singular value decomposition (SVD)" title="TThe unit circle after the three transformations of the singular value decomposition (SVD)">
+<em>Finally a third rotation is done with $\bs{U}$</em>
 
-![png](../../assets/images/2.8/output_35_7.png)
-
-
-Just to be sure, compare the last step to the transformation by $\bs{A}$. Fortunately, you will see that the result is the same:
+Just to be sure, you can compare this last step with the transformation by $\bs{A}$. Fortunately, you will see that the result is the same:
 
 
 ```python
@@ -690,8 +697,8 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.8/output_37_0.png)
-
+<img src="../../assets/images/2.8/unit-circle-transformed-python.png" width="300" alt="The unit circle transformed by the matrix A" title="The unit circle transformed by the matrix A">
+<em>The unit circle transformed by the matrix $\bs{A}$</em>
 
 # Singular values interpretation
 
@@ -715,8 +722,8 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.8/output_39_0.png)
-
+<img src="../../assets/images/2.8/major-minor-axes-after-singular-value-decomposition.png" width="300" alt="The singular values and the singular vectors show the direction of axes with the more variance" title="The singular values and the singular vectors reveal the shape of the transformed circle">
+<em>The singular values and vectors show the major and minor axes of the transformed circle</em>
 
 They are the major ($\sigma_1u_1$) and minor ($\sigma_2u_2$) axes of the elipse. We can see that the feature corresponding to this major axis is associated with more variance (the range of value on this axis is bigger than the other). See [2.12](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.12-Example-Principal-Components-Analysis/) for more details about the variance explained.
 
@@ -935,8 +942,8 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.8/output_66_0.png)
-
+<img src="../../assets/images/2.8/singular-value-decomposition-application-lucy.png" width="600" alt="The original image we will use to perform singular value decomposition" title="Lucy the goose">
+<em>A beautiful picture of Lucy the goose</em>
 
 We will see how to test the effect of SVD on **Lucy the goose**! Let's start to extract the left singular vectors, the singular values and the right singular vectors:
 
@@ -993,9 +1000,10 @@ The singular vectors and singular values are ordered with the first ones corresp
 
 We can reconstruct an image from a certain number of singular values. For instance for 2 singular values we will have:
 
-<img src="../../assets/images/2.8/imageReconstruction.png" width="400">
+<img src="../../assets/images/2.8/dimensions-reconstruction-image-singular-value-decomposition.png" width="400" alt="The dimensions of singular value decomposition to reconstruct image from few components" title="Image reconstruction dimensions">
+<em>We can reconstruct the image from few components</em>
 
-In this example, we have reconstructed the 699px by 1000px image from two singular values. 
+In this example, we have reconstructed the 699px by 1000px image from two singular values.
 
 
 ```python
