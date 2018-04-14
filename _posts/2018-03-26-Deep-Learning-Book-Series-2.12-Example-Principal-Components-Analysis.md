@@ -33,14 +33,15 @@ The aim of principal components analysis (PCA) is generaly to reduce the number 
 
 Unit vectors are an example of orthogonal vectors:
 
-<img src="../../assets/images/2.12/orthoVec.png" alt="orthoVec" width="200">
-
+<img src="../../assets/images/2.12/orthogonal-vectors.png" width="200" alt="Example of orthogonal vectors" title="Orthogonal vectors">
+<em>Orthogonal vectors</em>
 
 ## Describing the problem
 
 The problem can be expressed as finding a function that converts a set of data points from $\mathbb{R}^n$ to $\mathbb{R}^l$. This means that we change the number of dimensions of our dataset. We also need a function that can decode back from the transformed dataset to the initial one:
 
-<img src="../../assets/images/2.12/problem.png" alt="problem" width="80%">
+<img src="../../assets/images/2.12/principal-components-analysis-PCA-change-coordinates.png" width="80%" alt="Principal components analysis (PCA)" title="Principal components analysis (PCA)">
+<em>Principal components analysis as a change of coordinate system</em>
 
 The first step is to understand the shape of the data. $x^{(i)}$ is one data point containing $n$ dimensions. Let's have $m$ data points organized as column vectors (one column per point):
 
@@ -123,7 +124,8 @@ The columns of $\bs{D}$ must have unit norm (see [2.6](https://hadrienj.github.i
 
 Important: For now we will consider only **one data point**. Thus we will have the following dimensions for these matrices (note that $\bs{x}$ and $\bs{c}$ are column vectors):
 
-<img src="../../assets/images/2.12/decoding.png" alt="decoding" width="250">
+<img src="../../assets/images/2.12/principal-components-analysis-PCA-decoding-function.png" width="250" alt="Principal components analysis (PCA) - the decoding function" title="The decoding function">
+<em>The decoding function</em>
 
 We want a decoding function which is a simple matrix multiplication. For that reason, we have $g(\bs{c})=\bs{Dc}$. We will then find the encoding function from the decoding function. We want to minimize the error between the decoded data point and the actual data point. With our previous notation, this means reducing the distance between $\bs{x}$ and $g(\bs{c})$. As an indicator of this distance, we will use the squared $L^2$ norm (see [2.5](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.5-Norms/)):
 
@@ -231,11 +233,13 @@ $$
 
 So far so good! Now the goal is to find the minimum of the function $- 2\bs{x}^\text{T}\bs{Dc} + \bs{c}^\text{T}\bs{c}$. One widely used way of doing that is to use the **gradient descent** algorithm. It is not the focus of this chapter but we will say a word about it (see [4.3](http://www.deeplearningbook.org/contents/numerical.html) of the Deep Learning Book for more details). The main idea is that the sign of the derivative of the function at a specific value of $x$ tells you if you need to increase or decrease $x$ to reach the minimum. When the slope is near $0$, the minimum should have been reached.
 
-<img src="../../assets/images/2.12/gradient-descent.png" alt="gradientDescent" width="400">
+<img src="../../assets/images/2.12/gradient-descent.png" width="400" alt="Mechanism of the gradient descent algorithm" title="Mechanism of the gradient descent algorithm">
+<em>Gradient descent</em>
 
 However, functions with local minima can trouble the descent:
 
-<img src="../../assets/images/2.12/localMinima.png" alt="localMinima" width="400">
+<img src="../../assets/images/2.12/gradient-descent-local-minima.png" width="400" alt="Gradient descent in the case of local minimum" title="Gradient descent">
+<em>Gradient descent can get stuck in local minima</em>
 
 These examples are in 2 dimensions but the principle stands for higher dimensional functions. The gradient is a vector containing the partial derivatives of all dimensions. Its mathematical notation is $\nabla_xf(\bs{x})$.
 
@@ -249,7 +253,7 @@ $$
 $$
 </div>
 
-Let's take these terms separately to calculate the derivative according to $\bs{c}$. 
+Let's take these terms separately to calculate the derivative according to $\bs{c}$.
 
 <div>
 $$
@@ -287,8 +291,8 @@ $$
 
 Great! We found the encoding function! Here are its dimensions:
 
-<img src="../../assets/images/2.12/encoding.png" alt="encoding" width="250">
-
+<img src="../../assets/images/2.12/principal-components-analysis-PCA-encoding-function.png" width="250" alt="Expression of the encoding function" title="The encoding function">
+<em>The encoding function</em>
 
 To go back from $\bs{c}$ to $\bs{x}$ we use $g(\bs{c})=\bs{Dc}$:
 
@@ -298,7 +302,8 @@ r(\bs{x}) = g(f(\bs{x})=\bs{D}\bs{D}^\text{T}\bs{x}
 $$
 </div>
 
-<img src="../../assets/images/2.12/reconstruction.png" alt="reconstruction" width="300">
+<img src="../../assets/images/2.12/principal-components-analysis-PCA-reconstruction-function.png" width="300" alt="Expression of the reconstruction function" title="The reconstruction function">
+<em>The reconstruction function</em>
 
 ## Finding $\bs{D}$
 
@@ -334,7 +339,8 @@ With the constraint that $\bs{D}^\text{T}\bs{D}=\bs{I}_l$ because we have chosen
 
 We will start to find only the first principal component (PC). For that reason, we will have $l=1$. So the matrix $\bs{D}$ will have the shape $(n \times 1)$: it is a simple column vector. Since it is a vector we will call it $\bs{d}$:
 
-<img src="../../assets/images/2.12/l1.png" alt="l1" width="100">
+<img src="../../assets/images/2.12/first-principal-component.png" width="100" alt="Dimension of the first principal component" title="The first principal component">
+<em>The first principal component</em>
 
 We can therefore remove the sum over $j$ and the square root since we will take the squared $L^2$ norm:
 
@@ -557,8 +563,8 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.12/output_24_0.png)
-
+<img src="../../assets/images/2.12/dataset-correlation.png" width="300" alt="Creation of a toy dataset and plot with Python, Numpy and Matplotlib" title="Toy dataset">
+<em>Toy dataset with correlated features</em>
 
 Highly correlated data means that the dimensions are redundant. It is possible to predict one from the other without losing much information.
 
@@ -583,9 +589,8 @@ plt.plot(X_centered[:,0], X_centered[:,1], '*')
 plt.show()
 ```
 
-
-![png](../../assets/images/2.12/output_28_0.png)
-
+<img src="../../assets/images/2.12/dataset-centering.png" width="300" alt="Plot of the dataset with Python, Numpy and Matplotlib after centering" title="Centered data">
+<em>The dataset is now centered in $0$</em>
 
 That's better!
 
@@ -611,7 +616,7 @@ array([[-0.91116273, -0.41204669],
 </pre>
 
 
-These are the vectors maximizing our function. Each column vector is associated with an eigenvalue. The vector associated with the larger eigenvalue tells us the direction associated with the larger variance in our data. To check that, we will plot these vectors along with the data. 
+These are the vectors maximizing our function. Each column vector is associated with an eigenvalue. The vector associated with the larger eigenvalue tells us the direction associated with the larger variance in our data. To check that, we will plot these vectors along with the data.
 
 
 ```python
@@ -625,12 +630,13 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.12/output_32_0.png)
-
+<img src="../../assets/images/2.12/principal-component-analysis-eigenvectors.png" width="300" alt="Plot of the dataset and the eigenvectors of its covariance matrix with Python, Numpy and Matplotlib" title="Eigenvectors">
+<em>Eigenvectors of the covariance matrix</em>
 
 We can see that the blue vector direction corresponds to the oblique shape of our data. The idea is that if you project the data points on the line corresponding to the blue vector direction you will end up with the largest variance. This vector has the direction that maximizes variance of projected data. Have a look at the following figure:
 
-<img src="../../assets/images/2.12/variance.png" alt="variance" width="400">
+<img src="../../assets/images/2.12/principal-component-analysis-variance-explained.png" width="400" alt="Representation of the variance explained across directions" title="Maximizing the variance">
+<em>Projection of the data point: this line direction is the one with the largest variance</em>
 
 When you project data points on the pink line there is more variance. This line has the direction that maximizes the variance of the data points. It is the same for the figure above: our blue vector has the direction of the line where data point projection has the higher variance. Then the second eigenvector is orthogonal to the first.
 
@@ -670,9 +676,8 @@ plt.ylim(-5, 5)
 plt.show()
 ```
 
-
-![png](../../assets/images/2.12/output_36_0.png)
-
+<img src="../../assets/images/2.12/principal-component-analysis-rotation-data.png" width="300" alt="Dataset after rotation" title="Rotation of our dataset">
+<em>We rotated the data in order to have the largest variance on one axis</em>
 
 It worked! The rotation transformed our dataset that have now the more variance on one of the basis axis. You could keep only this dimension and have a fairly good representation of the data.
 

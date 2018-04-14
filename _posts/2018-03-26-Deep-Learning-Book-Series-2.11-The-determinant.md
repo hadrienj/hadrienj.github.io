@@ -24,7 +24,8 @@ In this chapter, we will see what is the meaning of the determinant of a matrix.
 
 We saw in [2.8](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.8-Singular-Value-Decomposition/) that a matrix can be seen as a linear transformation of the space. The determinant of a matrix $\bs{A}$ is a number corresponding to the *multiplicative change* you get when you transform your space with this matrix (see a comment by Pete L. Clark in [this SE question](https://math.stackexchange.com/questions/668/whats-an-intuitive-way-to-think-about-the-determinant)). A negative determinant means that there is a change in orientation (and not just a rescaling and/or a rotation). As outlined by Nykamp DQ on [Math Insight](https://mathinsight.org/determinant_linear_transformation), a change in orientation means for instance in 2D that we take a plane out of these 2 dimensions, do some transformations and get back to the initial 2D space. Here is an example distinguishing between positive and negative determinant:
 
-<img src="../../assets/images/2.11/positive-negative-determinant.png" alt="rotationVsMirror" width="400">
+<img src="../../assets/images/2.11/positive-negative-determinant.png" width="400" alt="Comparison of positive and negative determinant" title="Comparison of the effect of positive and negative determinants">
+<em>The determinant of a matrix can tell you a lot of things about the transformation associated with this matrix</em>
 
 You can see that the second transformation can't be obtained through rotation and rescaling. Thus the sign can tell you the nature of the transformation associated with the matrix!
 
@@ -34,8 +35,8 @@ In addition, the determinant also gives you the *amount* of transformation. If y
 
 To calculate the area of the shapes, we will use simple squares in 2 dimensions. The unit square area can be calculated with the Pythagorean theorem taking the two unit vectors.
 
-<img src="../../assets/images/2.11/unitSquare.png" alt="unitSquare" width="300">
-
+<img src="../../assets/images/2.11/unit-square-area.png" width="300" alt="Illustration of the unit square area and the unit vectors in two dimensions" title="The unit square area">
+<em>The unit square area</em>
 
 The lengths of $i$ and $j$ are $1$ thus the area of the unit square is $1$.
 
@@ -45,7 +46,7 @@ Let's start by creating both vectors in Python:
 ```python
 orange = '#FF9A13'
 blue = '#1190FF'
-    
+
 i = [0, 1]
 j = [1, 0]
 
@@ -56,8 +57,8 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.11/output_9_0.png)
-
+<img src="../../assets/images/2.11/unit-vectors-python.png" width="300" alt="Plot of the two unit vectors in Python, Numpy and Matplotlib" title="The unit vectors">
+<em>The unit vectors</em>
 
 We will apply
 
@@ -97,13 +98,15 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.11/output_13_0.png)
+<img src="../../assets/images/2.11/unit-vectors-transformed-python.png" width="300" alt="Plot of the two unit vectors in Python, Numpy and Matplotlib after transformation" title="The transformed unit vectors">
+<em>The transformed unit vectors: their lengths was multiplied by 2</em>
 
+As expected, we can see that the square corresponding to $i$ and $j$ didn't rotate but the lengths of $i$ and $j$ have doubled.
 
-As expected, we can see that the square corresponding to $i$ and $j$ didn't rotate but the lengths of $i$ and $j$ have doubled. We will now calculate the determinant of $\bs{A}$ (you can go to the [Wikipedia article](https://en.wikipedia.org/wiki/Determinant) for more details about the calculation of the determinant):
+<img src="../../assets/images/2.11/unit-square-area-transformed.png" width="300" alt="Areas of the unit square and its transformation by the matrix" title="The transformed unit square">
+<em>The unit square transformed by the matrix</em>
 
-<img src="../../assets/images/2.11/unitSquareTrans.png" alt="unitSquareTrans" width="300">
-
+We will now calculate the determinant of $\bs{A}$ (you can go to the [Wikipedia article](https://en.wikipedia.org/wiki/Determinant) for more details about the calculation of the determinant):
 
 ```python
 np.linalg.det(A)
@@ -155,10 +158,13 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.11/output_19_0.png)
+<img src="../../assets/images/2.11/unit-vectors-transformed-python-1.png" width="300" alt="Transformation of the unit vectors by the matrix with a negative determinant" title="The transformed unit vectors">
+<em>The unit vectors transformed by the matrix with a negative determinant</em>
 
+We can see that the matrices with determinant $2$ and $-2$ modified the area of the unit square the same way.
 
-<img src="../../assets/images/2.11/unitSquareTrans1.png" alt="unitSquareTrans1" width="300">
+<img src="../../assets/images/2.11/unit-square-area-transformed-1.png" width="300" alt="Areas of the unit square and its transformation by the matrix with a negative determinant" title="The transformed unit square">
+<em>The unit square transformed by the matrix with a negative determinant</em>
 
 The absolute value of the determinant shows that, as in the first example, the area of the new square is 4 times the area of the unit square. But this time, it was not just a rescaling but also a transformation. It is not obvious with only the unit vectors so let's transform some random points. We will use the matrix
 
@@ -203,8 +209,8 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.11/output_24_0.png)
-
+<img src="../../assets/images/2.11/negative-determinant-points.png" width="300" alt="Effect of a negative determinant matrix on random data points" title="The effect of a matrix with negative determinant">
+<em>The transformation obtained with a negative determinant matrix is more than rescaling and rotating</em>
 
 You can see that the transformation mirrored the initial shape.
 

@@ -122,7 +122,7 @@ The syllabus follow exactly the [Deep Learning Book](http://www.deeplearningbook
 11. [The Determinant](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.11-The-determinant/)
 
     <img src="../../assets/images/2.11/positive-negative-determinant.png" width="400" alt="Comparison of positive and negative determinant" title="Comparison of the effect of positive and negative determinants">
-    <em>Link between the determinant of a matrix and the transformation associated with it</em>
+    <em>The determinant of a matrix can tell you a lot of things about the transformation associated with this matrix</em>
 
     This chapter is about the determinant of a matrix. This special number can tell us a lot of things about our matrix!
 

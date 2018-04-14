@@ -176,7 +176,8 @@ In this case the result is the same as with the SVD way.
 
 In general there is no solution to overdetermined systems (see [2.4](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.4-Linear-Dependence-and-Span/) ; [Overdetermined systems](https://en.wikipedia.org/wiki/Overdetermined_system)). In the following picture, there is no point at the intersection of the three lines corresponding to three equations:
 
-<img src="../../assets/images/2.9/overdeterminedSystem.png" width="300">
+<img src="../../assets/images/2.9/overdetermined-system-equations.png" width="300" alt="Example of three linear equations in 2 dimensions: this is an overdetermined system" title="Overdetermined system of equations">
+<em>There is more equations (3) than unknowns (2) so this is an overdetermined system of equations</em>
 
 The pseudoinverse solve the system in the least square error perspective: it finds the solution that minimize the error. We will see this more explicitly with an example.
 
@@ -222,8 +223,8 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.9/output_17_0.png)
-
+<img src="../../assets/images/2.9/overdetermined-system-equations-python.png" width="300" alt="Plot of three equations in 2 dimensions done with Python, Numpy and Matplotlib" title="Overdetermined system of equations plotted with Python">
+<em>Representation of our overdetermined system of equation</em>
 
 We actually see that there is no solution.
 
@@ -399,8 +400,8 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.9/output_23_0.png)
-
+<img src="../../assets/images/2.9/mean-square-error-solution-overdetermined-system-equations-python.png" width="300" alt="Finding the solution that minimizes the mean square error with the pseudo-inverse" title="Finding a solution minimizing the mean square error">
+<em>The pseudoinverse can be used to find the point that minimizes the mean square error</em>
 
 Maybe you would have expected the point being at the barycenter of the triangle (cf. [Least square solution in the triangle center](https://math.stackexchange.com/questions/471812/is-the-least-squares-solution-to-an-overdetermined-system-a-triangle-center)). This is not the case becase the equations are not scaled the same way. Actually the point is at the intersection of the three [symmedians](https://en.wikipedia.org/wiki/Symmedian) of the triangle.
 
@@ -408,7 +409,8 @@ Maybe you would have expected the point being at the barycenter of the triangle 
 
 This method can also be used to fit a line to a set of points. Let's take the following data points:
 
-<img src="../../assets/images/2.9/dataPoints.png" width="300">
+<img src="../../assets/images/2.9/dataset-representation.png" width="300" alt="Representation of a set of data points" title="Some data points">
+<em>We want to fit a line to this set of data points</em>
 
 We have this set of $\bs{x}$ and $\bs{y}$ and we are looking for the line $y=mx+b$ that minimizes the error. The error can be evaluated as the sum of the differences between the fit and the actual data points. We can represent the data points with a matrix equations:
 
@@ -545,8 +547,8 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.9/output_33_0.png)
-
+<img src="../../assets/images/2.9/line-fit-dataset.png" width="300" alt="Representation of the data points and the fitting line minimizing the mean square error" title="Representation of the fit">
+<em>We found the line minimizing the error!</em>
 
 If you are not sure about the result. Just check it with another method. For instance, I double-checked with R:
 
@@ -563,7 +565,8 @@ ggplot(data=a, aes(x=x, y=y)) +
 
 outputs:
 
-<img src="../../assets/images/2.9/rLinearFit.png" width="400">
+<img src="../../assets/images/2.9/linear-regression-r.png" width="300" alt="Fitting a line with another method (in R)" title="Fitting with R">
+<em>Just checking with another method</em>
 
 You can also do the fit with the Numpy `polyfit()` to check the parameters:
 
@@ -646,8 +649,8 @@ plt.show()
 ```
 
 
-![png](../../assets/images/2.9/output_44_0.png)
-
+<img src="../../assets/images/2.9/linear-regression-dataset.png" width="300" alt="Fitting a line to a set of data points" title="Regression line">
+<em>Fitting a line to a set of data points</em>
 
 Looks good!
 

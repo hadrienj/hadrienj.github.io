@@ -22,7 +22,8 @@ I can assure you that you will read this chapter in 2 minutes! It is nice after 
 
 # 2.10 The Trace Operator
 
-<img src="../../assets/images/2.10/trace-matrix.png" alt="trace" width="200">
+<img src="../../assets/images/2.10/trace-matrix.png" width="200" alt="Calculating the trace of a matrix" title="Calculating the trace of a matrix">
+<em>The trace of matrix</em>
 
 
 The trace is the sum of all values in the diagonal of a square matrix.
