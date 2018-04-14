@@ -96,19 +96,22 @@ The syllabus follow exactly the [Deep Learning Book](http://www.deeplearningbook
 
 7. [Eigendecomposition](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.7-Eigendecomposition/)
 
-    <img src="../../assets/images/2.7/output_59_0.png" width="300" alt="output_59_0">
+    <img src="../../assets/images/2.7/unit-circle-eigenvectors.png" width="250" alt="Plot of the unit circle and its transformation by the matrix A" title="Transformation of the unit circle by the matrix A">
+    <em>The unit circle and its transformation by the matrix A. The vectors are the eigenvectors of A.</em>
 
     We will see some major concepts of linear algebra in this chapter. We will start by getting some ideas on eigenvectors and eigenvalues. We will see that a matrix can be seen as a linear transformation and that applying a matrix on its eigenvectors gives new vectors with same direction. Then we will see how to express quadratic equations into a matrix form. We will see that the eigendecomposition of the matrix corresponding to the quadratic equation can be used to find its minimum and maximum. As a bonus, we will also see how to visualize linear transformation in Python!
 
 8. [Singular Value Decomposition](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.8-Singular-Value-Decomposition/)
 
-    <img src="../../assets/images/2.8/output_35_7.png" width="300" alt="output_35_7">
+    <img src="../../assets/images/2.8/unit-circle-transformed-python.png" width="300" alt="The unit circle transformed by the matrix A" title="The unit circle transformed by the matrix A">
+    <em>The unit circle transformed by the matrix $\bs{A}$</em>
 
     We will see another way to decompose matrices: the Singular Value Decomposition or SVD. Since the beginning of this series, I emphasized the fact that you can see matrices as linear transformation in space. With the SVD, you decompose a matrix in three other matrices. We will see that we can see these new matrices as *sub-transformation* of the space. Instead of doing the transformation in one movement, we decompose it in three movements. As a bonus, we will apply the SVD to image processing. We will see the effect of SVD on an example image of Lucy the goose so keep on reading!
 
 9. [The Moore-Penrose Pseudoinverse](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.9-The-Moore-Penrose-Pseudoinverse/)
 
-    <img src="../../assets/images/2.9/output_44_0.png" width="300" alt="output_44_0">
+    <img src="../../assets/images/2.9/overdetermined-system-equations.png" width="300" alt="Example of three linear equations in 2 dimensions: this is an overdetermined system" title="Overdetermined system of equations">
+    <em>There is more equations (3) than unknowns (2) so this is an overdetermined system of equations</em>
 
     We saw that not all matrices have an inverse. It is unfortunate because the inverse is used to solve system of equations. In some cases, a system of equation has no solution, and thus the inverse doesn’t exist. However it can be useful to find a value that is almost a solution (in term of minimizing the error). This can be done with the pseudoinverse! We will see for instance how we can find the best-fit line of a set of data points with the pseudoinverse.
 

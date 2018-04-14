@@ -310,3 +310,12 @@ img + em {
   font-size: 0.9em;
   font-weight: 600;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.grid-item {
+  text-align: center;
+  margin: 10px;
+  background-color: #c1ccda1f;
+}
