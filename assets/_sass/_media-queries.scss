@@ -3,12 +3,6 @@
 * ========================================================================== */
 
 
-@media screen and (max-width: $sm-break-point) {
-  .MathJax {
-    font-size: 40% !important;
-  }
-}
-
 @media screen and (min-width: $sm-break-point) and (max-width: $md-break-point) {
   .MathJax {
     font-size: 60% !important;
@@ -19,6 +13,13 @@
   }
   body {
     text-align: left;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
+   .grid-item {
+    margin: 12px;
   }
 }
 
@@ -186,5 +187,18 @@
   .link-to-post {
     margin: 50px auto;
     padding: 2em;
+  }
+}
+
+@media screen and (max-width: $sm-break-point) {
+  .MathJax {
+    font-size: 40% !important;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .grid-item {
+    font-size: 12px;
   }
 }
