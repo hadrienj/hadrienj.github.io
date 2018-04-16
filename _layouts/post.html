@@ -10,8 +10,9 @@ layout: default
     <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d-%m-%Y" }}</time>
 
     {% if page.author %}
-      &nbsp;/&nbsp;
+      &nbsp;|&nbsp;
       <span>{{ page.author }}</span>
+      {% include twitter_follow.html %}
     {% endif %}
 
     {% if page.tags %} | {% for tag in page.tags %}
@@ -24,18 +25,18 @@ layout: default
   <div class="post-content">
 
     {% if page.jupyter %}
-      <p>
-        <a href="{{ page.jupyter }}" target="_blank">
-           <img src="../../assets/images/notebook.png" alt="notebook">
-        </a>
-      </p>
+      {% include jupyter.html %}
     {% endif %}
+
+    {% include twitter_share.html %}
 
     {{ content }}
 
     {% if page.comments %}
       {% include disqus.html %}
     {% endif %}
+
+    {% include share.html %}
 
     <div class="post-links">
       {% if page.previous.url %}
