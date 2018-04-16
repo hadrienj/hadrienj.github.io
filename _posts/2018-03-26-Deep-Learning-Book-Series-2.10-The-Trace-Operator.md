@@ -9,7 +9,9 @@ tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.10%20The%20Trace%20Operator/2.10%20The%20Trace%20Operator.ipynb
 date: 2018-03-26 17:00:00
-skip_span: true
+excerpt: I can assure you that you will read this chapter in 2 minutes! It is nice after the last two chapters that were quite big! We will see what is the Trace of a matrix. It will be needed for the last chapter on the Principal Component Analysis (PCA).
+excerpt-image: <img src="../../assets/images/2.10/trace-matrix.png" width="200" alt="Calculating the trace of a matrix" title="Calculating the trace of a matrix">
+    <em>The trace of matrix</em>
 ---
 
 <span class='notes'>

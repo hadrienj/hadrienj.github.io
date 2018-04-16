@@ -9,7 +9,9 @@ tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.9%20The%20Moore-Penrose%20Pseudoinverse/2.9%20The%20Moore-Penrose%20Pseudoinverse.ipynb
 date: 2018-03-26 16:30:00
-skip_span: true
+excerpt: We saw that not all matrices have an inverse. It is unfortunate because the inverse is used to solve system of equations. In some cases, a system of equation has no solution, and thus the inverse doesn't exist. However it can be useful to find a value that is almost a solution (in term of minimizing the error). We will see for instance how we can find the best-fit line of a set of data points with the pseudoinverse.
+excerpt-image: <img src="../../assets/images/2.9/overdetermined-system-equations.png" width="300" alt="Example of three linear equations in 2 dimensions. This is an overdetermined system" title="Overdetermined system of equations">
+  <em>There is more equations (3) than unknowns (2) so this is an overdetermined system of equations</em>
 ---
 
 <span class='notes'>

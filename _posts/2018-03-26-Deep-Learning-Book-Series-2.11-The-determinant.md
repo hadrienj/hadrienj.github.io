@@ -9,7 +9,9 @@ tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.11%20The%20determinant/2.11%20The%20determinant.ipynb
 date: 2018-03-26 17:30:00
-skip_span: true
+excerpt: In this chapter, we will see what is the meaning of the determinant of a matrix. This special number can tell us a lot of things about our matrix!
+excerpt-image: <img src="../../assets/images/2.11/positive-negative-determinant.png" width="400" alt="Comparison of positive and negative determinant" title="Comparison of the effect of positive and negative determinants">
+    <em>The determinant of a matrix can tell you a lot of things about the transformation associated with this matrix</em>
 ---
 
 <span class='notes'>

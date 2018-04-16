@@ -7,8 +7,10 @@ crawlertitle: "Deep Learning Book Series · Introduction"
 categories: posts
 tags: ['linear-algebra', 'deep-learning', 'machine-learning']
 author: hadrienj
-skip_span: true
 date: 2018-03-26 09:00:00
+excerpt: I'd like to introduce a series of blog posts and their corresponding Python Notebooks gathering notes on the Deep Learning Book from Ian Goodfellow, Yoshua Bengio, and Aaron Courville (2016). The aim of these notebooks is to help beginners/advanced beginners to grasp linear algebra concepts underlying deep learning and machine learning. Acquiring these skills can boost your ability to understand and apply various data science algorithms. In my opinion, it is one of the bedrock of machine learning, deep learning and data science.
+excerpt-image: <img src="../../assets/images/deep-learning-book-goodfellow-cover.jpg" width="400" alt="Cover of the deep learning book by Goodfellow, Bengio and Courville" title="The Deep Learning Book - Goodfellow, I., Bengio, Y., and Courville, A. (2016)">
+    <em>The Deep Learning Book - Goodfellow, I., Bengio, Y., and Courville, A. (2016)</em>
 ---
 
 <img src="../../assets/images/deep-learning-book-goodfellow-cover.jpg" width="400" alt="Cover of the deep learning book by Goodfellow, Bengio and Courville" title="The Deep Learning Book - Goodfellow, I., Bengio, Y., and Courville, A. (2016)">
@@ -103,8 +105,8 @@ The syllabus follow exactly the [Deep Learning Book](http://www.deeplearningbook
 
 8. [Singular Value Decomposition](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.8-Singular-Value-Decomposition/)
 
-    <img src="../../assets/images/2.8/unit-circle-transformed-python.png" width="300" alt="The unit circle transformed by the matrix A" title="The unit circle transformed by the matrix A">
-    <em>The unit circle transformed by the matrix $\bs{A}$</em>
+    <img src="../../assets/images/2.8/unit-circle-transformation1.png" width="400" alt="Plot of the unit circle and its transformation" title="Transformation of the unit circle">
+    <em>The unit circle and its transformation by a matrix</em>
 
     We will see another way to decompose matrices: the Singular Value Decomposition or SVD. Since the beginning of this series, I emphasized the fact that you can see matrices as linear transformation in space. With the SVD, you decompose a matrix in three other matrices. We will see that we can see these new matrices as *sub-transformation* of the space. Instead of doing the transformation in one movement, we decompose it in three movements. As a bonus, we will apply the SVD to image processing. We will see the effect of SVD on an example image of Lucy the goose so keep on reading!
 

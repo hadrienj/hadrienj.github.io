@@ -9,7 +9,9 @@ tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.3%20Identity%20and%20Inverse%20Matrices/2.3%20Identity%20and%20Inverse%20Matrices.ipynb
 date: 2018-03-26 12:00:00
-skip_span: true
+excerpt: We will see two types of matrices in this chapter. The identity matrix or the inverse of a matrix are concepts that will be very useful in the next chapters. We will see at the end of this chapter that we can solve systems of linear equations by using the inverse matrix. So hang on!
+excerpt-image: <img src="../../assets/images/2.3/identity-matrix.png" width="150" alt="Example of an identity matrix" title="Identity matrix">
+  <em>A 3 by 3 identity matrix</em>
 ---
 
 <span class='notes'>
