@@ -8,7 +8,7 @@ summary: "hadrienj. <br>PhD student . Cognitive Science <br>ENS - Paris, France"
 active: about
 ---
 
-I'm currently doing a PhD student (end expected Dec. 2018) in Cognitive Sciences at the &Eacute;cole Normale Supérieure (ENS) in Paris, France. I'm studying auditory perceptual learning (pitch perception and auditory selective attention) using psychophysics and electrophysiology (EEG).
+I'm currently doing a PhD (end expected Dec. 2018) in Cognitive Sciences at the &Eacute;cole Normale Supérieure (ENS) in Paris, France. I'm studying auditory perceptual learning (pitch perception and auditory selective attention) using psychophysics and electrophysiology (EEG).
 
 #### Web Development . Full-Stack
 
