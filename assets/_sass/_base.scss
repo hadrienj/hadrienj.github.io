@@ -289,6 +289,7 @@ article a.btn {
   display: block;
   margin: 40px 10%;
 }
+
 .copyright {
   z-index: 100;
   position: absolute;
@@ -345,4 +346,15 @@ ul.share-buttons .sr-only{
 div > ul.share-buttons > li > a > img {
   display: inline;
   margin: 0 auto;
+}
+
+
+.jupyterLink {
+  width: 25%;
+  display: block;
+  margin: auto;
+}
+.jupyterImg {
+  width: 100%;
+  display: block;
 }
