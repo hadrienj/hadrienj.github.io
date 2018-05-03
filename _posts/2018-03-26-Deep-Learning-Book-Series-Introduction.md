@@ -85,7 +85,7 @@ The syllabus follow exactly the [Deep Learning Book](http://www.deeplearningbook
 
 5. [Norms](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.5-Norms/)
 
-    <img src="../../assets/images/2.5/squared-L2-Norm.png" width="400" alt="Representation of the squared L2 norm in 3 dimensions" title="Representation of the squared L2 norm in 3 dimensions">
+    <img src="../../assets/images/2.5/squared-L2-norm.png" width="400" alt="Representation of the squared L2 norm in 3 dimensions" title="Representation of the squared L2 norm in 3 dimensions">
     <em>Shape of a squared L2 norm in 3 dimensions</em>
 
     The norm of a vector is a function that takes a vector in input and outputs a positive value. It can be thinks as the *length* of the vector. It is for example used to evaluate the distance between the prediction of a model and the actual value. We will see different kind of norms ($L^0$, $L^1$, $L^2$...) with examples.

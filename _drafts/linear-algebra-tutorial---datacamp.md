@@ -29,7 +29,7 @@ excerpt-image: <img src="../../assets/images/2.5/squared-l2-norm.png" width="500
 
 # Introduction
 
-This tutorial will get you through some intermediates linear algebra concepts usefull in deep learning, machine learning and data science in general. The prerequisites are not high: just be sure that you know what is a matrix and how to do the dot product. You can get these notions on the first posts (1 to 4) of [my series on the deep learning book]() from Ian Goodfellow.
+This tutorial will get you through some intermediates linear algebra concepts usefull in deep learning, machine learning and data science in general. The prerequisites are not high: just be sure that you know what is a matrix and how to do the dot product. You can get or refresh these notions on the first posts (1 to 4) of [my series]() on the deep learning book from Ian Goodfellow.
 
 We will see an important concept for machine learning and deep learning. The norm is what is generally used to evaluate the error of a model. For instance it is used to calculate the error between the output of a neural network and what is expected (the actual label or value). You can think of the norm as the length of a vector. It is a function that maps a vector to a positive value. Different functions can be used and we will see few examples.
 
