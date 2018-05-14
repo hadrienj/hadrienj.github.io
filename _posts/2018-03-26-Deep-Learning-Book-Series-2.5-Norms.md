@@ -35,13 +35,13 @@ Norms are any functions that are characterized by the following properties:
 
 3- Norms respect the triangle inequity. See bellow.
 
-4- $\norm{\bs{k}\cdot \bs{u}}=\norm{\bs{k}}\cdot\norm{\bs{u}}$. The norm of a vector multiplied by a scalar is equal to the absolute value of this scalar multiplied by the norm of the vector.
+4- $\norm{\bs{k}\cdot \bs{u}}= \| \bs{k} \| \cdot\norm{\bs{u}}$. The norm of a vector multiplied by a scalar is equal to the absolute value of this scalar multiplied by the norm of the vector.
 
 It is usually written with two horizontal bars: $\norm{\bs{x}}$
 
 # The triangle inequity
 
-The norm of the sum of some vectors is less than or equal the sum of the norms of these vectors.
+The norm of the sum of some vectors is less than or equal to the sum of the norms of these vectors.
 
 <div>
 $$

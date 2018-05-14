@@ -3,7 +3,7 @@ bg: "tools.jpg"
 layout: post
 mathjax: true
 title: Convolution of two signals
-date:
+date: 2018-03-05
 summary: Practical example on how to do convolution of two signals
 categories: posts
 tags: ['signal-processing']

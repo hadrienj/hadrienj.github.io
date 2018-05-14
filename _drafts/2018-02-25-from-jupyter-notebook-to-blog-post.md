@@ -3,8 +3,7 @@ bg: "tools.jpg"
 layout: post
 mathjax: true
 title: From jupyter notebook to blog post
-date:
-summary: 
+date: 2018-02-25
 categories: posts
 tags: ['jupyter', 'python', 'markdown', 'jekyll']
 author: hadrienj

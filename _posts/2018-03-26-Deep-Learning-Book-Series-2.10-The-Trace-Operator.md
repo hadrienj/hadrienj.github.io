@@ -119,15 +119,15 @@ np.sqrt(np.trace(A.dot(A.T)))
 
 Since the transposition of a matrix doesn't change the diagonal, the trace of the matrix is equal to the trace of its transpose:
 
-$
+$$
 \Tr(\bs{A})=\Tr(\bs{A}^T)
-$
+$$
 
 ## Trace of a product
 
-$
+$$
 \Tr(\bs{ABC}) = \Tr(\bs{CAB}) = \Tr(\bs{BCA})
-$
+$$
 
 
 ### Example 1.

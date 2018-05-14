@@ -561,7 +561,7 @@ On a graphical point of view, we have to travel from the origin (zero on every d
 
 ### Example 5.
 
-$m=2$, $n=2$: 2 equations and 2 variables
+$m=2$, $n=2$: 2 equations and 2 unknowns
 
 <div>
 $$
@@ -764,7 +764,61 @@ We will now see how to determine if a system of equations has one and only one s
 1. The system must have at least one solution
 2. Then, the system must have **only** one solution
 
-### Requirement 1. Overdetermined system: the system must have at least one solution for each value of $\bs{b}$: $m\geq n$
+### Requirement 1. Underdetermined system: the system must have at least one solution for each value of $\bs{b}$: $n\geq m$
+
+<span class='pquote'>
+     An underdetermined system of equations is a system with less equations than unknowns
+</span>
+
+If we want our system to have one and only one solution a first requirement is that $n$ must not be bigger than $m$.
+
+Let's take the example of a ($2\times 3$) matrix that corresponds to a set of 2 equations with 3 unknowns variables:
+
+
+<div>
+$$
+\begin{cases}
+8x+y+z=1\\\\
+x+y+z=1
+\end{cases}
+$$
+</div>
+
+<div>
+$$
+x
+\begin{bmatrix}
+    8 \\\\
+    1
+\end{bmatrix}
++
+y
+\begin{bmatrix}
+    1 \\\\
+    1
+\end{bmatrix}
++
+z
+\begin{bmatrix}
+    1 \\\\
+    1
+\end{bmatrix}
+=
+\begin{bmatrix}
+    1 \\\\
+    1
+\end{bmatrix}
+$$
+</div>
+
+Here is the representation of the planes plotted with the help of this [website](https://technology.cpm.org/general/3dgraph/):
+
+<img src="../../assets/images/2.4/intersection-2-planes-line.png" alt="Plot showing two planes. The intersection of the two planes is a line" title="The intersection of the two planes is a line" width="500">
+<em>The intersection of the two planes is a line</em>
+
+We can see that in the best case the two planes are not parallel and there are solutions to the set of equations. It means that it exists some points that rely on both planes. But we can also see that there is inevitably an infinite number of points on the intersection (a line that we can see on the figure). We need a third plane to have a unique solution.
+
+### Requirement 2. Overdetermined system: the system must have **only** one solution for each value of $\bs{b}$: $m\geq n$
 
 
 <span class='pquote'>
@@ -917,59 +971,11 @@ plt.close()
 
 We would like to go to $b$ but the only path we can take is the blue/orange line. The second equation doesn't provide us with a new direction to take since it is just a linear combination of the first one.
 
-### Requirement 2. Underdetermined system: the system must have **only** one solution for each value of $\bs{b}$: $n=m$
+Thus, an overdetermined system of independant equations has at most 1 solution.
 
-<span class='pquote'>
-     An underdetermined system of equations is a system with less equations than unknowns
-</span>
+### Square matrix
 
-We saw that a requirement is that $n$ (the number of unknowns) must not be inferior to $m$ (the number of equations). But if we want our system to have one and only one solution a second requirement is that $n$ must not be bigger than $m$.
-
-Let's take the example of a ($2\times 3$) matrix that corresponds to a set of 2 equations with 3 unknowns variables:
-
-
-<div>
-$$
-\begin{cases}
-8x+y+z=1\\\\
-x+y+z=1
-\end{cases}
-$$
-</div>
-
-<div>
-$$
-x
-\begin{bmatrix}
-    8 \\\\
-    1
-\end{bmatrix}
-+
-y
-\begin{bmatrix}
-    1 \\\\
-    1
-\end{bmatrix}
-+
-z
-\begin{bmatrix}
-    1 \\\\
-    1
-\end{bmatrix}
-=
-\begin{bmatrix}
-    1 \\\\
-    1
-\end{bmatrix}
-$$
-</div>
-
-Here is the representation of the planes plotted with the help of this [website](https://technology.cpm.org/general/3dgraph/):
-
-<img src="../../assets/images/2.4/intersection-2-planes-line.png" alt="Plot showing two planes. The intersection of the two planes is a line" title="The intersection of the two planes is a line" width="500">
-<em>The intersection of the two planes is a line</em>
-
-We can see that in the best case the two planes are not parallel and there are solutions to the set of equations. It means that it exists some points that rely on both planes. But we can also see that there is inevitably an infinite number of points on the intersection (a line that we can see on the figure). We need a third plane to have a unique solution.
+How could we satisfy both requirements ($m\geq n$ and $n\geq m$): we must have $m=n$!
 
 The resulting of all of this is that the system needs a **square matrix** $\bs{A}$ ($m=n$) with linearly independant columns to have a unique solution for every values of $\bs{b}$.
 

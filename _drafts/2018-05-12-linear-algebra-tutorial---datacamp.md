@@ -1,16 +1,14 @@
-
 ---
 bg: "path.jpg"
 layout: post
 mathjax: true
-title: Deep Learning Book Series · 2.5 Norms
-crawlertitle: "Deep Learning Book Series · 2.5 Norms"
+title: Datacamp tutorial - Deep Learning Book Series
+crawlertitle: "Datacamp tutorial - Deep Learning Book Series"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.5%20Norms/2.5%20Norms.ipynb
-date: 2018-03-26 14:00:00
-excerpt: We will see an important concept for machine learning and deep learning. The norm is what is generally used to evaluate the error of a model. For instance it is used to calculate the error between the output of a neural network and what is expected (the actual label or value). You can think of the norm as the length of a vector. It is a function that maps a vector to a positive value. Different functions can be used and we will see few examples.
+date: 2018-05-12
+excerpt: Tutorial of linear algebra for deep learning and machine learning
 excerpt-image: <img src="../../assets/images/2.5/squared-l2-norm.png" width="500" alt="Representation of the squared L2 norm" title="The squared L2 norm">
   <em>The squared L2 norm</em>
 ---
@@ -29,22 +27,112 @@ excerpt-image: <img src="../../assets/images/2.5/squared-l2-norm.png" width="500
 
 # Introduction
 
-This tutorial will get you through some intermediates linear algebra concepts usefull in deep learning, machine learning and data science in general. The prerequisites are not high: just be sure that you know what is a matrix and how to do the dot product. You can get or refresh these notions on the first posts (1 to 4) of [my series]() on the deep learning book from Ian Goodfellow.
+This tutorial will get you through some intermediates linear algebra concepts usefull in deep learning, machine learning and data science in general. The prerequisites are not high: just be sure that you know what is a matrix and how to do the dot product. You can get or refresh these notions on the first posts (1 to 4) of [my series]() on the deep learning book by Ian Goodfellow. I think that having a practical tutorial on theoretical topic like linear algebra can be useful because writing and reading code is a good way to truly understand mathematical concepts.
 
-We will see an important concept for machine learning and deep learning. The norm is what is generally used to evaluate the error of a model. For instance it is used to calculate the error between the output of a neural network and what is expected (the actual label or value). You can think of the norm as the length of a vector. It is a function that maps a vector to a positive value. Different functions can be used and we will see few examples.
-
+...
 
 # 2.5 Norms
 
-Norms are any functions that are characterized by the following properties:
+# A practical example
 
-1- Norms are non-negative values. If you think of the norms as a length, you easily see why it can't be negative.
+This first chapter concerns an important concept for machine learning and deep learning. The norm is extensively used in the context of supervised learning, to evaluate the goodness of a model. Imagine that you built a model that predicts the duration of a song. You trained the model with a lot of different song with a lot of features (style, instruments, lyrics vs no lyrics etc.). Now you want to know if you model is good to predicts song duration. One way to do it is to look at the difference between true and predicted duration for each observation. Imagine that you have the following results in seconds:
 
-2- Norms are $0$ if and only if the vector is a zero vector
+```python
+errorModel1 = [22, -4, 2, 7, 6, -36, 12]
+```
 
-3- Norms respect the triangle inequity. See bellow.
+These differences can be tought of the error of the model. A perfect model would have only 0's while a very bad model would have huge values.
 
-4- $\norm{\bs{k}\cdot \bs{u}}=\norm{\bs{k}}\cdot\norm{\bs{u}}$. The norm of a vector multiplied by a scalar is equal to the absolute value of this scalar multiplied by the norm of the vector.
+Now imagine that you try another model and you end up with the following differences between predicted and real song durations:
+
+```python
+errorModel2 = [14, 9, -13, 19, 8, -21, 4]
+```
+
+What can you do if you want to find the best model? A natural way to do it is to take the sum of the absolute value of these errors. The absolute value is used because a negative error (true duration smaller than predicted duration) is also an error. The model with the smaller total error is the better:
+
+```python
+totalErrorModel1 = np.sum(errorModel1)
+totalErrorModel2 = np.sum(errorModel2)
+```
+
+It looks like the model 1 is far better than the model 2.
+
+Congratulation! What you have just done is calculate the norm of the vector of errors!
+
+You can think of the norm as the **length** of the vector. To have an idea of the graphical representation of this, let's take again our preceding example. The error vectors are multidimensional: there is one dimension per observation. In our simple case, there is 7 observations so there is 7 dimensions. It is quite hard to represent 7 dimensions so let's again simplify the example and keep only 2 observations:
+
+```python
+errorModel1 = [22, -4]
+errorModel2 = [14, 9]
+```
+
+Now we can represent these vector considering that the first element of the array is the x-coordinate and the second element is the y-coordinate.
+
+... plots
+
+So we have two vectors and the way to see which one is the smaller (and hence which model has the smaller error) is to take the sum of each coordinate. It is what we have done earlier. Actually we need to take the absolute value of each coordinate because we don't want to cancel out coordinates.
+
+# How to plot vectors with Python and Matplotlib
+
+We just used a custom function to plot vectors in Python. Let's see how it works:
+
+```python
+def plotVectors(vecs, cols, alpha=1):
+    """
+    Plot set of vectors.
+
+    Parameters
+    ----------
+    vecs : array-like
+        Coordinates of the vectors to plot. Each vectors is in an array. For
+        instance: [[1, 3], [2, 2]] can be used to plot 2 vectors.
+    cols : array-like
+        Colors of the vectors. For instance: ['red', 'blue'] will display the
+        first vector in red and the second in blue.
+    alpha : float
+        Opacity of vectors
+
+    Returns:
+
+    fig : instance of matplotlib.figure.Figure
+        The figure of the vectors
+    """
+    plt.axvline(x=0, color='#A9A9A9', zorder=0)
+    plt.axhline(y=0, color='#A9A9A9', zorder=0)
+
+    for i in range(len(vecs)):
+        if (isinstance(alpha, list)):
+            alpha_i = alpha[i]
+        else:
+            alpha_i = alpha
+        if (len(vecs[i])==2):
+            x = np.concatenate([[0,0],vecs[i]])
+        elif (len(vecs[i])==4):
+            x = vecs[i]
+        plt.quiver([x[0]],
+                   [x[1]],
+                   [x[2]],
+                   [x[3]],
+                   angles='xy', scale_units='xy', scale=1, color=cols[i],
+                  alpha=alpha_i)
+```
+
+It takes an array of vectors that we want to plot (`vecs`) and their colors as input (`cols`). If 2 dimensions are specified in the vector, it starts at (0, 0). Under the hood, we iterate on this array of vectors and use `plt.quiver()` to plot them.
+
+# Norm functions: definitions
+
+This is one way to calculate the length of the vector but the norm is actually any function that maps a vector to a positive value. Different functions can be used and we will see few examples.
+
+Norms are any functions that are characterized by the **following properties**:
+
+- Norms are non-negative values. If you think of the norms as a length, you easily see why it can't be negative.
+
+- Norms are $0$ if and only if the vector is a zero vector
+
+- Norms respect the triangle inequity. See bellow.
+
+- $\norm{\bs{k}\cdot \bs{u}}=\norm{\bs{k}}\cdot\norm{\bs{u}}$. The norm of a vector multiplied by a scalar is equal to the absolute value of this scalar multiplied by the norm of the vector.
 
 It is usually written with two horizontal bars: $\norm{\bs{x}}$
 
@@ -60,6 +148,8 @@ $$
 
 ### Example 1.
 
+To show what this means, we will take two vectors containing each two elements (usefull to be represented as x and y coordinates). Our vectors are:
+
 <div>
 $$
 \bs{u}=
@@ -68,6 +158,15 @@ $$
 \end{bmatrix}
 $$
 </div>
+
+```python
+u = np.array([1, 6])
+u
+```
+
+<pre class='output'>
+array([1, 6])
+</pre>
 
 and
 
@@ -80,32 +179,6 @@ $$
 $$
 </div>
 
-<div>
-$$
-\norm{\bs{u}+\bs{v}} = \sqrt{(1+4)^2+(6+2)^2} = \sqrt{89} \approx 9.43
-$$
-</div>
-
-<div>
-$$
-\norm{\bs{u}}+\norm{\bs{v}} = \sqrt{1^2+6^2}+\sqrt{4^2+2^2} = \sqrt{37}+\sqrt{20} \approx 10.55
-$$
-</div>
-
-Let's check these results:
-
-
-```python
-u = np.array([1, 6])
-u
-```
-
-<pre class='output'>
-array([1, 6])
-</pre>
-
-
-
 ```python
 v = np.array([4, 2])
 v
@@ -115,17 +188,29 @@ v
 array([4, 2])
 </pre>
 
+Let's compare:
 
+<div>
+$$
+\norm{\bs{u}+\bs{v}}
+$$
+</div>
 
-```python
-u+v
-```
+and:
 
-<pre class='output'>
-array([5, 8])
-</pre>
+<div>
+$$
+\norm{\bs{u}}+\norm{\bs{v}}
+$$
+</div>
 
+using the $L^2$ norm. With the `linalg` methods from `numpy`, the $L^2$ norm can be calculated with `np.linalg.norm()`.
 
+<div>
+$$
+\norm{\bs{u}+\bs{v}} = \sqrt{(1+4)^2+(6+2)^2} = \sqrt{89} \approx 9.43
+$$
+</div>
 
 ```python
 np.linalg.norm(u+v)
@@ -135,7 +220,13 @@ np.linalg.norm(u+v)
 9.4339811320566032
 </pre>
 
+and
 
+<div>
+$$
+\norm{\bs{u}}+\norm{\bs{v}} = \sqrt{1^2+6^2}+\sqrt{4^2+2^2} = \sqrt{37}+\sqrt{20} \approx 10.55
+$$
+</div>
 
 ```python
 np.linalg.norm(u)+np.linalg.norm(v)
@@ -146,22 +237,34 @@ np.linalg.norm(u)+np.linalg.norm(v)
 </pre>
 
 
+We can see that the triangle inequity is respected since:
+
+<div>
+$$
+\norm{\bs{u}+\bs{v}} \leq \norm{\bs{u}}+\norm{\bs{v}}
+$$
+</div>
+
+
+**Graphical explanation**
+
+You will see that the graphical representation of this theorem makes it quite trivial. We will plot the vectors $\bs{u}$, $\bs{v}$ and $\bs{u}+\bs{v}$. We will not use the custom function `plotVectors()`.
 
 ```python
-u = [0,0,1,6]
-v = [0,0,4,2]
-u_bis = [1,6,v[2],v[3]]
-w = [0,0,5,8]
-plt.quiver([u[0], u_bis[0], w[0]],
-           [u[1], u_bis[1], w[1]],
-           [u[2], u_bis[2], w[2]],
-           [u[3], u_bis[3], w[3]],
-           angles='xy', scale_units='xy', scale=1, color=sns.color_palette())
-# plt.rc('text', usetex=True)
+u = np.array([0,0,1,6])
+v = np.array([0,0,4,2])
+w = u+v
+
+u_bis = [u[2], u[3], v[2],v[3]]
+
+
+plotVectors([u, u_bis, w],
+            [sns.color_palette()[0],
+            sns.color_palette()[1],
+            sns.color_palette()[2]])
+
 plt.xlim(-2, 6)
 plt.ylim(-2, 9)
-plt.axvline(x=0, color='grey')
-plt.axhline(y=0, color='grey')
 
 plt.text(-1, 3.5, r'$||\vec{u}||$', color=sns.color_palette()[0], size=20)
 plt.text(2.5, 7.5, r'$||\vec{v}||$', color=sns.color_palette()[1], size=20)
@@ -169,27 +272,17 @@ plt.text(2, 2, r'$||\vec{u}+\vec{v}||$', color=sns.color_palette()[2], size=20)
 
 plt.show()
 plt.close()
-
 ```
 
 
 <img src="../../assets/images/2.5/triangle-inequity.png" width="300" alt="Vector illustration of the triangle inequity" title="Triangle inequity">
 <em>Vector illustration of the triangle inequity</em>
 
-<span class='pquote'>
-    Geometrically, this simply means that the shortest path between two points is a line
-</span>
+You can see with this plot that if the norm function corresponds to the length of the vector, the length of $\bs{u}$ plus the length of $+\bs{v}$ is larger than the length of the vector $\bs{u}+\bs{b}$. Geometrically, this simply means that the shortest path between two points is a line.
 
 # P-norms: general rules
 
-Here is the recipe to get the $p$-norm of a vector:
-
-1. Calculate the absolute value of each element
-2. Take the power $p$ of these absolute values
-3. Sum all these powered absolute values
-4. Take the power $\frac{1}{p}$ of this result
-
-This is more condensly expressed with the formula:
+Now that we have seen the conditions required by the function to be called norm. This means that there are multiple functions that can be used as norms. We will see later the pros and cons of these different norms. We call p-norm the following function that depends on $p$:
 
 <div>
 $$
@@ -197,11 +290,26 @@ $$
 $$
 </div>
 
+In pratical terms, here is the recipe to get the $p$-norm of a vector:
+
+1. Calculate the absolute value of each element
+2. Take the power $p$ of these absolute values
+3. Sum all these powered absolute values
+4. Take the power $\frac{1}{p}$ of this result
+
 This will be clear with examples using these widely used $p$-norms.
 
 # The $L^0$ norm
 
-All positive values will get you a $1$ if you calculate its power $0$ except $0$ that will get you another $0$. Therefore this norm corresponds to the number of non-zero elements in the vector. It is not really a norm because if you multiply the vector by $\alpha$, this number is the same (rule 4 above).
+If $p=0$, the formula becomes:
+
+<div>
+$$
+\norm{\bs{x}}_0=(\sum_i|\bs{x}_i|^0)^{1/0}
+$$
+</div>
+
+Let's see what it means. All positive values will get you a $1$ if you calculate its power $0$ except $0$ that will get you another $0$. Therefore this norm corresponds to the number of non-zero elements in the vector. It is not really a norm because if you multiply the vector by $\alpha$, this number is the same (rule 4 above).
 
 # The $L^1$ norm
 

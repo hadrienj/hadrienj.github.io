@@ -757,13 +757,17 @@ array([[ 0.]])
 </pre>
 
 
-Let's check that
+Let's check that:
 
-$
+$$
 \bs{A^\text{T}A}=\bs{AA^\text{T}}=\bs{I}
-$ and thus $
+$$
+
+and thus:
+
+$$
 \bs{A}^\text{T}=\bs{A}^{-1}
-$
+$$
 
 
 ```python

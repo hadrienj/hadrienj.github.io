@@ -418,13 +418,17 @@ We can see that the vector found with Numpy (in dark blue) is a scaled version o
 
 As we saw it with numpy, if $\bs{v}$ is an eigenvector of $\bs{A}$, then any rescaled vector $s\bs{v}$ is also an eigenvector of $\bs{A}$. The eigenvalue of the rescaled vector is the same.
 
-Let's try to rescale $
+Let's try to rescale
+
+$$
 \bs{v}=
 \begin{bmatrix}
     1\\\\
     -3
 \end{bmatrix}
-$ from our preceding example.
+$$
+
+from our preceding example.
 
 For instance,
 
@@ -481,17 +485,25 @@ $$
 $$
 </div>
 
-The first column $
+The first column
+
+$$
 \begin{bmatrix}
     1\\\\
     1
 \end{bmatrix}
-$ corresponds to $\lambda=6$ and the second $
+$$
+
+corresponds to $\lambda=6$ and the second
+
+$$
 \begin{bmatrix}
     1\\\\
     -3
 \end{bmatrix}
-$ to $\lambda=2$.
+$$
+
+to $\lambda=2$.
 
 The vector $\bs{\lambda}$ can be created from all eigenvalues:
 

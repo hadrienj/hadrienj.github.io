@@ -3,8 +3,7 @@ bg: "tools.jpg"
 layout: post
 mathjax: true
 title: Use reduce function in js
-date:
-summary: 
+date: 2017-12-05
 categories: posts
 tags: ['']
 author: hadrienj
