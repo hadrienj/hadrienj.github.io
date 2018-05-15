@@ -10,7 +10,7 @@ author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.5%20Norms/2.5%20Norms.ipynb
 date: 2018-03-26 14:00:00
 excerpt: We will see an important concept for machine learning and deep learning. The norm is what is generally used to evaluate the error of a model. For instance it is used to calculate the error between the output of a neural network and what is expected (the actual label or value). You can think of the norm as the length of a vector. It is a function that maps a vector to a positive value. Different functions can be used and we will see few examples.
-excerpt-image: <img src="../../assets/images/2.5/squared-l2-norm1.png" width="500" alt="Representation of the squared L2 norm" title="The squared L2 norm">
+excerpt-image: <img src="../../assets/images/2.5/squared-L2-norm1.png" width="500" alt="Representation of the squared L2 norm" title="The squared L2 norm">
   <em>The squared L2 norm</em>
 ---
 
@@ -483,7 +483,7 @@ $L^2$ norm:
 
 Squared $L^2$ norm:
 
-<img src="../../assets/images/2.5/squared-l2-norm1.png" width="500" alt="Representation of the squared L2 norm" title="The squared L2 norm">
+<img src="../../assets/images/2.5/squared-L2-norm1.png" width="500" alt="Representation of the squared L2 norm" title="The squared L2 norm">
 <em>The squared L2 norm</em>
 
 $L^1$ norm:
