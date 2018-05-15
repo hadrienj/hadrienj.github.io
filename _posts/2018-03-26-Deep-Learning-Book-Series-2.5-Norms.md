@@ -483,6 +483,7 @@ $L^2$ norm:
 
 Squared $L^2$ norm:
 
+
 <img src="../../assets/images/2.5/squared-L2-norm1.png" width="500" alt="Representation of the squared L2 norm" title="The squared L2 norm">
 <em>The squared L2 norm</em>
 
