@@ -1,23 +1,15 @@
 ---
 bg: "path.jpg"
-layout: post
+layout: page
 mathjax: true
-title: Datacamp tutorial - Deep Learning Book Series
-crawlertitle: "Datacamp tutorial - Deep Learning Book Series"
-categories: posts
-tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
-author: hadrienj
-date: 2018-05-12
-excerpt: Tutorial of linear algebra for deep learning and machine learning
-excerpt-image: <img src="../../assets/images/2.5/squared-l2-norm.png" width="500" alt="Representation of the squared L2 norm" title="The squared L2 norm">
-  <em>The squared L2 norm</em>
+title: datacampTutorial
 ---
 
 # Syllabus
 
-- Norm
-- Special matrices
-- Eigendecomposition
+- **Norm**
+- **Special matrices**
+- **Eigendecomposition**
 - Singular value decomposition
 - Pseudoinverse
 - Trace operator

@@ -50,9 +50,9 @@ $$
 $$
 </div>
 
-In this case the matrix is also square but there can be non square diagonal matrices.
-
 ### Example 2.
+
+In this case the matrix is also square but there can be non square diagonal matrices.
 
 <div>
 $$
@@ -79,9 +79,9 @@ $$
 $$
 </div>
 
-The diagonal matrix can be denoted $diag(\bs{v})$ where $\bs{v}$ is the vector containing the diagonal values.
-
 ### Example 3.
+
+The diagonal matrix can be denoted $diag(\bs{v})$ where $\bs{v}$ is the vector containing the diagonal values.
 
 <div>
 $$
@@ -124,10 +124,9 @@ array([[2, 0, 0, 0],
        [0, 0, 0, 1]])
 </pre>
 
+### Example 4.
 
 The mutliplication between a diagonal matrix and a vector is thus just a ponderation of each element of the vector by $v$:
-
-### Example 4.
 
 <div>
 $$
@@ -188,9 +187,9 @@ $$
 $$
 </div>
 
-Non square matrices have the same properties:
-
 ### Example 5.
+
+Non square matrices have the same properties:
 
 <div>
 $$
