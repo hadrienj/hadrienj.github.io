@@ -5,7 +5,6 @@ permalink: /tags/
 title: "Tags"
 crawlertitle: "All articles"
 summary: "All posts."
-active: Tags
 ---
 
 {% for tag in site.tags %}

@@ -21,6 +21,34 @@
    .grid-item {
     margin: 12px;
   }
+  .card-post {
+    height: 130px;
+    width: 130px;
+    margin: 0.5em 0.5em 0.5em 0;
+  }
+  .card-post > div > p > img, .card-post-text-description {
+    display: none;
+  }
+  .card-post-text-description {
+    display: none;
+  }
+  .card-post-text-title, .card-title {
+    font-size: 0.8em;
+    overflow-wrap: break-word;
+  }
+
+  .card-section {
+    display: inline-block;
+    padding: 0.5em;
+  }
+  .card-section-img {
+    width: 70%;
+    margin: auto;
+    display: flex;
+  }
+  .card-section-text-description {
+    text-align: justify;
+  }
 }
 
 @media screen and (min-width: $md-break-point) {
@@ -200,5 +228,12 @@
   }
   .grid-item {
     font-size: 12px;
+  }
+  .card-post {
+    padding: 0;
+  }
+
+  .card-section-text-description {
+    font-size: 0.8em;
   }
 }

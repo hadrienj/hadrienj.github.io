@@ -1,7 +1,7 @@
 ---
-bg: "mi2.JPG"
+bg: "deep-learning-book-goodfellow-cover.jpg"
 layout: page
-title: "deep-learning-book-series-home"
+title: "Linear Algebra Series"
 crawlertitle: "deep-learning-book-series-home"
 permalink: /deep-learning-book-series-home/
 summary: ""

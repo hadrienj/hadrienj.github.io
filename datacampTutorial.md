@@ -27,7 +27,7 @@ I think that having a practical tutorials on theoretical topics like linear alge
 
 # A practical example
 
-This first chapter concerns an important concept for machine learning and deep learning. The norm is extensively used in the context of supervised learning, to evaluate the goodness of a model. Imagine that you want to build a model that predicts the duration of a song. You trained the model with a lot of different songs containing a lot of features (style, instruments, lyrics vs no lyrics etc.). Now you want to know if you model is good to predict the duration of a new song. One way to do it is to look at the difference between true and predicted duration for each observation. Imagine that you have the following results in seconds:
+This first chapter concerns an important concept for machine learning and deep learning: the norm. The norm is extensively used in the context of supervised learning, to evaluate the goodness of a model. It will help you get what the norm represent. Imagine that you have a big data set of songs with a lot of metadata and that you want to build a model that predicts the duration of a song according to other features like the genre of music, the instrumentation etc. You think that you have a decent model that you have trained on a part of your database. But now you want to know if you model is good to predict the duration of a new song. One way to do so is to take some data not use for training your model and predict the song durations. Since you know the real duration of each song you can then look at the difference between real and predicted duration for each observation. Imagine that you have the following results in seconds:
 
 ```python
 errorModel1 = [22, -4, 2, 7, 6, -36, 12]

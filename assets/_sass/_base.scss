@@ -85,7 +85,6 @@ textarea {
 * ========================================================================== */
 pre {
   line-height: 1.5;
-  border: 1px solid #ddd;
   padding: 1em;
   background: #F9F8F6;
   margin: 2em 0;
@@ -250,8 +249,11 @@ article a.btn {
 * ========================================================================== */
 
 .output {
-  border-left: 10px solid #7f9f7fa8;
+  border-left: 10px solid #ffc802ed;
   margin: 0;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
+    0 1px 5px 0 rgba(0,0,0,.12),
+    0 3px 1px -2px rgba(0,0,0,.2);
 }
 .flexOutside {
   display: flex;
@@ -313,12 +315,11 @@ img + em {
 }
 .grid-container {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 33% 33% 33%;
+  text-decoration: none;
 }
 .grid-item {
   text-align: center;
-  margin: 10px;
-  background-color: #c1ccda1f;
   word-wrap: break-word;
 }
 
@@ -357,4 +358,66 @@ div > ul.share-buttons > li > a > img {
 .jupyterImg {
   width: 100%;
   display: block;
+}
+.highlight {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.2),
+    0 1px 5px 0 rgba(0,0,0,.12),
+    0 3px 1px -2px rgba(0,0,0,.14);
+}
+
+
+
+.card-post, .card-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 1em;
+  margin: 1em;
+  left: 0;
+  right: 0;
+  background-color: #f6f6f6;
+  border: solid white;
+  border-width: 13px;
+}
+.card-post {
+  height: 220px;
+  width: 220px;
+}
+
+.card-post:hoverm .card-section:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-post-img, .card-section-img {
+  flex: 0 0 45%;
+}
+
+.card-post-text, .card-section-text {
+  flex: 0 0 50%;
+}
+
+.card-post-text-title, .card-section-text-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+}
+.card-post-text-title > a, .card-post-text-description > a, .card-post > a,
+div.grid-container > a, .card-section-text-title > a, .card-section-text-description > a {
+  text-decoration: none;
+}
+.card-post > div > p > img {
+  height: 100px;
+  object-fit: contain;
+}
+.card-title {
+  font-weight: bold;
+  text-align: center;
+}
+.card-post-in {
+  width: 100%;
+}
+.intro {
+  font-weight: bold;
+  text-align: center;
 }
