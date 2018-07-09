@@ -1,5 +1,5 @@
 ---
-bg: "crystal2.jpg"
+bg: "leaves.jpg"
 layout: page
 title: "All posts"
 crawlertitle: "All posts"

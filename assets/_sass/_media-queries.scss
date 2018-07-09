@@ -44,10 +44,20 @@
   .card-section-img {
     width: 70%;
     margin: auto;
-    display: flex;
   }
   .card-section-text-description {
     text-align: justify;
+  }
+
+  .avatar {
+    margin: 0;
+  }
+  .avatar-img {
+    margin: 1em 1em 0 0;
+  }
+  .avatar-txt {
+    flex: 0 0 60%;
+    margin-left: 5%;
   }
 }
 
