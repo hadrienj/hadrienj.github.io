@@ -402,8 +402,12 @@ div > ul.share-buttons > li > a > img {
   font-size: 1.2em;
   text-align: center;
 }
-.card-post-text-title > a, .card-post-text-description > a, .card-post > a,
-div.grid-container > a, .card-section-text-title > a, .card-section-text-description > a {
+.card-post-text-title,
+.card-post-text-description,
+.card-post,
+.grid-container,
+.card-section-text-title,
+.card-section-text-description {
   text-decoration: none;
 }
 .card-post > div > p > img {
@@ -419,5 +423,26 @@ div.grid-container > a, .card-section-text-title > a, .card-section-text-descrip
 }
 .intro {
   font-weight: bold;
+  text-align: center;
+}
+.avatar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1em;
+  margin: 1em;
+}
+.avatar-img {
+  flex: 0 0 10%;
+  border-radius: 50%;
+  padding: 0;
+  margin: 1em 1em 0 5em;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.avatar-txt {
+  flex: 0 0 50%;
+  text-align: center;
+}
+.projects {
   text-align: center;
 }

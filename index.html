@@ -1,15 +1,15 @@
 ---
 bg: "leaves.jpg"
 layout: default
-title: "Code · Data Science"
+title: "Projects"
 mathjax: true
 ---
 
 <article class="index-page">
   <p class="intro">
-    Now featuring: <i>linear algebra for deep learning</i>:
+    {% include avatar.html %}
   </p>
-  <a href="/deep-learning-book-series-home">
+  <a class='noDeco' href="/deep-learning-book-series-home">
     <div class='card-section'>
       <div class="card-section-img">
         <img src="../../assets/images/2.12/gradient-descent.png" width="400" alt="Mechanism of the gradient descent algorithm" title="Mechanism of the gradient descent algorithm">
@@ -24,4 +24,42 @@ mathjax: true
       </div>
     </div>
   </a>
+
+  <a class='noDeco' href="https://fm-am.auditory.fr/">
+    <div class='card-section'>
+      <div class="card-section-img">
+        <img src="../../assets/images/AM-FM/demo.png" width="400" alt="Screenshot
+        of amplitude and frequency modulation demo" title="Amplitude and frequency
+        modulations">
+      </div>
+      <div class="card-section-text">
+        <div class="card-section-text-title">
+          Amplitude and Frequency modulations
+        </div>
+        <div class='card-section-text-description'>
+          Interactive demo illustrating the concept of amplitude and frequency
+          modulation.
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a class='noDeco' href="https://tonecloud.auditory.fr/">
+    <div class='card-section'>
+      <div class="card-section-img">
+        <img src="../../assets/images/tonecloud/demo.jpg" width="400" alt="Screenshot
+        of tone cloud demo" title="Tone cloud with React, D3 and WebAudio">
+      </div>
+      <div class="card-section-text">
+        <div class="card-section-text-title">
+          Tone clouds
+        </div>
+        <div class='card-section-text-description'>
+          Audiovisual represention of tone clouds. Tone clouds are sets of pure
+          tones with random spectrotemporal characteristics.
+        </div>
+      </div>
+    </div>
+  </a>
+
 </article>
