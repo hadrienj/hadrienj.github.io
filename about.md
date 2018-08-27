@@ -1,5 +1,5 @@
 ---
-bg: "mi.jpg"
+bg: "about.jpg"
 layout: page
 title: "About"
 crawlertitle: "About"
@@ -20,6 +20,8 @@ Passionate about data analysis and very keen to learn new things, I use <span cl
 
 #### Contact
 
-Drop me an email: 
+Drop me an email: code.datascience@gmail.com
 
-code.datascience@gmail.com
+[Linkedin](https://www.linkedin.com/in/hadrienj/)
+
+[Twiter](https://twitter.com/_hadrienj)

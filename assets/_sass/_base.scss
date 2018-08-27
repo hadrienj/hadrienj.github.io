@@ -432,8 +432,7 @@ div > ul.share-buttons > li > a > img {
   padding: 1em;
   margin: 1em;
 }
-.avatar-img {
-  flex: 0 0 10%;
+.avatar-img, .cv-avatar  {
   border-radius: 50%;
   padding: 0;
   margin: 1em 1em 0 0;
@@ -446,3 +445,57 @@ div > ul.share-buttons > li > a > img {
 .projects {
   text-align: center;
 }
+
+
+.cv-content-wrapper {
+  margin: 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cv-content {
+  flex: 1 1 300px;
+  margin-right: 50px;
+}
+.cv-content-side {
+  flex: 0 0 200px;
+  color: #bdbdbd;
+}
+
+.cv-header {
+  height: 50vh;
+  border-bottom: solid #b5e299;
+  margin: 0 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cv-header-main {
+  margin-right: 5%;
+}
+.cv-header-title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.cv-header-profile {
+  margin-right: 40%;
+  font-style: italic;
+}
+.cv-avatar, .cv-name, .cv-contact {
+  flex: 0 0 auto;
+}
+.cv-name h1 {
+  margin-bottom: 0;
+}
+.cv-contact p {
+  margin: 5px 0;
+}
+
+@media print {
+  .cv-header {
+    height: 200px;
+    font-size: 12pt;
+  }
+}
+

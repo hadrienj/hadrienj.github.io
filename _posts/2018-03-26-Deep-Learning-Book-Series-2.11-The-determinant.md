@@ -1,5 +1,5 @@
 ---
-bg: "craterLake_orig.jpg"
+bg: "fl.jpg"
 layout: post
 mathjax: true
 title: Deep Learning Book Series · 2.11 The determinant

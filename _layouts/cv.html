@@ -1,0 +1,68 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+  {% include head.html %}
+
+  <body>
+    <div id="shadow"></div>
+
+    <header class="cv-header">
+
+      <div class="cv-header-main">
+        <div class="cv-header-title">
+          <img class='cv-avatar' src="../../assets/images/avatar2.jpg" width="100"
+            alt="avatar" title="hadrienj">
+
+          <div class="cv-name">
+            <h1>
+              {{ page.fullname }}
+            </h1>
+
+            {{ page.position }}
+
+          </div>
+        </div>
+
+        <div class="cv-header-description">
+          <div class="cv-profile">
+            {% contentblock profile %}
+          </div>
+        </div>
+      </div>
+
+
+      <div class="cv-contact">
+        <p>{{ page.email }}</p>
+        <p>{{ page.web }}</p>
+        <p>{{ page.github }}</p>
+        <p>{{ page.linkedin }}</p>
+      </div>
+
+
+    </header>
+
+      {% unless page.exclude %}
+        {% include aside.html %}
+      {% endunless %}
+
+    <main class="cv-content-wrapper">
+      <div class="cv-content">
+        {% contentblock projects %}
+        {% contentblock volunteer %}
+        {% contentblock publications %}
+        {% contentblock education %}
+        {% contentblock grants %}
+      </div>
+      <div class="cv-content-side">
+        {% contentblock skills %}
+      </div>
+    </main>
+
+
+
+  </body>
+</html>
