@@ -838,9 +838,7 @@ def whiten(X):
 
 ```python
 CWhitened = whiten(CCentered)
-# whitened_B_cov = whitened_B.T.dot(whitened_B)/whitened_B.shape[0]
 
-# CDecorrelated = decorrelate(CCentered)
 plotDataAndCov(CWhitened)
 plt.xlim(-5,5)
 plt.ylim(-5,5)
@@ -1309,7 +1307,7 @@ You can fork the Jupyter notebook on Github [here](https://github.com/hadrienj/P
 [L. Wan, M. Zeiler, S. Zhang, Y. L. Cun, and R. Fergus, “Regularization of Neural Networks using DropConnect,” in International Conference on Machine Learning, 2013, pp. 1058–1066.
 ](http://proceedings.mlr.press/v28/wan13.html)
 
-And also these great ressources and QA:
+And also these great resources and QA:
 
 [Wikipedia - Whitening transformation](https://en.wikipedia.org/wiki/Whitening_transformation)
 
