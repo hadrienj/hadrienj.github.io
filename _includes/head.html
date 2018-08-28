@@ -65,7 +65,9 @@
 
 <link rel="shortcut icon" type="image/png" href="{{ "/favicon.png" | prepend: site.baseurl }}" >
 
-  {% if page.bg %}
+  {% if page.twitterImg %}
+    <meta name="twitter:image" content="{{ site.baseurl | prepend: site.url }}{{ site.images }}/{{ page.twitterImg }}">
+  {% elsif page.bg %}
     <meta property="og:image" content="{{ site.baseurl | prepend: site.url }}{{ site.images }}/{{ page.bg }}">
     <meta name="twitter:image" content="{{ site.baseurl | prepend: site.url }}{{ site.images }}/{{ page.bg }}">
   {% else %}
