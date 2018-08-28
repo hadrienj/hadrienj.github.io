@@ -67,6 +67,7 @@
 
   {% if page.twitterImg %}
     <meta name="twitter:image" content="{{ site.baseurl | prepend: site.url }}{{ site.images }}/{{ page.twitterImg }}">
+    <meta property="og:image" content="{{ site.baseurl | prepend: site.url }}{{ site.images }}/{{ page.twitterImg }}">
   {% elsif page.bg %}
     <meta property="og:image" content="{{ site.baseurl | prepend: site.url }}{{ site.images }}/{{ page.bg }}">
     <meta name="twitter:image" content="{{ site.baseurl | prepend: site.url }}{{ site.images }}/{{ page.bg }}">
