@@ -18,8 +18,6 @@ excerpt-image: <img src="../../assets/images/2.7/unit-circle-eigenvectors.png" w
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}
-
 # Introduction
 
 We will see some major concepts of linear algebra in this chapter. We will start with getting some ideas on eigenvectors and eigenvalues. We will develop on the idea that a matrix can be seen as a linear transformation and that applying a matrix on its eigenvectors gives new vectors with the same direction. Then we will see how to express quadratic equations into the matrix form. We will see that the eigendecomposition of the matrix corresponding to a quadratic equation can be used to find the minimum and maximum of this function. As a bonus, we will also see how to visualize linear transformations in Python!
@@ -1631,3 +1629,6 @@ In this case, the eigenvectors are not orthogonal!
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
 </span>
+
+
+{% include deep-learning-book-toc.html %}

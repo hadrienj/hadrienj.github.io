@@ -18,8 +18,6 @@ excerpt-image: <img src="../../assets/images/2.11/positive-negative-determinant.
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}
-
 # Introduction
 
 In this chapter, we will see what is the meaning of the determinant of a matrix. This special number can tell us a lot of things about our matrix!
@@ -237,3 +235,6 @@ We have seen that the determinant of a matrix is a special value telling us a lo
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
 </span>
+
+
+{% include deep-learning-book-toc.html %}

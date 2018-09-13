@@ -18,8 +18,6 @@ excerpt-image: <img src="../../assets/images/2.12/gradient-descent.png" width="4
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/) but here are the links to the other articles:
 </span>
 
-{% include deep-learning-book-toc.html %}
-
 # Introduction
 
 This is the last chapter of this series on linear algebra! It is about Principal Components Analysis (PCA). We will use some knowledge that we acquired along the preceding chapters to understand this important data analysis tool! Feel free to check out the preceding chapters!
@@ -785,3 +783,5 @@ And... This is the end! We have gone through a lot of things during this series 
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
 </span>
+
+{% include deep-learning-book-toc.html %}

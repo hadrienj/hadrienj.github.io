@@ -18,8 +18,6 @@ excerpt-image: <img src="../../assets/images/2.2/dot-product.png" width="400" al
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}
-
 # Introduction
 
 We will see some very important concepts in this chapter. The dot product is used in every equation explaining data science algorithms so it's worth the effort to understand it. Then we will see some properties of this operation. Finally, we will get some intuition on the link between matrices and systems of linear equations.
@@ -973,3 +971,5 @@ We will see at the end of the [the next chapter](https://hadrienj.github.io/post
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
 </span>
+
+{% include deep-learning-book-toc.html %}
