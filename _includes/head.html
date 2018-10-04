@@ -45,7 +45,15 @@
     {% endif %}
   </title>
 
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="
+  {% if page.metaDescription %}
+    {{ page.metaDescription | strip_html | strip_newlines | truncate: 160 }}
+  {% elsif page.excerpt %}
+    {{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}
+  {% else %}
+    {{ site.description }}
+  {% endif %}
+  ">
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 

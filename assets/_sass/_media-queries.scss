@@ -59,6 +59,12 @@
     flex: 0 0 60%;
     margin-left: 5%;
   }
+  .skills-col {
+    flex: 0 0 50%;
+  }
+  .about-h2 {
+    margin-top: 3em;
+  }
 }
 
 @media screen and (min-width: $md-break-point) {
@@ -146,6 +152,13 @@
       border: 1px solid #ddd;
     }
   }
+
+  .skills-col {
+    flex: 0 0 20%;
+  }
+  .about-h2 {
+    margin-top: 3em;
+  }
 }
 
 
@@ -157,6 +170,11 @@
 }
 
 
+
+
+
+
+/***** Bigger screen *****/
 
 @media screen and (min-width: $break-point) {
   table {
@@ -226,6 +244,14 @@
     margin: 50px auto;
     padding: 2em;
   }
+
+  .skills-col {
+    flex: 0 0 25%;
+  }
+
+  .about-h2 {
+    margin-top: 3em;
+  }
 }
 
 @media screen and (max-width: $sm-break-point) {
@@ -245,5 +271,12 @@
 
   .card-section-text-description {
     font-size: 0.8em;
+  }
+
+  .skills-col {
+    flex: 0 0 100%;
+  }
+  .about-h2 {
+    margin-top: 3em;
   }
 }
