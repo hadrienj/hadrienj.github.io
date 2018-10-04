@@ -12,7 +12,7 @@ active: about
     I'm currently doing a PhD (end Dec. 2018) in Cognitive Sciences at the <img class="inline-icon" src="../../assets/images/icons/ens_crop.png" width="30" alt="ens icon" title="ENS"> &Eacute;cole Normale Supérieure (ENS) in Paris, France. I'm studying auditory perceptual learning (pitch perception and auditory selective attention) using psychophysics and electrophysiology (EEG).
 </div>
 
-<h2 class='about-h2'>Web Development . Full-Stack</h2>
+<h2 class='about-h2'>Web Development - Full-Stack</h2>
 
 During my PhD I learned web developement (<img class="inline-icon" src="../../assets/images/icons/django_crop.png" width="30" alt="django icon" title="Django"><span class='salient'>Django</span>/<img class="inline-icon" src="../../assets/images/icons/js.png" width="25" alt="javascript icon" title="Javascript"><span class='salient'>Javascript</span>) and I built portable auditory experiments running on computers and tablets. I especially love the new features of Javascript (<span class='salient'>ES6-ES7</span>) and the fast evolution of the language.
 
@@ -142,7 +142,7 @@ I also love the idea to bind data science and web developement and I created the
 
 <div class='connect'>
     <div>
-        <img src="../../assets/images/flat_web_icon_set/color/email.png" width="30" alt="email icon" title="Email">
+        <img src="../../assets/images/flat_web_icon_set/color/Email.png" width="30" alt="email icon" title="Email">
     </div>
     <a href="mailto:code.datascience@gmail.com">
         <div class='connect-text'>
@@ -164,7 +164,7 @@ I also love the idea to bind data science and web developement and I created the
 
 <div class='connect'>
     <div>
-        <img src="../../assets/images/flat_web_icon_set/color/twitter.png" width="30" alt="twitter icon" title="Twitter">
+        <img src="../../assets/images/flat_web_icon_set/color/Twitter.png" width="30" alt="twitter icon" title="Twitter">
     </div>
     <a href="https://twitter.com/_hadrienj">
         <div class='connect-text'>
