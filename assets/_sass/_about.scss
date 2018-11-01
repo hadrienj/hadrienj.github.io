@@ -9,6 +9,8 @@
   color: #929292;
 }
 
+
+
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -31,10 +33,20 @@
   font-weight: bold;
 }
 
+
+
+
 .connect {
   display: flex;
   align-items: center;
-  margin: -1em 0;
+}
+.connect-img {
+  display: flex;
+  align-items: center;
+  padding: 0.3em;
+}
+.connect img {
+  margin: 0;
 }
 .connect-text  {
   flex: 0 0 40%;
@@ -45,12 +57,12 @@
   margin: 0;
   padding: 0 0.2em;
 }
-a {
-  text-decoration: none;
-}
+
 .connect a:hover {
   color: #766257;
 }
+
+
 
 
 

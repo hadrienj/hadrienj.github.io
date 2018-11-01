@@ -21,8 +21,9 @@ layout: compress
             <h1>
               {{ page.fullname }}
             </h1>
-
-            {{ page.position }}
+            <div class="cv-header-position">
+              {{ page.position }}
+            </div>
 
           </div>
         </div>
@@ -36,10 +37,72 @@ layout: compress
 
 
       <div class="cv-contact">
-        <p>{{ page.email }}</p>
-        <p>{{ page.web }}</p>
-        <p>{{ page.github }}</p>
-        <p>{{ page.linkedin }}</p>
+        <div class='connect'>
+          <div class='connect-img'>
+              <img src="../../assets/images/flat_web_icon_set/color/Email.png" width="20" alt="email icon" title="Email">
+          </div>
+          <a href="mailto:code.datascience@gmail.com">
+              <div class='connect-text'>
+                  {{ page.email }}
+              </div>
+          </a>
+        </div>
+
+        <div class="cv-contact">
+        <div class='connect'>
+          <div class='connect-img'>
+              <img src="../../assets/images/icons/jekyll.png" width="20" alt="jekyll icon" title="Jekyll blog">
+          </div>
+          <a href="https://hadrienj.github.io/">
+              <div class='connect-text'>
+                  https://hadrienj.github.io/
+              </div>
+          </a>
+        </div>
+
+        <div class='connect'>
+            <div class='connect-img'>
+                <img src="../../assets/images/github-black.png" width="20" alt="github icon" title="Github">
+            </div>
+            <a href="https://www.github.com/{{ page.github }}">
+                <div class='connect-text'>
+                    https://www.github.com/{{ page.github }}
+                </div>
+            </a>
+        </div>
+
+        <div class='connect'>
+            <div class='connect-img'>
+                <img src="../../assets/images/flat_web_icon_set/color/LinkedIn.png" width="20" alt="linkedin icon" title="Linkedin">
+            </div>
+            <a href="https://www.linkedin.com/in/{{ page.linkedin }}">
+                <div class='connect-text'>
+                    https://www.linkedin.com/in/{{ page.linkedin }}
+                </div>
+            </a>
+        </div>
+
+        <div class='connect'>
+            <div class='connect-img'>
+                <img src="../../assets/images/flat_web_icon_set/color/Twitter.png" width="20" alt="twitter icon" title="Twitter">
+            </div>
+            <a href="https://twitter.com/{{ page.twitter }}">
+                <div class='connect-text'>
+                    https://twitter.com/{{ page.twitter }}
+                </div>
+            </a>
+        </div>
+
+        <div class='connect'>
+            <div class='connect-img'>
+                <img src="../../assets/images/mountain.png" width="20" alt="Auditory icon" title="Auditory">
+            </div>
+            <a href="https://auditory.fr/">
+                <div class='connect-text'>
+                    https://auditory.fr/
+                </div>
+            </a>
+        </div>
       </div>
 
 
@@ -51,15 +114,23 @@ layout: compress
 
     <main class="cv-content-wrapper">
       <div class="cv-content">
+        {% contentblock experience %}
         {% contentblock projects %}
-        {% contentblock volunteer %}
-        {% contentblock publications %}
+        {% contentblock skills %}
         {% contentblock education %}
+        <div class="flex">
+          <div class="flex-in">
+            {% contentblock volunteer %}
+          </div>
+          <div>
+            {% contentblock publications %}
+          </div>
+        </div>
         {% contentblock grants %}
       </div>
-      <div class="cv-content-side">
+<!--       <div class="cv-content-side">
         {% contentblock skills %}
-      </div>
+      </div> -->
     </main>
 
 

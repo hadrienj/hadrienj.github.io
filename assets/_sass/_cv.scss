@@ -1,0 +1,144 @@
+.cv-avatar  {
+  border-radius: 50%;
+  padding: 0;
+  margin: 1em 1em 0 0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.cv-content-wrapper {
+  margin: 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cv-content {
+  flex: 1 1 300px;
+  margin-right: 50px;
+}
+.cv-content-side {
+  flex: 0 0 200px;
+  color: #bdbdbd;
+}
+
+
+
+/**** Header ****/
+.cv-header {
+  height: 50vh;
+  border-bottom: solid #b5e299;
+  margin: 0 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cv-header-main {
+  margin-right: 5%;
+}
+.cv-header-title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.cv-header-profile {
+  margin-right: 40%;
+  font-style: italic;
+}
+.cv-avatar, .cv-name, .cv-contact {
+  flex: 0 0 auto;
+}
+.cv-name h1 {
+  margin-bottom: 0;
+}
+.cv-contact p {
+  margin: 5px 0;
+}
+.cv-header-position {
+  color: #5E5E5E;
+}
+
+
+
+/**** Experience ****/
+.cv-exp {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+}
+.cv-exp:first-of-type {
+  margin-top: 0;
+}
+.cv-exp-text {
+  align-items: center;
+  flex: 0 0 36%;
+}
+.cv-exp-title {
+  margin: 0 0 0 10px;
+  font-weight: 600;
+  font-size: 12pt;
+}
+.cv-exp-subtitle p {
+  margin: 0 0 0 0;
+}
+.cv-exp-subtitle {
+  margin: 0 0 0 10px;
+  color: #5E5E5E;
+}
+.cv-exp-description {
+   margin: 0 0 0 30px;
+}
+
+
+
+.flex {
+  display: flex;
+}
+.flex-in {
+  margin-right: 2em;
+}
+.flex p {
+  margin: 0;
+}
+b {
+  font-weight: 600;
+}
+
+/**** For pdf version ****/
+@media print {
+  .cv-header {
+    height: auto;
+    margin: 2% 4% 0 4%;
+    padding: 0 0 1em 0;
+  }
+  body {
+    font-family: Avenir Next!important;
+    font-size: 10pt;
+  }
+  h1, h2, h3 {
+    font-family: Avenir Next!important;
+  }
+  h2 {
+    margin-bottom: 0.5em;
+  }
+  img.cv-avatar {
+    display: none;
+  }
+  .cv-content {
+    margin: 0;
+  }
+  .cv-content-wrapper {
+    padding: 0;
+    margin: 0 4% 2% 4%;
+  }
+  .skills-cat {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+  .card-section {
+    margin-top: 0;
+    padding: 0.5em;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
