@@ -367,6 +367,19 @@ div > ul.share-buttons > li > a > img {
 
 
 
+.card-example {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 0 1em;
+  margin: 1em;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border: solid #fffaf7cc;
+  border-width: 10px;
+}
+
+
+
 .card-post, .card-section {
   display: flex;
   justify-content: space-between;

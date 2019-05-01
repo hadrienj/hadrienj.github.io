@@ -6,7 +6,7 @@ mathjax: true
 title: "Preprocessing for deep learning: from covariance matrix to image whitening"
 crawlertitle: "Pre-processing for deep learning: from covariance matrix to image whitening"
 categories: posts
-tags: ['linear-algebra', 'python', 'numpy', 'deep-learning']
+tags: ['computer-vision', 'python', 'numpy', 'deep-learning']
 author: hadrienj
 jupyter: https://github.com/hadrienj/Preprocessing-for-deep-learning
 twitterImg: Preprocessing-for-deep-learning/rotation_small
