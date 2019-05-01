@@ -9,7 +9,7 @@ active: about
 ---
 
 <div class="intro">
-    I'm currently doing a PhD (end Dec. 2018) in Cognitive Sciences at the <img class="inline-icon" src="../../assets/images/icons/ens_crop.png" width="30" alt="ens icon" title="ENS"> &Eacute;cole Normale Supérieure (ENS) in Paris, France. I'm studying auditory perceptual learning (pitch perception and auditory selective attention) using psychophysics and electrophysiology (EEG).
+    I'm currently working as a Machine Learning Scientist at <a href="https://www.ava.me/">Ava Accessibility</a>. I finished my PhD in Dec. 2018 in Cognitive Sciences at the <img class="inline-icon" src="../../assets/images/icons/ens_crop.png" width="30" alt="ens icon" title="ENS"> &Eacute;cole Normale Supérieure (ENS) in Paris, France on auditory perceptual learning (pitch perception and auditory selective attention) using psychophysics and electrophysiology (EEG).
 </div>
 
 <h2 class='about-h2'>Web Development - Full-Stack</h2>
