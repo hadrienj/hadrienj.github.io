@@ -62,13 +62,6 @@ a {
 
 
 
-@media screen and (min-width: $md-break-point){
-  .toggle-button {
-    display: none;
-  }
-}
-
-
 /*
 * Header
 * ========================================================================== */
@@ -130,9 +123,6 @@ a {
     line-height: 50px;
     font-size: 18px;
     text-decoration: none;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
     border-bottom: 0;
     text-align: center;
     font-weight: bold;

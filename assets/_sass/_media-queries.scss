@@ -3,177 +3,6 @@
 * ========================================================================== */
 
 
-@media screen and (min-width: $sm-break-point) and (max-width: $md-break-point) {
-  .MathJax {
-    font-size: 60% !important;
-  }
-  .pquote {
-    width: 80%;
-    font-size: 1em;
-  }
-  body {
-    text-align: left;
-  }
-  .grid-container {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-  }
-   .grid-item {
-    margin: 12px;
-  }
-  .card-post {
-    height: 130px;
-    width: 130px;
-    margin: 0.5em 0.5em 0.5em 0;
-  }
-  .card-post > div > p > img, .card-post-text-description {
-    display: none;
-  }
-  .card-post-text-description {
-    display: none;
-  }
-  .card-post-text-title, .card-title {
-    font-size: 0.8em;
-    overflow-wrap: break-word;
-  }
-
-  .card-section {
-    display: inline-block;
-    padding: 0.5em;
-  }
-  .card-section-img {
-    width: 70%;
-    margin: auto;
-  }
-  .card-section-text-description {
-    text-align: justify;
-  }
-
-  .avatar {
-    margin: 0;
-  }
-  .avatar-img {
-    margin: 1em 1em 0 0;
-  }
-  .avatar-txt {
-    flex: 0 0 60%;
-    margin-left: 5%;
-  }
-  .skills-col {
-    flex: 0 0 50%;
-  }
-  .about-h2 {
-    margin-top: 3em;
-  }
-}
-
-@media screen and (min-width: $md-break-point) {
-  body { font-size: 17px; }
-  h1 { font-size: 2em; }
-  h2 { font-size: 1.8em; }
-  h3 { font-size: 1.6em; }
-  h4 { font-size: 1.3em; }
-  h5 { font-size: 1em; }
-  h6 { font-size: .8em; }
-
-  main { padding-top: 0; }
-
-  #menu-checkbox:checked + .nav-main {
-    -webkit-flex-flow: row nowrap;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    height: 40px;
-  }
-
-  .nav-main {
-    text-align: center;
-  }
-
-  .nav-main .blog-logo {
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    width: auto;
-  }
-
-  .nav-main a:not(.blog-logo) {
-    display: block;
-  }
-
-  .sidebar { display: block; }
-
-  .alingleft, .alignright, .aligncenter {
-    display: inline-block;
-  }
-
-  .alignleft {
-    float: left;
-    margin: .5em 1em .25em 0;
-  }
-
-  .alignright {
-    float: right;
-    margin: .5em 1em .25em 0;
-  }
-
-  .aligncenter { margin: 1em auto; }
-
-  .elements-wrapper {
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-
-    .element-container {
-      width: 33%;
-    }
-
-  }
-
-  .date { display: block;}
-
-  .work {
-    display: flex;
-    flex-flow: row wrap;
-    &-item {
-      width: 50%;
-      min-height: 300px;
-
-      &:nth-child(odd) {
-        border-right: 1px solid #ddd;
-      }
-
-      &:first-child { border-top-width: 0; }
-      &:nth-child(2) { border-top-width: 0; }
-    }
-
-    &-item-small {
-      width: 33%;
-      min-height: 200px;
-      border: 1px solid #ddd;
-    }
-  }
-
-  .skills-col {
-    flex: 0 0 20%;
-  }
-  .about-h2 {
-    margin-top: 3em;
-  }
-}
-
-
-
-@media screen and (max-width: $break-point) {
-  .nav-main a {
-    font-size: 14px;
-  }
-}
-
-
-
-
-
-
 /***** Bigger screen *****/
 
 @media screen and (min-width: $break-point) {
@@ -254,6 +83,195 @@
   }
 }
 
+
+
+
+@media screen and (min-width: $md-break-point) {
+  body { font-size: 17px; }
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.8em; }
+  h3 { font-size: 1.6em; }
+  h4 { font-size: 1.3em; }
+  h5 { font-size: 1em; }
+  h6 { font-size: .8em; }
+
+  main { padding-top: 0; }
+
+  #menu-checkbox:checked + .nav-main {
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    height: 40px;
+  }
+
+  .nav-main {
+    text-align: center;
+  }
+
+  .nav-main .blog-logo {
+    width: auto;
+  }
+
+  .nav-main a:not(.blog-logo) {
+    display: block;
+  }
+
+  .sidebar { display: block; }
+
+  .alingleft, .alignright, .aligncenter {
+    display: inline-block;
+  }
+
+  .alignleft {
+    float: left;
+    margin: .5em 1em .25em 0;
+  }
+
+  .alignright {
+    float: right;
+    margin: .5em 1em .25em 0;
+  }
+
+  .aligncenter { margin: 1em auto; }
+
+  .elements-wrapper {
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+    .element-container {
+      width: 33%;
+    }
+
+  }
+
+  .date { display: block;}
+
+  .work {
+    display: flex;
+    flex-flow: row wrap;
+    &-item {
+      width: 50%;
+      min-height: 300px;
+
+      &:nth-child(odd) {
+        border-right: 1px solid #ddd;
+      }
+
+      &:first-child { border-top-width: 0; }
+      &:nth-child(2) { border-top-width: 0; }
+    }
+
+    &-item-small {
+      width: 33%;
+      min-height: 200px;
+      border: 1px solid #ddd;
+    }
+  }
+
+  .skills-col {
+    flex: 0 0 20%;
+  }
+  .about-h2 {
+    margin-top: 3em;
+  }
+
+  .toggle-button {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: $sm-break-point) and (max-width: $md-break-point) {
+  .MathJax {
+    font-size: 60% !important;
+  }
+  .pquote {
+    width: 80%;
+    font-size: 1em;
+  }
+  body {
+    text-align: left;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
+   .grid-item {
+    margin: 12px;
+  }
+  .card-post {
+    height: 130px;
+    width: 130px;
+    margin: 0.5em 0.5em 0.5em 0;
+  }
+  .card-post > div > p > img, .card-post-text-description {
+    display: none;
+  }
+  .card-post-text-description {
+    display: none;
+  }
+  .card-post-text-title, .card-title {
+    font-size: 0.8em;
+    overflow-wrap: break-word;
+  }
+
+  .card-section {
+    display: inline-block;
+    padding: 0.5em;
+  }
+  .card-section-img {
+    width: 70%;
+    margin: auto;
+  }
+  .card-section-text-description {
+    text-align: justify;
+  }
+
+  .avatar {
+    margin: 0;
+  }
+  .avatar-img {
+    margin: 1em 1em 0 0;
+  }
+  .avatar-txt {
+    flex: 0 0 60%;
+    margin-left: 5%;
+  }
+  .skills-col {
+    flex: 0 0 50%;
+  }
+  .about-h2 {
+    margin-top: 3em;
+  }
+
+  .nav-main .blog-logo {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    width: auto;
+  }
+  
+}
+
+
+
+
+
+@media screen and (max-width: $break-point) {
+  .nav-main a {
+    font-size: 14px;
+  }
+}
+
+
+
+
 @media screen and (max-width: $sm-break-point) {
   .MathJax {
     font-size: 40% !important;
@@ -288,5 +306,12 @@
 
   .jupyterLink {
     width: 50%;
+  }
+
+  .nav-main .blog-logo {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    width: auto;
   }
 }
