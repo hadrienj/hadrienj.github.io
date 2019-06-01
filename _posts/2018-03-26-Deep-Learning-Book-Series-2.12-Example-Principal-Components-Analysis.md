@@ -184,12 +184,13 @@ $$
 The commutative property (see [2.2](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.2-Multiplying-Matrices-and-Vectors/)) tells us that $
 \bs{x^\text{T}y} = \bs{y^\text{T}x}
 $. We can use that in the previous equation: we have $
-\bs{x}^\text{T}g(\bs{c}) = g(\bs{c})^\text{T}\bs{x}
+g(\bs{c})^\text{T}\bs{x} = \bs{x}^\text{T}g(\bs{c})
 $. So the equation becomes:
 
 <div>
 $$
-\bs{x^\text{T}x} -2\bs{x}^\text{T}g(\bs{c}) + g(\bs{c})^\text{T}g(\bs{c})
+\bs{x^\text{T}x} -\bs{x}^\text{T}g(\bs{c}) -\bs{x}^\text{T}g(\bs{c}) + g(\bs{c})^\text{T}g(\bs{c})\\\\
+= \bs{x^\text{T}x} -2\bs{x}^\text{T}g(\bs{c}) + g(\bs{c})^\text{T}g(\bs{c})
 $$
 </div>
 
@@ -268,7 +269,7 @@ The second term is $\bs{c}^\text{T}\bs{c}$. We can develop the vector $\bs{c}$ a
 <div>
 $$
 \begin{align*}
-\frac{d(\bs{c}\text{T}\bs{c})}{d\bs{c}} &=
+\frac{d(\bs{c}^\text{T}\bs{c})}{d\bs{c}} &=
 \left(\frac{d(\bs{c}_1^2 + \bs{c}_2^2 + \cdots + \bs{c}_l^2)}{d\bs{c}_1},
 \frac{d(\bs{c}_1^2 + \bs{c}_2^2 + \cdots + \bs{c}_l^2)}{d\bs{c}_2},
 \cdots,
@@ -418,7 +419,7 @@ $$
 $$
 </div>
 
-with the constraint that $\bs{dd}^\text{T}=1$.
+with the constraint that $\bs{d}^\text{T}\bs{d}=1$.
 
 ### Using the Trace operator
 
@@ -498,15 +499,15 @@ $$
 $$
 </div>
 
-Because of the constraint $\bs{dd}^\text{T}=1$:
+Because of the constraint $\bs{d}^\text{T}\bs{d}=1$:
 
 <div>
 $$
 \begin{align*}
 \bs{d}^* &= \argmin{d} -2\Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}
- + \Tr{(\bs{X}^\text{T}\bs{Xd}\bs{d}^\text{T})}\textrm{ subject to }\bs{dd}^\text{T}=1\\\\
-&= \argmin{d} -\Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}\textrm{ subject to }\bs{dd}^\text{T}=1\\\\
-&=\argmax{d} \Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}\textrm{ subject to }\bs{dd}^\text{T}=1
+ + \Tr{(\bs{X}^\text{T}\bs{Xd}\bs{d}^\text{T})}\textrm{ subject to }\bs{d}^\text{T}\bs{d}=1\\\\
+&= \argmin{d} -\Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}\textrm{ subject to }\bs{d}^\text{T}\bs{d}=1\\\\
+&=\argmax{d} \Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}\textrm{ subject to }\bs{d}^\text{T}\bs{d}=1
 \end{align*}
 $$
 </div>
@@ -515,7 +516,7 @@ and with the cycling property:
 
 <div>
 $$
-\bs{d}^* = \argmax{d} \Tr{(\bs{d}^\text{T}\bs{X}^\text{T}\bs{Xd})} \textrm{ subject to }\bs{dd}^\text{T}=1
+\bs{d}^* = \argmax{d} \Tr{(\bs{d}^\text{T}\bs{X}^\text{T}\bs{Xd})} \textrm{ subject to }\bs{d}^\text{T}\bs{d}=1
 $$
 </div>
 
@@ -600,7 +601,7 @@ We can now look for PCs. We saw that they correspond to values taken by $\bs{d}$
 
 <div>
 $$
-\bs{d}^* = \argmax{d} \Tr{(\bs{d}^\text{T}\bs{X}^\text{T}\bs{Xd})} \textrm{ subject to }\bs{dd}^\text{T}=1
+\bs{d}^* = \argmax{d} \Tr{(\bs{d}^\text{T}\bs{X}^\text{T}\bs{Xd})} \textrm{ subject to }\bs{d}^\text{T}\bs{d}=1
 $$
 </div>
 
@@ -685,7 +686,7 @@ It worked! The rotation transformed our dataset that have now the more variance 
 
 ### About the unit norm constraint
 
-We saw that the maximization is subject to $\bs{dd}^\text{T}=1$. This means that the solution vector has to be a unit vector. Without this constraint, you could scale $\bs{d}$ up to the infinity to increase the function to maximize (see [here](https://stats.stackexchange.com/questions/117695/why-is-the-eigenvector-in-pca-taken-to-be-unit-norm)). For instance, let's see some vectors $\bs{x}$ that could maximize the function:
+We saw that the maximization is subject to $\bs{d}^\text{T}\bs{d}=1$. This means that the solution vector has to be a unit vector. Without this constraint, you could scale $\bs{d}$ up to the infinity to increase the function to maximize (see [here](https://stats.stackexchange.com/questions/117695/why-is-the-eigenvector-in-pca-taken-to-be-unit-norm)). For instance, let's see some vectors $\bs{x}$ that could maximize the function:
 
 
 ```python
@@ -698,7 +699,7 @@ array([[ 4165298.04389264]])
 </pre>
 
 
-However this $\bs{d}$ has not a unit norm (since $\bs{d}$ is a column vector we use the transpose of $\bs{dd}^\text{T}$ (see [2.2](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.2-Multiplying-Matrices-and-Vectors/)):
+However this $\bs{d}$ has not a unit norm (since $\bs{d}$ is a column vector we use the transpose of $\bs{d}^\text{T}\bs{d}=1$ (see [2.2](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.2-Multiplying-Matrices-and-Vectors/)):
 
 
 ```python
