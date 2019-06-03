@@ -3,20 +3,16 @@ bg: "path.jpg"
 layout: post
 mathjax: true
 title: Deep Learning Book Series · 2.5 Norms
-crawlertitle: "Deep Learning Book Series · 2.5 Norms"
+crawlertitle: "Introduction to Norms using Python/Numpy examples and drawings"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.5%20Norms/2.5%20Norms.ipynb
 date: 2018-03-26 14:00:00
-excerpt: We will see an important concept for machine learning and deep learning. The norm is what is generally used to evaluate the error of a model. For instance it is used to calculate the error between the output of a neural network and what is expected (the actual label or value). You can think of the norm as the length of a vector. It is a function that maps a vector to a positive value. Different functions can be used and we will see few examples.
+excerpt: This post explains what is a norm using examples with Python/Numpy. The norm is what is generally used to evaluate the error of a model. You can think of the norm as the length of a vector. It is a function that maps a vector to a positive value.
 excerpt-image: <img src="../../assets/images/2.5/squared-L2-norm1.png" width="500" alt="Representation of the squared L2 norm" title="The squared L2 norm">
   <em>The squared L2 norm</em>
 ---
-
-<span class='notes'>
-    This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
-</span>
 
 # Introduction
 
@@ -652,6 +648,10 @@ np.cos(np.deg2rad(45))*2*np.sqrt(8)
 
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
+</span>
+
+<span class='notes'>
+    This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
 {% include deep-learning-book-toc.html %}

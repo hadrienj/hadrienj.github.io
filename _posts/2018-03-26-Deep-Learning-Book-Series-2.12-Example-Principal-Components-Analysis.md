@@ -3,27 +3,22 @@ bg: "river.jpg"
 layout: post
 mathjax: true
 title: Deep Learning Book Series · 2.12 Example   Principal Components Analysis
-crawlertitle: "Deep Learning Book Series · 2.12 Example   Principal Components Analysis"
+crawlertitle: "Introduction to Principal Components Analysis (PCA) using Python/Numpy examples and drawings"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.12%20Example%20-%20Principal%20Components%20Analysis/2.12%20Example%20-%20Principal%20Components%20Analysis.ipynb
 date: 2018-03-26 18:00:00
-excerpt: This is the last chapter of this series on linear algebra! It is about Principal Components Analysis (PCA). We will use some knowledge that we acquired along the preceding chapters to understand this important data analysis tool! Feel free to check out the preceding chapters!
+excerpt: This post on linear algebra is about Principal Components Analysis (PCA). We will use Python/Numpy/Matplotlib to get a better intuition and understanding of this important data analysis tool!
 excerpt-image: <img src="../../assets/images/2.12/gradient-descent.png" width="400" alt="Mechanism of the gradient descent algorithm" title="Mechanism of the gradient descent algorithm">
     <em>Gradient descent</em>
 ---
-
-<span class='notes'>
-    This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/) but here are the links to the other articles:
-</span>
 
 # Introduction
 
 This is the last chapter of this series on linear algebra! It is about Principal Components Analysis (PCA). We will use some knowledge that we acquired along the preceding chapters to understand this important data analysis tool! Feel free to check out the preceding chapters!
 
 # 2.12 Example - Principal Components Analysis
-
 
 Dimensions are a crucial topic in data science. The dimensions are all the features of the dataset. For instance, if you are looking at a dataset containing pieces of music, dimensions could be the genre, the length of the piece, the number of instruments, the presence of a singer etc. You can imagine all these dimensions as different columns. When there is only two dimensions, it is very convenient to plot: you can use the $x$- and $y$-axis. Add color and you can represent a third dimension. It is similar if you have tens or hundereds of dimensions, it will just be harder to visualize it.
 
@@ -783,6 +778,10 @@ And... This is the end! We have gone through a lot of things during this series 
 
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
+</span>
+
+<span class='notes'>
+    This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/) but here are the links to the other articles:
 </span>
 
 {% include deep-learning-book-toc.html %}

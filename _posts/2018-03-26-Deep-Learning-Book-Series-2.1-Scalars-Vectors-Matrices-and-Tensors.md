@@ -3,20 +3,16 @@ bg: "horse.jpg"
 layout: post
 mathjax: true
 title: Deep Learning Book Series · 2.1 Scalars Vectors Matrices and Tensors
-crawlertitle: "Deep Learning Book Series · 2.1 Scalars Vectors Matrices and Tensors"
+crawlertitle: "Introduction to Scalars Vectors Matrices and Tensors using Python/Numpy examples and drawings"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.1%20Scalars%2C%20Vectors%2C%20Matrices%20and%20Tensors/2.1%20Scalars%20Vectors%20Matrices%20and%20Tensors.ipynb
 date: 2018-03-26 10:00:00
-excerpt: This is the first post/notebook of a series following the syllabus of the linear algebra chapter from the Deep Learning Book by Goodfellow et al.. This work is a collection of thoughts/details/developements/examples I made while reading this chapter. It is designed to help you go through their introduction to linear algebra. For more details about this series and the syllabus, please see the introduction post.
+excerpt: This introduction to scalars, vectors, matrices and tensors presents Python/Numpy code and drawings to build a better intuition behind these linear algebra basics.
 excerpt-image: <img src="../../assets/images/2.1/scalar-vector-matrix-tensor.png" width="400" alt="An example of a scalar, a vector, a matrix and a tensor" title="Difference between a scalar, a vector, a matrix and a tensor">
   <em>Difference between a scalar, a vector, a matrix and a tensor</em>
 ---
-
-<span class='notes'>
-    This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
-</span>
 
 # Introduction
 
@@ -478,6 +474,10 @@ You can find basics operations on matrices simply explained [here](https://www.m
 
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
+</span>
+
+<span class='notes'>
+    This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
 {% include deep-learning-book-toc.html %}

@@ -3,20 +3,16 @@ bg: "galoped.jpg"
 layout: post
 mathjax: true
 title: Deep Learning Book Series · 2.2 Multiplying Matrices and Vectors
-crawlertitle: "Deep Learning Book Series · 2.2 Multiplying Matrices and Vectors"
+crawlertitle: "Introduction to Multiplying Matrices and Vectors using Python/Numpy examples and drawings"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.2%20Multiplying%20Matrices%20and%20Vectors/2.2%20Multiplying%20Matrices%20and%20Vectors.ipynb
 date: 2018-03-26 11:00:00
-excerpt: We will see some very important concepts in this chapter. The dot product is used in every equation explaining data science algorithms so it's worth the effort to understand it. Then we will see some properties of this operation. Finally, we will get some intuition on the link between matrices and systems of linear equations.
-excerpt-image: <img src="../../assets/images/2.2/dot-product.png" width="400" alt="An example of how to calculate the dot product between a matrix and a vector" title="The dot product between a matrix and a vector">
+excerpt: This short introduction will give you the intuition and Python/Numpy code behind matrices and vectors multiplication. Multiplying matrices and understanding the dot product is crucial to more advanced linear algebra needed for data science, machine learning and deep learning.
+excerpt-image: <img src="../../assets/images/2.2/dot-product.png" width="400" alt="Multiplying matrices. An example of how to calculate the dot product between a matrix and a vector" title="The dot product between a matrix and a vector">
   <em>The dot product between a matrix and a vector</em>
 ---
-
-<span class='notes'>
-    This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
-</span>
 
 # Introduction
 
@@ -970,6 +966,10 @@ We will see at the end of the [the next chapter](https://hadrienj.github.io/post
 
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
+</span>
+
+<span class='notes'>
+    This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
 {% include deep-learning-book-toc.html %}

@@ -3,20 +3,16 @@ bg: "ecu.jpg"
 layout: post
 mathjax: true
 title: Deep Learning Book Series · 2.10 The Trace Operator
-crawlertitle: "Deep Learning Book Series · 2.10 The Trace Operator"
+crawlertitle: "Introduction to The Trace Operator using Python/Numpy examples and drawings"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.10%20The%20Trace%20Operator/2.10%20The%20Trace%20Operator.ipynb
 date: 2018-03-26 17:00:00
-excerpt: I can assure you that you will read this chapter in 2 minutes! It is nice after the last two chapters that were quite big! We will see what is the Trace of a matrix. It will be needed for the last chapter on the Principal Component Analysis (PCA).
+excerpt: This short post introduces you to the trace operator. We will see what is the Trace of a matrix and how to compute it.
 excerpt-image: <img src="../../assets/images/2.10/trace-matrix.png" width="200" alt="Calculating the trace of a matrix" title="Calculating the trace of a matrix">
     <em>The trace of matrix</em>
 ---
-
-<span class='notes'>
-    This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
-</span>
 
 # Introduction
 
@@ -240,6 +236,10 @@ $$
 
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
+</span>
+
+<span class='notes'>
+    This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
 {% include deep-learning-book-toc.html %}

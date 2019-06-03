@@ -3,20 +3,16 @@ bg: "deadTrees.jpg"
 layout: post
 mathjax: true
 title: Deep Learning Book Series · 2.9 The Moore Penrose Pseudoinverse
-crawlertitle: "Deep Learning Book Series · 2.9 The Moore Penrose Pseudoinverse"
+crawlertitle: "Introduction to The Moore Penrose Pseudoinverse using Python/Numpy examples and drawings"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.9%20The%20Moore-Penrose%20Pseudoinverse/2.9%20The%20Moore-Penrose%20Pseudoinverse.ipynb
 date: 2018-03-26 16:30:00
-excerpt: We saw that not all matrices have an inverse. It is unfortunate because the inverse is used to solve system of equations. In some cases, a system of equation has no solution, and thus the inverse doesn't exist. However it can be useful to find a value that is almost a solution (in term of minimizing the error). We will see for instance how we can find the best-fit line of a set of data points with the pseudoinverse.
+excerpt: In this post, we will learn about the Moore Penrose pseudoinverse as a way to find an approaching solution where no solution exists. In some cases, a system of equation has no solution, and thus the inverse doesn't exist. However it can be useful to find a value that is almost a solution (in term of minimizing the error). We will see for instance how we can find the best-fit line of a set of data points with the pseudoinverse.
 excerpt-image: <img src="../../assets/images/2.9/overdetermined-system-equations.png" width="300" alt="Example of three linear equations in 2 dimensions. This is an overdetermined system" title="Overdetermined system of equations">
   <em>There is more equations (3) than unknowns (2) so this is an overdetermined system of equations</em>
 ---
-
-<span class='notes'>
-    This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
-</span>
 
 # Introduction
 
@@ -688,6 +684,10 @@ You can see that the pseudoinverse can be very useful for this kind of problems!
 
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
+</span>
+
+<span class='notes'>
+    This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
 {% include deep-learning-book-toc.html %}
