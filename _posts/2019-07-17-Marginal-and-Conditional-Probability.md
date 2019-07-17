@@ -9,7 +9,7 @@ tags: ['probability', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
 date: 2019-07-17 17:00:00
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/3.4-3.5%20Marginal%20and%20Conditional%20Probability
-twitterImg: 3.4/inside-probability
+twitterImg: 3.4/sum-rule-small
 excerpt: "In this article, we'll cover marginal and conditional probability for discrete and continuous variables. We'll also see the concept of dependent and independent events. We'll introduce the math smoothly with Python and drawings."
 excerpt-image: '<img src="../../assets/images/3.4/intro.png" width="500" alt="Sum rule to calculate marginal probability.">
 <em>The sum rule allows to calculate marginal probability from joint probability.</em>'
