@@ -3,11 +3,11 @@ bg: "tree_toulon.jpg"
 layout: post
 mathjax: true
 title: Deep Learning Book Series 3.1 to 3.3 Probability Mass and Density Functions
-crawlertitle: "deep learning machine learning linear algebra python getting started numpy data sciences"
+crawlertitle: "Introduction to Probability Mass and Density Functions using Python/Numpy examples and drawings"
 categories: posts
 tags: ['probability', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/
+jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/3.1-3.3%20Probability%20Mass%20and%20Density%20Functions
 date: 2019-05-01 17:00:00
 excerpt: The goal of probability is to deal with uncertainty. It gives ways to describe random events. A random variable is a variable that can take multiple values depending of the outcome of a random event. The possible outcomes are the possible values taken by the variable. If the outcomes are finite (for example the 6 possibilities in a die throwing event) the random variable is said to be discrete.
 excerpt-image: <img src="../../assets/images/3.1/probability-density-function-area-under-the-curve-2.png" width="300" alt="Illustration of the probability density function and the area under the curve corresponding to the range 0.5-0.7" title="Probability density function (pdf) and area under the curve">
@@ -135,7 +135,7 @@ for i in range(num_throws):
     outcome = np.random.choice(['1', '2', '3', '4', '5', '6'])
     outcomes[i] = outcome
 
-    
+
 val, cnt = np.unique(outcomes, return_counts=True)
 prop = cnt / len(outcomes)
 
