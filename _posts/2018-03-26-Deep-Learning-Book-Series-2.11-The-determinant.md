@@ -12,6 +12,7 @@ date: 2018-03-26 17:30:00
 excerpt: In this post, we will see what is the meaning of the determinant of a matrix. This special number can tell us a lot of things about our matrix!
 excerpt-image: <img src="../../assets/images/2.11/positive-negative-determinant.png" width="400" alt="Comparison of positive and negative determinant" title="Comparison of the effect of positive and negative determinants">
     <em>The determinant of a matrix can tell you a lot of things about the transformation associated with this matrix</em>
+deep-learning-book-toc: true
 ---
 
 # Introduction
@@ -236,4 +237,3 @@ We have seen that the determinant of a matrix is a special value telling us a lo
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}

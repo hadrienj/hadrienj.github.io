@@ -12,6 +12,7 @@ date: 2018-03-26 14:00:00
 excerpt: This post explains what is a norm using examples with Python/Numpy. The norm is what is generally used to evaluate the error of a model. You can think of the norm as the length of a vector. It is a function that maps a vector to a positive value.
 excerpt-image: <img src="../../assets/images/2.5/squared-L2-norm1.png" width="500" alt="Representation of the squared L2 norm" title="The squared L2 norm">
   <em>The squared L2 norm</em>
+deep-learning-book-toc: true
 ---
 
 # Introduction
@@ -313,7 +314,7 @@ $$
 </div>
 
 
-The squared $L^2$ norm is convenient because it removes the square root and we end up with the simple sum of every squared values of the vector. 
+The squared $L^2$ norm is convenient because it removes the square root and we end up with the simple sum of every squared values of the vector.
 
 The squared Euclidean norm is widely used in machine learning partly because it can be calculated with the vector operation $\bs{x}^\text{T}\bs{x}$. There can be performance gain due to the optimization See [here](https://softwareengineering.stackexchange.com/questions/312445/why-does-expressing-calculations-as-matrix-multiplications-make-them-faster) and [here](https://www.quora.com/What-makes-vector-operations-faster-than-for-loops) for more details.
 
@@ -654,4 +655,3 @@ np.cos(np.deg2rad(45))*2*np.sqrt(8)
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}

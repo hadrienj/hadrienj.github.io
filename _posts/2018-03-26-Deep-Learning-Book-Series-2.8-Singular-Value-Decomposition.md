@@ -13,6 +13,7 @@ excerpt: This post introduces the details Singular Value Decomposition or SVD. W
 excerpt-image: <img src="../../assets/images/2.8/unit-circle-transformation1.png" width="400" alt="Plot of the unit circle and its transformation" title="Transformation of the unit circle">
     <em>The unit circle and its transformation by a matrix</em>
 metaDescription: "Introduction to the Singular Value Decomposition (SVD). We will use Python/Numpy to get a practical and visual intuition of the Singular Value Decomposition."
+deep-learning-book-toc: true
 ---
 
 # Introduction
@@ -382,7 +383,7 @@ First, let's plot $\bs{u}$ and $\bs{v}$.
 ```python
 orange = '#FF9A13'
 blue = '#1190FF'
-    
+
 u = [1,0]
 v = [0,1]
 
@@ -1098,4 +1099,3 @@ I like this chapter on the SVD because it uses what we have learned so far in a 
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}

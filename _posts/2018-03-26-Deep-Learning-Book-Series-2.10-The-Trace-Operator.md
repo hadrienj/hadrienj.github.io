@@ -12,6 +12,7 @@ date: 2018-03-26 17:00:00
 excerpt: This short post introduces you to the trace operator. We will see what is the Trace of a matrix and how to compute it.
 excerpt-image: <img src="../../assets/images/2.10/trace-matrix.png" width="200" alt="Calculating the trace of a matrix" title="Calculating the trace of a matrix">
     <em>The trace of matrix</em>
+deep-learning-book-toc: true
 ---
 
 # Introduction
@@ -242,4 +243,3 @@ $$
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}

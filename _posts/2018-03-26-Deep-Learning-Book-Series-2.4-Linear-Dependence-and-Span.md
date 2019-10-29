@@ -12,6 +12,7 @@ date: 2018-03-26 13:00:00
 excerpt: We will see how to represent systems of equations graphically, how to interpret the number of solutions of a system, what is linear combination and more. As usual, we will use Numpy/Matplotlib as a tool to experiment these concepts and hopefully gain a more concrete understanding.
 excerpt-image: <img src="../../assets/images/2.4/number-solutions-system-equations.png" width="700" alt="Examples of systems of equations with 0, 1 and an infinite number of solutions" title="System of equations with 0, 1 and an infinite number of solutions">
     <em>A system of equations has no solution, 1 solution or an infinite number of solutions</em>
+deep-learning-book-toc: true
 ---
 
 # Introduction
@@ -1011,4 +1012,3 @@ For more details about the row and the column figure, have a look at the books o
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}

@@ -12,6 +12,7 @@ date: 2018-03-26 18:00:00
 excerpt: This post on linear algebra is about Principal Components Analysis (PCA). We will use Python/Numpy/Matplotlib to get a better intuition and understanding of this important data analysis tool!
 excerpt-image: <img src="../../assets/images/2.12/gradient-descent.png" width="400" alt="Mechanism of the gradient descent algorithm" title="Mechanism of the gradient descent algorithm">
     <em>Gradient descent</em>
+deep-learning-book-toc: true
 ---
 
 # Introduction
@@ -784,4 +785,3 @@ And... This is the end! We have gone through a lot of things during this series 
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/) but here are the links to the other articles:
 </span>
 
-{% include deep-learning-book-toc.html %}

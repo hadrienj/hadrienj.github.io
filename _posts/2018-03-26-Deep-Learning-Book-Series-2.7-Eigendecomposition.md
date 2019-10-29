@@ -12,6 +12,7 @@ date: 2018-03-26 15:30:00
 excerpt: This post introduces the concept of eigendecomposition. We will start with getting some intuitions on eigenvectors and eigenvalues. We will develop on the idea that a matrix can be seen as a linear transformation and that applying a matrix on its eigenvectors gives new vectors. We will also see how to visualize linear transformations in Python!
 excerpt-image: <img src="../../assets/images/2.7/unit-circle-eigenvectors.png" width="250" alt="Plot of the unit circle and its transformation by the matrix A" title="Transformation of the unit circle by the matrix A">
     <em>The unit circle and its transformation by the matrix A. The vectors are the eigenvectors of A.</em>
+deep-learning-book-toc: true
 ---
 
 # Introduction
@@ -673,7 +674,7 @@ array([[ 5.,  1.],
 </pre>
 
 
-That confirms our previous calculation. 
+That confirms our previous calculation.
 
 ## Real symmetric matrix
 
@@ -1300,7 +1301,7 @@ where $\lambda_1$ is the eigenvalue corresponding to the first eigenvector and $
 
 # Finding f(x) with eigendecomposition
 
-We will see that there is a way to find $f(\bs{x})$ with eigenvectors and eigenvalues when $\bs{x}$ is a unit vector. 
+We will see that there is a way to find $f(\bs{x})$ with eigenvectors and eigenvalues when $\bs{x}$ is a unit vector.
 
 Let's start from:
 
@@ -1631,4 +1632,3 @@ In this case, the eigenvectors are not orthogonal!
 </span>
 
 
-{% include deep-learning-book-toc.html %}

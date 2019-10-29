@@ -12,6 +12,7 @@ date: 2018-03-26 10:00:00
 excerpt: This introduction to scalars, vectors, matrices and tensors presents Python/Numpy code and drawings to build a better intuition behind these linear algebra basics.
 excerpt-image: <img src="../../assets/images/2.1/scalar-vector-matrix-tensor.png" width="400" alt="An example of a scalar, a vector, a matrix and a tensor" title="Difference between a scalar, a vector, a matrix and a tensor">
   <em>Difference between a scalar, a vector, a matrix and a tensor</em>
+deep-learning-book-toc: true
 ---
 
 # Introduction
@@ -480,4 +481,3 @@ You can find basics operations on matrices simply explained [here](https://www.m
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}

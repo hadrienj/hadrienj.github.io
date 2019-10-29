@@ -12,6 +12,7 @@ date: 2018-03-26 12:00:00
 excerpt: "This post will introduce you to special kind of matrices: the identity matrix and the inverse matrix. We will use Python/Numpy as a tool to get a better intuition behind these concepts."
 excerpt-image: <img src="../../assets/images/2.3/identity-matrix.png" width="150" alt="Example of an identity matrix" title="Identity matrix">
   <em>A 3 by 3 identity matrix</em>
+deep-learning-book-toc: true
 ---
 
 # Introduction
@@ -436,4 +437,3 @@ This introduces different cases according to the linear system because $\bs{A}^{
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}

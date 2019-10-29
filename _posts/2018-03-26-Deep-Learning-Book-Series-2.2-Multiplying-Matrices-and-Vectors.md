@@ -12,6 +12,7 @@ date: 2018-03-26 11:00:00
 excerpt: This short introduction will give you the intuition and Python/Numpy code behind matrices and vectors multiplication. Multiplying matrices and understanding the dot product is crucial to more advanced linear algebra needed for data science, machine learning and deep learning.
 excerpt-image: <img src="../../assets/images/2.2/dot-product.png" width="400" alt="Multiplying matrices. An example of how to calculate the dot product between a matrix and a vector" title="The dot product between a matrix and a vector">
   <em>The dot product between a matrix and a vector</em>
+deep-learning-book-toc: true
 ---
 
 # Introduction
@@ -972,4 +973,3 @@ We will see at the end of the [the next chapter](https://hadrienj.github.io/post
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}

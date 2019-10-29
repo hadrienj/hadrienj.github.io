@@ -12,6 +12,7 @@ date: 2018-03-26 16:30:00
 excerpt: In this post, we will learn about the Moore Penrose pseudoinverse as a way to find an approaching solution where no solution exists. In some cases, a system of equation has no solution, and thus the inverse doesn't exist. However it can be useful to find a value that is almost a solution (in term of minimizing the error). We will see for instance how we can find the best-fit line of a set of data points with the pseudoinverse.
 excerpt-image: <img src="../../assets/images/2.9/overdetermined-system-equations.png" width="300" alt="Example of three linear equations in 2 dimensions. This is an overdetermined system" title="Overdetermined system of equations">
   <em>There is more equations (3) than unknowns (2) so this is an overdetermined system of equations</em>
+deep-learning-book-toc: true
 ---
 
 # Introduction
@@ -529,7 +530,7 @@ array([[ 0.21538462],
 </pre>
 
 
-These are the parameters of the fit. The slope is $m=0.21538462$ and the intercept is $b=2.2$. We will plot the data points and the regression line: 
+These are the parameters of the fit. The slope is $m=0.21538462$ and the intercept is $b=2.2$. We will plot the data points and the regression line:
 
 
 ```python
@@ -690,4 +691,3 @@ You can see that the pseudoinverse can be very useful for this kind of problems!
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}

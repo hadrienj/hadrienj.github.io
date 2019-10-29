@@ -12,6 +12,7 @@ date: 2018-03-26 15:00:00
 excerpt: "In this post, we will see special kinds of matrix and vectors the diagonal and symmetric matrices, the unit vector and the concept of orthogonality."
 excerpt-image: <img src="../../assets/images/2.6/diagonal-and-symmetric-matrices.png" width="400" alt="Diagonal and symmetric matrices" title="Diagonal and symmetric matrices">
     <em>Example of diagonal and symmetric matrices</em>
+deep-learning-book-toc: true
 ---
 
 # Introduction
@@ -700,7 +701,7 @@ Sine and cosine are convenient to create orthogonal matrices. Let's take the fol
 
 <div>
 $$
-\bs{A}= 
+\bs{A}=
 \begin{bmatrix}
     cos(50) & -sin(50)\\\\
     sin(50) & cos(50)
@@ -819,4 +820,3 @@ In the next chapter we will saw a central idea in linear algebra: the eigendecom
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}
