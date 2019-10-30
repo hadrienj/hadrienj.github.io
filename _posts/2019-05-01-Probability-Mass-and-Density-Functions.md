@@ -43,6 +43,10 @@ In order to understand it we'll also study some very useful mathematical tools:
 
 These notions are important to catch for general data science and machine learning.
 
+
+{% include mailchimp.html %}
+
+
 # 3.2 Random Variables
 
 The goal of probability is to deal with uncertainty. It gives ways to describe random events. A random variable is a variable that can take multiple values depending on the outcome of a random event. The possible outcomes are the possible values taken by the variable.

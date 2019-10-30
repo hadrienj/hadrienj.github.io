@@ -19,6 +19,8 @@ deep-learning-book-toc: true
 
 In this chapter, we will see what is the meaning of the determinant of a matrix. This special number can tell us a lot of things about our matrix!
 
+{% include mailchimp.html %}
+
 # 2.11 The determinant
 
 We saw in [2.8](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.8-Singular-Value-Decomposition/) that a matrix can be seen as a linear transformation of the space. The determinant of a matrix $\bs{A}$ is a number corresponding to the *multiplicative change* you get when you transform your space with this matrix (see a comment by Pete L. Clark in [this SE question](https://math.stackexchange.com/questions/668/whats-an-intuitive-way-to-think-about-the-determinant)). A negative determinant means that there is a change in orientation (and not just a rescaling and/or a rotation). As outlined by Nykamp DQ on [Math Insight](https://mathinsight.org/determinant_linear_transformation), a change in orientation means for instance in 2D that we take a plane out of these 2 dimensions, do some transformations and get back to the initial 2D space. Here is an example distinguishing between positive and negative determinant:

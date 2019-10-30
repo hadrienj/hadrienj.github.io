@@ -21,6 +21,8 @@ This is the first post/notebook of a series following the syllabus of the [linea
 
 This first chapter is quite light and concerns the basic elements used in linear algebra and their definitions. It also introduces important functions in Python/Numpy that we will use all along this series. It will explain how to create and use vectors and matrices through examples.
 
+{% include mailchimp.html %}
+
 # 2.1 Scalars, Vectors, Matrices and Tensors
 
 Let's start with some basic definitions:

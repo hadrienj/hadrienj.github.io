@@ -19,6 +19,8 @@ deep-learning-book-toc: true
 
 We have seen in [2.3](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/) some interesting kind of matrices. We will see other type of vectors and matrices in this chapter. It is not a big chapter but it is important to understand the next ones.
 
+{% include mailchimp.html %}
+
 # 2.6 Special Kinds of Matrices and Vectors
 
 <img src="../../assets/images/2.6/diagonal-and-symmetric-matrices.png" width="400" alt="Diagonal and symmetric matrices" title="Diagonal and symmetric matrices">

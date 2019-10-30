@@ -19,6 +19,8 @@ deep-learning-book-toc: true
 
 I can assure you that you will read this chapter in 2 minutes! It is nice after the last two chapters that were quite big! We will see what is the Trace of a matrix. It will be needed for the last chapter on the Principal Component Analysis (PCA).
 
+{% include mailchimp.html %}
+
 # 2.10 The Trace Operator
 
 <img src="../../assets/images/2.10/trace-matrix.png" width="200" alt="Calculating the trace of a matrix" title="Calculating the trace of a matrix">

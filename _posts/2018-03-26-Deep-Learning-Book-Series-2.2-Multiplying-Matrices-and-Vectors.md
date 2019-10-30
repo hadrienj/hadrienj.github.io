@@ -19,6 +19,8 @@ deep-learning-book-toc: true
 
 We will see some very important concepts in this chapter. The dot product is used in every equation explaining data science algorithms so it's worth the effort to understand it. Then we will see some properties of this operation. Finally, we will get some intuition on the link between matrices and systems of linear equations.
 
+{% include mailchimp.html %}
+
 # 2.2 Multiplying Matrices and Vectors
 
 The standard way to multiply matrices is not to multiply each element of one with each element of the other (this is the element-wise product) but to calculate the sum of the products between rows and columns. The matrix product, also called **dot product**, is calculated as following:

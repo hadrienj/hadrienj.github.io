@@ -33,6 +33,8 @@ In this second post/notebook on marginal and conditional probability you will le
 
 We'll insist on the mathematical notation employed in probability. You'll see that this is an expressive and synthetic way of expressing ideas!
 
+{% include mailchimp.html %}
+
 # 3.4 Marginal Probability
 
 In the preceding posts, we have seen the probability of one random variable at a time. In some cases, it can be interested to see the probabilities of multiple events. For instance, we would ask: "If I toss a coin two times, what is the probability to obtain exactly one 'head' and one 'tail'? To answer this kind of questions we need to take into account multiple events.

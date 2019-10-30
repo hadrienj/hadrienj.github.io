@@ -19,6 +19,8 @@ deep-learning-book-toc: true
 
 We will see an important concept for machine learning and deep learning. The norm is what is generally used to evaluate the error of a model. For instance it is used to calculate the error between the output of a neural network and what is expected (the actual label or value). You can think of the norm as the length of a vector. It is a function that maps a vector to a positive value. Different functions can be used and we will see few examples.
 
+{% include mailchimp.html %}
+
 
 # 2.5 Norms
 

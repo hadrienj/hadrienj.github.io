@@ -34,7 +34,9 @@ Here is the syllabus of this tutorial:
 Feel free to fork the notebook. For instance, check the shapes of the matrices each time you have a doubt :)
 
 
-  
+{% include mailchimp.html %}
+
+
 # 1. Background
 
 ## A. Variance and covariance
@@ -66,7 +68,7 @@ $$
 </div>
 
 
-  
+
 This is the first cell of our covariance matrix. The second element on the diagonal corresponds of the variance of the second column vector from $\bs{A}$ and so on.
 
 *Note*: the vectors extracted from the matrix $\bs{A}$ correspond to the columns of $\bs{A}$.
@@ -80,7 +82,7 @@ The other cells correspond to the covariance between two column vectors from $\b
 
 
 
-  
+
 Let's check that the covariance between the first and the third column vector of $\bs{A}$ is equal to $-2.67$. The formula of the covariance between two variables $\bs{X}$ and $\bs{Y}$ is:
 
 <div>
@@ -150,7 +152,7 @@ Now the easy way! With Numpy, the covariance matrix can be calculated with the f
 Let's create the array first:
 
 
-  
+
 
 
 ```python
@@ -170,11 +172,11 @@ array([[1, 3, 5],
 
 
 
-  
+
 Now we will calculate the covariance with the Numpy function:
 
 
-  
+
 
 
 ```python
@@ -193,18 +195,18 @@ array([[ 2.66666667,  0.66666667, -2.66666667],
 
 
 
-  
-Looks good! 
+
+Looks good!
 
 
-  
+
 ### Finding the covariance matrix with the dot product
 
 There is another way to compute the covariance matrix of $\bs{A}$. You can center $
 \bs{A}$ around 0 (subtract the mean of the vector to each element of the vector to have a vector of mean equal to 0, *cf*. below), multiply it with its own transpose and divide by the number of observations. Let's start with an implementation and then we'll try to understand the link with the previous equation:
 
 
-  
+
 
 
 ```python
@@ -217,11 +219,11 @@ def calculateCovariance(X):
 ```
 
 
-  
+
 Let's test it on our matrix $\boldsymbol{A}$:
 
 
-  
+
 
 
 ```python
@@ -240,7 +242,7 @@ array([[ 2.66666667,  0.66666667, -2.66666667],
 
 
 
-  
+
 We end up with the same result as before!
 
 The explanation is simple. The dot product between two vectors can be expressed:
@@ -282,7 +284,7 @@ Now if we have a matrix $\bs{A}$, the dot product between $\bs{A}$ and its trans
 This is the covariance matrix! 🌵
 
 
-  
+
 ## B. Visualize data and covariance matrices
 
 In order to get more insights about the covariance matrix and how it can be useful, we will create a function used to visualize it along with 2D data. You will be able to see the link between the covariance matrix and the data.
@@ -290,7 +292,7 @@ In order to get more insights about the covariance matrix and how it can be usef
 This function will calculate the covariance matrix as we have seen above. It will create two subplots: one for the covariance matrix and one for the data. The `heatmap` function from Seaborn is used to create gradients of color: small values will be colored in light green and large values in dark blue. The data is represented as a scatterplot. We choose one of our palette colors, but you may prefer other colors 🌈.
 
 
-  
+
 
 
 ```python
@@ -302,27 +304,27 @@ def plotDataAndCov(data):
     fig.set_size_inches(10, 10)
 
     ax0 = plt.subplot(2, 2, 1)
-    
+
     # Choosing the colors
     cmap = sns.color_palette("GnBu", 10)
     sns.heatmap(ACov, cmap=cmap, vmin=0)
 
     ax1 = plt.subplot(2, 2, 2)
-    
+
     # data can include the colors
     if data.shape[1]==3:
         c=data[:,2]
     else:
         c="#0A98BE"
     ax1.scatter(data[:,0], data[:,1], c=c, s=40)
-    
+
     # Remove the top and right axes from the data plot
     ax1.spines['right'].set_visible(False)
     ax1.spines['top'].set_visible(False)
 ```
 
 
-  
+
 ## C. Simulating data
 
 ### Uncorrelated data
@@ -335,7 +337,7 @@ Now that we have the plot function, we will generate some random data to visuali
 This function needs the mean, the standard deviation and the number of observations of the distribution as input. We will create two random variables of 300 observations with a standard deviation of 1. The first will have a mean of 1 and the second a mean of 2. If we draw two times 300 observations from a normal distribution, both vectors will be uncorrelated.
 
 
-  
+
 
 
 ```python
@@ -356,7 +358,7 @@ A.shape
 
 
 
-  
+
 *Note 1*:  We transpose the data with `.T` because the original shape is (2, 300) and we want the number of observations as rows (so with shape (300, 2)).
 
 *Note 2*: We use `np.random.seed` function for reproducibility. The same random number will be used the next time we run the cell!
@@ -364,7 +366,7 @@ A.shape
 Let's check how the data looks like:
 
 
-  
+
 
 
 ```python
@@ -390,13 +392,13 @@ array([[ 2.47143516,  1.52704645],
 
 
 
-  
+
 Nice, we have our two columns vectors.
 
 Now, we can check that the distributions are normal:
 
 
-  
+
 
 
 ```python
@@ -413,15 +415,15 @@ plt.close()
 
 
 
-  
+
 Looks good! We can see that the distributions have equivalent standard deviations but different means (1 and 2). So that's exactly what we have asked for!
 
 
-  
+
 Now we can plot our dataset and its covariance matrix with our function:
 
 
-  
+
 
 
 ```python
@@ -445,17 +447,17 @@ Covariance matrix:
 
 
 
-  
+
 We can see on the scatterplot that the two dimensions are uncorrelated. Note that we have one dimension with a mean of 1 and the other with the mean of 2. Also, the covariance matrix shows that the variance of each variable is very large (around 1) and the covariance of columns 1 and 2 is very small (around 0). Since we insured that the two vectors are independent this is coherent (the opposite is not necessarily true: a covariance of 0 doesn't guaranty independency (see [here](https://stats.stackexchange.com/questions/12842/covariance-and-independence)).
 
 
-  
+
 ### Correlated data
 
 Now, let's construct dependent data by specifying one column from the other one.
 
 
-  
+
 
 
 ```python
@@ -483,13 +485,13 @@ Covariance matrix:
 
 
 
-  
+
 The correlation between the two dimensions is visible on the scatter plot. We can see that a line could be drawn and used to predict $\boldsymbol{y}$ from $\boldsymbol{x}$ and vice versa. The covariance matrix is not diagonal (there are non-zero cells outside of the diagonal). That means that the covariance between dimensions is non-zero.
 
 That's great! ⚡️ We now have all the tools to see different preprocessing techniques.
 
 
-  
+
 # 2. Preprocessing
 
 ## A. Mean normalization
@@ -507,7 +509,7 @@ where $\bs{X'}$ is the normalized dataset, $\bs{X}$ the original dataset and $\b
 It will have the effect of centering the data around 0. We will create the function `center()` to do that:
 
 
-  
+
 
 
 ```python
@@ -517,11 +519,11 @@ def center(X):
 ```
 
 
-  
+
 Let's give it a try with the matrix $\bs{B}$ we have created above:
 
 
-  
+
 
 
 ```python
@@ -574,11 +576,11 @@ Covariance matrix:
 
 
 
-  
+
 The first plot shows again the original data $\bs{B}$ and the second plot shows the centered data (look at the scale).
 
 
-  
+
 ## B. Standardization
 
 The standardization is used to put all features on the same scale. The way to do it is to divide each zero-centered dimension by its standard deviation.
@@ -592,7 +594,7 @@ $$
 where $\bs{X'}$ is the standardized dataset, $\bs{X}$ the original dataset, $\bar{x}$ the mean of $\bs{X}$ and $\sigma_{\bs{X}}$ the standard deviation of $\bs{X}$.
 
 
-  
+
 
 
 ```python
@@ -602,11 +604,11 @@ def standardize(X):
 ```
 
 
-  
+
 Let's create another dataset with a different scale to check that it is working.
 
 
-  
+
 
 
 ```python
@@ -637,11 +639,11 @@ Covariance matrix:
 
 
 
-  
+
 We can see that the scales of $x$ and $y$ are different. Note also that the correlation seems smaller because of the scale differences. Now let's standardise it:
 
 
-  
+
 
 
 ```python
@@ -667,11 +669,11 @@ Covariance matrix:
 
 
 
-  
+
 Looks good! You can see that the scales are the same and that the dataset is zero-centered according to both axes. Now, have a look at the covariance matrix: you can see that the variance of each coordinate (the top-left cell and the bottom-right cell) is equal to 1. By the way, this new covariance matrix is actually the correlation matrix!💥 The Pearson correlation coefficient between the two variables ($\bs{c1}$ and $\bs{c2}$) is 0.54220151.
 
 
-  
+
 ## C. Whitening
 
 Whitening or sphering data means that we want to transform it in a way to have a covariance matrix that is the identity matrix (1 in the diagonal and 0 for the other cells; [more details on the identity matrix](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/)). It is called whitening in reference to white noise.
@@ -681,13 +683,13 @@ Whitening is a bit more complicated but we now have all the tools that we need t
     1- Zero-center the data
     2- Decorrelate the data
     3- Rescale the data
-    
+
 Let's take again $\bs{C}$ and try to do these steps.
 
 #### 1. Zero-centering
 
 
-  
+
 
 
 ```python
@@ -713,7 +715,7 @@ Covariance matrix:
 
 
 
-  
+
 #### 2. Decorrelate
 
 At this point, we need to decorrelate our data. Intuitively, it means that we want to rotate the data until there is no correlation anymore. Look at the following cartoon to see what I mean:
@@ -733,11 +735,11 @@ So we can decorrelate the data by projecting it on the eigenvectors basis. This 
     1- Calculate the covariance matrix
     2- Calculate the eigenvectors of the covariance matrix
     3- Apply the matrix of eigenvectors to the data (this will apply the rotation)
-    
+
 Let's pack that into a function:
 
 
-  
+
 
 
 ```python
@@ -752,11 +754,11 @@ def decorrelate(X):
 ```
 
 
-  
+
 Let's try to decorrelate our zero-centered matrix $\bs{C}$ to see it in action:
 
 
-  
+
 
 
 ```python
@@ -800,19 +802,19 @@ Covariance matrix:
 
 
 
-  
+
 Nice! This is working 🎄
 
 We can see that the correlation is not here anymore and that the covariance matrix (now a diagonal matrix) confirms that the covariance between the two dimensions is equal to 0.
 
 
-  
+
 #### 3. Rescale the data
 
 The next step is to scale the uncorrelated matrix in order to obtain a covariance matrix corresponding to the identity matrix (ones on the diagonal and zeros on the other cells). To do that we scale our decorrelated data by dividing each dimension by the square-root of its corresponding eigenvalue.
 
 
-  
+
 
 
 ```python
@@ -829,11 +831,11 @@ def whiten(X):
 ```
 
 
-  
+
 *Note:* we add a small value (here $10^{-5}$) to avoid the division by $0$.
 
 
-  
+
 
 
 ```python
@@ -861,11 +863,11 @@ Covariance matrix:
 
 
 
-  
+
 Hooray! We can see that with the covariance matrix that this is all good. We have something that really looks to the identity matrix ($1$ on the diagonal and $0$ elsewhere). 🌵
 
 
-  
+
 # 3. Image whitening
 
 We will see how whitening can be applied to preprocess image dataset. To do so we will use the paper of [Pal & Sudeep (2016)](https://ieeexplore.ieee.org/document/7808140/) where they give some details about the process. This preprocessing technique is called Zero component analysis (ZCA).
@@ -878,7 +880,7 @@ Check out the paper, but here is the kind of result they got:
 First thing first: we will load images from the CIFAR dataset. This dataset is available from Keras but you can also download it [here](https://www.cs.toronto.edu/~kriz/cifar.html).
 
 
-  
+
 
 
 ```python
@@ -899,13 +901,13 @@ X_train.shape
 
 
 
-  
+
 The training set of the CIFAR10 dataset contains 50000 images. The shape of `X_train` is (50000, 32, 32, 3). Each image is 32px by 32px and each pixel contains 3 dimensions (R, G, B). Each value is the brightness of the corresponding color between 0 and 255.
 
 We will start by selecting only a subset of the images, let's say 1000:
 
 
-  
+
 
 
 ```python
@@ -920,11 +922,11 @@ print X.shape
 
 
 
-  
+
 That's better! Now we will reshape the array to have flat image data with one image per row. Each image will be (1, 3072) because $32 \times 32 \times 3 = 3072$. Thus, the array containing all images will be (1000, 3072):
 
 
-  
+
 
 
 ```python
@@ -939,11 +941,11 @@ print X.shape
 
 
 
-  
+
 The next step is to be able to see the images. The function `imshow()` from Matplotlib ([doc](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html)) can be used to show images. It needs images with the shape ($M \times N \times 3$) so let's create a function to reshape the images and be able to visualize them from the shape (1, 3072).
 
 
-  
+
 
 
 ```python
@@ -955,11 +957,11 @@ def plotImage(X):
 ```
 
 
-  
+
 For instance, let's plot one of the images we have loaded:
 
 
-  
+
 
 
 ```python
@@ -973,11 +975,11 @@ plotImage(X[12, :])
 
 
 
-  
+
 Cute! 🌵
 
 
-  
+
 We can now implement the whitening of the images. [Pal & Sudeep (2016)](https://ieeexplore.ieee.org/document/7808140/) describe the process:
 
 1. The first step is to rescale the images to obtain the range [0, 1] by dividing by 255 (the maximum value of the pixels).
@@ -995,7 +997,7 @@ $$\frac{data}{max(data)} = \frac{data}{255}$$
 </div>
 
 
-  
+
 
 
 ```python
@@ -1012,7 +1014,7 @@ X.max() 1.0
 
 
 
-  
+
 ### Mean subtraction: per-pixel or per-image?
 
 Ok cool, the range of our pixel values is between 0 and 1 now. The next step is:
@@ -1028,7 +1030,7 @@ Another way to do it is to take each of the 3072 pixels that we have (32 by 32 p
 We will now do the per-pixel mean subtraction from our 1000 images. Our data are organized with these dimensions (images, pixels). It was (1000, 3072) because there are 1000 images with $32 \times 32 \times 3 = 3072$ pixels. The mean per-pixel can thus be obtained from the first axis:
 
 
-  
+
 
 
 ```python
@@ -1045,11 +1047,11 @@ X_norm.mean(axis=0).shape
 
 
 
-  
+
 This gives us 3072 values which is the number of means: one per pixel. Let's see the kind of values we have:
 
 
-  
+
 
 
 ```python
@@ -1067,11 +1069,11 @@ array([ 0.5234    ,  0.54323137,  0.5274    , ...,  0.50369804,
 
 
 
-  
+
 This is near 0.5 because we already have normalized to the range [0, 1]. However, we still need to remove the mean from each pixel:
 
 
-  
+
 
 
 ```python
@@ -1079,11 +1081,11 @@ X_norm = X_norm - X_norm.mean(axis=0)
 ```
 
 
-  
+
 Just to convince ourselves that it worked, we will compute the mean of the first pixel. Let's hope that it is 0.
 
 
-  
+
 
 
 ```python
@@ -1101,15 +1103,15 @@ array([ -5.30575583e-16,  -5.98021632e-16,  -4.23439062e-16, ...,
 
 
 
-  
+
 This is not exactly 0 but it is small enough that we can consider that it worked! 🌵
 
 
-  
+
 Now we want to calculate the covariance matrix of the zero-centered data. Like we have seen above, we can calculate it with the `np.cov()` function from Numpy. Please note that our variables are our different images. This implies that the variables are the rows of the matrix $\bs{X}$. Just to be clear, we will tell this information to Numpy with the parameter `rowvar=TRUE` even if it is `True` by default (see the [doc](https://docs.scipy.org/doc/numpy/reference/generated/numpy.cov.html)):
 
 
-  
+
 
 
 ```python
@@ -1117,13 +1119,13 @@ cov = np.cov(X_norm, rowvar=True)
 ```
 
 
-  
+
 Now the magic part: we will calculate the singular values and vectors of the covariance matrix and use them to rotate our dataset. Have a look at [my post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.8-Singular-Value-Decomposition/) on the singular value decomposition if you need more details!
 
 *Note*: It can take a bit of time with a lot of images and that's why we are using only 1000. In the paper, they used 10000 images. Feel free to compare the results according to how many images you are using:
 
 
-  
+
 
 
 ```python
@@ -1131,7 +1133,7 @@ U,S,V = np.linalg.svd(cov)
 ```
 
 
-  
+
 In the paper, they used the following equation:
 
 <div>
@@ -1145,7 +1147,7 @@ with $\bs{U}$ the left singular vectors, and $\bs{S}$ the singular values of the
 We will try to implement this equation. Let's start by checking the dimensions of the SVD:
 
 
-  
+
 
 
 ```python
@@ -1159,11 +1161,11 @@ print U.shape, S.shape
 
 
 
-  
+
 $\bs{S}$ is a vector containing 1000 elements (the singular values). $diag(\bs{S})$ will thus be of shape (1000, 1000) with $\bs{S}$ as the diagonal:
 
 
-  
+
 
 
 ```python
@@ -1179,7 +1181,7 @@ print '\nshape:', np.diag(S).shape
     0.00000000e+00   0.00000000e+00]
  [  0.00000000e+00   0.00000000e+00   2.41075267e+00 ...,   0.00000000e+00
     0.00000000e+00   0.00000000e+00]
- ..., 
+ ...,
  [  0.00000000e+00   0.00000000e+00   0.00000000e+00 ...,   3.92727365e-05
     0.00000000e+00   0.00000000e+00]
  [  0.00000000e+00   0.00000000e+00   0.00000000e+00 ...,   0.00000000e+00
@@ -1192,7 +1194,7 @@ shape: (1000, 1000)
 
 
 
-  
+
 $diag(\frac{1}{\sqrt{diag(\bs{S}) + \epsilon}})$ is also of shape (1000, 1000) as well as $\bs{U}$ and $\bs{U^{\text{T}}}$. We have seen also that $\bs{X}$ has the shape (1000, 3072). The shape of $\bs{X}_{ZCA}$ is thus:
 
 <div>
@@ -1206,7 +1208,7 @@ which corresponds to the shape of the initial dataset. Nice!
 We have:
 
 
-  
+
 
 
 ```python
@@ -1215,7 +1217,7 @@ X_ZCA = U.dot(np.diag(1.0/np.sqrt(S + epsilon))).dot(U.T).dot(X_norm)
 ```
 
 
-  
+
 
 
 ```python
@@ -1236,7 +1238,7 @@ plotImage(X_ZCA[12, :])
 
 
 
-  
+
 
 
 ```python
@@ -1253,7 +1255,7 @@ max: 1.0
 
 
 
-  
+
 
 
 ```python
@@ -1274,14 +1276,14 @@ plotImage(X_ZCA_rescaled[12, :])
 
 
 
-  
+
 Hooray! That's great!⚡️It looks like the images from the paper. Actually, they have used 10000 images and not 1000 like us. To see the differences in the results according to the number of images that you use and the effect of the hyper-parameter $\epsilon$, here are the results for different values:
 
 <img src="../../assets/images/Preprocessing-for-deep-learning/result-image-whitening-cifar10.png" width="400" alt="Different values of epsilon and different number of images used">
 <em>The result of the whitening is different according to the number of images that we are using and the value of the hyper-parameter epsilon. The image on the left is the original image. In the paper, [Pal & Sudeep (2016)](https://ieeexplore.ieee.org/document/7808140/) used 10000 images and epsilon = 0.1. This corresponds to the bottom left image.</em>
 
 
-  
+
 That's all! 🌴
 
 I hope that you found something interesting in this article!
@@ -1289,7 +1291,7 @@ I hope that you found something interesting in this article!
 You can fork the Jupyter notebook on Github [here](https://github.com/hadrienj/Preprocessing-for-deep-learning)!
 
 
-  
+
 # References
 
 [K. Jarrett, K. Kavukcuoglu, M. Ranzato, and Y. LeCun, “What is the best multi-stage architecture for object recognition?,” in 2009 IEEE 12th International Conference on Computer Vision, 2009, pp. 2146–2153.

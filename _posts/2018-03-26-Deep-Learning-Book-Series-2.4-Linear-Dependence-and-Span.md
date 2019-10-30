@@ -19,6 +19,8 @@ deep-learning-book-toc: true
 
 This chapter is quite heavy by its size and its content but I did what I could to make it more intuitive and visual. We will see how to represent systems of equations graphically, how to interpret the number of solutions of a system, what is linear combination and more. As usual, we will use Numpy/Matplotlib as a tool to experiment these concepts and hopefully gain a more concrete understanding.
 
+{% include mailchimp.html %}
+
 # 2.4 Linear Dependence and Span
 
 Since it is all about systems of linear equations, let's start again with the set of equations:
