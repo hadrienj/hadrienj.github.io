@@ -120,13 +120,13 @@ $$
 Let's $\bs{A}$ be the following matrix:
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
-    5 & 1\\\\
+    5 & 1\\\
     3 & 3
 \end{bmatrix}
-$$
+$
 </div>
 
 We know that one eigenvector of A is:
@@ -144,19 +144,19 @@ $$
 We can check that $\bs{Av} = \lambda\bs{v}$:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    5 & 1\\\\
+    5 & 1\\\
     3 & 3
 \end{bmatrix}
 \begin{bmatrix}
-    1\\\\
+    1\\\
     1
 \end{bmatrix}=\begin{bmatrix}
-    6\\\\
+    6\\\
     6
 \end{bmatrix}
-$$
+$
 </div>
 
 We can see that:
@@ -237,18 +237,18 @@ $$
 because
 
 <div>
-$$
+$
 \begin{bmatrix}
-    5 & 1\\\\
+    5 & 1\\\
     3 & 3
 \end{bmatrix}\begin{bmatrix}
-    1\\\\
+    1\\\
     -3
 \end{bmatrix} = \begin{bmatrix}
-    2\\\\
+    2\\\
     -6
 \end{bmatrix}
-$$
+$
 </div>
 
 and
@@ -361,23 +361,23 @@ $$
 The eigenvectors look different because they have not necessarly the same scaling than the ones we gave in the example. We can easily see that the first corresponds to a scaled version of our $\begin{bmatrix}
     1\\\\
     1
-\end{bmatrix}$. But the same property stands. We have still $\bs{Av} = \lambda\bs{v}$:
+\end{bmatrix}$. But the same property stands. We still have $\bs{Av} = \lambda\bs{v}$:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    5 & 1\\\\
+    5 & 1\\\
     3 & 3
 \end{bmatrix}
 \begin{bmatrix}
-    0.70710678\\\\
+    0.70710678\\\
     0.70710678
 \end{bmatrix}=
 \begin{bmatrix}
-    4.24264069\\\\
+    4.24264069\\\
     4.24264069
 \end{bmatrix}
-$$
+$
 </div>
 
 With $0.70710678 \times 6 = 4.24264069$. So there are an infinite number of eigenvectors corresponding to the eigenvalue $6$. They are equivalent because we are interested by their directions.
@@ -442,44 +442,44 @@ $$
 So we have:
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \begin{bmatrix}
-    5 & 1\\\\
+    5 & 1\\\
     3 & 3
 \end{bmatrix}
 \begin{bmatrix}
-    3\\\\
+    3\\\
     -9
 \end{bmatrix}
 &=
 \begin{bmatrix}
-    6\\\\
+    6\\\
     18
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &= 2 \times
 \begin{bmatrix}
-    3\\\\
+    3\\\
     -9
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
-We have well $\bs{A}\times 3\bs{v} = \lambda \times 3\bs{v}$ and the eigenvalue is still $\lambda=2$.
+This corresponds to $\bs{A}\times 3\bs{v} = \lambda \times 3\bs{v}$ and the eigenvalue is still $\lambda=2$.
 
 ## Concatenating eigenvalues and eigenvectors
 
 Now that we have an idea of what eigenvectors and eigenvalues are we can see how it can be used to decompose a matrix. All eigenvectors of a matrix $\bs{A}$ can be concatenated in a matrix with each column corresponding to each eigenvector (like in the second array return by `np.linalg.eig(A)`):
 
 <div>
-$$
+$
 \bs{V}=
 \begin{bmatrix}
-    1 & 1\\\\
+    1 & 1\\\
     1 & -3
 \end{bmatrix}
-$$
+$
 </div>
 
 The first column
@@ -529,24 +529,24 @@ $$
 $diag(\bs{v})$ is a diagonal matrix (see [2.6](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.6-Special-Kinds-of-Matrices-and-Vectors/)) containing all the eigenvalues. Continuing with our example we have
 
 <div>
-$$
+$
 \bs{V}=\begin{bmatrix}
-    1 & 1\\\\
+    1 & 1\\\
     1 & -3
 \end{bmatrix}
-$$
+$
 </div>
 
 The diagonal matrix is all zeros except the diagonal that is our vector $\bs{\lambda}$.
 
 <div>
-$$
+$
 diag(\bs{v})=
 \begin{bmatrix}
-    6 & 0\\\\
+    6 & 0\\\
     0 & 2
 \end{bmatrix}
-$$
+$
 </div>
 
 The inverse matrix of $\bs{V}$ can be calculated with numpy:
@@ -578,77 +578,77 @@ array([[ 0.75,  0.25],
 So let's plug
 
 <div>
-$$
+$
 \bs{V}^{-1}=\begin{bmatrix}
-    0.75 & 0.25\\\\
+    0.75 & 0.25\\\
     0.25 & -0.25
 \end{bmatrix}
-$$
+$
 </div>
 
 into our equation:
 
 <div>
-$$
-\begin{align*}
-&\bs{V}\cdot diag(\bs{\lambda}) \cdot \bs{V}^{-1}\\\\
+$
+\begin{aligned}
+&\bs{V}\cdot diag(\bs{\lambda}) \cdot \bs{V}^{-1}\\\
 &=
 \begin{bmatrix}
-    1 & 1\\\\
+    1 & 1\\\
     1 & -3
-\end{bmatrix}\\\\
-&\begin{bmatrix}
-    6 & 0\\\\
+\end{bmatrix}
+\begin{bmatrix}
+    6 & 0\\\
     0 & 2
 \end{bmatrix}
 \begin{bmatrix}
-    0.75 & 0.25\\\\
+    0.75 & 0.25\\\
     0.25 & -0.25
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 If we do the dot product of the first two matrices we have:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    1 & 1\\\\
+    1 & 1\\\
     1 & -3
 \end{bmatrix}
 \begin{bmatrix}
-    6 & 0\\\\
+    6 & 0\\\
     0 & 2
 \end{bmatrix} =
 \begin{bmatrix}
-    6 & 2\\\\
+    6 & 2\\\
     6 & -6
 \end{bmatrix}
-$$
+$
 </div>
 
 So if we replace into the equation:
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 &\begin{bmatrix}
-    6 & 2\\\\
+    6 & 2\\\
     6 & -6
 \end{bmatrix}
 \begin{bmatrix}
-    0.75 & 0.25\\\\
+    0.75 & 0.25\\\
     0.25 & -0.25
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &=
 \begin{bmatrix}
-    5 & 1\\\\
+    5 & 1\\\
     3 & 3
 \end{bmatrix}=
 \bs{A}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 Let's check our result with Python:
@@ -693,103 +693,103 @@ where $\bs{Q}$ is the matrix with eigenvectors as columns and $\Lambda$ is $diag
 ### Example 3.
 
 <div>
-$$
+$
 \bs{A}=\begin{bmatrix}
-    6 & 2\\\\
+    6 & 2\\\
     2 & 3
 \end{bmatrix}
-$$
+$
 </div>
 
 This matrix is symmetric because $\bs{A}=\bs{A}^\text{T}$. Its eigenvectors are:
 
 <div>
-$$
+$
 \bs{Q}=
 \begin{bmatrix}
-    0.89442719 & -0.4472136\\\\
+    0.89442719 & -0.4472136\\\
     0.4472136 & 0.89442719
 \end{bmatrix}
-$$
+$
 </div>
 
 and its eigenvalues put in a diagonal matrix gives:
 
 <div>
-$$
+$
 \bs{\Lambda}=
 \begin{bmatrix}
-    7 & 0\\\\
+    7 & 0\\\
     0 & 2
 \end{bmatrix}
-$$
+$
 </div>
 
-So let's begin to calculate $\bs{Q\Lambda}$:
+So let's begin with $\bs{Q\Lambda}$:
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \bs{Q\Lambda}&=
 \begin{bmatrix}
-    0.89442719 & -0.4472136\\\\
+    0.89442719 & -0.4472136\\\
     0.4472136 & 0.89442719
 \end{bmatrix}
 \begin{bmatrix}
-    7 & 0\\\\
+    7 & 0\\\
     0 & 2
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &=
 \begin{bmatrix}
-    0.89442719 \times 7 & -0.4472136\times 2\\\\
+    0.89442719 \times 7 & -0.4472136\times 2\\\
     0.4472136 \times 7 & 0.89442719\times 2
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &=
 \begin{bmatrix}
-    6.26099033 & -0.8944272\\\\
+    6.26099033 & -0.8944272\\\
     3.1304952 & 1.78885438
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 with:
 
 <div>
-$$
+$
 \bs{Q}^\text{T}=
 \begin{bmatrix}
-    0.89442719 & 0.4472136\\\\
+    0.89442719 & 0.4472136\\\
     -0.4472136 & 0.89442719
 \end{bmatrix}
-$$
+$
 </div>
 
 So we have:
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \bs{Q\Lambda} \bs{Q}^\text{T}&=
 \begin{bmatrix}
-    6.26099033 & -0.8944272\\\\
+    6.26099033 & -0.8944272\\\
     3.1304952 & 1.78885438
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &\cdot
 \begin{bmatrix}
-    0.89442719 & 0.4472136\\\\
+    0.89442719 & 0.4472136\\\
     -0.4472136 & 0.89442719
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &=
 \begin{bmatrix}
-    6 & 2\\\\
+    6 & 2\\\
     2 & 3
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
-It works! For that reason, it can useful to use symmetric matrices! Let's do the same things easily with `linalg` from numpy:
+It works! For that reason, it can useful to use symmetric matrices! Let's do it now with `linalg` from Numpy:
 
 
 ```python
@@ -861,43 +861,43 @@ $$
 These quadratic forms can be generated by matrices:
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 f(\bs{x})
 &= \begin{bmatrix}
     x_1 & x_2
 \end{bmatrix}\begin{bmatrix}
-    a & b\\\\
+    a & b\\\
     c & d
 \end{bmatrix}\begin{bmatrix}
-    x_1\\\\
+    x_1\\\
     x_2
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &= \bs{x^\text{T}Ax}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 with:
 
 <div>
-$$
+$
 \bs{x} = \begin{bmatrix}
-    x_1\\\\
+    x_1\\\
     x_2
 \end{bmatrix}
-$$
+$
 </div>
 
 and
 
 <div>
-$$
+$
 \bs{A}=\begin{bmatrix}
-    a & b\\\\
+    a & b\\\
     c & d
 \end{bmatrix}
-$$
+$
 </div>
 
 We call them matrix forms. This form is useful to do various things on the quadratic equation like constrained optimization (see bellow).
@@ -922,45 +922,45 @@ $$
 and
 
 <div>
-$$
+$
 \bs{A}=\begin{bmatrix}
-    2 & 4\\\\
+    2 & 4\\\
     2 & 5
 \end{bmatrix}
-$$
+$
 </div>
 
 gives the following quadratic form:
 
 <div>
-$$
-\begin{align*}
-&2x_1^2 + (4+2)x_1x_2 + 5x_2^2\\\\
+$
+\begin{aligned}
+&2x_1^2 + (4+2)x_1x_2 + 5x_2^2\\\
 &=2x_1^2 + 6x_1x_2 + 5x_2^2
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 but if:
 
 <div>
-$$
+$
 \bs{A}=\begin{bmatrix}
-    2 & -3\\\\
+    2 & -3\\\
     9 & 5
 \end{bmatrix}
-$$
+$
 </div>
 
 we still have the quadratic same form:
 
 <div>
-$$
-\begin{align*}
-&2x_1^2 + (-3+9)x_1x_2 + 5x_2^2\\\\
+$
+\begin{aligned}
+&2x_1^2 + (-3+9)x_1x_2 + 5x_2^2\\\
 &=2x_1^2 + 6x_1x_2 + 5x_2^2
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 ### Example 5
@@ -968,53 +968,54 @@ $$
 For this example, we will go from the matrix form to the quadratic form using a symmetric matrix $\bs{A}$. Let's use the matrix of the example 3.
 
 <div>
-$$
+$
 \bs{x} = \begin{bmatrix}
-    x_1\\\\
+    x_1\\\
     x_2
 \end{bmatrix}
-$$
+$
 </div>
 
 and
 
 <div>
-$$\bs{A}=\begin{bmatrix}
-    6 & 2\\\\
+$
+\bs{A}=\begin{bmatrix}
+    6 & 2\\\
     2 & 3
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \bs{x^\text{T}Ax}&=
 \begin{bmatrix}
     x_1 & x_2
 \end{bmatrix}
 \begin{bmatrix}
-    6 & 2\\\\
+    6 & 2\\\
     2 & 3
 \end{bmatrix}
 \begin{bmatrix}
-    x_1\\\\
+    x_1\\\
     x_2
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &=
 \begin{bmatrix}
     x_1 & x_2
 \end{bmatrix}
 \begin{bmatrix}
-    6 x_1 + 2 x_2\\\\
+    6 x_1 + 2 x_2\\\
     2 x_1 + 3 x_2
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &=
-x_1(6 x_1 + 2 x_2) + x_2(2 x_1 + 3 x_2)\\\\
+x_1(6 x_1 + 2 x_2) + x_2(2 x_1 + 3 x_2)\\\
 &=
 6 x_1^2 + 4 x_1x_2 + 3 x_2^2
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 Our quadratic equation is thus:
@@ -1030,12 +1031,12 @@ $$
 If $\bs{A}$ is a diagonal matrix (all 0 except the diagonal), the quadratic form of $\bs{x^\text{T}Ax}$ will have no cross term. Take the following matrix form:
 
 <div>
-$$
+$
 \bs{A}=\begin{bmatrix}
-    a & b\\\\
+    a & b\\\
     c & d
 \end{bmatrix}
-$$
+$
 </div>
 
 If $\bs{A}$ is diagonal, then $b$ and $c$ are 0 and since $f(\bs{x}) = ax_1^2 +(b+c)x_1x_2 + dx_2^2$ there is no cross term. A quadratic form without cross term is called diagonal form since it comes from a diagonal matrix.
@@ -1072,50 +1073,51 @@ $$
 and
 
 <div>
-$$\bs{A}=\begin{bmatrix}
-    6 & 2\\\\
+$
+\bs{A}=\begin{bmatrix}
+    6 & 2\\\
     2 & 3
 \end{bmatrix}
-$$
+$
 </div>
 
 and that the eigenvectors of $\bs{A}$ are:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    0.89442719 & -0.4472136\\\\
+    0.89442719 & -0.4472136\\\
     0.4472136 & 0.89442719
 \end{bmatrix}
-$$
+$
 </div>
 
 With the purpose of simplification, we can replace these values with:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    \frac{2}{\sqrt{5}} & -\frac{1}{\sqrt{5}}\\\\
+    \frac{2}{\sqrt{5}} & -\frac{1}{\sqrt{5}}\\\
     \frac{1}{\sqrt{5}} & \frac{2}{\sqrt{5}}
 \end{bmatrix} =
 \frac{1}{\sqrt{5}}
 \begin{bmatrix}
-    2 & -1\\\\
+    2 & -1\\\
     1 & 2
 \end{bmatrix}
-$$
+$
 </div>
 
 So our first eigenvector is:
 
 <div>
-$$
+$
 \frac{1}{\sqrt{5}}
 \begin{bmatrix}
-    2\\\\
+    2\\\
     1
 \end{bmatrix}
-$$
+$
 </div>
 
 and our second eigenvector is:
@@ -1133,30 +1135,30 @@ $$
 The change of variable will lead to:
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \begin{bmatrix}
-    x_1\\\\
+    x_1\\\
     x_2
 \end{bmatrix}
 &=
 \frac{1}{\sqrt{5}}
 \begin{bmatrix}
-    2 & -1\\\\
+    2 & -1\\\
     1 & 2
 \end{bmatrix}
 \begin{bmatrix}
-    y_1\\\\
+    y_1\\\
     y_2
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &=
 \frac{1}{\sqrt{5}}
 \begin{bmatrix}
-    2y_1 - y_2\\\\
+    2y_1 - y_2\\\
     y_1 + 2y_2
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 so we have
@@ -1173,23 +1175,23 @@ $$
 So far so good! Let's replace that in our example:
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \bs{x^\text{T}Ax}
-&=6 x_1^2 + 4 x_1x_2 + 3 x_2^2\\\\
-&=6 [\frac{1}{\sqrt{5}}(2y_1 - y_2)]^2 + 4 [\frac{1}{\sqrt{5}}(2y_1 - y_2)\frac{1}{\sqrt{5}}(y_1 + 2y_2)] + 3 [\frac{1}{\sqrt{5}}(y_1 + 2y_2)]^2\\\\
+&=6 x_1^2 + 4 x_1x_2 + 3 x_2^2\\\
+&=6 [\frac{1}{\sqrt{5}}(2y_1 - y_2)]^2 + 4 [\frac{1}{\sqrt{5}}(2y_1 - y_2)\frac{1}{\sqrt{5}}(y_1 + 2y_2)] + 3 [\frac{1}{\sqrt{5}}(y_1 + 2y_2)]^2\\\
 &=
-\frac{1}{5}[6 (2y_1 - y_2)^2 + 4 (2y_1 - y_2)(y_1 + 2y_2) + 3 (y_1 + 2y_2)^2]\\\\
+\frac{1}{5}[6 (2y_1 - y_2)^2 + 4 (2y_1 - y_2)(y_1 + 2y_2) + 3 (y_1 + 2y_2)^2]\\\
 &=
-\frac{1}{5}[6 (4y_1^2 - 4y_1y_2 + y_2^2) + 4 (2y_1^2 + 4y_1y_2 - y_1y_2 - 2y_2^2) + 3 (y_1^2 + 4y_1y_2 + 4y_2^2)]\\\\
+\frac{1}{5}[6 (4y_1^2 - 4y_1y_2 + y_2^2) + 4 (2y_1^2 + 4y_1y_2 - y_1y_2 - 2y_2^2) + 3 (y_1^2 + 4y_1y_2 + 4y_2^2)]\\\
 &=
-\frac{1}{5}(24y_1^2 - 24y_1y_2 + 6y_2^2 + 8y_1^2 + 16y_1y_2 - 4y_1y_2 - 8y_2^2 + 3y_1^2 + 12y_1y_2 + 12y_2^2)\\\\
+\frac{1}{5}(24y_1^2 - 24y_1y_2 + 6y_2^2 + 8y_1^2 + 16y_1y_2 - 4y_1y_2 - 8y_2^2 + 3y_1^2 + 12y_1y_2 + 12y_2^2)\\\
 &=
-\frac{1}{5}(35y_1^2 + 10y_2^2)\\\\
+\frac{1}{5}(35y_1^2 + 10y_2^2)\\\
 &=
 7y_1^2 + 2y_2^2
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 That's great! Our new equation doesn't have any cross terms!
@@ -1215,15 +1217,15 @@ $$
 We want to find $P$ such as our new equation (after the change of variable) doesn't contain the cross terms. The first step is to replace that in the first equation:
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \bs{x^\text{T}Ax}
 &=
-(\bs{Py})^\text{T}\bs{A}(\bs{Py})\\\\
+(\bs{Py})^\text{T}\bs{A}(\bs{Py})\\\
 &=
 \bs{y}^\text{T}(\bs{P}^\text{T}\bs{AP})\bs{y}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 Can you see the how to transform the left hand side ($\bs{x}$) into the right hand side ($\bs{y}$)? The substitution is done by replacing $\bs{A}$ with $\bs{P^\text{T}AP}$. We also know that $\bs{A}$ is symmetric and thus that there is a diagonal matrix $\bs{D}$ containing the eigenvectors of $\bs{A}$ and such as $\bs{D}=\bs{P}^\text{T}\bs{AP}$. We thus end up with:
@@ -1237,52 +1239,52 @@ $$
 All of this implies that we can use $\bs{D}$ to simplify our quadratic equation and remove the cross terms. If you remember from example 2 we know that the eigenvalues of $\bs{A}$ are:
 
 <div>
-$$
+$
 \bs{D}=
 \begin{bmatrix}
-    7 & 0\\\\
+    7 & 0\\\
     0 & 2
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \bs{x^\text{T}Ax}
 &=
-\bs{y^\text{T}\bs{D} y}\\\\
+\bs{y^\text{T}\bs{D} y} \\\
 &=
 \bs{y}^\text{T}
 \begin{bmatrix}
-    7 & 0\\\\
+    7 & 0 \\\
     0 & 2
 \end{bmatrix}
-\bs{y}\\\\
+\bs{y} \\\
 &=
 \begin{bmatrix}
     y_1 & y_2
 \end{bmatrix}
 \begin{bmatrix}
-    7 & 0\\\\
+    7 & 0 \\\
     0 & 2
 \end{bmatrix}
 \begin{bmatrix}
-    y_1\\\\
+    y_1 \\\
     y_2
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &=
 \begin{bmatrix}
     7y_1 +0y_2 & 0y_1 + 2y_2
 \end{bmatrix}
 \begin{bmatrix}
-    y_1\\\\
+    y_1 \\\
     y_2
-\end{bmatrix}\\\\
+\end{bmatrix} \\\
 &=
 7y_1^2 + 2y_2^2
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 That's nice! If you look back to the change of variable that we have done in the quadratic form, you will see that we have found the same values!
@@ -1339,47 +1341,47 @@ f(\bs{x}) =\bs{x^\text{T}Ax}$ will take the value of the corresponding eigenvalu
 This example will show that $f(\bs{x}) = \lambda$. Let's take again the last example, the eigenvectors of $\bs{A}$ were
 
 <div>
-$$
+$
 \bs{Q}=
 \begin{bmatrix}
-    0.89442719 & -0.4472136\\\\
+    0.89442719 & -0.4472136 \\\
     0.4472136 & 0.89442719
 \end{bmatrix}
-$$
+$
 </div>
 
 and the eigenvalues
 
 <div>
-$$
+$
 \bs{\Lambda}=
 \begin{bmatrix}
-    7 & 0\\\\
+    7 & 0 \\\
     0 & 2
 \end{bmatrix}
-$$
+$
 </div>
 
 So if:
 
 <div>
-$$
+$
 \bs{x}=\begin{bmatrix}
     0.89442719 & 0.4472136
 \end{bmatrix}
-$$
+$
 </div>
 
 $f(\bs{x})$ should be equal to 7. Let's check that's true.
 
 <div>
-$$
-\begin{align*}
-f(\bs{x}) &= 6 x_1^2 + 4 x_1x_2 + 3 x_2^2\\\\
-&= 6\times 0.89442719^2 + 4\times 0.89442719\times 0.4472136 + 3 \times 0.4472136^2\\\\
+$
+\begin{aligned}
+f(\bs{x}) &= 6 x_1^2 + 4 x_1x_2 + 3 x_2^2 \\\
+&= 6\times 0.89442719^2 + 4\times 0.89442719\times 0.4472136 + 3 \times 0.4472136^2 \\\
 &= 7
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 In the same way, if $\bs{x}=\begin{bmatrix}
@@ -1387,13 +1389,13 @@ In the same way, if $\bs{x}=\begin{bmatrix}
 \end{bmatrix}$, $f(\bs{x})$ should be equal to 2.
 
 <div>
-$$
-\begin{align*}
-f(\bs{x}) &= 6 x_1^2 + 4 x_1x_2 + 3 x_2^2\\\\
-&= 6\times -0.4472136^2 + 4\times -0.4472136\times 0.89442719 + 3 \times 0.89442719^2\\\\
+$
+\begin{aligned}
+f(\bs{x}) &= 6 x_1^2 + 4 x_1x_2 + 3 x_2^2 \\\
+&= 6\times -0.4472136^2 + 4\times -0.4472136\times 0.89442719 + 3 \times 0.89442719^2 \\\
 &= 2
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 # Quadratic form optimization
@@ -1402,7 +1404,7 @@ Depending to the context, optimizing a function means finding its maximum or its
 
 Here we will see how eigendecomposition can be used to optimize quadratic functions and why this can be done easily without cross terms. The difficulty is that we want a constrained optimization, that is to find the minimum or the maximum of the function for $f(\bs{x})$ being a unit vector.
 
-### Example 7.
+### Example 8.
 
 We want to optimize:
 
@@ -1431,15 +1433,15 @@ $$
 We can also show that $\bs{y}$ has to be a unit vector if it is the case for $\bs{x}$. Recall first that $\bs{x}=\bs{Py}$:
 
 <div>
-$$
-\begin{align*}
-||\bs{x}||^2 &= \bs{x^\text{T}x}\\\\
-&= (\bs{Py})^\text{T}(\bs{Py})\\\\
-&= \bs{P^\text{T}y^\text{T}Py}\\\\
-&= \bs{PP^\text{T}y^\text{T}y}\\\\
+$
+\begin{aligned}
+||\bs{x}||^2 &= \bs{x^\text{T}x} \\\
+&= (\bs{Py})^\text{T}(\bs{Py}) \\\
+&= \bs{P^\text{T}y^\text{T}Py} \\\
+&= \bs{PP^\text{T}y^\text{T}y} \\\
 &= \bs{y^\text{T}y} = ||\bs{y}||^2
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 So $\norm{\bs{x}}^2 = \norm{\bs{y}}^2 = 1$ and thus $y_1^2 + y_2^2 = 1$
@@ -1447,17 +1449,17 @@ So $\norm{\bs{x}}^2 = \norm{\bs{y}}^2 = 1$ and thus $y_1^2 + y_2^2 = 1$
 Since $y_1^2$ and $y_2^2$ cannot be negative because they are squared values, we can be sure that $2y_2^2\leq7y_2^2$. Hence:
 
 <div>
-$$
-\begin{align*}
-f(\bs{x}) &= 7y_1^2 + 2y_2^2\\\\
+$
+\begin{aligned}
+f(\bs{x}) &= 7y_1^2 + 2y_2^2 \\\
 &\leq
-7y_1^2 + 7y_2^2\\\\
+7y_1^2 + 7y_2^2 \\\
 &\leq
-7(y_1^2+y_2^2)\\\\
+7(y_1^2+y_2^2) \\\
 &\leq
 7
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 This means that the maximum value of $f(\bs{x})$ is 7.
@@ -1465,17 +1467,17 @@ This means that the maximum value of $f(\bs{x})$ is 7.
 The same way can lead to find the minimum of $f(\bs{x})$. $7y_1^2\geq2y_1^2$ and:
 
 <div>
-$$
-\begin{align*}
-f(\bs{x}) &= 7y_1^2 + 2y_2^2\\\\
+$
+\begin{aligned}
+f(\bs{x}) &= 7y_1^2 + 2y_2^2 \\\
 &\geq
-2y_1^2 + 2y_2^2\\\\
+2y_1^2 + 2y_2^2 \\\
 &\geq
-2(y_1^2+y_2^2)\\\\
+2(y_1^2+y_2^2) \\\
 &\geq
 2
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 And the minimum of $f(\bs{x})$ is 2.
@@ -1489,12 +1491,12 @@ We can note that the minimum of $f(\bs{x})$ is the minimum eigenvalue of the cor
 We saw that the quadratic functions $f(\bs{x}) = ax_1^2 +2bx_1x_2 + cx_2^2$ can be represented by the symmetric matrix $\bs{A}$:
 
 <div>
-$$
+$
 \bs{A}=\begin{bmatrix}
-    a & b\\\\
+    a & b \\\
     b & c
 \end{bmatrix}
-$$
+$
 </div>
 
 Graphically, these functions can take one of three general shapes (click on the links to go to the Surface Plotter and move the shapes):
