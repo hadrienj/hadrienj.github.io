@@ -46,26 +46,26 @@ The problem can be expressed as finding a function that converts a set of data p
 The first step is to understand the shape of the data. $x^{(i)}$ is one data point containing $n$ dimensions. Let's have $m$ data points organized as column vectors (one column per point):
 
 <div>
-$$
+$
 \bs{x}=
 \begin{bmatrix}
     x^{(1)} & x^{(2)} & \cdots & x^{(m)}
 \end{bmatrix}
-$$
+$
 </div>
 
 If we deploy the $n$ dimensions of our data points we will have:
 
 <div>
-$$
+$
 \bs{x}=
 \begin{bmatrix}
-    x_1^{(1)} & x_1^{(2)} & \cdots & x_1^{(m)}\\\\
-    x_2^{(1)} & x_2^{(2)} & \cdots & x_2^{(m)}\\\\
-    \cdots & \cdots & \cdots & \cdots\\\\
+    x_1^{(1)} & x_1^{(2)} & \cdots & x_1^{(m)} \\\
+    x_2^{(1)} & x_2^{(2)} & \cdots & x_2^{(m)} \\\
+    \cdots & \cdots & \cdots & \cdots \\\
     x_n^{(1)} & x_n^{(2)} & \cdots & x_n^{(m)}
 \end{bmatrix}
-$$
+$
 </div>
 
 We can also write:
@@ -265,18 +265,18 @@ $$
 The second term is $\bs{c}^\text{T}\bs{c}$. We can develop the vector $\bs{c}$ and calculate the derivative for each element:
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \frac{d(\bs{c}^\text{T}\bs{c})}{d\bs{c}} &=
 \left(\frac{d(\bs{c}_1^2 + \bs{c}_2^2 + \cdots + \bs{c}_l^2)}{d\bs{c}_1},
 \frac{d(\bs{c}_1^2 + \bs{c}_2^2 + \cdots + \bs{c}_l^2)}{d\bs{c}_2},
 \cdots,
-\frac{d(\bs{c}_1^2 + \bs{c}_2^2 + \cdots + \bs{c}_l^2)}{d\bs{c}_l}\right) \\\\
-&=(2\bs{c}_1, 2\bs{c}_2, \cdots, 2\bs{c}_l)\\\\
-&=2(\bs{c}_1, \bs{c}_2, \cdots, \bs{c}_l)\\\\
+\frac{d(\bs{c}_1^2 + \bs{c}_2^2 + \cdots + \bs{c}_l^2)}{d\bs{c}_l}\right) \\\
+&=(2\bs{c}_1, 2\bs{c}_2, \cdots, 2\bs{c}_l) \\\
+&=2(\bs{c}_1, \bs{c}_2, \cdots, \bs{c}_l) \\\
 &=2\bs{c}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 So we can progress in our derivatives:
@@ -382,31 +382,32 @@ Because of the constraint 3. (the columns of $\bs{D}$ have unit norms) we have $
 Instead of using the sum along the $m$ data points $\bs{x}$ we can have the matrix $\bs{X}$ which gather all the observations:
 
 <div>
-$$
+$
 \bs{X} = \begin{bmatrix}
-    \bs{x}^{(1)\text{T}}\\\\
-    \bs{x}^{(2)\text{T}}\\\\
-    \cdots\\\\
+    \bs{x}^{(1)\text{T}} \\\
+    \bs{x}^{(2)\text{T}} \\\
+    \cdots \\\
     \bs{x}^{(m)\text{T}}
 \end{bmatrix}=
 \begin{bmatrix}
-    \bs{x}_1^{(1)} & \bs{x}_2^{(1)} & \cdots & \bs{x}_n^{(1)}\\\\
-    \bs{x}_1^{(2)} & \bs{x}_2^{(2)} & \cdots & \bs{x}_n^{(2)}\\\\
-    \cdots & \cdots & \cdots & \cdots\\\\
+    \bs{x}_1^{(1)} & \bs{x}_2^{(1)} & \cdots & \bs{x}_n^{(1)} \\\
+    \bs{x}_1^{(2)} & \bs{x}_2^{(2)} & \cdots & \bs{x}_n^{(2)} \\\
+    \cdots & \cdots & \cdots & \cdots \\\
     \bs{x}_0^{(m)} & \bs{x}_1^{(m)} & \cdots & \bs{x}_n^{(m)}
 \end{bmatrix}
-$$
+$
 </div>
 
 We want $\bs{x}^{(i)\text{T}}$ instead of $\bs{x}^{(i)}$ in our expression of $\bs{d}^*$. We can transpose the content of the norm:
 
+
 <div>
-$$
-\begin{align*}
-\bs{d}^* &= \underset{\bs{d}}{\arg\min} \sum_{i}\norm{(\bs{x}^{(i)}-\bs{dd}^\text{T}\bs{x}^{(i)})^\text{T}}_2^2\\\\
-&=\underset{\bs{d}}{\arg\min} \sum_{i}\norm{\bs{x}^{(i)\text{T}}-\bs{x}^{(i)\text{T}}\bs{dd}^\text{T}}_2^2\\\\
-\end{align*}
-$$
+$
+\begin{aligned}
+\bs{d}^* &= \underset{\bs{d}}{\arg\min} \sum_{i}\norm{(\bs{x}^{(i)}-\bs{dd}^\text{T}\bs{x}^{(i)})^\text{T}}_2^2 \\\
+&= \underset{\bs{d}}{\arg\min} \sum_i\norm{\bs{x}^{(i)\text{T}}-\bs{x}^{(i)\text{T}}\bs{dd}^\text{T}}_2^2 \\\
+\end{aligned}
+$
 </div>
 
 and
@@ -440,34 +441,32 @@ $$
 Since we can cycle the order of the matrices in a Trace (see [2.10](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.10-The-Trace-Operator/)) we can write:
 
 <div>
-$$
-\begin{align*}
-\bs{d}^* &= \argmin{d} \Tr{((\bs{X}-\bs{Xdd}^\text{T})^\text{T}}(\bs{X}-\bs{Xdd}^\text{T}))\\\\
+$
+\begin{aligned}
+\bs{d}^* &= \argmin{d} \Tr{((\bs{X}-\bs{Xdd}^\text{T})^\text{T}}(\bs{X}-\bs{Xdd}^\text{T})) \\\
 &=\argmin{d} \Tr{((\bs{X}^\text{T}-(\bs{Xdd}^\text{T})^\text{T})}(\bs{X}-\bs{Xdd}^\text{T}))
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 And $(\bs{Xdd}^\text{T})^\text{T}=(\bs{d}^\text{T})^\text{T}\bs{d}^\text{T}\bs{X}^\text{T}=\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}$. Let's plug that into our equation:
 
 
 <div>
-$$
-\begin{align*}
-\bs{d}^* &= \argmin{d} \Tr{(\bs{X}^\text{T}-\bs{d}\bs{d}^\text{T}\bs{X}^\text{T})}(\bs{X}-\bs{Xdd}^\text{T}))\\\\
-&= \argmin{d} \Tr{(\bs{X}^\text{T}\bs{X}-\bs{X}^\text{T}\bs{Xdd}^\text{T} -\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}\bs{X} +\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}\bs{Xdd}^\text{T}})\\\\
-&= \argmin{d} \Tr{(\bs{X}^\text{T}\bs{X})} - \Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}
-- \Tr{(\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}\bs{X})} + \Tr{(\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}\bs{Xdd}^\text{T})}
-\end{align*}
-$$
+$
+\begin{aligned}
+\bs{d}^* &= \argmin{d} \Tr{(\bs{X}^\text{T}-\bs{d}\bs{d}^\text{T}\bs{X}^\text{T})}(\bs{X}-\bs{Xdd}^\text{T})) \\\
+&= \argmin{d} \Tr{(\bs{X}^\text{T}\bs{X}-\bs{X}^\text{T}\bs{Xdd}^\text{T} -\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}\bs{X} +\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}\bs{Xdd}^\text{T}}) \\\
+&= \argmin{d} \Tr{(\bs{X}^\text{T}\bs{X})} - \Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})} - \Tr{(\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}\bs{X})} + \Tr{(\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}\bs{Xdd}^\text{T})}
+\end{aligned}
+$
 </div>
 
 We can remove the first term that not depends on $d$:
 
 <div>
 $$
-\bs{d}^* = \argmin{d} - \Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}
-- \Tr{(\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}\bs{X})} + \Tr{(\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}\bs{Xdd}^\text{T})}
+\bs{d}^* = \argmin{d} - \Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})} - \Tr{(\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}\bs{X})} + \Tr{(\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}\bs{Xdd}^\text{T})}
 $$
 </div>
 
@@ -483,8 +482,7 @@ We can simplify to:
 
 <div>
 $$
-\bs{d}^* = \argmin{d} -2\Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}
- + \Tr{(\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}\bs{Xdd}^\text{T})}
+\bs{d}^* = \argmin{d} -2\Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})} + \Tr{(\bs{d}\bs{d}^\text{T}\bs{X}^\text{T}\bs{Xdd}^\text{T})}
 $$
 </div>
 
@@ -492,22 +490,20 @@ and then
 
 <div>
 $$
-\bs{d}^* = \argmin{d} -2\Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}
- + \Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T}\bs{d}\bs{d}^\text{T})}
+\bs{d}^* = \argmin{d} -2\Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})} + \Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T}\bs{d}\bs{d}^\text{T})}
 $$
 </div>
 
 Because of the constraint $\bs{d}^\text{T}\bs{d}=1$:
 
 <div>
-$$
-\begin{align*}
-\bs{d}^* &= \argmin{d} -2\Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}
- + \Tr{(\bs{X}^\text{T}\bs{Xd}\bs{d}^\text{T})}\textrm{ subject to }\bs{d}^\text{T}\bs{d}=1\\\\
-&= \argmin{d} -\Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}\textrm{ subject to }\bs{d}^\text{T}\bs{d}=1\\\\
+$
+\begin{aligned}
+\bs{d}^* &= \argmin{d} -2\Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})} + \Tr{(\bs{X}^\text{T}\bs{Xd}\bs{d}^\text{T})}\textrm{ subject to }\bs{d}^\text{T}\bs{d}=1 \\\
+&= \argmin{d} -\Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}\textrm{ subject to }\bs{d}^\text{T}\bs{d}=1 \\\
 &=\argmax{d} \Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}\textrm{ subject to }\bs{d}^\text{T}\bs{d}=1
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 and with the cycling property:
