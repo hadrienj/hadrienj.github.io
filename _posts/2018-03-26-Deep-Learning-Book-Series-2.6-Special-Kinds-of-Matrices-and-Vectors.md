@@ -36,15 +36,15 @@ A matrix $\bs{A}_{i,j}$ is diagonal if its entries are all zeros except on the d
 ### Example 1.
 
 <div>
-$$
+$
 \bs{D}=
 \begin{bmatrix}
-    2 & 0 & 0 & 0\\\\
-    0 & 4 & 0 & 0\\\\
-    0 & 0 & 3 & 0\\\\
+    2 & 0 & 0 & 0 \\\
+    0 & 4 & 0 & 0 \\\
+    0 & 0 & 3 & 0 \\\
     0 & 0 & 0 & 1
 \end{bmatrix}
-$$
+$
 </div>
 
 ### Example 2.
@@ -52,28 +52,28 @@ $$
 In this case the matrix is also square but there can be non square diagonal matrices.
 
 <div>
-$$
+$
 \bs{D}=
 \begin{bmatrix}
-    2 & 0 & 0\\\\
-    0 & 4 & 0\\\\
-    0 & 0 & 3\\\\
+    2 & 0 & 0 \\\
+    0 & 4 & 0 \\\
+    0 & 0 & 3 \\\
     0 & 0 & 0
 \end{bmatrix}
-$$
+$
 </div>
 
 Or
 
 <div>
-$$
+$
 \bs{D}=
 \begin{bmatrix}
-    2 & 0 & 0 & 0\\\\
-    0 & 4 & 0 & 0\\\\
+    2 & 0 & 0 & 0 \\\
+    0 & 4 & 0 & 0 \\\
     0 & 0 & 3 & 0
 \end{bmatrix}
-$$
+$
 </div>
 
 ### Example 3.
@@ -81,29 +81,29 @@ $$
 The diagonal matrix can be denoted $diag(\bs{v})$ where $\bs{v}$ is the vector containing the diagonal values.
 
 <div>
-$$
+$
 \bs{D}=
 \begin{bmatrix}
-    2 & 0 & 0 & 0\\\\
-    0 & 4 & 0 & 0\\\\
-    0 & 0 & 3 & 0\\\\
+    2 & 0 & 0 & 0 \\\
+    0 & 4 & 0 & 0 \\\
+    0 & 0 & 3 & 0 \\\
     0 & 0 & 0 & 1
 \end{bmatrix}
-$$
+$
 </div>
 
 In this matrix, $\bs{v}$ is the following vector:
 
 <div>
-$$
+$
 \bs{v}=
 \begin{bmatrix}
-    2\\\\
-    4\\\\
-    3\\\\
+    2 \\\
+    4 \\\
+    3 \\\
     1
 \end{bmatrix}
-$$
+$
 </div>
 
 The Numpy function `diag()` can be used to create square diagonal matrices:
@@ -126,62 +126,62 @@ array([[2, 0, 0, 0],
 The mutliplication between a diagonal matrix and a vector is thus just a ponderation of each element of the vector by $v$:
 
 <div>
-$$
+$
 \bs{D}=
 \begin{bmatrix}
-    2 & 0 & 0 & 0\\\\
-    0 & 4 & 0 & 0\\\\
-    0 & 0 & 3 & 0\\\\
+    2 & 0 & 0 & 0 \\\
+    0 & 4 & 0 & 0 \\\
+    0 & 0 & 3 & 0 \\\
     0 & 0 & 0 & 1
 \end{bmatrix}
-$$
+$
 </div>
 
 and
 
 <div>
-$$
+$
 \bs{x}=
 \begin{bmatrix}
-    3\\\\
-    2\\\\
-    2\\\\
+    3 \\\
+    2 \\\
+    2 \\\
     7
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
-\begin{align*}
-&\bs{Dx}=
+$
+\begin{aligned}
+\bs{Dx}&=
 \begin{bmatrix}
-    2 & 0 & 0 & 0\\\\
-    0 & 4 & 0 & 0\\\\
-    0 & 0 & 3 & 0\\\\
+    2 & 0 & 0 & 0 \\\
+    0 & 4 & 0 & 0 \\\
+    0 & 0 & 3 & 0 \\\
     0 & 0 & 0 & 1
 \end{bmatrix} \times
 \begin{bmatrix}
-    3\\\\
-    2\\\\
-    2\\\\
+    3 \\\
+    2 \\\
+    2 \\\
     7
-\end{bmatrix}\\\\
+\end{bmatrix} \\\
 &=\begin{bmatrix}
-    2\times3 + 0\times2 + 0\times2 + 0\times7\\\\
-    0\times3 + 4\times2 + 0\times2 + 0\times7\\\\
-    0\times3 + 0\times2 + 3\times2 + 0\times7\\\\
+    2\times3 + 0\times2 + 0\times2 + 0\times7 \\\
+    0\times3 + 4\times2 + 0\times2 + 0\times7 \\\
+    0\times3 + 0\times2 + 3\times2 + 0\times7 \\\
     0\times3 + 0\times2 + 0\times2 + 1\times7
-\end{bmatrix}\\\\
+\end{bmatrix} \\\
 &=
 \begin{bmatrix}
-    2\times3\\\\
-    4\times2\\\\
-    3\times2\\\\
+    2\times3 \\\
+    4\times2 \\\
+    3\times2 \\\
     1\times7
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 ### Example 5.
@@ -189,103 +189,103 @@ $$
 Non square matrices have the same properties:
 
 <div>
-$$
+$
 \bs{D}=
 \begin{bmatrix}
-    2 & 0 & 0\\\\
-    0 & 4 & 0\\\\
-    0 & 0 & 3\\\\
+    2 & 0 & 0 \\\
+    0 & 4 & 0 \\\
+    0 & 0 & 3 \\\
     0 & 0 & 0
 \end{bmatrix}
-$$
+$
 </div>
 
 and
 
 <div>
-$$
+$
 \bs{x}=
 \begin{bmatrix}
-    3\\\\
-    2\\\\
+    3 \\\
+    2 \\\
     2
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 \bs{Dx}=
 \begin{bmatrix}
-    2 & 0 & 0\\\\
-    0 & 4 & 0\\\\
-    0 & 0 & 3\\\\
+    2 & 0 & 0 \\\
+    0 & 4 & 0 \\\
+    0 & 0 & 3 \\\
     0 & 0 & 0
 \end{bmatrix}
 \times
 \begin{bmatrix}
-    3\\\\
-    2\\\\
+    3 \\\
+    2 \\\
     2
 \end{bmatrix}
 =
 \begin{bmatrix}
-    2\times3\\\\
-    4\times2\\\\
-    3\times2\\\\
+    2\times3 \\\
+    4\times2 \\\
+    3\times2 \\\
     0
 \end{bmatrix}
-$$
+$
 </div>
 
 The invert of a square diagonal matrix exists if all entries of the diagonal are non-zeros. If it is the case, the invert is easy to find. Also, the inverse doen't exist if the matrix is non-square.
 
 <div>
-$$
+$
 \bs{D}=
 \begin{bmatrix}
-    2 & 0 & 0 & 0\\\\
-    0 & 4 & 0 & 0\\\\
-    0 & 0 & 3 & 0\\\\
+    2 & 0 & 0 & 0 \\\
+    0 & 4 & 0 & 0 \\\
+    0 & 0 & 3 & 0 \\\
     0 & 0 & 0 & 1
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 \bs{D}^{-1}=
 \begin{bmatrix}
-    \frac{1}{2} & 0 & 0 & 0\\\\
-    0 & \frac{1}{4} & 0 & 0\\\\
-    0 & 0 & \frac{1}{3} & 0\\\\
+    \frac{1}{2} & 0 & 0 & 0 \\\
+    0 & \frac{1}{4} & 0 & 0 \\\
+    0 & 0 & \frac{1}{3} & 0 \\\
     0 & 0 & 0 & \frac{1}{1}
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 \bs{D}=
 \begin{bmatrix}
-    2 & 0 & 0 & 0\\\\
-    0 & 4 & 0 & 0\\\\
-    0 & 0 & 3 & 0\\\\
+    2 & 0 & 0 & 0 \\\
+    0 & 4 & 0 & 0 \\\
+    0 & 0 & 3 & 0 \\\
     0 & 0 & 0 & 1
 \end{bmatrix}
 \begin{bmatrix}
-    \frac{1}{2} & 0 & 0 & 0\\\\
-    0 & \frac{1}{4} & 0 & 0\\\\
-    0 & 0 & \frac{1}{3} & 0\\\\
+    \frac{1}{2} & 0 & 0 & 0 \\\
+    0 & \frac{1}{4} & 0 & 0 \\\
+    0 & 0 & \frac{1}{3} & 0 \\\
     0 & 0 & 0 & \frac{1}{1}
 \end{bmatrix}=
 \begin{bmatrix}
-    1 & 0 & 0 & 0\\\\
-    0 & 1 & 0 & 0\\\\
-    0 & 0 & 1 & 0\\\\
+    1 & 0 & 0 & 0 \\\
+    0 & 1 & 0 & 0 \\\
+    0 & 0 & 1 & 0 \\\
     0 & 0 & 0 & 1
 \end{bmatrix}
-$$
+$
 </div>
 
 Let's check with Numpy that the multiplication of the matrix with its invert gives us the identity matrix:
@@ -341,9 +341,9 @@ Great! This gives the identity matrix
 The matrix $A$ is symmetric if it is equal to its transpose:
 
 <div>
-$$
+$
 \bs{A} = \bs{A}^\text{T}
-$$
+$
 </div>
 
 This concerns only square matrices.
@@ -351,14 +351,14 @@ This concerns only square matrices.
 ### Example 6.
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
-    2 & 4 & -1\\\\
-    4 & -8 & 0\\\\
+    2 & 4 & -1 \\\
+    4 & -8 & 0 \\\
     -1 & 0 & 3
 \end{bmatrix}
-$$
+$
 </div>
 
 
@@ -424,41 +424,41 @@ plt.close()
 <em>Orthogonal vectors</em>
 
 <div>
-$$
+$
 \bs{x}=
 \begin{bmatrix}
-    2\\\\
+    2 \\\
     2
 \end{bmatrix}
-$$
+$
 </div>
 
 and
 
 <div>
-$$
+$
 \bs{y}=
 \begin{bmatrix}
-    2\\\\
+    2 \\\
     -2
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 \bs{x^\text{T}y}=
 \begin{bmatrix}
     2 & 2
 \end{bmatrix}
 \begin{bmatrix}
-    2\\\\
+    2 \\\
     -2
 \end{bmatrix}=
 \begin{bmatrix}
     2\times2 + 2\times-2
 \end{bmatrix}=0
-$$
+$
 </div>
 
 In addition, when the norm of orthogonal vectors is the unit norm they are called **orthonormal**.
@@ -478,55 +478,55 @@ Orthogonal matrices are important because they have interesting properties. A ma
 <em>Under the hood of an orthogonal matrix</em>
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
-    A_{1,1} & A_{1,2}\\\\
+    A_{1,1} & A_{1,2} \\\
     A_{2,1} & A_{2,2}
 \end{bmatrix}
-$$
+$
 </div>
 
 This means that
 
 <div>
-$$
+$
 \begin{bmatrix}
-    A_{1,1}\\\\
+    A_{1,1} \\\
     A_{2,1}
 \end{bmatrix}
-$$
+$
 </div>
 
 and
 
 <div>
-$$
+$
 \begin{bmatrix}
-    A_{1,2}\\\\
+    A_{1,2} \\\
     A_{2,2}
 \end{bmatrix}
-$$
+$
 </div>
 
 are orthogonal vectors and also that the rows
 
 <div>
-$$
+$
 \begin{bmatrix}
     A_{1,1} & A_{1,2}
 \end{bmatrix}
-$$
+$
 </div>
 
 and
 
 <div>
-$$
+$
 \begin{bmatrix}
     A_{2,1} & A_{2,2}
 \end{bmatrix}
-$$
+$
 </div>
 
 are orthogonal vectors (cf. above for definition of orthogonal vectors).
@@ -537,9 +537,9 @@ are orthogonal vectors (cf. above for definition of orthogonal vectors).
 A orthogonal matrix has this property:
 
 <div>
-$$
+$
 \bs{A^\text{T}A}=\bs{AA^\text{T}}=\bs{I}
-$$
+$
 </div>
 
 We can see that this statement is true with the following reasoning:
@@ -547,50 +547,50 @@ We can see that this statement is true with the following reasoning:
 Let's have the following matrix:
 
 <div>
-$$
+$
 \bs{A}=\begin{bmatrix}
-    a & b\\\\
+    a & b \\\
     c & d
 \end{bmatrix}
-$$
+$
 </div>
 
 and thus
 
 <div>
-$$
+$
 \bs{A}^\text{T}=\begin{bmatrix}
-    a & c\\\\
+    a & c \\\
     b & d
 \end{bmatrix}
-$$
+$
 </div>
 
 Let's do the product:
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 &\bs{A^\text{T}A}=\begin{bmatrix}
-    a & c\\\\
+    a & c \\\
     b & d
 \end{bmatrix}
 \begin{bmatrix}
-    a & b\\\\
+    a & b \\\
     c & d
 \end{bmatrix}
 =
 \begin{bmatrix}
-    aa + cc & ab + cd\\\\
+    aa + cc & ab + cd \\\
     ab + cd & bb + dd
-\end{bmatrix}\\\\
+\end{bmatrix} \\\
 &=
 \begin{bmatrix}
-    a^2 + c^2 & ab + cd\\\\
+    a^2 + c^2 & ab + cd \\\
     ab + cd & b^2 + d^2
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 We saw in [2.5](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.5-Norms/) that the norm of the vector $\begin{bmatrix}
@@ -598,13 +598,13 @@ We saw in [2.5](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.5-N
 \end{bmatrix}$ is equal to $a^2+c^2$ ($L^2$ or squared $L^2$). In addtion, we saw that the rows of $\bs{A}$ have a unit norm because $\bs{A}$ is orthogonal. This means that $a^2+c^2=1$ and $b^2+d^2=1$. So we now have:
 
 <div>
-$$
+$
 \bs{A^\text{T}A}=
 \begin{bmatrix}
-    1 & ab + cd\\\\
+    1 & ab + cd \\\
     ab + cd & 1
 \end{bmatrix}
-$$
+$
 </div>
 
 Also, $ab+cd$ corresponds to the product of $\begin{bmatrix}
@@ -614,42 +614,42 @@ Also, $ab+cd$ corresponds to the product of $\begin{bmatrix}
 \end{bmatrix}$:
 
 <div>
-$$
+$
 \begin{bmatrix}
     a & c
 \end{bmatrix}
 \begin{bmatrix}
-    b\\\\
+    b \\\
     d
 \end{bmatrix}
 =
 ab+cd
-$$
+$
 </div>
 
 And we know that the columns are orthogonal which means that:
 
 <div>
-$$
+$
 \begin{bmatrix}
     a & c
 \end{bmatrix}
 \begin{bmatrix}
-    b\\\\
+    b \\\
     d
 \end{bmatrix}=0
-$$
+$
 </div>
 
 We thus have the identity matrix:
 
 <div>
-$$
+$
 \bs{A^\text{T}A}=\begin{bmatrix}
-    1 & 0\\\\
+    1 & 0 \\\
     0 & 1
 \end{bmatrix}
-$$
+$
 </div>
 
 ## Property 2: $\bs{A}^\text{T}=\bs{A}^{-1}$
@@ -660,39 +660,39 @@ We can show that if $\bs{A^\text{T}A}=\bs{I}$ then $
 If we multiply each side of the equation $\bs{A^\text{T}A}=\bs{I}$ by $\bs{A}^{-1}$ we have:
 
 <div>
-$$
+$
 (\bs{A^\text{T}A})\bs{A}^{-1}=\bs{I}\bs{A}^{-1}
-$$
+$
 </div>
 
 Recall from [2.3](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/) that a matrix or vector doesn't change when it is multiplied by the identity matrix. So we have:
 
 <div>
-$$
+$
 (\bs{A^\text{T}A})\bs{A}^{-1}=\bs{A}^{-1}
-$$
+$
 </div>
 
 We also saw in [2.2](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.2-Multiplying-Matrices-and-Vectors/) that matrix multiplication is associative so we can remove the parenthesis:
 
 <div>
-$$
+$
 \bs{A^\text{T}A}\bs{A}^{-1}=\bs{A}^{-1}
-$$
+$
 </div>
 
 We also know that $\bs{A}\bs{A}^{-1}=\bs{I}$ (see [2.3](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/)) so we can replace:
 
 <div>
-$$
+$
 \bs{A^\text{T}}\bs{I}=\bs{A}^{-1}
-$$
+$
 </div>
 
 This shows that
 
 <div>
-$$\bs{A}^\text{T}=\bs{A}^{-1}$$
+$\bs{A}^\text{T}=\bs{A}^{-1}$
 </div>
 
 You can refer to [this question](https://math.stackexchange.com/questions/1936020/why-is-the-inverse-of-an-orthogonal-matrix-equal-to-its-transpose).
@@ -702,13 +702,13 @@ You can refer to [this question](https://math.stackexchange.com/questions/193602
 Sine and cosine are convenient to create orthogonal matrices. Let's take the following matrix:
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
-    cos(50) & -sin(50)\\\\
+    cos(50) & -sin(50) \\\
     sin(50) & cos(50)
 \end{bmatrix}
-$$
+$
 </div>
 
 
@@ -755,15 +755,15 @@ array([[ 0.]])
 
 Let's check that:
 
-$$
+$
 \bs{A^\text{T}A}=\bs{AA^\text{T}}=\bs{I}
-$$
+$
 
 and thus:
 
-$$
+$
 \bs{A}^\text{T}=\bs{A}^{-1}
-$$
+$
 
 
 ```python

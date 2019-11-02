@@ -34,28 +34,28 @@ Let's start with some basic definitions:
 - A vector is an array of numbers.
 
 <div>
-$$
+$
 \bs{x} =\begin{bmatrix}
-    x_1 \\\\
-    x_2 \\\\
-    \cdots \\\\
+    x_1 \\\
+    x_2 \\\
+    \cdots \\\
     x_n
 \end{bmatrix}
-$$
+$
 </div>
 
 - A matrix is a 2-D array
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
-    A_{1,1} & A_{1,2} & \cdots & A_{1,n} \\\\
-    A_{2,1} & A_{2,2} & \cdots & A_{2,n} \\\\
-    \cdots & \cdots & \cdots & \cdots \\\\
+    A_{1,1} & A_{1,2} & \cdots & A_{1,n} \\\
+    A_{2,1} & A_{2,2} & \cdots & A_{2,n} \\\
+    \cdots & \cdots & \cdots & \cdots \\\
     A_{m,1} & A_{m,2} & \cdots & A_{m,n}
 \end{bmatrix}
-$$
+$
 </div>
 
 - A tensor is a $n$-dimensional array with $n>2$
@@ -164,24 +164,24 @@ If the matrix is not square the idea is the same:
 The superscript $^\text{T}$ is used for transposed matrices.
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
-    A_{1,1} & A_{1,2} \\\\
-    A_{2,1} & A_{2,2} \\\\
+    A_{1,1} & A_{1,2} \\\
+    A_{2,1} & A_{2,2} \\\
     A_{3,1} & A_{3,2}
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 \bs{A}^{\text{T}}=
 \begin{bmatrix}
-    A_{1,1} & A_{2,1} & A_{3,1} \\\\
+    A_{1,1} & A_{2,1} & A_{3,1} \\\
     A_{1,2} & A_{2,2} & A_{3,2}
 \end{bmatrix}
-$$
+$
 </div>
 
 The shape ($m \times n$) is inverted and becomes ($n \times m$).
@@ -250,35 +250,35 @@ We can see that the number of columns becomes the number of rows with transposit
 Matrices can be added if they have the same shape:
 
 <div>
-$$\bs{A} + \bs{B} = \bs{C}$$
+$\bs{A} + \bs{B} = \bs{C}$
 </div>
 
 Each cell of $\bs{A}$ is added to the corresponding cell of $\bs{B}$:
 
 <div>
-$$\bs{A}_{i,j} + \bs{B}_{i,j} = \bs{C}_{i,j}$$
+$\bs{A}_{i,j} + \bs{B}_{i,j} = \bs{C}_{i,j}$
 </div>
 
 $i$ is the row index and $j$ the column index.
 
 <div>
-$$
+$
 \begin{bmatrix}
-    A_{1,1} & A_{1,2} \\\\
-    A_{2,1} & A_{2,2} \\\\
+    A_{1,1} & A_{1,2} \\\
+    A_{2,1} & A_{2,2} \\\
     A_{3,1} & A_{3,2}
 \end{bmatrix}+
 \begin{bmatrix}
-    B_{1,1} & B_{1,2} \\\\
-    B_{2,1} & B_{2,2} \\\\
+    B_{1,1} & B_{1,2} \\\
+    B_{2,1} & B_{2,2} \\\
     B_{3,1} & B_{3,2}
 \end{bmatrix}=
 \begin{bmatrix}
-    A_{1,1} + B_{1,1} & A_{1,2} + B_{1,2} \\\\
-    A_{2,1} + B_{2,1} & A_{2,2} + B_{2,2} \\\\
+    A_{1,1} + B_{1,1} & A_{1,2} + B_{1,2} \\\
+    A_{2,1} + B_{2,1} & A_{2,2} + B_{2,2} \\\
     A_{3,1} + B_{3,1} & A_{3,2} + B_{3,2}
 \end{bmatrix}
-$$
+$
 </div>
 
 The shape of $\bs{A}$, $\bs{B}$ and $\bs{C}$ are identical. Let's check that in an example:
@@ -332,18 +332,18 @@ array([[ 3,  7],
 It is also possible to add a scalar to a matrix. This means adding this scalar to each cell of the matrix.
 
 <div>
-$$
+$
 \alpha+ \begin{bmatrix}
-    A_{1,1} & A_{1,2} \\\\
-    A_{2,1} & A_{2,2} \\\\
+    A_{1,1} & A_{1,2} \\\
+    A_{2,1} & A_{2,2} \\\
     A_{3,1} & A_{3,2}
 \end{bmatrix}=
 \begin{bmatrix}
-    \alpha + A_{1,1} & \alpha + A_{1,2} \\\\
-    \alpha + A_{2,1} & \alpha + A_{2,2} \\\\
+    \alpha + A_{1,1} & \alpha + A_{1,2} \\\
+    \alpha + A_{2,1} & \alpha + A_{2,2} \\\
     \alpha + A_{3,1} & \alpha + A_{3,2}
 \end{bmatrix}
-$$
+$
 </div>
 
 ### Example 5.
@@ -383,40 +383,40 @@ Numpy can handle operations on arrays of different shapes. The smaller array wil
 Here is another generic example:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    A_{1,1} & A_{1,2} \\\\
-    A_{2,1} & A_{2,2} \\\\
+    A_{1,1} & A_{1,2} \\\
+    A_{2,1} & A_{2,2} \\\
     A_{3,1} & A_{3,2}
 \end{bmatrix}+
 \begin{bmatrix}
-    B_{1,1} \\\\
-    B_{2,1} \\\\
+    B_{1,1} \\\
+    B_{2,1} \\\
     B_{3,1}
 \end{bmatrix}
-$$
+$
 </div>
 
 is equivalent to
 
 <div>
-$$
+$
 \begin{bmatrix}
-    A_{1,1} & A_{1,2} \\\\
-    A_{2,1} & A_{2,2} \\\\
+    A_{1,1} & A_{1,2} \\\
+    A_{2,1} & A_{2,2} \\\
     A_{3,1} & A_{3,2}
 \end{bmatrix}+
 \begin{bmatrix}
-    B_{1,1} & B_{1,1} \\\\
-    B_{2,1} & B_{2,1} \\\\
+    B_{1,1} & B_{1,1} \\\
+    B_{2,1} & B_{2,1} \\\
     B_{3,1} & B_{3,1}
 \end{bmatrix}=
 \begin{bmatrix}
-    A_{1,1} + B_{1,1} & A_{1,2} + B_{1,1} \\\\
-    A_{2,1} + B_{2,1} & A_{2,2} + B_{2,1} \\\\
+    A_{1,1} + B_{1,1} & A_{1,2} + B_{1,1} \\\
+    A_{2,1} + B_{2,1} & A_{2,2} + B_{2,1} \\\
     A_{3,1} + B_{3,1} & A_{3,2} + B_{3,1}
 \end{bmatrix}
-$$
+$
 </div>
 
 where the ($3 \times 1$) matrix is converted to the right shape ($3 \times 2$) by copying the first column. Numpy will do that automatically if the shapes can match.

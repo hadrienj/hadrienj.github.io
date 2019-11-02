@@ -41,43 +41,43 @@ It is usually written with two horizontal bars: $\norm{\bs{x}}$
 The norm of the sum of some vectors is less than or equal to the sum of the norms of these vectors.
 
 <div>
-$$
+$
 \norm{\bs{u}+\bs{v}} \leq \norm{\bs{u}}+\norm{\bs{v}}
-$$
+$
 </div>
 
 ### Example 1.
 
 <div>
-$$
+$
 \bs{u}=
 \begin{bmatrix}
     1 & 6
 \end{bmatrix}
-$$
+$
 </div>
 
 and
 
 <div>
-$$
+$
 \bs{v}=
 \begin{bmatrix}
     4 & 2
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 \norm{\bs{u}+\bs{v}} = \sqrt{(1+4)^2+(6+2)^2} = \sqrt{89} \approx 9.43
-$$
+$
 </div>
 
 <div>
-$$
+$
 \norm{\bs{u}}+\norm{\bs{v}} = \sqrt{1^2+6^2}+\sqrt{4^2+2^2} = \sqrt{37}+\sqrt{20} \approx 10.55
-$$
+$
 </div>
 
 Let's check these results:
@@ -180,9 +180,9 @@ Here is the recipe to get the $p$-norm of a vector:
 This is more condensly expressed with the formula:
 
 <div>
-$$
+$
 \norm{\bs{x}}_p=(\sum_i|\bs{x}_i|^p)^{1/p}
-$$
+$
 </div>
 
 This will be clear with examples using these widely used $p$-norms.
@@ -196,9 +196,9 @@ All positive values will get you a $1$ if you calculate its power $0$ except $0$
 $p=1$ so this norm is simply the sum of the absolute values:
 
 <div>
-$$
+$
 \norm{\bs{x}}_1=\sum_{i} |\bs{x}_i|
-$$
+$
 </div>
 
 # The Euclidean norm ($L^2$ norm)
@@ -206,9 +206,9 @@ $$
 The Euclidean norm is the $p$-norm with $p=2$. This may be the more used norm with the squared $L^2$ norm.
 
 <div>
-$$
+$
 \norm{\bs{x}}_2=(\sum_i \bs{x}_i^2)^{1/2}\Leftrightarrow \sqrt{\sum_i \bs{x}_i^2}
-$$
+$
 </div>
 
 Let's see an example of this norm:
@@ -218,23 +218,23 @@ Let's see an example of this norm:
 Graphically, the Euclidean norm corresponds to the length of the vector from the origin to the point obtained by linear combination (like applying Pythagorean theorem).
 
 <div>
-$$
+$
 \bs{u}=
 \begin{bmatrix}
-    3 \\\\
+    3 \\\
     4
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
-\begin{align*}
-\norm{\bs{u}}_2 &=\sqrt{|3|^2+|4|^2}\\\\
-&=\sqrt{25}\\\\
+$
+\begin{aligned}
+\norm{\bs{u}}_2 &=\sqrt{|3|^2+|4|^2}\\\
+&=\sqrt{25}\\\
 &=5
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 
@@ -289,30 +289,30 @@ plt.close()
 In this case, the vector is in a 2-dimensional space but this stands also for more dimensions.
 
 <div>
-$$
+$
 u=
 \begin{bmatrix}
-    u_1\\\\
-    u_2\\\\
-    \cdots \\\\
+    u_1\\\
+    u_2\\\
+    \cdots \\\
     u_n
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 ||u||_2 = \sqrt{u_1^2+u_2^2+\cdots+u_n^2}
-$$
+$
 </div>
 
 
 # The squared Euclidean norm (squared $L^2$ norm)
 
 <div>
-$$
+$
 \sum_i|\bs{x}_i|^2
-$$
+$
 </div>
 
 
@@ -323,42 +323,42 @@ The squared Euclidean norm is widely used in machine learning partly because it 
 ### Example 3.
 
 <div>
-$$
+$
 \bs{x}=
 \begin{bmatrix}
-    2 \\\\
-    5 \\\\
-    3 \\\\
+    2 \\\
+    5 \\\
+    3 \\\
     3
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 \bs{x}^\text{T}=
 \begin{bmatrix}
     2 & 5 & 3 & 3
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \bs{x}^\text{T}\bs{x}&=
 \begin{bmatrix}
     2 & 5 & 3 & 3
 \end{bmatrix} \times
 \begin{bmatrix}
-    2 \\\\
-    5 \\\\
-    3 \\\\
+    2 \\\
+    5 \\\
+    3 \\\
     3
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &= 2\times 2 + 5\times 5 + 3\times 3 + 3\times 3= 47
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 
@@ -403,32 +403,32 @@ It works!
 Another advantage of the squared $L^2$ norm is that its partial derivative is easily computed:
 
 <div>
-$$
+$
 u=
 \begin{bmatrix}
-    u_1\\\\
-    u_2\\\\
-    \cdots \\\\
+    u_1\\\
+    u_2\\\
+    \cdots \\\
     u_n
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 \norm{u}_2 = u_1^2+u_2^2+\cdots+u_n^2
-$$
+$
 </div>
 
 <div>
-$$
+$
 \begin{cases}
-\dfrac{d\norm{u}_2}{du_1} = 2u_1\\\\
-\dfrac{d\norm{u}_2}{du_2} = 2u_2\\\\
-\cdots\\\\
+\dfrac{d\norm{u}_2}{du_1} = 2u_1\\\
+\dfrac{d\norm{u}_2}{du_2} = 2u_2\\\
+\cdots\\\
 \dfrac{d\norm{u}_2}{du_n} = 2u_n
 \end{cases}
-$$
+$
 </div>
 
 ## Derivative of the $L^2$ norm
@@ -436,37 +436,37 @@ $$
 In the case of the $L^2$ norm, the derivative is more complicated and takes every elements of the vector into account:
 
 <div>
-$$
+$
 \norm{u}_2 = \sqrt{(u_1^2+u_2^2+\cdots+u_n^2)} = (u_1^2+u_2^2+\cdots+u_n^2)^{\frac{1}{2}}
-$$
+$
 </div>
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \dfrac{d\norm{u}_2}{du_1} &=
 \dfrac{1}{2}(u_1^2+u_2^2+\cdots+u_n^2)^{\frac{1}{2}-1}\cdot
-\dfrac{d}{du_1}(u_1^2+u_2^2+\cdots+u_n^2)\\\\
+\dfrac{d}{du_1}(u_1^2+u_2^2+\cdots+u_n^2)\\\
 &=\dfrac{1}{2}(u_1^2+u_2^2+\cdots+u_n^2)^{-\frac{1}{2}}\cdot
-\dfrac{d}{du_1}(u_1^2+u_2^2+\cdots+u_n^2)\\\\
+\dfrac{d}{du_1}(u_1^2+u_2^2+\cdots+u_n^2)\\\
 &=\dfrac{1}{2}\cdot\dfrac{1}{(u_1^2+u_2^2+\cdots+u_n^2)^{\frac{1}{2}}}\cdot
-\dfrac{d}{du_1}(u_1^2+u_2^2+\cdots+u_n^2)\\\\
+\dfrac{d}{du_1}(u_1^2+u_2^2+\cdots+u_n^2)\\\
 &=\dfrac{1}{2}\cdot\dfrac{1}{(u_1^2+u_2^2+\cdots+u_n^2)^{\frac{1}{2}}}\cdot
-2\cdot u_1\\\\
-&=\dfrac{u_1}{\sqrt{(u_1^2+u_2^2+\cdots+u_n^2)}}\\\\
-\end{align*}
-$$
+2\cdot u_1\\\
+&=\dfrac{u_1}{\sqrt{(u_1^2+u_2^2+\cdots+u_n^2)}}\\\
+\end{aligned}
+$
 </div>
 
 <div>
-$$
+$
 \begin{cases}
-\dfrac{d\norm{u}_2}{du_1} = \dfrac{u_1}{\sqrt{(u_1^2+u_2^2+\cdots+u_n^2)}}\\\\
-\dfrac{d\norm{u}_2}{du_2} = \dfrac{u_2}{\sqrt{(u_1^2+u_2^2+\cdots+u_n^2)}}\\\\
-\cdots\\\\
-\dfrac{d\norm{u}_2}{du_n} = \dfrac{u_n}{\sqrt{(u_1^2+u_2^2+\cdots+u_n^2)}}\\\\
+\dfrac{d\norm{u}_2}{du_1} = \dfrac{u_1}{\sqrt{(u_1^2+u_2^2+\cdots+u_n^2)}}\\\
+\dfrac{d\norm{u}_2}{du_2} = \dfrac{u_2}{\sqrt{(u_1^2+u_2^2+\cdots+u_n^2)}}\\\
+\cdots\\\
+\dfrac{d\norm{u}_2}{du_n} = \dfrac{u_n}{\sqrt{(u_1^2+u_2^2+\cdots+u_n^2)}}\\\
 \end{cases}
-$$
+$
 </div>
 
 One problem of the squared $L^2$ norm is that it hardly discriminates between 0 and small values because the increase of the function is slow.
@@ -495,16 +495,16 @@ These plots are done with the help of this [website](https://academo.org/demos/3
 It is the $L^\infty$ norm and corresponds to the absolute value of the greatest element of the vector.
 
 <div>
-$$
+$
 \norm{\bs{x}}_\infty = \max\limits_i|x_i|
-$$
+$
 </div>
 
 # Matrix norms: the Frobenius norm
 
 <div>
 $$
-\norm{\bs{A}}_F=\sqrt{\sum_{i,j}A^2_{i,j}}
+\norm{\bs{A}}_{F} = \sqrt{\sum_{i,j}A^{2}_{i,j}}
 $$
 </div>
 
@@ -538,34 +538,34 @@ np.linalg.norm(A)
 # Expression of the dot product with norms
 
 <div>
-$$
+$
 \bs{x}^\text{T}\bs{y} = \norm{\bs{x}}_2\cdot\norm{\bs{y}}_2\cos\theta
-$$
+$
 </div>
 
 
 ### Example 4.
 
 <div>
-$$
+$
 \bs{x}=
 \begin{bmatrix}
-    0 \\\\
+    0 \\\
     2
 \end{bmatrix}
-$$
+$
 </div>
 
 and
 
 <div>
-$$
+$
 \bs{y}=
 \begin{bmatrix}
-    2 \\\\
+    2 \\\
     2
 \end{bmatrix}
-$$
+$
 </div>
 
 
@@ -598,37 +598,37 @@ plt.close()
 We took this example for its simplicity. As we can see, the angle $\theta$ is equal to 45°.
 
 <div>
-$$
+$
 \bs{x^\text{T}y}=
 \begin{bmatrix}
     0 & 2
 \end{bmatrix} \cdot
 \begin{bmatrix}
-    2 \\\\
+    2 \\\
     2
 \end{bmatrix} =
 0\times2+2\times2 = 4
-$$
+$
 </div>
 
 and
 
 <div>
-$$
+$
 \norm{\bs{x}}_2=\sqrt{0^2+2^2}=\sqrt{4}=2
-$$
+$
 </div>
 
 <div>
-$$
+$
 \norm{\bs{y}}_2=\sqrt{2^2+2^2}=\sqrt{8}
-$$
+$
 </div>
 
 <div>
-$$
+$
 2\times\sqrt{8}\times cos(45)=4
-$$
+$
 </div>
 
 Here are the operations using numpy:

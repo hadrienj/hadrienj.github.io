@@ -54,17 +54,17 @@ The covariance matrix is a matrix that summarizes the variances and covariances 
 Let's just check with the formula of the variance:
 
 <div>
-$$
+$
 V(\bs{X}) = \frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2
-$$
+$
 </div>
 
 with $n$ the length of the vector, and $\bar{x}$ the mean of the vector. For instance, the variance of the first column vector of $\bs{A}$ is:
 
 <div>
-$$
+$
 V(\bs{A}_{:,1}) = \frac{(1-3)^2+(5-3)^2+(3-3)^2}{3} = 2.67
-$$
+$
 </div>
 
 
@@ -86,9 +86,9 @@ The other cells correspond to the covariance between two column vectors from $\b
 Let's check that the covariance between the first and the third column vector of $\bs{A}$ is equal to $-2.67$. The formula of the covariance between two variables $\bs{X}$ and $\bs{Y}$ is:
 
 <div>
-$$
+$
 cov(\bs{X},\bs{Y}) = \frac{1}{n} \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})
-$$
+$
 </div>
 
 The variables $\bs{X}$ and $\bs{Y}$ are the first and the third column vectors in the last example. Let's split this formula to be sure that it is crystal clear:
@@ -104,45 +104,45 @@ The variables $\bs{X}$ and $\bs{Y}$ are the first and the third column vectors i
 Let's start with the matrix $\bs{A}$:
 
 <div>
-$$
+$
 \boldsymbol{A}=
 \begin{bmatrix}
-    1 & 3 & 5\\\\
-    5 & 4 & 1\\\\
+    1 & 3 & 5 \\\
+    5 & 4 & 1 \\\
     3 & 8 & 6
 \end{bmatrix}
-$$
+$
 </div>
 
 We will calculate the covariance between the first and the third column vectors:
 
 <div>
-$$
+$
 \boldsymbol{X} = \begin{bmatrix}
-    1\\\\
-    5\\\\
+    1 \\\
+    5 \\\
     3
 \end{bmatrix}
-$$
+$
 </div>
 
 and
 
 <div>
-$$\boldsymbol{Y} = \begin{bmatrix}
-    5\\\\
-    1\\\\
+$\boldsymbol{Y} = \begin{bmatrix}
+    5 \\\
+    1 \\\
     6
 \end{bmatrix}
-$$
+$
 </div>
 
 $\boldsymbol{\bar{x}}=3$, $\boldsymbol{\bar{y}}=4$ and $n=3$ so we have:
 
 <div>
-$$
+$
 cov(X,Y) = \frac{(1-3)(5-4)+(5-3)(1-4)+(3-3)(6-4)}{3}=\frac{-8}{3}=-2.67
-$$
+$
 </div>
 
 Ok, great! That the value of the covariance matrix.
@@ -248,9 +248,9 @@ We end up with the same result as before!
 The explanation is simple. The dot product between two vectors can be expressed:
 
 <div>
-$$
+$
 \bs{X^\text{T}Y}= \sum_{i=1}^{n}(x_i)(y_i)
-$$
+$
 </div>
 
 That's right, it is the sum of the products of each element of the vectors:
@@ -261,17 +261,17 @@ That's right, it is the sum of the products of each element of the vectors:
 If $n$ is the number of elements in our vectors and that we divide by $n$:
 
 <div>
-$$
+$
 \frac{1}{n}\bs{X^\text{T}Y}= \frac{1}{n}\sum_{i=1}^{n}(x_i)(y_i)
-$$
+$
 </div>
 
 You can note that this is not too far from the formula of the covariance we have seen above:
 
 <div>
-$$
+$
 cov(\bs{X},\bs{Y}) = \frac{1}{n} \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})
-$$
+$
 </div>
 
 The only difference is that in the covariance formula we subtract the mean of a vector to each of its elements. This is why we need to center the data before doing the dot product.
@@ -499,9 +499,9 @@ That's great! ⚡️ We now have all the tools to see different preprocessing te
 Mean normalization is just removing the mean from each observation.
 
 <div>
-$$
+$
 \bs{X'} = \bs{X} - \bar{x}
-$$
+$
 </div>
 
 where $\bs{X'}$ is the normalized dataset, $\bs{X}$ the original dataset and $\bar{x}$ the mean of $\bs{X}$.
@@ -586,9 +586,9 @@ The first plot shows again the original data $\bs{B}$ and the second plot shows 
 The standardization is used to put all features on the same scale. The way to do it is to divide each zero-centered dimension by its standard deviation.
 
 <div>
-$$
+$
 \bs{X'} = \frac{\bs{X} - \bar{x}}{\sigma_{\bs{X}}}
-$$
+$
 </div>
 
 where $\bs{X'}$ is the standardized dataset, $\bs{X}$ the original dataset, $\bar{x}$ the mean of $\bs{X}$ and $\sigma_{\bs{X}}$ the standard deviation of $\bs{X}$.
@@ -987,13 +987,13 @@ We can now implement the whitening of the images. [Pal & Sudeep (2016)](https://
 Remind that the formula to obtain the range [0, 1] is:
 
 <div>
-$$\frac{data - min(data)}{max(data) - min(data)}$$
+$\frac{data - min(data)}{max(data) - min(data)}$
 </div>
 
 but here, the minimum value is 0, so this leads to:
 
 <div>
-$$\frac{data}{max(data)} = \frac{data}{255}$$
+$\frac{data}{max(data)} = \frac{data}{255}$
 </div>
 
 
@@ -1137,9 +1137,9 @@ U,S,V = np.linalg.svd(cov)
 In the paper, they used the following equation:
 
 <div>
-$$
+$
 \bs{X}_{ZCA} = \bs{U}.diag(\frac{1}{\sqrt{diag(\bs{S}) + \epsilon}}).\bs{U^\text{T}.X}
-$$
+$
 </div>
 
 with $\bs{U}$ the left singular vectors, and $\bs{S}$ the singular values of the covariance of the initial normalized dataset of images and $\bs{X}$ the normalized dataset. $\epsilon$ is an hyper-parameter called the whitening coefficient. $diag(a)$ corresponds to a matrix with the vector $a$ as a diagonal and 0 in all other cells.
@@ -1198,9 +1198,9 @@ shape: (1000, 1000)
 $diag(\frac{1}{\sqrt{diag(\bs{S}) + \epsilon}})$ is also of shape (1000, 1000) as well as $\bs{U}$ and $\bs{U^{\text{T}}}$. We have seen also that $\bs{X}$ has the shape (1000, 3072). The shape of $\bs{X}_{ZCA}$ is thus:
 
 <div>
-$$
+$
 (1000, 1000) . (1000, 1000) . (1000, 3072) = (1000, 1000) . (1000, 3072) = (1000, 3072)
-$$
+$
 </div>
 
 which corresponds to the shape of the initial dataset. Nice!

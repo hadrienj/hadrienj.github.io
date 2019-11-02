@@ -48,35 +48,37 @@ array([[ 1.,  0.,  0.],
 When 'apply' the identity matrix to a vector the result is this same vector:
 
 <div>
-$$\bs{I}_n\bs{x} = \bs{x}$$
+$
+\bs{I}_n\bs{x} = \bs{x}
+$
 </div>
 
 ### Example 1.
 
 <div>
-$$
+$
 \begin{bmatrix}
-    1 & 0 & 0 \\\\
-    0 & 1 & 0 \\\\
+    1 & 0 & 0 \\\
+    0 & 1 & 0 \\\
     0 & 0 & 1
 \end{bmatrix}
 \times
 \begin{bmatrix}
-    x_{1} \\\\
-    x_{2} \\\\
+    x_{1} \\\
+    x_{2} \\\
     x_{3}
 \end{bmatrix}=
 \begin{bmatrix}
-    1 \times x_1 + 0 \times x_2 + 0\times x_3 \\\\
-    0 \times x_1 + 1 \times x_2 + 0\times x_3 \\\\
+    1 \times x_1 + 0 \times x_2 + 0\times x_3 \\\
+    0 \times x_1 + 1 \times x_2 + 0\times x_3 \\\
     0 \times x_1 + 0 \times x_2 + 1\times x_3
 \end{bmatrix}=
 \begin{bmatrix}
-    x_{1} \\\\
-    x_{2} \\\\
+    x_{1} \\\
+    x_{2} \\\
     x_{3}
 \end{bmatrix}
-$$
+$
 </div>
 
 
@@ -120,7 +122,7 @@ We saw that $\bs{x}$ was not altered after being multiplied by $\bs{I}$.
 The matrix inverse of $\bs{A}$ is denoted $\bs{A}^{-1}$. It is the matrix that results in the identity matrix when it is multiplied by $\bs{A}$:
 
 <div>
-$$\bs{A}^{-1}\bs{A}=\bs{I}_n$$
+$\bs{A}^{-1}\bs{A}=\bs{I}_n$
 </div>
 
 This means that if we apply a linear transformation to the space with $\bs{A}$, it is possible to go back with $\bs{A}^{-1}$. It provides a way to cancel the transformation.
@@ -128,13 +130,13 @@ This means that if we apply a linear transformation to the space with $\bs{A}$, 
 ### Example 2.
 
 <div>
-$$
+$
 \bs{A}=\begin{bmatrix}
-    3 & 0 & 2 \\\\
-    2 & 0 & -2 \\\\
+    3 & 0 & 2 \\\
+    2 & 0 & -2 \\\
     0 & 1 & 1
 \end{bmatrix}
-$$
+$
 </div>
 
 For this example, we will use the Numpy function `linalg.inv()` to calculate the inverse of $\bs{A}$. Let's start by creating $\bs{A}$:
@@ -191,19 +193,19 @@ An introduction on system of linear equations can be found in [2.2](https://hadr
 The inverse matrix can be used to solve the equation $\bs{Ax}=\bs{b}$ by adding it to each term:
 
 <div>
-$$\bs{A}^{-1}\bs{Ax}=\bs{A}^{-1}\bs{b}$$
+$\bs{A}^{-1}\bs{Ax}=\bs{A}^{-1}\bs{b}$
 </div>
 
 Since we know by definition that $\bs{A}^{-1}\bs{A}=\bs{I}$, we have:
 
 <div>
-$$\bs{I}_n\bs{x}=\bs{A}^{-1}\bs{b}$$
+$\bs{I}_n\bs{x}=\bs{A}^{-1}\bs{b}$
 </div>
 
 We saw that a vector is not changed when multiplied by the identity matrix. So we can write:
 
 <div>
-$$\bs{x}=\bs{A}^{-1}\bs{b}$$
+$\bs{x}=\bs{A}^{-1}\bs{b}$
 </div>
 
 This is great! We can solve a set of linear equation just by computing the inverse of $\bs{A}$ and apply this matrix to the vector of results $\bs{b}$!
@@ -215,77 +217,77 @@ Let's try that!
 We will take a simple solvable example:
 
 <div>
-$$
+$
 \begin{cases}
-y = 2x \\\\
+y = 2x \\\
 y = -x +3
 \end{cases}
-$$
+$
 </div>
 
 We will use the notation that we saw in [2.2](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.2-Multiplying-Matrices-and-Vectors/):
 
 <div>
-$$
+$
 \begin{cases}
-A_{1,1}x_1 + A_{1,2}x_2 = b_1 \\\\
+A_{1,1}x_1 + A_{1,2}x_2 = b_1 \\\
 A_{2,1}x_1 + A_{2,2}x_2= b_2
 \end{cases}
-$$
+$
 </div>
 
 Here, $x_1$ corresponds to $x$ and $x_2$ corresponds to $y$. So we have:
 
 <div>
-$$
+$
 \begin{cases}
-2x_1 - x_2 = 0 \\\\
+2x_1 - x_2 = 0 \\\
 x_1 + x_2= 3
 \end{cases}
-$$
+$
 </div>
 
 Our matrix $\bs{A}$ of weights is:
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
-    2 & -1 \\\\
+    2 & -1 \\\
     1 & 1
 \end{bmatrix}
-$$
+$
 </div>
 
 And the vector $\bs{b}$ containing the solutions of individual equations is:
 
 <div>
-$$
+$
 \bs{b}=
 \begin{bmatrix}
-    0 \\\\
+    0 \\\
     3
 \end{bmatrix}
-$$
+$
 </div>
 
 Under the matrix form, our systems becomes:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    2 & -1 \\\\
+    2 & -1 \\\
     1 & 1
 \end{bmatrix}
 \begin{bmatrix}
-    x_1 \\\\
+    x_1 \\\
     x_2
 \end{bmatrix}=
 \begin{bmatrix}
-    0 \\\\
+    0 \\\
     3
 \end{bmatrix}
-$$
+$
 </div>
 
 Let's find the inverse of $\bs{A}$:
@@ -324,7 +326,7 @@ b = np.array([[0], [3]])
 Since we saw that
 
 <div>
-$$\bs{x}=\bs{A}^{-1}\bs{b}$$
+$\bs{x}=\bs{A}^{-1}\bs{b}$
 </div>
 
 We have:
@@ -344,13 +346,13 @@ array([[ 1.],
 This is our solution!
 
 <div>
-$$
+$
 \bs{x}=
 \begin{bmatrix}
-    1 \\\\
+    1 \\\
     2
 \end{bmatrix}
-$$
+$
 </div>
 
 This means that the point of coordinates (1, 2) is the solution and is at the intersection of the lines representing the equations. Let's plot them to check this solution:

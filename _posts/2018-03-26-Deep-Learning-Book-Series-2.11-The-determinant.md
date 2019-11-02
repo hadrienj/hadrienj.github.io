@@ -64,12 +64,12 @@ plt.show()
 We will apply
 
 <div>
-$$
+$
 \bs{A}=\begin{bmatrix}
-    2 & 0\\\\
+    2 & 0 \\\
     0 & 2
 \end{bmatrix}
-$$
+$
 </div>
 
 to $i$ and $j$. You can notice that this matrix is special: it is diagonal. So it will only rescale our space. No rotation here. More precisely, it will rescale each dimension the same way because the diagonal values are identical. Let's create the matrix $\bs{A}$:
@@ -127,12 +127,12 @@ Let's see now an example of negative determinant.
 We will transform the unit square with the matrix:
 
 <div>
-$$
+$
 \bs{B}=\begin{bmatrix}
-    -2 & 0\\\\
+    -2 & 0 \\\
     0 & 2
 \end{bmatrix}
-$$
+$
 </div>
 
 Its determinant is $-4$:
@@ -170,12 +170,12 @@ We can see that the matrices with determinant $2$ and $-2$ modified the area of 
 The absolute value of the determinant shows that, as in the first example, the area of the new square is 4 times the area of the unit square. But this time, it was not just a rescaling but also a transformation. It is not obvious with only the unit vectors so let's transform some random points. We will use the matrix
 
 <div>
-$$
+$
 \bs{C}=\begin{bmatrix}
-    -1 & 0\\\\
+    -1 & 0 \\\
     0 & 1
 \end{bmatrix}
-$$
+$
 </div>
 
 that has a determinant equal to $-1$ for simplicity:

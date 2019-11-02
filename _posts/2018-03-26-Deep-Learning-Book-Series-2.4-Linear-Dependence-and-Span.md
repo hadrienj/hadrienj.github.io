@@ -26,18 +26,20 @@ This chapter is quite heavy by its size and its content but I did what I could t
 Since it is all about systems of linear equations, let's start again with the set of equations:
 
 <div>
-$$\bs{Ax}=\bs{b}$$
+$
+\bs{Ax}=\bs{b}
+$
 </div>
 
 We saw in [2.2](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.2-Multiplying-Matrices-and-Vectors/) that this system corresponds to:
 
 <div>
-$$
-A_{1,1}x_1 + A_{1,2}x_2 + \cdots + A_{1,n}x_n = b_1 \\\\
-A_{2,1}x_1 + A_{2,2}x_2 + \cdots + A_{2,n}x_n = b_2 \\\\
-\cdots \\\\
+$
+A_{1,1}x_1 + A_{1,2}x_2 + \cdots + A_{1,n}x_n = b_1 \\\
+A_{2,1}x_1 + A_{2,2}x_2 + \cdots + A_{2,n}x_n = b_2 \\\
+\cdots \\\
 A_{m,1}x_1 + A_{m,2}x_2 + \cdots + A_{m,n}x_n = b_n
-$$
+$
 </div>
 
 So we have multiple equations with multiple unknowns. We know $A_{1,1}...A_{m,n}$ and $b_1...b_n$. To solve the system we need to find the values of the variables $x_1...x_n$ that satisfies all equations.
@@ -72,36 +74,36 @@ To be able to visualize it, let's take two dimensions and two equations. The sol
 Let's imagine that $\bs{x}$ and $\bs{y}$ are two solutions of our system. This means that
 
 <div>
-$$
+$
 \begin{cases}
-\bs{Ax}=\bs{b}\\\\
+\bs{Ax}=\bs{b} \\\
 \bs{Ay}=\bs{b}
 \end{cases}
-$$
+$
 </div>
 
 In that case, we will see that $\bs{z}=\alpha \bs{x} + (1-\alpha)\bs{y}$ is also a solution for any value of $\alpha$. If $\bs{z}$ is a solution, we can say that $\bs{Az}=\bs{b}$. Indeed, if we plug $\bs{z}$ into the left hand side of the equation we obtain:
 
 <div>
-$$
-\begin{align*}
-\bs{Az}&=\bs{A}(\alpha \bs{x} + (1-\alpha)\bs{y})\\\\
-    &=\bs{Ax}\alpha + \bs{Ay}(1-\alpha)\\\\
+$
+\begin{aligned}
+\bs{Az}&=\bs{A}(\alpha \bs{x} + (1-\alpha)\bs{y}) \\\
+    &=\bs{Ax}\alpha + \bs{Ay}(1-\alpha) \\\
     &=\bs{Ax}\alpha + \bs{Ay}(1-\alpha)
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 And since $\bs{Ax}=\bs{Ay}=\bs{b}$. This leads to:
 
 <div>
-$$
-\begin{align*}
-\bs{Az}&=\bs{b}\alpha + \bs{b}(1-\alpha)\\\\
-    &=\bs{b}\alpha + \bs{b}-\bs{b}\alpha\\\\
+$
+\begin{aligned}
+\bs{Az}&=\bs{b}\alpha + \bs{b}(1-\alpha) \\\
+    &=\bs{b}\alpha + \bs{b}-\bs{b}\alpha \\\
     &=\bs{b}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 So $\bs{z}$ is also a solution.
@@ -111,39 +113,39 @@ So $\bs{z}$ is also a solution.
 As we saw it, the equation $\bs{Ax}=\bs{b}$ can be represented by a matrix $\bs{A}$ containing the weigths of each variable and a vector $\bs{x}$ containing each variable (see [2.2](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.2-Multiplying-Matrices-and-Vectors/)). The product of $\bs{A}$ and $\bs{x}$ gives $\bs{b}$ that is another vector of size $m$:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    A_{1,1} & A_{1,2} & \cdots & A_{1,n} \\\\
-    A_{2,1} & A_{2,2} & \cdots & A_{2,n} \\\\
-    \cdots & \cdots & \cdots & \cdots \\\\
+    A_{1,1} & A_{1,2} & \cdots & A_{1,n} \\\
+    A_{2,1} & A_{2,2} & \cdots & A_{2,n} \\\
+    \cdots & \cdots & \cdots & \cdots \\\
     A_{m,1} & A_{m,2} & \cdots & A_{m,n}
 \end{bmatrix}
 \times
 \begin{bmatrix}
-    x_1 \\\\
-    x_2 \\\\
-    \cdots \\\\
+    x_1 \\\
+    x_2 \\\
+    \cdots \\\
     x_n
 \end{bmatrix}
 =
 \begin{bmatrix}
-    b_1 \\\\
-    b_2 \\\\
-    \cdots \\\\
+    b_1 \\\
+    b_2 \\\
+    \cdots \\\
     b_m
 \end{bmatrix}
-$$
+$
 </div>
 
 Which corresponds to the set of linear equations
 
 <div>
-$$
-A_{1,1}x_1 + A_{1,2}x_2 + \cdots + A_{1,n}x_n = b_1 \\\\
-A_{2,1}x_1 + A_{2,2}x_2 + \cdots + A_{2,n}x_n = b_2 \\\\
-\cdots \\\\
+$
+A_{1,1}x_1 + A_{1,2}x_2 + \cdots + A_{1,n}x_n = b_1 \\\
+A_{2,1}x_1 + A_{2,2}x_2 + \cdots + A_{2,n}x_n = b_2 \\\
+\cdots \\\
 A_{m,1}x_1 + A_{m,2}x_2 + \cdots + A_{m,n}x_n = b_n
-$$
+$
 </div>
 
 Here are some intuitions about what is represented by these matrices. The number of columns of $\bs{A}$ is the number of dimensions of our vector space. It is the number $n$ of directions we can travel by. The number of solutions of our linear system corresponds to the number of ways we can reach $\bs{b}$ by travelling through our $n$ dimensions.
@@ -159,14 +161,14 @@ I recommend to look at [this video lesson of Gilbert Strang](http://ia802205.us.
 When you are looking to the matrix $\bs{A}$:
 
 <div>
-$$
+$
 \bs{A}=\begin{bmatrix}
-    A_{1,1} & A_{1,2} & \cdots & A_{1,n} \\\\
-    A_{2,1} & A_{2,2} & \cdots & A_{2,n} \\\\
-    \cdots & \cdots & \cdots & \cdots \\\\
+    A_{1,1} & A_{1,2} & \cdots & A_{1,n} \\\
+    A_{2,1} & A_{2,2} & \cdots & A_{2,n} \\\
+    \cdots & \cdots & \cdots & \cdots \\\
     A_{m,1} & A_{m,2} & \cdots & A_{m,n}
 \end{bmatrix}
-$$
+$
 </div>
 
 You can consider its rows or its columns separately. Recall that the values are the weights corresponding to each variable. Each row synthetizes one equation. Each column is the set of weights given to 1 variable.
@@ -205,9 +207,9 @@ Let's see few examples of these different cases to clarify that.
 $m=1$, $n=2$: **1 equation and 2 variables**
 
 <div>
-$$
+$
 A_{1,1}x_1 + A_{1,2}x_2 = b_1
-$$
+$
 </div>
 
 The graphical interpretation of $n=2$ is that we have a 2-D space. So we can represent it with 2 axes. Since our hyperplane is of $n-1$-dimensional, we have a 1-D hyperplane. This is simply a line. As $m=1$, we have only one equation. This means that we have only one line characterizing our linear system.
@@ -215,9 +217,9 @@ The graphical interpretation of $n=2$ is that we have a 2-D space. So we can rep
 Note that the last equation can also be written in a way that may be more usual:
 
 <div>
-$$
+$
 y = ax + b
-$$
+$
 </div>
 
 with $y$ corresponding to $x_2$, $x$ corresponding to $x_1$, $a$ corresponding to $A_{1,1}$ and $A_{1,2}=1$.
@@ -225,9 +227,9 @@ with $y$ corresponding to $x_2$, $x$ corresponding to $x_1$, $a$ corresponding t
 For this first example we will take the following equation:
 
 <div>
-$$
+$
 y = 2x + 1
-$$
+$
 </div>
 
 Let's draw the line of this equation with Numpy and Matplotlib (see BONUS in [2.3](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/) for light tips to plot equations).
@@ -260,10 +262,10 @@ The solutions of this linear system correspond to the value of $x$ and $y$ such 
 *m*=2, *n*=2: **2 equations and 2 unknowns**
 
 <div>
-$$
-A_{1,1}x_1 + A_{1,2}x_2 = b_1\\\\
+$
+A_{1,1}x_1 + A_{1,2}x_2 = b_1 \\\
 A_{2,1}x_1 + A_{2,2}x_2 = b_2
-$$
+$
 </div>
 
 The graphical interpretation of this system is that we still have lines in a 2-D space. However this time there are 2 lines since there are 2 equations.
@@ -271,12 +273,12 @@ The graphical interpretation of this system is that we still have lines in a 2-D
 Let's take these equations as example:
 
 <div>
-$$
+$
 \begin{cases}
-y = 2x + 1\\\\
+y = 2x + 1 \\\
 y = 6x - 2
 \end{cases}
-$$
+$
 </div>
 
 
@@ -310,23 +312,23 @@ The same thing can be observed with other values of $m$ (number of equations) an
 *m*=3, *n*=2: **3 equations and 2 unknowns**
 
 <div>
-$$
-A_{1,1}x_1 + A_{1,2}x_2 = b_1\\\\
-A_{2,1}x_1 + A_{2,2}x_2 = b_2\\\\
+$
+A_{1,1}x_1 + A_{1,2}x_2 = b_1 \\\
+A_{2,1}x_1 + A_{2,2}x_2 = b_2 \\\
 A_{3,1}x_1 + A_{3,2}x_2 = b_3
-$$
+$
 </div>
 
 The same idea stands with more than 2 equations in a 2-D space. In that example we have the following 3 equations:
 
 <div>
-$$
+$
 \begin{cases}
-y = 2x + 1\\\\
-y = 6x - 2\\\\
+y = 2x + 1 \\\
+y = 6x - 2 \\\
 y = \frac{1}{10}x+6
 \end{cases}
-$$
+$
 </div>
 
 
@@ -365,25 +367,25 @@ Before going to the column figure, we need to talk about linear combination. The
 Let's take two vectors
 
 <div>
-$$
+$
 \vec{u}=
 \begin{bmatrix}
-    1 \\\\
+    1 \\\
     3
 \end{bmatrix}
-$$
+$
 </div>
 
 and
 
 <div>
-$$
+$
 \vec{v}=
 \begin{bmatrix}
-    2 \\\\
+    2 \\\
     1
 \end{bmatrix}
-$$
+$
 </div>
 
 These two vectors have 2 dimensions and thus contain coordinates in 2-D.
@@ -392,16 +394,16 @@ These two vectors have 2 dimensions and thus contain coordinates in 2-D.
 The linear combination of $\vec{u}$ and $\vec{v}$ is
 
 <div>
-$$
+$
 a\vec{u}+b\vec{v}= a
 \begin{bmatrix}
-    1 \\\\
+    1 \\\
     3
 \end{bmatrix} + b\begin{bmatrix}
-    2 \\\\
+    2 \\\
     1
 \end{bmatrix}
-$$
+$
 </div>
 
 with $a$ and $b$ the weights of the vectors.
@@ -409,25 +411,25 @@ with $a$ and $b$ the weights of the vectors.
 Graphically, the vectors are added to reach a specific point in space. For example if $a=2$ and $b=1$:
 
 <div>
-$$
+$
 2\vec{u}+\vec{v}= 2
 \begin{bmatrix}
-    1 \\\\
+    1 \\\
     3
 \end{bmatrix} +
 \begin{bmatrix}
-    2 \\\\
+    2 \\\
     1
 \end{bmatrix} =
 \begin{bmatrix}
-    2 \cdot 1 + 2 \\\\
+    2 \cdot 1 + 2 \\\
     2 \cdot 3 + 1
 \end{bmatrix} =
 \begin{bmatrix}
-    4 \\\\
+    4 \\\
     7
 \end{bmatrix}
-$$
+$
 </div>
 
 The sum of $\vec{u}$ and $\vec{v}$ is a vector that will reach the point of corrdinates $(4, 7)$. To show that on a plot, I will use the custom function `plotVectors()` that I defined at the beginning of [the notebook](https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.4%20Linear%20Dependence%20and%20Span/2.4%20Linear%20Dependence%20and%20Span.ipynb). It takes a set of coordinates and an array of colors as input and plot the corresponding vectors. So let's plot $\vec{u}$ and $\vec{v}$:
@@ -509,45 +511,45 @@ It is also possible to represent the set of equations by considering that the so
 From the set of equations:
 
 <div>
-$$
-A_{1,1}x_1 + A_{1,2}x_2 + A_{1,n}x_n = b_1 \\\\
-A_{2,1}x_1 + A_{2,2}x_2 + A_{2,n}x_n = b_2 \\\\
-\cdots \\\\
+$
+A_{1,1}x_1 + A_{1,2}x_2 + A_{1,n}x_n = b_1 \\\
+A_{2,1}x_1 + A_{2,2}x_2 + A_{2,n}x_n = b_2 \\\
+\cdots \\\
 A_{m,1}x_1 + A_{m,2}x_2 + A_{m,n}x_n = b_m
-$$
+$
 </div>
 
 The column form is then:
 
 <div>
-$$
+$
 x_1
 \begin{bmatrix}
-    A_{1,1}\\\\
-    A_{2,1}\\\\
+    A_{1,1} \\\
+    A_{2,1} \\\
     A_{m,1}
 \end{bmatrix}
 +
 x_2
 \begin{bmatrix}
-    A_{1,2}\\\\
-    A_{2,2}\\\\
+    A_{1,2} \\\
+    A_{2,2} \\\
     A_{m,2}
 \end{bmatrix}
 +
 x_n
 \begin{bmatrix}
-    A_{1,n}\\\\
-    A_{2,n}\\\\
+    A_{1,n} \\\
+    A_{2,n} \\\
     A_{m,n}
 \end{bmatrix}
 =
 \begin{bmatrix}
-    b_1\\\\
-    b_2\\\\
+    b_1 \\\
+    b_2 \\\
     b_m
 \end{bmatrix}
-$$
+$
 </div>
 
 On a graphical point of view, we have to travel from the origin (zero on every dimensions) to the point of coordinate $\bs{b}$. The columns of $\bs{A}$ give us the directions we can travel by and their weights are the length of the way in that direction.
@@ -561,92 +563,92 @@ On a graphical point of view, we have to travel from the origin (zero on every d
 $m=2$, $n=2$: 2 equations and 2 unknowns
 
 <div>
-$$
-A_{1,1}x_1 + A_{1,2}x_2 = b_1\\\\
+$
+A_{1,1}x_1 + A_{1,2}x_2 = b_1 \\\
 A_{2,1}x_1 + A_{2,2}x_2 = b_2
-$$
+$
 </div>
 
 <div>
-$$
+$
 \begin{cases}
-y = \frac{1}{2}x+1\\\\
+y = \frac{1}{2}x+1 \\\
 y = -x + 4
 \end{cases}
 \Leftrightarrow
 \begin{cases}
-\frac{1}{2}x-y = -1\\\\
+\frac{1}{2}x-y = -1 \\\
 x+y=4
 \end{cases}
-$$
+$
 </div>
 
 So here is the matrix $\bs{A}$:
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
-    \frac{1}{2} & -1 \\\\
+    \frac{1}{2} & -1 \\\
     1 & 1
 \end{bmatrix}
-$$
+$
 </div>
 
 The column figure gives us:
 
 <div>
-$$
+$
 x
 \begin{bmatrix}
-    \frac{1}{2} \\\\
+    \frac{1}{2} \\\
     1
 \end{bmatrix}
 +
 y
 \begin{bmatrix}
-    -1 \\\\
+    -1 \\\
     1
 \end{bmatrix}
 =
 \begin{bmatrix}
-    -1 \\\\
+    -1 \\\
     4
 \end{bmatrix}
-$$
+$
 </div>
 
 The goal is to find the value of the weights ($x$ and $y$) for which the linear combination of the vector
 
 <div>
-$$
+$
 \begin{bmatrix}
-    \frac{1}{2} \\\\
+    \frac{1}{2} \\\
     1
 \end{bmatrix}
-$$
+$
 </div>
 
 and
 
 <div>
-$$
+$
 \begin{bmatrix}
-    -1 \\\\
+    -1 \\\
     1
 \end{bmatrix}
-$$
+$
 </div>
 
 gives the vector:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    -1 \\\\
+    -1 \\\
     4
 \end{bmatrix}
-$$
+$
 </div>
 
 We will solve the system graphically by plotting the equations and looking for their intersection:
@@ -676,48 +678,48 @@ plt.close()
 We can see that the solution (the intersection of the lines representing our two equations) is $x=2$ and $y=2$. This means that the linear combination is the following:
 
 <div>
-$$
+$
 2
 \begin{bmatrix}
-    \frac{1}{2} \\\\
+    \frac{1}{2} \\\
     1
 \end{bmatrix}
 +
 2
 \begin{bmatrix}
-    -1 \\\\
+    -1 \\\
     1
 \end{bmatrix}
 =
 \begin{bmatrix}
-    -1 \\\\
+    -1 \\\
     4
 \end{bmatrix}
-$$
+$
 </div>
 
 Let's say that:
 
 <div>
-$$
+$
 \vec{u}=
 \begin{bmatrix}
-    \frac{1}{2} \\\\
+    \frac{1}{2} \\\
     1
 \end{bmatrix}
-$$
+$
 </div>
 
 and:
 
 <div>
-$$
+$
 \vec{v}=
 \begin{bmatrix}
-    -1 \\\\
+    -1 \\\
     1
 \end{bmatrix}
-$$
+$
 </div>
 
 To talk in term of the column figure we can reach the point of coordinates $(-1, 4)$ if we add two times the vector $\vec{u}$ and two times the vector $\vec{v}$. Let's check that:
@@ -773,39 +775,39 @@ Let's take the example of a ($2\times 3$) matrix that corresponds to a set of 2 
 
 
 <div>
-$$
+$
 \begin{cases}
-8x+y+z=1\\\\
+8x+y+z=1 \\\
 x+y+z=1
 \end{cases}
-$$
+$
 </div>
 
 <div>
-$$
+$
 x
 \begin{bmatrix}
-    8 \\\\
+    8 \\\
     1
 \end{bmatrix}
 +
 y
 \begin{bmatrix}
-    1 \\\\
+    1 \\\
     1
 \end{bmatrix}
 +
 z
 \begin{bmatrix}
-    1 \\\\
+    1 \\\
     1
 \end{bmatrix}
 =
 \begin{bmatrix}
-    1 \\\\
+    1 \\\
     1
 \end{bmatrix}
-$$
+$
 </div>
 
 Here is the representation of the planes plotted with the help of this [website](https://technology.cpm.org/general/3dgraph/):
@@ -825,45 +827,45 @@ We can see that in the best case the two planes are not parallel and there are s
 The column figure is helpful to understand why the linear system has usually no solution if $n$ (the number of unknowns) is smaller than $m$ (the number of equations). Let's add 1 equation to the above system in order to end up with a ($3\times2$) matrix (3 equations and 2 unknowns):
 
 <div>
-$$
+$
 \begin{cases}
-y = \frac{1}{2}x+1\\\\
-y = -x + 4\\\\
+y = \frac{1}{2}x+1 \\\
+y = -x + 4 \\\
 y = 7x + 2
 \end{cases}
 \Leftrightarrow
 \begin{cases}
-\frac{1}{2}x-y = -1\\\\
-x+y=4\\\\
+\frac{1}{2}x-y = -1 \\\
+x+y=4 \\\
 7x-y=2
 \end{cases}
-$$
+$
 </div>
 
 This corresponds to:
 
 <div>
-$$
+$
 x
 \begin{bmatrix}
-    \frac{1}{2} \\\\
-    1 \\\\
+    \frac{1}{2} \\\
+    1 \\\
     7
 \end{bmatrix}
 +
 y
 \begin{bmatrix}
-    -1 \\\\
-    1 \\\\
+    -1 \\\
+    1 \\\
     -1
 \end{bmatrix}
 =
 \begin{bmatrix}
-    -1 \\\\
-    4 \\\\
+    -1 \\\
+    4 \\\
     2
 \end{bmatrix}
-$$
+$
 </div>
 
 So we are still traveling in our 2-dimensional space (see the plot of the column space above) but the point that we are looking for is defined by 3 dimensions. There are cases where the third coordinate does not rely on our 2-dimensional $x$-$y$ plane. In that case no solution exists.
@@ -879,17 +881,17 @@ The number of columns can thus provide information on the number of solutions. B
 Here is an example of linear system containing linear dependency:
 
 <div>
-$$
+$
 \begin{cases}
-y = 2x+6\\\\
+y = 2x+6 \\\
 y = 2x
 \end{cases}
 \Leftrightarrow
 \begin{cases}
-2x-y = -6\\\\
+2x-y = -6 \\\
 2x-y=0
 \end{cases}
-$$
+$
 </div>
 
 The row figure shows that the system has no solution:
@@ -921,24 +923,24 @@ Since the lines are parallel, there is no point at their intersection.
 The column figure illustrates the point as well:
 
 <div>
-$$
+$
 x
 \begin{bmatrix}
-    2 \\\\
+    2 \\\
     2
 \end{bmatrix}
 +
 y
 \begin{bmatrix}
-    -1 \\\\
+    -1 \\\
     -1
 \end{bmatrix}
 =
 \begin{bmatrix}
-    -6 \\\\
+    -6 \\\
     0
 \end{bmatrix}
-$$
+$
 </div>
 
 

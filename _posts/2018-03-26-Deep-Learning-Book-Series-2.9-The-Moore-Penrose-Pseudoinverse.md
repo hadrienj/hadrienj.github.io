@@ -78,13 +78,13 @@ This is a bit crude but we will see some examples to clarify all of this.
 Let's see how to implement that. We will create a non square matrix $\bs{A}$, calculate its singular value decomposition and its pseudoinverse.
 
 <div>
-$$
+$
 \bs{A}=\begin{bmatrix}
-    7 & 2\\\\
-    3 & 4\\\\
+    7 & 2 \\\
+    3 & 4 \\\
     5 & 3
 \end{bmatrix}
-$$
+$
 </div>
 
 
@@ -127,11 +127,12 @@ $$\bs{A}^{-1}\bs{A}=\bs{I_n}$$
 with
 
 <div>
-$$\bs{I_2}=\begin{bmatrix}
-    1 & 0 \\\\
+$
+\bs{I_2}=\begin{bmatrix}
+    1 & 0 \\\
     0 & 1
 \end{bmatrix}
-$$
+$
 </div>
 
 
@@ -191,19 +192,19 @@ The pseudoinverse solve the system in the least square error perspective: it fin
 For this example we will consider this set of three equations with two unknowns:
 
 <div>
-$$
+$
 \begin{cases}
--2x_1 + 2 = x_2 \\\\
-4x_1 + 8 = x_2 \\\\
+-2x_1 + 2 = x_2 \\\
+4x_1 + 8 = x_2 \\\
 -1x_1 + 2 = x_2
 \end{cases}
 \Leftrightarrow
 \begin{cases}
--2x_1 - x_2 = -2 \\\\
-4x_1 - x_2 = -8 \\\\
+-2x_1 - x_2 = -2 \\\
+4x_1 - x_2 = -8 \\\
 -1x_1 - x_2 = -2
 \end{cases}
-$$
+$
 </div>
 
 Let's see their graphical representation:
@@ -232,14 +233,14 @@ We actually see that there is no solution.
 Putting this into the matrix form we have:
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
-    -2 & -1 \\\\
-    4 & -1 \\\\
+    -2 & -1 \\\
+    4 & -1 \\\
     -1 & -1
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
@@ -268,25 +269,25 @@ $$
 So we have:
 
 <div>
-$$
+$
 \bs{Ax} = \bs{b}
 \Leftrightarrow
 \begin{bmatrix}
-    -2 & -1 \\\\
-    4 & -1 \\\\
+    -2 & -1 \\\
+    4 & -1 \\\
     -1 & -1
 \end{bmatrix}
 \begin{bmatrix}
-    x_1 \\\\
+    x_1 \\\
     x_2
 \end{bmatrix}
 =
 \begin{bmatrix}
-    -2 \\\\
-    -8 \\\\
+    -2 \\\
+    -8 \\\
     -2
 \end{bmatrix}
-$$
+$
 </div>
 
 We will now calculate the pseudoinverse of $\bs{A}$:
@@ -307,13 +308,13 @@ array([[-0.11290323,  0.17741935, -0.06451613],
 Now that we have calculated the pseudoinverse of $\bs{A}$:
 
 <div>
-$$
+$
 \bs{A}^+=
 \begin{bmatrix}
-    -0.1129 &  0.1774 & -0.0645 \\\\
+    -0.1129 &  0.1774 & -0.0645 \\\
     -0.3710 & -0.2742 & -0.3548
 \end{bmatrix}
-$$
+$
 </div>
 
 we can use it to find $\bs{x}$ knowing that:
@@ -353,36 +354,36 @@ array([[-1.06451613],
 So we have
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \bs{A}^+\bs{b}&=
 \begin{bmatrix}
-    -0.1129 &  0.1774 & -0.0645 \\\\
+    -0.1129 &  0.1774 & -0.0645 \\\
     -0.3710 & -0.2742 & -0.3548
 \end{bmatrix}
 \begin{bmatrix}
-    -2 \\\\
-    -8 \\\\
+    -2 \\\
+    -8 \\\
     -2
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &=
 \begin{bmatrix}
-    -1.06451613 \\\\
+    -1.06451613 \\\
     3.64516129
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 In our two dimensions, the coordinates of $\bs{x}$ are
 
 <div>
-$$
+$
 \begin{bmatrix}
-    -1.06451613 \\\\
+    -1.06451613 \\\
     3.64516129
 \end{bmatrix}
-$$
+$
 </div>
 
 Let's plot this point along with the equations lines:

@@ -35,82 +35,84 @@ The number of columns of the first matrix must be equal to the number of rows of
 As a starter we will see the multiplication of a matrix and a vector.
 
 <div>
-$$\bs{A} \times \bs{b} = \bs{C}$$
+$
+\bs{A} \times \bs{b} = \bs{C}
+$
 </div>
 
 with:
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
-    1 & 2\\\\
-    3 & 4\\\\
+    1 & 2 \\\
+    3 & 4 \\\
     5 & 6
 \end{bmatrix}
-$$
+$
 </div>
 
 and:
 
 <div>
-$$
+$
 \bs{b}=\begin{bmatrix}
-    2\\\\
+    2\\\
     4
 \end{bmatrix}
-$$
+$
 </div>
 
 We saw that the formula is the following:
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 &\begin{bmatrix}
-    A_{1,1} & A_{1,2} \\\\
-    A_{2,1} & A_{2,2} \\\\
+    A_{1,1} & A_{1,2} \\\
+    A_{2,1} & A_{2,2} \\\
     A_{3,1} & A_{3,2}
 \end{bmatrix}\times
 \begin{bmatrix}
-    B_{1,1} \\\\
+    B_{1,1} \\\
     B_{2,1}
-\end{bmatrix}=\\\\
+\end{bmatrix}=\\\
 &\begin{bmatrix}
-    A_{1,1}B_{1,1} + A_{1,2}B_{2,1} \\\\
-    A_{2,1}B_{1,1} + A_{2,2}B_{2,1} \\\\
+    A_{1,1}B_{1,1} + A_{1,2}B_{2,1} \\\
+    A_{2,1}B_{1,1} + A_{2,2}B_{2,1} \\\
     A_{3,1}B_{1,1} + A_{3,2}B_{2,1}
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 So we will have:
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 &\begin{bmatrix}
-    1 & 2 \\\\
-    3 & 4 \\\\
+    1 & 2 \\\
+    3 & 4 \\\
     5 & 6
 \end{bmatrix}\times
 \begin{bmatrix}
-    2 \\\\
+    2 \\\
     4
-\end{bmatrix}=\\\\
+\end{bmatrix}=\\\
 &\begin{bmatrix}
-    1 \times 2 + 2 \times 4 \\\\
-    3 \times 2 + 4 \times 4 \\\\
+    1 \times 2 + 2 \times 4 \\\
+    3 \times 2 + 4 \times 4 \\\
     5 \times 2 + 6 \times 4
 \end{bmatrix}=
 \begin{bmatrix}
-    10 \\\\
-    22 \\\\
+    10 \\\
+    22 \\\
     34
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 It is a good habit to check the dimensions of the matrix to see what is going on. We can see in this example that the shape of $\bs{A}$ is ($3 \times 2$) and the shape of $\bs{b}$ is ($2 \times 1$). So the dimensions of $\bs{C}$ are ($3 \times 1$).
@@ -177,63 +179,63 @@ array([[10],
 Multiplication of two matrices.
 
 <div>
-$$\bs{A} \times \bs{B} = \bs{C}$$
+$\bs{A} \times \bs{B} = \bs{C}$
 </div>
 
 with:
 
 <div>
-$$\bs{A}=\begin{bmatrix}
-    1 & 2 & 3 \\\\
-    4 & 5 & 6 \\\\
-    7 & 8 & 9 \\\\
+$\bs{A}=\begin{bmatrix}
+    1 & 2 & 3 \\\
+    4 & 5 & 6 \\\
+    7 & 8 & 9 \\\
     10 & 11 & 12
 \end{bmatrix}
-$$
+$
 </div>
 
 and:
 
 <div>
-$$\bs{B}=\begin{bmatrix}
-    2 & 7 \\\\
-    1 & 2 \\\\
+$\bs{B}=\begin{bmatrix}
+    2 & 7 \\\
+    1 & 2 \\\
     3 & 6
 \end{bmatrix}
-$$
+$
 </div>
 
 So we have:
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 &\begin{bmatrix}
-    1 & 2 & 3 \\\\
-    4 & 5 & 6 \\\\
-    7 & 8 & 9 \\\\
+    1 & 2 & 3 \\\
+    4 & 5 & 6 \\\
+    7 & 8 & 9 \\\
     10 & 11 & 12
 \end{bmatrix}\times
 \begin{bmatrix}
-    2 & 7 \\\\
-    1 & 2 \\\\
+    2 & 7 \\\
+    1 & 2 \\\
     3 & 6
-\end{bmatrix}=\\\\
+\end{bmatrix}=\\\
 &\begin{bmatrix}
-    2 \times 1 + 1 \times 2 + 3 \times 3 & 7 \times 1 + 2 \times 2 + 6 \times 3 \\\\
-    2 \times 4 + 1 \times 5 + 3 \times 6 & 7 \times 4 + 2 \times 5 + 6 \times 6 \\\\
-    2 \times 7 + 1 \times 8 + 3 \times 9 & 7 \times 7 + 2 \times 8 + 6 \times 9 \\\\
-    2 \times 10 + 1 \times 11 + 3 \times 12 & 7 \times 10 + 2 \times 11 + 6 \times 12 \\\\
-\end{bmatrix}\\\\
+    2 \times 1 + 1 \times 2 + 3 \times 3 & 7 \times 1 + 2 \times 2 + 6 \times 3 \\\
+    2 \times 4 + 1 \times 5 + 3 \times 6 & 7 \times 4 + 2 \times 5 + 6 \times 6 \\\
+    2 \times 7 + 1 \times 8 + 3 \times 9 & 7 \times 7 + 2 \times 8 + 6 \times 9 \\\
+    2 \times 10 + 1 \times 11 + 3 \times 12 & 7 \times 10 + 2 \times 11 + 6 \times 12 \\\
+\end{bmatrix}\\\
 &=
 \begin{bmatrix}
-    13 & 29 \\\\
-    31 & 74 \\\\
-    49 & 119 \\\\
+    13 & 29 \\\
+    31 & 74 \\\
+    49 & 119 \\\
     67 & 164
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 Let's check the result with Numpy:
@@ -284,9 +286,9 @@ It works!
 # Formalization of the dot product
 
 <div>
-$$
+$
 C_{i,j} = A_{i,k}B_{k,j} = \sum_{k}A_{i,k}B_{k,j}
-$$
+$
 </div>
 
 You can find more examples about the dot product [here](https://www.mathsisfun.com/algebra/matrix-multiplying.html).
@@ -298,122 +300,122 @@ We will now see some interesting properties of the matrix multiplication. It wil
 ## Matrices mutliplication is distributive
 
 <div>
-$$\bs{A}(\bs{B}+\bs{C}) = \bs{AB}+\bs{AC}$$
+$\bs{A}(\bs{B}+\bs{C}) = \bs{AB}+\bs{AC}$
 </div>
 
 ### Example 3.
 
 <div>
-$$
+$
 \bs{A}=\begin{bmatrix}
-    2 & 3 \\\\
-    1 & 4 \\\\
+    2 & 3 \\\
+    1 & 4 \\\
     7 & 6
 \end{bmatrix},
 \bs{B}=\begin{bmatrix}
-    5 \\\\
+    5 \\\
     2
 \end{bmatrix},
 \bs{C}=\begin{bmatrix}
-    4 \\\\
+    4 \\\
     3
 \end{bmatrix}
-$$
+$
 </div>
 
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \bs{A}(\bs{B}+\bs{C})&=\begin{bmatrix}
-    2 & 3 \\\\
-    1 & 4 \\\\
+    2 & 3 \\\
+    1 & 4 \\\
     7 & 6
 \end{bmatrix}\times
 \left(\begin{bmatrix}
-    5 \\\\
+    5 \\\
     2
 \end{bmatrix}+
 \begin{bmatrix}
-    4 \\\\
+    4 \\\
     3
 \end{bmatrix}\right)=
 \begin{bmatrix}
-    2 & 3 \\\\
-    1 & 4 \\\\
+    2 & 3 \\\
+    1 & 4 \\\
     7 & 6
 \end{bmatrix}\times
 \begin{bmatrix}
-    9 \\\\
+    9 \\\
     5
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &=
 \begin{bmatrix}
-    2 \times 9 + 3 \times 5 \\\\
-    1 \times 9 + 4 \times 5 \\\\
+    2 \times 9 + 3 \times 5 \\\
+    1 \times 9 + 4 \times 5 \\\
     7 \times 9 + 6 \times 5
 \end{bmatrix}=
 \begin{bmatrix}
-    33 \\\\
-    29 \\\\
+    33 \\\
+    29 \\\
     93
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 is equivalent to
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \bs{A}\bs{B}+\bs{A}\bs{C} &= \begin{bmatrix}
-    2 & 3 \\\\
-    1 & 4 \\\\
+    2 & 3 \\\
+    1 & 4 \\\
     7 & 6
 \end{bmatrix}\times
 \begin{bmatrix}
-    5 \\\\
+    5 \\\
     2
 \end{bmatrix}+
 \begin{bmatrix}
-    2 & 3 \\\\
-    1 & 4 \\\\
+    2 & 3 \\\
+    1 & 4 \\\
     7 & 6
 \end{bmatrix}\times
 \begin{bmatrix}
-    4 \\\\
+    4 \\\
     3
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &=
 \begin{bmatrix}
-    2 \times 5 + 3 \times 2 \\\\
-    1 \times 5 + 4 \times 2 \\\\
+    2 \times 5 + 3 \times 2 \\\
+    1 \times 5 + 4 \times 2 \\\
     7 \times 5 + 6 \times 2
 \end{bmatrix}+
 \begin{bmatrix}
-    2 \times 4 + 3 \times 3 \\\\
-    1 \times 4 + 4 \times 3 \\\\
+    2 \times 4 + 3 \times 3 \\\
+    1 \times 4 + 4 \times 3 \\\
     7 \times 4 + 6 \times 3
-\end{bmatrix}\\\\
+\end{bmatrix}\\\
 &=
 \begin{bmatrix}
-    16 \\\\
-    13 \\\\
+    16 \\\
+    13 \\\
     47
 \end{bmatrix}+
 \begin{bmatrix}
-    17 \\\\
-    16 \\\\
+    17 \\\
+    16 \\\
     46
 \end{bmatrix}=
 \begin{bmatrix}
-    33 \\\\
-    29 \\\\
+    33 \\\
+    29 \\\
     93
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 
@@ -486,7 +488,7 @@ array([[33],
 ## Matrices mutliplication is associative
 
 <div>
-$$\bs{A}(\bs{BC}) = (\bs{AB})\bs{C}$$
+$\bs{A}(\bs{BC}) = (\bs{AB})\bs{C}$
 </div>
 
 
@@ -549,7 +551,7 @@ array([[100],
 ## Matrix multiplication is not commutative
 
 <div>
-$$\bs{AB} \neq \bs{BA}$$
+$\bs{AB} \neq \bs{BA}$
 </div>
 
 
@@ -607,7 +609,7 @@ array([[28, 30],
 ## However vector multiplication is commutative
 
 <div>
-$$\bs{x^{ \text{T}}y} = \bs{y^{\text{T}}x} $$
+$\bs{x^{ \text{T}}y} = \bs{y^{\text{T}}x} $
 </div>
 
 
@@ -663,7 +665,7 @@ array([[22]])
 ## Simplification of the matrix product
 
 <div>
-$$(\bs{AB})^{\text{T}} = \bs{B}^\text{T}\bs{A}^\text{T}$$
+$(\bs{AB})^{\text{T}} = \bs{B}^\text{T}\bs{A}^\text{T}$
 </div>
 
 
@@ -726,12 +728,12 @@ This is an important part of why linear algebra can be very useful to solve vari
 A system of equations is a set of multiple equations (at least 1). For instance we could have:
 
 <div>
-$$
+$
 \begin{cases}
-y = 2x + 1 \\\\
+y = 2x + 1 \\\
 y = \frac{7}{2}x +3
 \end{cases}
-$$
+$
 </div>
 
 A system of equations is defined by its number of equations and its number of unknowns. In our example above, the system has 2 equations and 2 unknowns ($x$ and $y$). In addition we call this a system of **linear** equations because each equations is linear. It is easy to see that in 2 dimensions: we will have one straight line per equation and the dimensions are the unknowns. Here is the plot of the first one:
@@ -748,12 +750,12 @@ A system of equations is defined by its number of equations and its number of un
 Matrices can be used to describe a system of linear equations of the form $\bs{Ax}=\bs{b}$. Here is such a system:
 
 <div>
-$$
-A_{1,1}x_1 + A_{1,2}x_2 + A_{1,n}x_n = b_1 \\\\
-A_{2,1}x_1 + A_{2,2}x_2 + A_{2,n}x_n = b_2 \\\\
-\cdots \\\\
+$
+A_{1,1}x_1 + A_{1,2}x_2 + A_{1,n}x_n = b_1 \\\
+A_{2,1}x_1 + A_{2,2}x_2 + A_{2,n}x_n = b_2 \\\
+\cdots \\\
 A_{m,1}x_1 + A_{m,2}x_2 + A_{m,n}x_n = b_n
-$$
+$
 </div>
 
 The unknowns (what we want to find to solve the system) are the variables $x_1$ and $x_2$ corresponding to the previous variables $x$ and $y$. It is exactly the same form as with the last example but with all the variables on the same side. $y = 2x + 1$ becomes $-2x + y = 1$ with $x$ corresponding to $x_1$ and $y$ corresponding to $x_2$. We will have $n$ unknowns and $m$ equations.
@@ -765,29 +767,29 @@ The variables are named $x_1, x_2, \cdots, x_n$ by convention because we will se
 The left hand term can considered as the product of a matrix $\bs{A}$ containing weights for each variable ($n$ columns) and each equation ($m$ rows):
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
-    A_{1,1} & A_{1,2} & \cdots & A_{1,n} \\\\
-    A_{2,1} & A_{2,2} & \cdots & A_{2,n} \\\\
-    \cdots & \cdots & \cdots & \cdots \\\\
+    A_{1,1} & A_{1,2} & \cdots & A_{1,n} \\\
+    A_{2,1} & A_{2,2} & \cdots & A_{2,n} \\\
+    \cdots & \cdots & \cdots & \cdots \\\
     A_{m,1} & A_{m,2} & \cdots & A_{m,n}
 \end{bmatrix}
-$$
+$
 </div>
 
 with a vector $\bs{x}$ containing the $n$ unknowns
 
 <div>
-$$
+$
 \bs{x}=
 \begin{bmatrix}
-    x_1 \\\\
-    x_2 \\\\
-    \cdots \\\\
+    x_1 \\\
+    x_2 \\\
+    \cdots \\\
     x_n
 \end{bmatrix}
-$$
+$
 </div>
 
 The dot product of $\bs{A}$ and $\bs{x}$ gives a set of equations. Here is a simple example:
@@ -802,34 +804,34 @@ We have a set of two equations with two unknowns. So the number of rows of $\bs{
 The equation system can be wrote like that:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    A_{1,1} & A_{1,2} & \cdots & A_{1,n} \\\\
-    A_{2,1} & A_{2,2} & \cdots & A_{2,n} \\\\
-    \cdots & \cdots & \cdots & \cdots \\\\
+    A_{1,1} & A_{1,2} & \cdots & A_{1,n} \\\
+    A_{2,1} & A_{2,2} & \cdots & A_{2,n} \\\
+    \cdots & \cdots & \cdots & \cdots \\\
     A_{m,1} & A_{m,2} & \cdots & A_{m,n}
 \end{bmatrix}
 \times
 \begin{bmatrix}
-    x_1 \\\\
-    x_2 \\\\
-    \cdots \\\\
+    x_1 \\\
+    x_2 \\\
+    \cdots \\\
     x_n
 \end{bmatrix}
 =
 \begin{bmatrix}
-    b_1 \\\\
-    b_2 \\\\
-    \cdots \\\\
+    b_1 \\\
+    b_2 \\\
+    \cdots \\\
     b_m
 \end{bmatrix}
-$$
+$
 </div>
 
 Or simply:
 
 <div>
-$$\bs{Ax}=\bs{b}$$
+$\bs{Ax}=\bs{b}$
 </div>
 
 ### Example 4.
@@ -837,88 +839,88 @@ $$\bs{Ax}=\bs{b}$$
 We will try to convert the common form of a linear equation $y=ax+b$ to the matrix form. If we want to keep the previous notation we will have instead:
 
 <div>
-$$x_2=ax_1+b$$
+$x_2=ax_1+b$
 </div>
 
 Don't confuse the variable $x_1$ and $x_2$ with the vector $\bs{x}$. This vector contains actually all the variables of our equations. Here we have:
 
 <div>
-$$
+$
 \bs{x} =
 \begin{bmatrix}
-    x_1 \\
+    x_1 \\\
     x_2
 \end{bmatrix}
-$$
+$
 </div>
 
 In this example we will use the following equation:
 
 <div>
-$$
-\begin{align*}
-&x_2=2x_1+1\\\\
+$
+\begin{aligned}
+&x_2=2x_1+1 \\\
 \Leftrightarrow& 2x_1-x_2=-1
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 In order to end up with this system when we multiply $\bs{A}$ and $\bs{x}$ we need $\bs{A}$ to be a matrix containing the weights of each variable. The weight of $x_1$ is $2$ and the weights of $x_2$ is $-1$:
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
     2 & -1
 \end{bmatrix}
-$$
+$
 </div>
 
 So we have
 
 <div>
-$$
+$
 \begin{bmatrix}
     2 & -1
 \end{bmatrix}
 \begin{bmatrix}
-    x_1 \\
+    x_1 \\\
     x_2
 \end{bmatrix}
 =
 \begin{bmatrix}
 2x_1-1x_2
 \end{bmatrix}
-$$
+$
 </div>
 
 To complete the equation we have
 
 <div>
-$$
+$
 \bs{b}=
 \begin{bmatrix}
     -1
 \end{bmatrix}
-$$
+$
 </div>
 
 which gives
 
 <div>
-$$
+$
 \begin{bmatrix}
     2 & -1
 \end{bmatrix}
 \begin{bmatrix}
-    x_1 \\
+    x_1 \\\
     x_2
 \end{bmatrix}
 =
 \begin{bmatrix}
     -1
 \end{bmatrix}
-$$
+$
 </div>
 
 This system of equations is thus very simple and contains only 1 equation ($\bs{A}$ has 1 row) and 2 variables ($\bs{A}$ has 2 columns).
@@ -926,39 +928,39 @@ This system of equations is thus very simple and contains only 1 equation ($\bs{
 To summarise, $\bs{A}$ will be the matrix of dimensions $m\times n$ containing scalars multiplying these variables (here $x_1$ is multiplied by 2 and $x_2$ by -1). The vector $\bs{x}$ contains the variables $x_1$ and $x_2$. And the right hand term is the constant $\bs{b}$:
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
     2 & -1
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 \bs{x}=
 \begin{bmatrix}
-    x_1\\\\
+    x_1 \\\
     x_2
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 \bs{b}=
 \begin{bmatrix}
     -1
 \end{bmatrix}
-$$
+$
 </div>
 
 We can write this system
 
 <div>
-$$
+$
 \bs{Ax}=\bs{b}
-$$
+$
 </div>
 
 We will see at the end of the [the next chapter](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/) that this compact way of writing sets of linear equations can be very usefull. It provides actually a way to solve the equations.

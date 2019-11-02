@@ -72,7 +72,7 @@ We will modify the vector:
 <div>
 $$
 \bs{v}=\begin{bmatrix}
-    x\\\\
+    x \\\
     y
 \end{bmatrix}
 $$
@@ -81,54 +81,54 @@ $$
 by applying the matrix:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    2 & 0\\\\
+    2 & 0 \\\
     0 & 2
 \end{bmatrix}
-$$
+$
 </div>
 
 We will have:
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \begin{bmatrix}
-    x'\\\\
+    x' \\\
     y'
 \end{bmatrix}
 &=\begin{bmatrix}
-    2 & 0\\\\
+    2 & 0 \\\
     0 & 2
 \end{bmatrix}
 \begin{bmatrix}
-    x\\\\
+    x \\\
     y
-\end{bmatrix}\\\\
+\end{bmatrix} \\\
 &=
 \begin{bmatrix}
-    2x + 0y\\\\
+    2x + 0y \\\
     0x + 2y
-\end{bmatrix}\\\\
+\end{bmatrix} \\\
 &=
 \begin{bmatrix}
-    2x\\\\
+    2x \\\
     2y
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 We see that applying the matrix:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    2 & 0\\\\
+    2 & 0 \\\
     0 & 2
 \end{bmatrix}
-$$
+$
 </div>
 
 just doubled each coordinate of our vector. Here are the graphical representation of $\bs{v}$ and its transformation $\bs{w}$:
@@ -151,35 +151,35 @@ It is then possible to apply a matrix to all these unit vectors to see the kind 
 Again, let's apply the matrix:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    2 & 0\\\\
+    2 & 0 \\\
     0 & 2
 \end{bmatrix}
-$$
+$
 </div>
 
 to the unit circle:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    x'\\\\
+    x' \\\
     y'
 \end{bmatrix}=
 \begin{bmatrix}
-    2 & 0\\\\
+    2 & 0 \\\
     0 & 2
 \end{bmatrix}
 \begin{bmatrix}
-    x\\\\
+    x \\\
     y
 \end{bmatrix}=
 \begin{bmatrix}
-    2x\\\\
+    2x \\\
     2y
 \end{bmatrix}
-$$
+$
 </div>
 
 <img src="../../assets/images/2.8/unit-circle-transformation.png" width="400" alt="Representation of the unit circle and its transformation" title="The unit circle and its transformation">
@@ -192,35 +192,35 @@ We can see that the matrix doubled the size of the circle. But in some transform
 We will apply the matrix:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    3 & 0\\\\
+    3 & 0 \\\
     0 & 2
 \end{bmatrix}
-$$
+$
 </div>
 
 to the unit circle:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    x'\\\\
+    x' \\\
     y'
 \end{bmatrix}=
 \begin{bmatrix}
-    3 & 0\\\\
+    3 & 0 \\\
     0 & 2
 \end{bmatrix}\cdot
 \begin{bmatrix}
-    x\\\\
+    x \\\
     y
 \end{bmatrix}=
 \begin{bmatrix}
-    3x\\\\
+    3x \\\
     2y
 \end{bmatrix}
-$$
+$
 </div>
 
 This gives the following new circle:
@@ -231,46 +231,46 @@ This gives the following new circle:
 We can check that with the equations associated with this matrix transformation. Let's say that the coordinates of the new circle (after transformation) are $x'$ and $y'$. The relation between the old coordinates ($x$, $y$) and the new coordinates ($x'$, $y'$) is:
 
 <div>
-$$
+$
 \begin{bmatrix}
-    x'\\\\
+    x' \\\
     y'
 \end{bmatrix}=
 \begin{bmatrix}
-    3x\\\\
+    3x \\\
     2y
 \end{bmatrix}
 \Leftrightarrow
 \begin{cases}
-x=\frac{x'}{3}\\\\
+x=\frac{x'}{3} \\\
 y=\frac{y'}{2}
 \end{cases}
-$$
+$
 </div>
 
 We also know that the equation of the unit circle is $x^2+y^2=1$ (the norm of the unit vectors is 1, see [2.5](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.5-Norms/)). By replacement we end up with:
 
 <div>
-$$
-\begin{align*}
-\left(\frac{x'}{3}\right)^2 + \left(\frac{y'}{2}\right)^2 = 1\\\\
-\left(\frac{y'}{2}\right)^2 = 1 - \left(\frac{x'}{3}\right)^2\\\\
-\frac{y'}{2} = \sqrt{1 - \left(\frac{x'}{3}\right)^2}\\\\
+$
+\begin{aligned}
+\left(\frac{x'}{3}\right)^2 + \left(\frac{y'}{2}\right)^2 = 1 \\\
+\left(\frac{y'}{2}\right)^2 = 1 - \left(\frac{x'}{3}\right)^2 \\\
+\frac{y'}{2} = \sqrt{1 - \left(\frac{x'}{3}\right)^2} \\\
 y' = 2\sqrt{1 - \left(\frac{x'}{3}\right)^2}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 We can check that this equation corresponds to our transformed circle. Let's start by drawing the old circle. Its equation is:
 
 <div>
-$$
-\begin{align*}
-x^2+y^2=1\\\\
-y^2=1-x^2\\\\
+$
+\begin{aligned}
+x^2+y^2=1 \\\
+y^2=1-x^2 \\\
 y=\sqrt{1-x^2}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 
@@ -336,40 +336,40 @@ We saw that the matrix $\bs{D}$ is a diagonal matrix. And we saw also that it co
 Matrices that are not diagonal can produce a rotation (see more details [here](https://en.wikipedia.org/wiki/Rotation_matrix)). Since it is easier to think about angles when we talk about rotation, we will use a matrix of the form
 
 <div>
-$$
+$
 R=
 \begin{bmatrix}
-    cos(\theta) & -sin(\theta)\\\\
+    cos(\theta) & -sin(\theta) \\\
     sin(\theta) & cos(\theta)
 \end{bmatrix}
-$$
+$
 </div>
 
 This matrix will rotate our vectors or matrices counterclockwise through an angle $\theta$. Our new coordinates will be
 
 <div>
-$$
-\begin{align*}
+$
+\begin{aligned}
 \begin{bmatrix}
-    x'\\\\
+    x' \\\
     y'
 \end{bmatrix}
 &=
 \begin{bmatrix}
-    cos(\theta) & -sin(\theta)\\\\
+    cos(\theta) & -sin(\theta) \\\
     sin(\theta) & cos(\theta)
 \end{bmatrix}
 \begin{bmatrix}
-    x\\\\
+    x \\\
     y
-\end{bmatrix}\\\\
+\end{bmatrix} \\\
 &=
 \begin{bmatrix}
-    xcos(\theta) - ysin(\theta)\\\\
+    xcos(\theta) - ysin(\theta) \\\
     xsin(\theta) + ycos(\theta)
 \end{bmatrix}
-\end{align*}
-$$
+\end{aligned}
+$
 </div>
 
 Let's rotate some vectors through an angle of $\theta = 45^\circ$.
@@ -552,12 +552,12 @@ We can use it to check that the three transformations given by the SVD are equiv
 We will use the matrix:
 
 <div>
-$$
+$
 \bs{A}=\begin{bmatrix}
-    3 & 7\\\\
+    3 & 7 \\\
     5 & 2
 \end{bmatrix}
-$$
+$
 </div>
 
 and plot the unit circle and its transformation by $\bs{A}$:
@@ -739,13 +739,13 @@ The matrices $\bs{U}$, $\bs{D}$ and $\bs{V}$ can be found by transforming $\bs{A
 Let's take an example of a non square matrix:
 
 <div>
-$$
+$
 \bs{A}=\begin{bmatrix}
-    7 & 2\\\\
-    3 & 4\\\\
+    7 & 2 \\\
+    3 & 4 \\\
     5 & 3
 \end{bmatrix}
-$$
+$
 </div>
 
 The singular value decomposition can be done with the `linalg.svd()` function from Numpy (note that `np.linalg.eig(A)` works only on square matrices and will give an error for `A`).

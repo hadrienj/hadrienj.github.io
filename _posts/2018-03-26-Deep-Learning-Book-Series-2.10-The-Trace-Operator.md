@@ -30,14 +30,14 @@ I can assure you that you will read this chapter in 2 minutes! It is nice after 
 The trace is the sum of all values in the diagonal of a square matrix.
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
-    2 & 9 & 8 \\\\
-    4 & 7 & 1 \\\\
+    2 & 9 & 8 \\\
+    4 & 7 & 1 \\\
     8 & 2 & 5
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
@@ -132,33 +132,33 @@ $$
 Let's see an example of this property.
 
 <div>
-$$
+$
 \bs{A}=
 \begin{bmatrix}
-    4 & 12 \\\\
+    4 & 12 \\\
     7 & 6
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 \bs{B}=
 \begin{bmatrix}
-    1 & -3 \\\\
+    1 & -3 \\\
     4 & 3
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 \bs{C}=
 \begin{bmatrix}
-    6 & 6 \\\\
+    6 & 6 \\\
     2 & 5
 \end{bmatrix}
-$$
+$
 </div>
 
 
@@ -196,33 +196,33 @@ np.trace(B.dot(C).dot(A))
 
 
 <div>
-$$
+$
 \bs{ABC}=
 \begin{bmatrix}
-    360 & 432 \\\\
+    360 & 432 \\\
     180 & 171
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 \bs{CAB}=
 \begin{bmatrix}
-    498 & 126 \\\\
+    498 & 126 \\\
     259 & 33
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
-$$
+$
 \bs{BCA}=
 \begin{bmatrix}
-    -63 & -54 \\\\
+    -63 & -54 \\\
     393 & 594
 \end{bmatrix}
-$$
+$
 </div>
 
 <div>
