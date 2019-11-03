@@ -43,7 +43,7 @@ h5 { font-size: .8em; }
 h6 { font-size: .6em; }
 
 .heading {
-  font-size: 2.3em;
+  font-size: 1.7em;
   font-weight: bold;
   font-family: Avenir;
   margin: .67em 0;
@@ -453,8 +453,9 @@ div > ul.share-buttons > li > a > img {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 .avatar-txt {
-  flex: 0 0 50%;
+  flex: 0 0 80%;
   text-align: left;
+  color: #606060;
 }
 .projects {
   text-align: center;
