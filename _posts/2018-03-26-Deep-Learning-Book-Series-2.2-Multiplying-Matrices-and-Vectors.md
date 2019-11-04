@@ -965,6 +965,9 @@ $
 
 We will see at the end of the [the next chapter](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/) that this compact way of writing sets of linear equations can be very usefull. It provides actually a way to solve the equations.
 
+{% include mailchimp.html %}
+
+
 # References
 
 - [Math is fun - Multiplying matrices](https://www.mathsisfun.com/algebra/matrix-multiplying.html)

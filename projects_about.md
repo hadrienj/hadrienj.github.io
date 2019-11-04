@@ -1,11 +1,11 @@
 ---
-bg: "about1.jpg"
+bg: "about.jpg"
 layout: page
 title: "About"
 crawlertitle: "About"
 permalink: /about/
-summary: "hadrienj. <br>PhD student . Cognitive Science <br>ENS - Paris, France"
-active: about
+summary: "Hadrien Jean Ph.D<br>(Cognitive Science)<br>-<br>Data Science<br>Web Developement"
+active: true
 ---
 
 <p class="intro">

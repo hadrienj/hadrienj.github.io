@@ -23,6 +23,8 @@ This content is part of a series about the chapter 3 on probability from the [De
 
 <iframe src="https://ghbtns.com/github-btn.html?user=hadrienj&repo=deepLearningBook-Notes&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="20px !important"></iframe>
 
+{% include mailchimp.html %}
+
 # Introduction
 
 I'm happy to present here the following of my series on the Deep Learning Book by Goodfellow et al. This is the first post/notebook made from chapter 3 on Probability. For those who already know my posts/notebooks about [Chapter 2](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/) on linear algebra, the aim and the structure are the same. The goal is to make the book more accessible **for people without a deep mathematical background**.
@@ -483,3 +485,5 @@ To summarise, we have seen what is a random variable and how the distribution of
 You now have all the tools to dive more into probability. The next part will be about the chapters 3.4 to 3.8. We will see what we called marginal and conditional probability, the chain rule and the concept of independence.
 
 I hope that this helped you to gain a better intuition on all of this! Feel free to contact me about any question/note/correction! 😀
+
+{% include mailchimp.html %}

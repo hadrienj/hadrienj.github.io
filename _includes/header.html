@@ -3,11 +3,11 @@
   <input type="checkbox" id="menu-checkbox" />
 
   <nav class="center-wrapper nav-main">
-    
+
     {% for my_page in site.pages %}
       {% if my_page.active %}
         {% if page.title == my_page.title %}
-          <a class="blog-logo" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+          <a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
         {% else %}
           <a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
         {% endif %}

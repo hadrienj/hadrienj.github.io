@@ -449,13 +449,14 @@ div > ul.share-buttons > li > a > img {
 .avatar-img  {
   border-radius: 50%;
   padding: 0;
-  margin: 1em 1em 0 0;
+  margin: 0em 1em 0 0;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 .avatar-txt {
   flex: 0 0 80%;
   text-align: left;
   color: #606060;
+  line-height: 2em;
 }
 .projects {
   text-align: center;

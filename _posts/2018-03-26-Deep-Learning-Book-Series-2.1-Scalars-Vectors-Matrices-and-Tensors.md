@@ -467,6 +467,9 @@ array([[ 3,  4],
 
 You can find basics operations on matrices simply explained [here](https://www.mathsisfun.com/algebra/matrix-introduction.html).
 
+{% include mailchimp.html %}
+
+
 # References
 
 - [Broadcasting in Numpy](https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html)

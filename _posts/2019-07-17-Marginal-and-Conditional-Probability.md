@@ -438,3 +438,5 @@ We have seen that marginal probability refers to the probability of a single eve
 We also talked about conditional probability. It corresponds to probability under certain conditions, for instance, the probability to get a six in a deck of cards knowing that we already got a six and didn't replace it. We investigated the cases of dependent and independent events.
 
 I hope that this article helped you to use and read the mathematical notation underlying these concepts.
+
+{% include mailchimp.html %}

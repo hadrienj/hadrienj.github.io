@@ -1290,7 +1290,7 @@ I hope that you found something interesting in this article!
 
 You can fork the Jupyter notebook on Github [here](https://github.com/hadrienj/Preprocessing-for-deep-learning)!
 
-
+{% include mailchimp.html %}
 
 # References
 
