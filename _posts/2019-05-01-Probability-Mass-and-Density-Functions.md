@@ -23,7 +23,6 @@ This content is part of a series about the chapter 3 on probability from the [De
 
 <iframe src="https://ghbtns.com/github-btn.html?user=hadrienj&repo=deepLearningBook-Notes&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="20px !important"></iframe>
 
-{% include mailchimp.html %}
 
 # Introduction
 
