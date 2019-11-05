@@ -33,6 +33,14 @@ a {
   font-size: 18px;
 }
 
+#menu-checkbox:checked + .nav-main a:not(.blog-logo) {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+
 #menu-checkbox:checked + .nav-main {
   -webkit-flex-flow: column nowrap;
   -ms-flex-flow: column nowrap;
@@ -165,7 +173,7 @@ a {
 .sidebar,
 .cover {
   width: 100%;
-  height: 100vh;
+  height: 30vh;
 }
 
 

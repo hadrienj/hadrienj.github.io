@@ -221,18 +221,6 @@
     overflow-wrap: break-word;
   }
 
-  .card-section {
-    display: inline-block;
-    padding: 0.5em;
-  }
-  .card-section-img {
-    width: 70%;
-    margin: auto;
-  }
-  .card-section-text-description {
-    text-align: justify;
-  }
-
   .avatar {
     margin: 0;
   }
@@ -266,6 +254,25 @@
 @media screen and (max-width: $break-point) {
   .nav-main a {
     font-size: 14px;
+  }
+
+  .toggle-button {
+    display: none;
+  }
+  .nav-main a:not(.blog-logo) {
+    display: block;
+  }
+
+  .card-section {
+    display: inline-block;
+    padding: 0.5em;
+  }
+  .card-section-img {
+    width: 70%;
+    margin: auto;
+  }
+  .card-section-text-description {
+    text-align: justify;
   }
 }
 
