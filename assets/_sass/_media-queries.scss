@@ -245,6 +245,14 @@
     width: auto;
   }
 
+  .subscribe-subtitle {
+    font-size: 10pt;
+    margin-top: 1em;
+  }
+  .subscribe-img {
+    display: none;
+  }
+
 }
 
 
@@ -274,6 +282,7 @@
   .card-section-text-description {
     text-align: justify;
   }
+
 }
 
 
@@ -320,5 +329,13 @@
     -ms-flex-order: 0;
     order: 0;
     width: auto;
+  }
+
+  .subscribe-subtitle {
+    font-size: 10pt;
+    margin-top: 1em;
+  }
+  .subscribe-img {
+    display: none;
   }
 }

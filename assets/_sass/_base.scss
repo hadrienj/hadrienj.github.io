@@ -466,6 +466,7 @@ div > ul.share-buttons > li > a > img {
 
 #mc_embed_signup {
   background-color: #ececec !important;
+  margin: 0 !important;
 }
 #mc-embedded-subscribe {
   background-color: #2EBCE7 !important;
@@ -485,4 +486,32 @@ div > ul.share-buttons > li > a > img {
 }
 #mc-embedded-subscribe {
 font-size: 18px;
+}
+
+
+
+.subscribe-container {
+  font-size: 14pt;
+  margin-top: 1em !important;
+  font-weight: bold;
+  flex-flow: row wrap;
+  padding: 0;
+}
+.subscribe-title {
+  width: 100%;
+}
+.subscribe-subtitle-img-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.subscribe-img {
+  padding: 0;
+  margin-top: 1%;
+  margin-bottom: 0;
+  text-align: center;
+}
+.subscribe-subtitle {
+  width: 100%;
+  font-size: 14pt;
 }
