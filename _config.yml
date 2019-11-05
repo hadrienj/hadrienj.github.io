@@ -33,7 +33,6 @@ compress_html:
 sass:
   sass_dir: assets/_sass
   style: compressed
-  sourcemap: true
 
 
 images: '/assets/images'
