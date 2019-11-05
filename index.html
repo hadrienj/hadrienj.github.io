@@ -7,7 +7,6 @@ active: true
 mathjax: true
 ---
 
-
 {% for post in site.posts %}
   <article class="index-page">
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
@@ -23,7 +22,7 @@ mathjax: true
         <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
       {% endfor %}
       {% endif %}
-      
+
     </p>
     <div class="borderAppears">
     <a href="{{ post.url | relative_url }}" class='noDeco'>
