@@ -798,7 +798,7 @@ Note that the sign difference comes from the fact that eigenvectors are not uniq
 U, D, V = np.linalg.svd(A)
 ```
 
-Left singular vectors of A:
+Left singular vectors of $\bs{A}$:
 
 
 ```python
@@ -812,7 +812,7 @@ array([[-0.69366543,  0.59343205, -0.40824829],
 </pre>
 
 
-Eigenvectors of AA_transpose:
+Eigenvectors of $\bs{A}\bs{A}^\text{T}$:
 
 
 ```python
@@ -837,7 +837,7 @@ The right-singular values of $\bs{A}$ correspond to the eigenvectors of $\bs{A}^
 U, D, V = np.linalg.svd(A)
 ```
 
-Right singular vectors of A:
+Right singular vectors of $\bs{A}$:
 
 
 ```python
@@ -880,7 +880,7 @@ array([ 10.25142677,   2.62835484])
 </pre>
 
 
-Eigenvalues of A_transposeA:
+Eigenvalues of $\bs{A}^\text{T}\bs{A}$:
 
 
 ```python
@@ -892,7 +892,7 @@ array([ 105.09175083,    6.90824917])
 </pre>
 
 
-Eigenvalues of AA_transpose:
+Eigenvalues of $\bs{A}\bs{A}^\text{T}$:
 
 
 ```python
