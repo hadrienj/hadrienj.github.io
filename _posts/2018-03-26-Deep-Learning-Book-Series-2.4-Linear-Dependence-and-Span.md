@@ -15,6 +15,8 @@ excerpt-image: <img src="../../assets/images/2.4/number-solutions-system-equatio
 deep-learning-book-toc: true
 ---
 
+*Last update: 11/07/2019*
+
 # Introduction
 
 This chapter is quite heavy by its size and its content but I did what I could to make it more intuitive and visual. We will see how to represent systems of equations graphically, how to interpret the number of solutions of a system, what is linear combination and more. As usual, we will use Numpy/Matplotlib as a tool to experiment these concepts and hopefully gain a more concrete understanding.
@@ -432,7 +434,46 @@ $
 $
 </div>
 
-The sum of $\vec{u}$ and $\vec{v}$ is a vector that will reach the point of corrdinates $(4, 7)$. To show that on a plot, I will use the custom function `plotVectors()` that I defined at the beginning of [the notebook](https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.4%20Linear%20Dependence%20and%20Span/2.4%20Linear%20Dependence%20and%20Span.ipynb). It takes a set of coordinates and an array of colors as input and plot the corresponding vectors. So let's plot $\vec{u}$ and $\vec{v}$:
+The sum of $\vec{u}$ and $\vec{v}$ is a vector that will reach the point of corrdinates $(4, 7)$. To show that on a plot, I will use the custom function `plotVectors()` that I defined at the beginning of [the notebook](https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.4%20Linear%20Dependence%20and%20Span/2.4%20Linear%20Dependence%20and%20Span.ipynb).
+
+First, let's create a function `plotVectors()` to plot vectors:
+
+```python
+def plotVectors(vecs, cols, alpha=1):
+    """
+    Plot set of vectors.
+
+    Parameters
+    ----------
+    vecs : array-like
+        Coordinates of the vectors to plot. Each vectors is in an array. For
+        instance: [[1, 3], [2, 2]] can be used to plot 2 vectors.
+    cols : array-like
+        Colors of the vectors. For instance: ['red', 'blue'] will display the
+        first vector in red and the second in blue.
+    alpha : float
+        Opacity of vectors
+
+    Returns:
+
+    fig : instance of matplotlib.figure.Figure
+        The figure of the vectors
+    """
+    plt.figure()
+    plt.axvline(x=0, color='#A9A9A9', zorder=0)
+    plt.axhline(y=0, color='#A9A9A9', zorder=0)
+
+    for i in range(len(vecs)):
+        x = np.concatenate([[0,0],vecs[i]])
+        plt.quiver([x[0]],
+                   [x[1]],
+                   [x[2]],
+                   [x[3]],
+                   angles='xy', scale_units='xy', scale=1, color=cols[i],
+                   alpha=alpha)
+```
+
+It takes a set of coordinates and an array of colors as input and plot the corresponding vectors. So let's plot $\vec{u}$ and $\vec{v}$:
 
 
 ```python

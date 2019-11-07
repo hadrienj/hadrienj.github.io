@@ -15,6 +15,8 @@ excerpt-image: <img src="../../assets/images/2.11/positive-negative-determinant.
 deep-learning-book-toc: true
 ---
 
+*Last update: 11/07/2019*
+
 # Introduction
 
 In this chapter, we will see what is the meaning of the determinant of a matrix. This special number can tell us a lot of things about our matrix!
@@ -41,7 +43,45 @@ To calculate the area of the shapes, we will use simple squares in 2 dimensions.
 
 The lengths of $i$ and $j$ are $1$ thus the area of the unit square is $1$.
 
-Let's start by creating both vectors in Python:
+
+First, let's create a function `plotVectors()` to plot vectors:
+
+```python
+def plotVectors(vecs, cols, alpha=1):
+    """
+    Plot set of vectors.
+
+    Parameters
+    ----------
+    vecs : array-like
+        Coordinates of the vectors to plot. Each vectors is in an array. For
+        instance: [[1, 3], [2, 2]] can be used to plot 2 vectors.
+    cols : array-like
+        Colors of the vectors. For instance: ['red', 'blue'] will display the
+        first vector in red and the second in blue.
+    alpha : float
+        Opacity of vectors
+
+    Returns:
+
+    fig : instance of matplotlib.figure.Figure
+        The figure of the vectors
+    """
+    plt.figure()
+    plt.axvline(x=0, color='#A9A9A9', zorder=0)
+    plt.axhline(y=0, color='#A9A9A9', zorder=0)
+
+    for i in range(len(vecs)):
+        x = np.concatenate([[0,0],vecs[i]])
+        plt.quiver([x[0]],
+                   [x[1]],
+                   [x[2]],
+                   [x[3]],
+                   angles='xy', scale_units='xy', scale=1, color=cols[i],
+                   alpha=alpha)
+```
+
+And let's start by creating both vectors in Python:
 
 
 ```python

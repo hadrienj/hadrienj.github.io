@@ -15,6 +15,8 @@ excerpt-image: <img src="../../assets/images/2.7/unit-circle-eigenvectors.png" w
 deep-learning-book-toc: true
 ---
 
+*Last update: 11/07/2019*
+
 # Introduction
 
 We will see some major concepts of linear algebra in this chapter. We will start with getting some ideas on eigenvectors and eigenvalues. We will develop on the idea that a matrix can be seen as a linear transformation and that applying a matrix on its eigenvectors gives new vectors with the same direction. Then we will see how to express quadratic equations into the matrix form. We will see that the eigendecomposition of the matrix corresponding to a quadratic equation can be used to find the minimum and maximum of this function. As a bonus, we will also see how to visualize linear transformations in Python!
@@ -55,8 +57,44 @@ array([[2],
 </pre>
 
 
-Let's plot this vector:
+First, let's create a function `plotVectors()` to plot vectors:
 
+```python
+def plotVectors(vecs, cols, alpha=1):
+    """
+    Plot set of vectors.
+
+    Parameters
+    ----------
+    vecs : array-like
+        Coordinates of the vectors to plot. Each vectors is in an array. For
+        instance: [[1, 3], [2, 2]] can be used to plot 2 vectors.
+    cols : array-like
+        Colors of the vectors. For instance: ['red', 'blue'] will display the
+        first vector in red and the second in blue.
+    alpha : float
+        Opacity of vectors
+
+    Returns:
+
+    fig : instance of matplotlib.figure.Figure
+        The figure of the vectors
+    """
+    plt.figure()
+    plt.axvline(x=0, color='#A9A9A9', zorder=0)
+    plt.axhline(y=0, color='#A9A9A9', zorder=0)
+
+    for i in range(len(vecs)):
+        x = np.concatenate([[0,0],vecs[i]])
+        plt.quiver([x[0]],
+                   [x[1]],
+                   [x[2]],
+                   [x[3]],
+                   angles='xy', scale_units='xy', scale=1, color=cols[i],
+                   alpha=alpha)
+```
+
+We can now use this function:
 
 ```python
 plotVectors([v.flatten()], cols=['#1190FF'])
