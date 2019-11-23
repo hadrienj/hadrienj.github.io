@@ -461,3 +461,55 @@ div > ul.share-buttons > li > a > img {
 .projects {
   text-align: center;
 }
+
+
+.book-call-container {
+  margin: 2% 10%;
+  border-radius: 20px;
+}
+.book-call {
+  display: block !important;
+  font-size: 1.2em !important;
+  font-family: Avenir Next !important;
+}
+
+.center {
+  text-align: center;
+}
+
+.button-call2action {
+  background: #2EBCE7;
+  color: #ffffff !important;
+  font-weight: 100;
+  padding: 20px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+.button-call2action:hover {
+  background: #2ecde7;
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.1);
+}
+.call2action-text {
+  display: inline;
+  font-family: Avenir Next;
+  font-weight: bold;
+}
+.fa-calendar:before, {
+  padding-right: 1em;
+  font: normal normal normal 14px/1 FontAwesome;
+}
+.fa-check:before {
+  padding-right: 0.8em;
+  color: #2EBCE7;
+  font: normal normal normal 14px/1 FontAwesome;
+}
+.call2action-container {
+  text-align: center;
+  display: block;
+}
+.skills-container {
+  margin: auto;
+  width: 50%;
+}

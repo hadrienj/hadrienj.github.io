@@ -23,6 +23,22 @@ active: true
     </div>
   </p>
 
+
+<div class="card-section book-call-container">
+    <div class="skills-container">
+        <div class="fa fa-check book-call">Machine learning</div>
+        <div class="fa fa-check book-call">Data Science</div>
+        <div class="fa fa-check book-call">Data-Oriented Web Development</div>
+    </div>
+    <a href="/discovery" class="call2action-container">
+        <button class="button-call2action">
+            <div class="fa fa-calendar">
+                <div class="call2action-text">Book a Discovery Call!</div>
+            </div>
+        </button>
+    </a>
+</div>
+
 <h2 class='about-h2'>Data Science</h2>
 
 I am currently managing a project for bird detection using deep learning with the non profit organization Wazo in Paris. This project has been selected in the season 06 of DataForGood Paris from September to December 2019.
