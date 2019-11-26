@@ -16,9 +16,12 @@ active: true
         </a>
       </div>
       <div class="avatar-txt">
-        Previously working as a Machine Learning Scientist at <a href="https://www.ava.me/">Ava Accessibility</a>.<br>
-
-        I finished my PhD in Dec. 2018 in Cognitive Sciences at the <img class="inline-icon" src="../../assets/images/icons/ens_crop.png" width="30" alt="ens icon" title="ENS"> &Eacute;cole Normale Supérieure (ENS) in Paris, France on auditory perceptual learning (pitch perception and auditory selective attention) using psychophysics and electrophysiology (EEG).
+        <b>Available for consulting in data science and machine learning and for technical training.</b><br>
+        <ul>
+        <li>Currently working on a book: <a href="https://learning.oreilly.com/library/view/essential-math-for/9781098115555/">"Essential Math for Data Science"</a> for <a href="https://www.oreilly.com/"><img style="display: inline-block; margin: 0; padding: 0;" src="../../assets/images/icons/oreilly.svg" width="70" alt="oreilly icon" title="Oreilly"></a>.</li>
+        <li>Previously working as a Machine Learning Scientist at Ava Accessibility <a href="https://www.ava.me/"><img style="display: inline-block; margin: 0; padding: 0;" src="../../assets/images/icons/ava.png" width="40" alt="ava icon" title="Ava"></a>.</li>
+        <li>Previously Ph.D student at the &Eacute;cole Normale Supérieure <a href="http://www.ens.fr/en"><img class="inline-icon" src="../../assets/images/icons/ens_crop.png" width="30" alt="ens icon" title="ENS"></a></li>
+        </ul>
       </div>
     </div>
   </p>
@@ -41,16 +44,8 @@ active: true
 
 <h2 class='about-h2'>Data Science</h2>
 
-I am currently managing a project for bird detection using deep learning with the non profit organization Wazo in Paris. This project has been selected in the season 06 of DataForGood Paris from September to December 2019.
-
-I am also bloging here on mathematics for machine learning and deep learning. I think that computer science is a great way to learn theoretical knowledge with a practical approach.
-
-I worked on creating and mainting machine learning pipelines for speaker diarization from multi microphone signals.
-
-I used R to analyse behavioral data and create vizualisations and Python to analyse EEG data (see [my toolbox](https://github.com/hadrienj/EEG) for EEG processing) and elaborate offline/online signal processing workflow.
-
-At the corner of data science and web developement, I created the skeleton of a neurofeedback app that streamed and transfered the data from the EEG system to a web server in Django and get the data in the browser with web sockets for final feedback display.
-
+- Machine Learning / Deep Learning (Sklearn, Keras)
+- Data processing (Pandas, Numpy)
 
 <div class='card-section'>
     <div class='skills'>
@@ -109,13 +104,23 @@ At the corner of data science and web developement, I created the skeleton of a 
     </div>
 </div>
 
+
+I am currently managing a project for bird detection using deep learning with the non profit organization Wazo in Paris. This project has been selected in the season 06 of DataForGood Paris from September to December 2019.
+
+I am also bloging here on mathematics for machine learning and deep learning. I think that computer science is a great way to learn theoretical knowledge with a practical approach.
+
+At Ava, I worked on creating and maintaining machine learning pipelines for speaker diarization from multi-microphone signals.
+
+I used R to analyse behavioral data and create vizualisations and Python to analyse EEG data (see [my toolbox](https://github.com/hadrienj/EEG) for EEG processing) and elaborate offline/online signal processing workflow.
+
+At the corner of data science and web developement, I created the skeleton of a neurofeedback app that streamed and transfered the data from the EEG system to a web server in Django and get the data in the browser with web sockets for final feedback display.
+
+
 <h2 class='about-h2'>Web Development - Full-Stack</h2>
 
-During my PhD, I created web apps with Django and Javascript for auditory experiments running on computers and tablets. I also worked with NoSQL databases (CouchDB) hosted on a DigitalOcean and PouchDB to build offline-first web app.
-
-I also used D3 and React to build data vizualisation on the web.
-
-The Web app I created used the Web Audio API to create sounds with controled features on the web (for instance [a demo](https://fm-am.auditory.fr/) of amplitude and frequency modulation with visualizations).
+- Django/Flask
+- Js/React
+- Data oriented Web Apps (model deployment, data visualization)
 
 <div class='card-section'>
     <div class='skills'>
@@ -124,6 +129,10 @@ The Web app I created used the Web Audio API to create sounds with controled fea
             <div class="skills-item">
                 <img src="../../assets/images/icons/django.png" width="30" alt="django icon" title="Django">
                 Django
+            </div>
+            <div class="skills-item">
+                <img src="../../assets/images/icons/flask.png" width="30" alt="flask icon" title="Flask">
+                Flask
             </div>
             <div class="skills-item">
                 <img src="../../assets/images/icons/digitalocean.png" width="30" alt="digitalocean icon" title="Digitalocean">
@@ -168,6 +177,14 @@ The Web app I created used the Web Audio API to create sounds with controled fea
         </div>
     </div>
 </div>
+
+
+During my PhD, I have developped Web Apps using Django and Javascript for auditory experiments running on computers and tablets. I also worked with NoSQL databases (CouchDB) hosted on a DigitalOcean and PouchDB to build offline-first web app.
+
+I am also using D3 and React to build data vizualisation on the web.
+
+I have created Web Apps using the Web Audio API to create sounds with controled acousticx features (for instance [a demo](https://fm-am.auditory.fr/) of amplitude and frequency modulations with visualizations).
+
 
 
 <h2 class='about-h2'>Some Projects</h2>
