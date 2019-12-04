@@ -15,24 +15,26 @@ excerpt-image: <img src="../../assets/images/2.2/dot-product.png" width="400" al
 deep-learning-book-toc: true
 ---
 
+*Last update: 04/12/2019*
+
 # Introduction
 
-We will see some very important concepts in this chapter. The dot product is used in every equation explaining data science algorithms so it's worth the effort to understand it. Then we will see some properties of this operation. Finally, we will get some intuition on the link between matrices and systems of linear equations.
+The dot product is a major concept of linear algebra and thus machine learning and data science. We will see some properties of this operation. Then, we will get some intuition on the link between matrices and systems of linear equations.
 
 {% include mailchimp.html %}
 
 # 2.2 Multiplying Matrices and Vectors
 
-The standard way to multiply matrices is not to multiply each element of one with each element of the other (this is the element-wise product) but to calculate the sum of the products between rows and columns. The matrix product, also called **dot product**, is calculated as following:
+The standard way to multiply matrices is not to multiply each element of one with each element of the other (called the *element-wise product*) but to calculate the sum of the products between rows and columns. The matrix product, also called **dot product**, is calculated as following:
 
 <img src="../../assets/images/2.2/dot-product.png" width="400" alt="An example of how to calculate the dot product between a matrix and a vector" title="The dot product between a matrix and a vector">
 <em>The dot product between a matrix and a vector</em>
 
-The number of columns of the first matrix must be equal to the number of rows of the second matrix. Thus, if the dimensions, or the shape of the first matrix, is ($m \times n$) the second matrix need to be of shape ($n \times x$). The resulting matrix will have the shape ($m \times x$).
+The number of columns of the first matrix must be equal to the number of rows of the second matrix. If the dimensions of the first matrix is ($m \times n$), the second matrix needs to be of shape ($n \times x$). The resulting matrix will have the shape ($m \times x$).
 
 ### Example 1.
 
-As a starter we will see the multiplication of a matrix and a vector.
+Let's start with the multiplication of a matrix and a vector.
 
 <div>
 $
@@ -285,6 +287,8 @@ It works!
 
 # Formalization of the dot product
 
+The dot product can be formalized through the following equation:
+
 <div>
 $
 C_{i,j} = A_{i,k}B_{k,j} = \sum_{k}A_{i,k}B_{k,j}
@@ -295,7 +299,7 @@ You can find more examples about the dot product [here](https://www.mathsisfun.c
 
 # Properties of the dot product
 
-We will now see some interesting properties of the matrix multiplication. It will become useful as we move forward in the chapters. Using simple examples for each property will provide a way to check them while we get used to the Numpy functions.
+We will now see some interesting properties of the dot product. Using simple examples for each property, we'll get used to the Numpy functions.
 
 ## Matrices mutliplication is distributive
 
@@ -723,7 +727,7 @@ array([[16, 13, 47],
 
 # System of linear equations
 
-This is an important part of why linear algebra can be very useful to solve variety of problems. Here we will see that it can be use to represent system of equations.
+This is an important part of why linear algebra can be very useful to solve a large variety of problems. Here we will see that it can be used to represent systems of equations.
 
 A system of equations is a set of multiple equations (at least 1). For instance we could have:
 
@@ -736,7 +740,7 @@ y = \frac{7}{2}x +3
 $
 </div>
 
-A system of equations is defined by its number of equations and its number of unknowns. In our example above, the system has 2 equations and 2 unknowns ($x$ and $y$). In addition we call this a system of **linear** equations because each equations is linear. It is easy to see that in 2 dimensions: we will have one straight line per equation and the dimensions are the unknowns. Here is the plot of the first one:
+It is defined by its number of equations and its number of unknowns. In this example, there are 2 equations (the first and the second line) and 2 unknowns ($x$ and $y$). In addition we call this a system of **linear** equations because each equation is linear. We can represent that in 2 dimensions: we have one straight line per equation and dimensions correspond to the unknowns. Here is the plot of the first equation:
 
 <img src="../../assets/images/2.2/plot-linear-equation.png" width="300" alt="Representation of a line from an equation" title="Plot of a linear equation">
 <em>Representation of a linear equation</em>
@@ -758,13 +762,13 @@ A_{m,1}x_1 + A_{m,2}x_2 + A_{m,n}x_n = b_n
 $
 </div>
 
-The unknowns (what we want to find to solve the system) are the variables $x_1$ and $x_2$ corresponding to the previous variables $x$ and $y$. It is exactly the same form as with the last example but with all the variables on the same side. $y = 2x + 1$ becomes $-2x + y = 1$ with $x$ corresponding to $x_1$ and $y$ corresponding to $x_2$. We will have $n$ unknowns and $m$ equations.
+The unknowns (what we want to find to solve the system) are the variables $x_1$ and $x_2$. It is exactly the same form as with the last example but with all the variables on the same side. $y = 2x + 1$ becomes $-2x + y = 1$ with $x$ corresponding to $x_1$ and $y$ corresponding to $x_2$. We will have $n$ unknowns and $m$ equations.
 
 The variables are named $x_1, x_2, \cdots, x_n$ by convention because we will see that it can be summarised in the vector $\bs{x}$.
 
-### Left hand side
+### Left-hand side
 
-The left hand term can considered as the product of a matrix $\bs{A}$ containing weights for each variable ($n$ columns) and each equation ($m$ rows):
+The left-hand side can be considered as the product of a matrix $\bs{A}$ containing weights for each variable ($n$ columns) and each equation ($m$ rows):
 
 <div>
 $
@@ -842,7 +846,7 @@ We will try to convert the common form of a linear equation $y=ax+b$ to the matr
 $x_2=ax_1+b$
 </div>
 
-Don't confuse the variable $x_1$ and $x_2$ with the vector $\bs{x}$. This vector contains actually all the variables of our equations. Here we have:
+Don't confuse the variable $x_1$ and $x_2$ with the vector $\bs{x}$. This vector contains all the variables of our equations:
 
 <div>
 $
@@ -925,7 +929,7 @@ $
 
 This system of equations is thus very simple and contains only 1 equation ($\bs{A}$ has 1 row) and 2 variables ($\bs{A}$ has 2 columns).
 
-To summarise, $\bs{A}$ will be the matrix of dimensions $m\times n$ containing scalars multiplying these variables (here $x_1$ is multiplied by 2 and $x_2$ by -1). The vector $\bs{x}$ contains the variables $x_1$ and $x_2$. And the right hand term is the constant $\bs{b}$:
+To summarise, $\bs{A}$ will be a matrix of dimensions $m\times n$ containing scalars multiplying these variables (here $x_1$ is multiplied by 2 and $x_2$ by -1). The vector $\bs{x}$ contains the variables $x_1$ and $x_2$. And the right-hand side is the constant $\bs{b}$:
 
 <div>
 $
@@ -963,7 +967,7 @@ $
 $
 </div>
 
-We will see at the end of the [the next chapter](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/) that this compact way of writing sets of linear equations can be very usefull. It provides actually a way to solve the equations.
+We will see at the end of the [the next chapter](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/) that this compact way of writing sets of linear equations can be very usefull. It provides a way to solve the equations.
 
 {% include mailchimp.html %}
 
