@@ -122,7 +122,6 @@ $
     \cdots & \cdots & \cdots & \cdots \\\
     A_{m,1} & A_{m,2} & \cdots & A_{m,n}
 \end{bmatrix}
-\times
 \begin{bmatrix}
     x_1 \\\
     x_2 \\\
@@ -181,7 +180,7 @@ It is possible to draw a different graphical represention of the set of equation
 
 The row figure is maybe more usual because it is the representation used when we have only one equation. It can now be extended to an infinite number of equations and unknowns (even if it would be hard to represent a 9-dimensional hyperplane in a 10-dimensional space...).
 
-We said that the solutions of the linear system of equations are the sets of values of $x_1...x_n$ that satisfies all equations, that is to say, the values taken by the unknowns. For instance, in the case of $\bs{A}$ being a ($2 \times 2$) matrix ($n=m=2$) the equations correspond to lines in a 2-dimensional space and the solution of the system is the intersection of these lines.
+We said that the solutions of the linear system of equations are the sets of values of $x_1...x_n$ that satisfy all equations, that is, the values taken by the unknowns. For instance, in the case of $\bs{A}$ being a ($2 \times 2$) matrix ($n=m=2$) the equations correspond to lines in a 2-dimensional space and the solution of the system is the intersection of these lines.
 
 Note that associating one direction in space to one parameter is only one way to represent the equations. There are number of ways to represent more than 3 parameters systems. For instance, you can add colors to have the representation of a fourth dimension. It is all about **representation**.
 

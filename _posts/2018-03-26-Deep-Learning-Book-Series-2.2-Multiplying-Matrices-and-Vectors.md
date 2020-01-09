@@ -181,7 +181,7 @@ array([[10],
 Multiplication of two matrices.
 
 <div>
-$\bs{A} \times \bs{B} = \bs{C}$
+$\bs{A} \bs{B} = \bs{C}$
 </div>
 
 with:
@@ -217,7 +217,7 @@ $
     4 & 5 & 6 \\\
     7 & 8 & 9 \\\
     10 & 11 & 12
-\end{bmatrix}\times
+\end{bmatrix}
 \begin{bmatrix}
     2 & 7 \\\
     1 & 2 \\\
@@ -815,7 +815,6 @@ $
     \cdots & \cdots & \cdots & \cdots \\\
     A_{m,1} & A_{m,2} & \cdots & A_{m,n}
 \end{bmatrix}
-\times
 \begin{bmatrix}
     x_1 \\\
     x_2 \\\

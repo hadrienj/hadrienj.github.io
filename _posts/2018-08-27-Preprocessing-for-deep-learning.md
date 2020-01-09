@@ -15,6 +15,8 @@ excerpt-image: '<img src="../../assets/images/Preprocessing-for-deep-learning/ro
 <em>The left plot shows correlated data. For instance, if you take a data point with a big $x$ value, chances are that $y$ will also be quite big. Now take all data points and do a rotation (maybe around 45 degrees counterclockwise): the new data (plotted on the right) is not correlated anymore.</em>'
 ---
 
+*Last update: 09/01/2020*
+
 A notebook version of this post can be found [here](https://github.com/hadrienj/Preprocessing-for-deep-learning) on Github.
 
 The goal of this post/notebook is to go from the basics of data preprocessing to modern techniques used in deep learning. My point is that we can use code (Python/Numpy etc.) to better understand abstract mathematical notions! Thinking by coding! 💥
@@ -1108,21 +1110,32 @@ This is not exactly 0 but it is small enough that we can consider that it worked
 
 
 
-Now we want to calculate the covariance matrix of the zero-centered data. Like we have seen above, we can calculate it with the `np.cov()` function from Numpy. Please note that our variables are our different images. This implies that the variables are the rows of the matrix $\bs{X}$. Just to be clear, we will tell this information to Numpy with the parameter `rowvar=TRUE` even if it is `True` by default (see the [doc](https://docs.scipy.org/doc/numpy/reference/generated/numpy.cov.html)):
+Now we want to calculate the covariance matrix of the zero-centered data. Like we have seen above, we can calculate it with the `np.cov()` function from Numpy.
+
+There are two possible correlation matrices that we can calculate from the matrix $\bs{X}$: either the correlation between rows or between columns. In our case, each row of the matrix $\bs{X}$ is an image, so the rows of the matrix correspond to the observations and the columns of the matrix corresponds to the features (the images pixels). We want to calculate the correlation between the pixels because the goal of the whitening is to remove these correlations to force the algorithm to focus on higher-order relations.
+
+To do so, we will tell this to Numpy with the parameter `rowvar=False` (see the [doc](https://docs.scipy.org/doc/numpy/reference/generated/numpy.cov.html)): it will use the columns as variables (or features) and the rows as observations.
 
 
 
 
 
 ```python
-cov = np.cov(X_norm, rowvar=True)
+cov = np.cov(X_norm, rowvar=False)
 ```
 
+The covariance matrix should have a shape of 3072 by 3072 to represent the correlation between each pair of pixels (and there are 3072 pixels):
+
+```python
+cov.shape
+```
+
+<pre class='output'>
+(3072, 3072)
+</pre>
 
 
 Now the magic part: we will calculate the singular values and vectors of the covariance matrix and use them to rotate our dataset. Have a look at [my post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.8-Singular-Value-Decomposition/) on the singular value decomposition if you need more details!
-
-*Note*: It can take a bit of time with a lot of images and that's why we are using only 1000. In the paper, they used 10000 images. Feel free to compare the results according to how many images you are using:
 
 
 
@@ -1142,7 +1155,7 @@ $
 $
 </div>
 
-with $\bs{U}$ the left singular vectors, and $\bs{S}$ the singular values of the covariance of the initial normalized dataset of images and $\bs{X}$ the normalized dataset. $\epsilon$ is an hyper-parameter called the whitening coefficient. $diag(a)$ corresponds to a matrix with the vector $a$ as a diagonal and 0 in all other cells.
+with $\bs{U}$ the left singular vectors, and $\bs{S}$ the singular values of the covariance of the initial normalized dataset of images and $\bs{X}$ the normalized dataset. $\epsilon$ (*epsilon*) is an hyper-parameter called the whitening coefficient. $diag(a)$ corresponds to a matrix with the vector $a$ as a diagonal and 0 in all other cells.
 
 We will try to implement this equation. Let's start by checking the dimensions of the SVD:
 
@@ -1156,14 +1169,13 @@ print U.shape, S.shape
 
 
 <pre class='output'>
-(1000, 1000) (1000,)
+(3072, 3072) (3072,)
 </pre>
 
 
 
 
-$\bs{S}$ is a vector containing 1000 elements (the singular values). $diag(\bs{S})$ will thus be of shape (1000, 1000) with $\bs{S}$ as the diagonal:
-
+$\bs{S}$ is a vector containing 3072 elements (the singular values). $diag(\bs{S})$ will thus be of shape (3072, 3072) with $\bs{S}$ as the diagonal:
 
 
 
@@ -1189,21 +1201,19 @@ print '\nshape:', np.diag(S).shape
  [  0.00000000e+00   0.00000000e+00   0.00000000e+00 ...,   0.00000000e+00
     0.00000000e+00   1.35907202e-15]]
 
-shape: (1000, 1000)
+shape: (3072, 3072)
 </pre>
 
 
 
 
-$diag(\frac{1}{\sqrt{diag(\bs{S}) + \epsilon}})$ is also of shape (1000, 1000) as well as $\bs{U}$ and $\bs{U^{\text{T}}}$. We have seen also that $\bs{X}$ has the shape (1000, 3072). The shape of $\bs{X}_{ZCA}$ is thus:
+$diag(\frac{1}{\sqrt{diag(\bs{S}) + \epsilon}})$ is also of shape (3072, 3072) as well as $\bs{U}$ and $\bs{U^{\text{T}}}$. We have seen also that $\bs{X}$ has the shape (1000, 3072) and we need to transpose it to have (3072, 1000). The shape of $\bs{X}_{ZCA}$ is thus:
 
-<div>
-$
-(1000, 1000) . (1000, 1000) . (1000, 3072) = (1000, 1000) . (1000, 3072) = (1000, 3072)
-$
-</div>
+$$
+(3072, 3072) . (3072, 3072) . (1000, 3072)^{\text{T}} = (3072, 3072) . (3072, 1000) = (3072, 1000)
+$$
 
-which corresponds to the shape of the initial dataset. Nice!
+which corresponds to the shape of the initial dataset after transposition. Nice!
 
 We have:
 
@@ -1213,31 +1223,10 @@ We have:
 
 ```python
 epsilon = 0.1
-X_ZCA = U.dot(np.diag(1.0/np.sqrt(S + epsilon))).dot(U.T).dot(X_norm)
+X_ZCA = U.dot(np.diag(1.0/np.sqrt(S + epsilon))).dot(U.T).dot(X_norm.T).T
 ```
 
-
-
-
-
-```python
-plotImage(X[12, :])
-plotImage(X_ZCA[12, :])
-```
-
-
-
-<img src="../../assets/images/Preprocessing-for-deep-learning/Preprocessing-for-deep-learning_88_0.png">
-
-
-
-
-
-<img src="../../assets/images/Preprocessing-for-deep-learning/Preprocessing-for-deep-learning_88_1.png">
-
-
-
-
+Let's rescale the images:
 
 
 
@@ -1253,6 +1242,8 @@ min: 0.0
 max: 1.0
 </pre>
 
+
+Finally, we can look at the effect of whitening by comparing an image before and after whitening:
 
 
 
@@ -1277,10 +1268,7 @@ plotImage(X_ZCA_rescaled[12, :])
 
 
 
-Hooray! That's great!⚡️It looks like the images from the paper. Actually, they have used 10000 images and not 1000 like us. To see the differences in the results according to the number of images that you use and the effect of the hyper-parameter $\epsilon$, here are the results for different values:
-
-<img src="../../assets/images/Preprocessing-for-deep-learning/result-image-whitening-cifar10.png" width="400" alt="Different values of epsilon and different number of images used">
-<em>The result of the whitening is different according to the number of images that we are using and the value of the hyper-parameter epsilon. The image on the left is the original image. In the paper, [Pal & Sudeep (2016)](https://ieeexplore.ieee.org/document/7808140/) used 10000 images and epsilon = 0.1. This corresponds to the bottom left image.</em>
+Hooray! That's great!⚡️It looks like the images from the paper [Pal & Sudeep (2016)](https://ieeexplore.ieee.org/document/7808140/). They used `epsilon = 0.1`. You can try other values to see the effect on the image.
 
 
 
