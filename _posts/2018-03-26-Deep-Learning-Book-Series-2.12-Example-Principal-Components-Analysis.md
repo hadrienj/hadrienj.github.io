@@ -25,11 +25,11 @@ This is the last chapter of this series on linear algebra! It is about Principal
 
 # 2.12 Example - Principal Components Analysis
 
-Dimensions are a crucial topic in data science. The dimensions are all the features of the dataset. For instance, if you are looking at a dataset containing pieces of music, dimensions could be the genre, the length of the piece, the number of instruments, the presence of a singer etc. You can imagine all these dimensions as different columns. When there is only two dimensions, it is very convenient to plot: you can use the $x$- and $y$-axis. Add color and you can represent a third dimension. It is similar if you have tens or hundereds of dimensions, it will just be harder to visualize it.
+Dimensions are a crucial topic in data science. The dimensions are all the features of the dataset. For instance, if you are looking at a dataset containing pieces of music, dimensions could be the genre, the length of the piece, the number of instruments, the presence of a singer, etc. You can imagine all these dimensions as different columns. When there are only two dimensions, it is very convenient to plot: you can use the $x$- and $y$-axis. Add color and you can represent a third dimension. It is similar if you have tens or hundereds of dimensions, it will just be harder to visualize it.
 
-When you have that many dimensions it happens that some of them are correlated. For instance, we can reasonably think that the genre dimension will correlate with the instruments dimensions in our previous example. One way to reduce dimensionality is simply to keep only some of them. The problem is that you loose good information. It would be nice to have a way to reduce these dimensions while keeping all the information present in the data set.
+When you have that many dimensions, it happens that some of them are correlated. For instance, we can reasonably think that the genre of a piece of music will correlate with the instruments present in the piece. One way to reduce dimensionality is simply to keep only some of them. The problem is that you loose good information. It would be nice to have a way to reduce these dimensions while keeping important informations present in the dataset.
 
-The aim of principal components analysis (PCA) is generaly to reduce the number of dimensions of a dataset where dimensions are not completly decorelated. PCA provides us with a new set of dimensions, the principal components (PC). They are ordered: the first PC is the dimension having the largest variance. In addition, each PC is orthogonal to the preceding one. Remember that orthogonal vectors means that their dot product is equal to $0$ (see [2.6](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.6-Special-Kinds-of-Matrices-and-Vectors/)). This means that each PC is decorelated to the preceding one. It is way better than feature selection where you loose a lot of information.
+The aim of *Principal Components Analysis* (PCA) is generaly to reduce the number of dimensions of a dataset. PCA provides us with a new set of dimensions, the *Principal Components* (PC). They are ordered: the first PC is the dimension associated with the largest variance. In addition, PC's are orthogonal. Remember that orthogonal vectors means that their dot product is equal to $0$ (see [2.6](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.6-Special-Kinds-of-Matrices-and-Vectors/)). This means that each PC is decorelated to the preceding one. You can choose to keep only the first few PC's, knowing that each PC is a linear combination of the data features. For instance, one PC could be a linear combination of the length of the muscial piece and the number of instruments playing.
 
 ### Example 1.
 
@@ -40,7 +40,7 @@ Unit vectors are an example of orthogonal vectors:
 
 ## Describing the problem
 
-The problem can be expressed as finding a function that converts a set of data points from $\mathbb{R}^n$ to $\mathbb{R}^l$. This means that we change the number of dimensions of our dataset. We also need a function that can decode back from the transformed dataset to the initial one:
+The problem can be expressed as finding a function that converts a set of data points from $\mathbb{R}^n$ to $\mathbb{R}^l$: we want to change the number of dimensions of our dataset from $n$ to $l$. We also need a function that can decode back the transformed dataset into the initial one:
 
 <img src="../../assets/images/2.12/principal-components-analysis-PCA-change-coordinates.png" width="80%" alt="Principal components analysis (PCA)" title="Principal components analysis (PCA)">
 <em>Principal components analysis as a change of coordinate system</em>

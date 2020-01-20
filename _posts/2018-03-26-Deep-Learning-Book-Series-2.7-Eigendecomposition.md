@@ -19,17 +19,17 @@ deep-learning-book-toc: true
 
 # Introduction
 
-We will see some major concepts of linear algebra in this chapter. We will start with getting some ideas on eigenvectors and eigenvalues. We will develop on the idea that a matrix can be seen as a linear transformation and that applying a matrix on its eigenvectors gives new vectors with the same direction. Then we will see how to express quadratic equations into the matrix form. We will see that the eigendecomposition of the matrix corresponding to a quadratic equation can be used to find the minimum and maximum of this function. As a bonus, we will also see how to visualize linear transformations in Python!
+We will see some major concepts of linear algebra in this chapter. We will start with defining eigenvectors and eigenvalues. We will develop on the idea that a matrix can be seen as a linear transformation and that applying a matrix on its eigenvectors gives new vectors that have the same direction. Then we will see how to express quadratic equations into matrix form. We will see that the eigendecomposition of the matrix corresponding to a quadratic equation can be used to find the minimum and maximum of this function. As a bonus, we will also see how to visualize linear transformations in Python!
 
 {% include mailchimp.html %}
 
 # 2.7 Eigendecomposition
 
-The eigendecomposition is one form of matrix decomposition. Decomposing a matrix means that we want to find a product of matrices that is equal to the initial matrix. In the case of the eigendecomposition, we decompose the initial matrix into the product of its eigenvectors and eigenvalues. Before all, let's see what are eigenvectors and eigenvalues.
+The eigendecomposition is one form of matrix decomposition. Decomposing a matrix means that we want to find a product of matrices that is equal to the initial matrix. In the case of eigendecomposition, we decompose the initial matrix into the product of its eigenvectors and eigenvalues. Before all, let's see the link between matrices and linear transformation. Then, you'll learn what are eigenvectors and eigenvalues.
 
 # Matrices as linear transformations
 
-As we have seen in [2.3](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/) with the example of the identity matrix, you can think of matrices as linear transformations. Some matrices will rotate your space, others will rescale it etc. So when we apply a matrix to a vector, we end up with a transformed version of the vector. When we say that we 'apply' the matrix to the vector it means that we calculate the dot product of the matrix with the vector. We will start with a basic example of this kind of transformation.
+As we have seen in [2.3](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/) with the example of the identity matrix, you can think of matrices as linear transformations. Some matrices will rotate your space, others will rescale it. When we apply a matrix to a vector, we end up with a transformed version of the vector. When we say that we *apply* the matrix to the vector, it means that we calculate the dot product of the matrix with the vector. We will start with a basic example of this kind of transformation.
 
 ### Example 1.
 
@@ -57,7 +57,7 @@ array([[2],
 </pre>
 
 
-First, let's create a function `plotVectors()` to plot vectors:
+First, let's create a function `plotVectors()` to easily plot vectors and visualize transformations:
 
 ```python
 def plotVectors(vecs, cols, alpha=1):
@@ -94,7 +94,7 @@ def plotVectors(vecs, cols, alpha=1):
                    alpha=alpha)
 ```
 
-We can now use this function:
+We can now use this function to plot our vector $\bs{v}$:
 
 ```python
 plotVectors([v.flatten()], cols=['#1190FF'])
@@ -110,12 +110,12 @@ plt.xlim(-1, 4)
 <em>A simple vector</em>
 
 
-Now, we will apply the matrix $\bs{A}$ to this vector and plot the old vector (light blue) and the new one (orange):
+Now, let's apply the matrix $\bs{A}$ to this vector. We'll plot the old vector $\bs{v}$ (light blue) and the new one (orange):
 
 
 ```python
 Av = A.dot(v)
-print Av
+print(Av)
 plotVectors([v.flatten(), Av.flatten()], cols=['#1190FF', '#FF9A13'])
 plt.ylim(-1, 4)
 plt.xlim(-1, 4)
@@ -131,27 +131,31 @@ plt.xlim(-1, 4)
 
 
 <img src="../../assets/images/2.7/simple-vector-and-transformation.png" width="250" alt="A simple vector and its transformation" title="A simple vector and its transformation">
-<em>A simple vector and its transformation</em>
+<em>The vector $\bs{v}$ (blue) and its transformed version (orange)</em>
 
 We can see that applying the matrix $\bs{A}$ has the effect of modifying the vector.
 
-Now that you can think of matrices as linear transformation recipes, let's see the case of a very special type of vector: the eigenvector.
+You can think of matrices as linear transformation recipes. Let's see the case of a very special type of vector: the eigenvectors.
 
 # Eigenvectors and eigenvalues
 
-We have seen an example of a vector transformed by a matrix. Now imagine that the transformation of the initial vector gives us a new vector that has the exact same direction. The scale can be different but the direction is the same. Applying the matrix didn't change the direction of the vector. This special vector is called an eigenvector of the matrix. We will see that finding the eigenvectors of a matrix can be very useful.
+We have seen an example of a vector transformed by a matrix. Now imagine that the transformation of the initial vector gives us a new vector that has the exact same direction. The scale can be different but the direction is the same. Applying the matrix doesn't change the direction of the vector. This special vector is called an *eigenvector* of the matrix. We will see that finding the eigenvectors of a matrix can be very useful.
 
 <span class='pquote'>
     Imagine that the transformation of the initial vector by the matrix gives a new vector with the exact same direction. This vector is called an eigenvector of $\bs{A}$.
 </span>
 
-This means that $\bs{v}$ is a eigenvector of $\bs{A}$ if $\bs{v}$ and $\bs{Av}$ are in the same direction or to rephrase it if the vectors $\bs{Av}$ and $\bs{v}$ are parallel. The output vector is just a scaled version of the input vector. This scalling factor is $\lambda$ which is called the **eigenvalue** of $\bs{A}$.
+This means that $\bs{v}$ is a eigenvector of $\bs{A}$ if $\bs{v}$ and $\bs{Av}$ (the transformed vector) are in the same direction. The output vector is just a scaled version of the input vector. This scalling factor is $\lambda$ which is called the *eigenvalue* of $\bs{A}$.
+
+Mathematically, we have the following equation:
 
 <div>
 $$
 \bs{Av} = \lambda\bs{v}
 $$
 </div>
+
+The vector $\bs{Av}$ is the vector $\bs{v}$ transformed by the matrix $\bs{A}$. This transformed vector is a scaled version (scaled by the value $\lambda$) of the initial vector $\bs{v}$.
 
 ### Example 2.
 
@@ -167,7 +171,7 @@ $
 $
 </div>
 
-We know that one eigenvector of A is:
+We know that one eigenvector of $\bs{A}$ is:
 
 <div>
 $$
@@ -256,7 +260,7 @@ plt.xlim(-1, 7)
 </pre>
 
 <img src="../../assets/images/2.7/eigenvector-transformation.png" width="250" alt="The direction of the eigenvector after transformation by its matrix is the same as the original vector direction" title="Eigenvector direction">
-<em>Eigenvector doesn't change its direction when we apply the corresponding matrix</em>
+<em>An eigenvector of a matrix doesn't change direction when we apply this matrix</em>
 
 We can see that their directions are the same!
 
@@ -423,7 +427,7 @@ With $0.70710678 \times 6 = 4.24264069$. So there are an infinite number of eige
 For the second eigenvector we can check that it corresponds to a scaled version of $\begin{bmatrix}
     1\\\\
     -3
-\end{bmatrix}$. We can draw these vectors and see if they are parallel.
+\end{bmatrix}$. We can draw these vectors and see if they have the same direction.
 
 
 ```python
@@ -508,7 +512,7 @@ This corresponds to $\bs{A}\times 3\bs{v} = \lambda \times 3\bs{v}$ and the eige
 
 ## Concatenating eigenvalues and eigenvectors
 
-Now that we have an idea of what eigenvectors and eigenvalues are we can see how it can be used to decompose a matrix. All eigenvectors of a matrix $\bs{A}$ can be concatenated in a matrix with each column corresponding to each eigenvector (like in the second array return by `np.linalg.eig(A)`):
+Now that we have an idea of what eigenvectors and eigenvalues are, we can see how it can be used to decompose a matrix. All eigenvectors of a matrix $\bs{A}$ can be concatenated in a matrix with each column corresponding to each eigenvector (like in the second array return by `np.linalg.eig(A)`):
 
 <div>
 $
@@ -693,7 +697,7 @@ Let's check our result with Python:
 
 
 ```python
-lambdas = np.diag([6,2])
+lambdas = np.diag([6, 2])
 lambdas
 ```
 
