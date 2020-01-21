@@ -10,8 +10,8 @@ author: hadrienj
 jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.12%20Example%20-%20Principal%20Components%20Analysis/2.12%20Example%20-%20Principal%20Components%20Analysis.ipynb
 date: 2018-03-26 18:00:00
 excerpt: This post on linear algebra is about Principal Components Analysis (PCA). We will use Python/Numpy/Matplotlib to get a better intuition and understanding of this important data analysis tool!
-excerpt-image: <img src="../../assets/images/2.12/gradient-descent.png" width="400" alt="Mechanism of the gradient descent algorithm" title="Mechanism of the gradient descent algorithm">
-    <em>Gradient descent</em>
+excerpt-image: '<img src="../../assets/images/2.12/principal-component-analysis-variance-explained.png" width="400" alt="Representation of the variance explained across directions" title="Maximizing the variance">
+    <em>Projection of the data point: the line direction is the one with the largest variance</em>'
 deep-learning-book-toc: true
 ---
 
@@ -183,7 +183,7 @@ $$
 
 The commutative property (see [2.2](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.2-Multiplying-Matrices-and-Vectors/)) tells us that $
 \bs{x^\text{T}y} = \bs{y^\text{T}x}
-$. We can use that in the previous equation: we have $
+$. Since the result of $g(\bs{c})^\text{T}\bs{x}$ is a scalar, we have $
 g(\bs{c})^\text{T}\bs{x} = \bs{x}^\text{T}g(\bs{c})
 $. So the equation becomes:
 
@@ -218,7 +218,7 @@ $$
 $$
 </div>
 
-As we saw in [2.6](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.6-Special-Kinds-of-Matrices-and-Vectors/), $\bs{D}^\text{T}\bs{D}=\bs{I}_l$ because $\bs{D}$ is orthogonal (actually, it is [semi-orthogonal](https://en.wikipedia.org/wiki/Semi-orthogonal_matrix) if $n \neq l$) and their columns have unit norm. We can replace in the equation:
+As we saw in [2.6](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.6-Special-Kinds-of-Matrices-and-Vectors/), $\bs{D}^\text{T}\bs{D}=\bs{I}_l$ because $\bs{D}$ is orthogonal (actually, it is [semi-orthogonal](https://en.wikipedia.org/wiki/Semi-orthogonal_matrix) if $n \neq l$) and have unit norm columns. We can replace in the equation:
 
 <div>
 $$
@@ -287,7 +287,27 @@ So we can progress in our derivatives:
 $$
 \nabla_c(-2\bs{x}^\text{T}\bs{Dc} + \bs{c}^\text{T}\bs{c})=0\\\\
 -2\bs{x}^\text{T}\bs{D} + 2\bs{c}=0\\\\
--2\bs{D}^\text{T}\bs{x} + 2\bs{c}=0\\\\
+\bs{c}=\bs{x}^\text{T}\bs{D}
+$$
+</div>
+
+Keep in mind the dimensions of the matrix $\bs{D}$ and the vector $\bs{x}$. We want $\bs{c}$ to be a column vector of shape (l, 1), so we need to transpose $\bs{x}^\text{T}\bs{D}$.
+
+<img src="../../assets/images/2.12/principal-components-analysis-PCA-transpose-matrix-vectors.png" width="250" alt="Checking the dimension of the encoding" title="Checking the dimensions of the encoding">
+<em>Dimensions of the matrix/vector dot product</em>
+
+We have:
+
+<div>
+$$
+(\bs{x}^\text{T}\bs{D})^{\text{T}} = \bs{D}^\text{T}\bs{x}
+$$
+</div>
+
+So we have:
+
+<div>
+$$
 \bs{c}=\bs{D}^\text{T}\bs{x}
 $$
 </div>
@@ -674,7 +694,7 @@ plt.show()
 We can see that the blue vector direction corresponds to the oblique shape of our data. The idea is that if you project the data points on the line corresponding to the blue vector direction you will end up with the largest variance. This vector has the direction that maximizes variance of projected data. Have a look at the following figure:
 
 <img src="../../assets/images/2.12/principal-component-analysis-variance-explained.png" width="400" alt="Representation of the variance explained across directions" title="Maximizing the variance">
-<em>Projection of the data point: this line direction is the one with the largest variance</em>
+<em>Projection of the data point: the line direction is the one with the largest variance</em>
 
 When you project data points on the pink line there is more variance. This line has the direction that maximizes the variance of the data points. It is the same for the figure above: our blue vector has the direction of the line where data point projection has the higher variance. Then the second eigenvector is orthogonal to the first.
 

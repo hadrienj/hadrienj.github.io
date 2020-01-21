@@ -301,6 +301,64 @@ You can find more examples about the dot product [here](https://www.mathsisfun.c
 
 We will now see some interesting properties of the dot product. Using simple examples for each property, we'll get used to the Numpy functions.
 
+## Simplification of the matrix product
+
+<div>
+$(\bs{AB})^{\text{T}} = \bs{B}^\text{T}\bs{A}^\text{T}$
+</div>
+
+
+```python
+A = np.array([[2, 3], [1, 4], [7, 6]])
+A
+```
+
+<pre class='output'>
+array([[2, 3],
+       [1, 4],
+       [7, 6]])
+</pre>
+
+
+
+```python
+B = np.array([[5, 3], [2, 2]])
+B
+```
+
+<pre class='output'>
+array([[5, 3],
+       [2, 2]])
+</pre>
+
+
+$(\bs{AB})^{\text{T}}$:
+
+
+```python
+AB_t = A.dot(B).T
+AB_t
+```
+
+<pre class='output'>
+array([[16, 13, 47],
+       [12, 11, 33]])
+</pre>
+
+
+is equivalent to $\bs{B}^\text{T}\bs{A}^\text{T}$:
+
+
+```python
+B_tA = B.T.dot(A.T)
+B_tA
+```
+
+<pre class='output'>
+array([[16, 13, 47],
+       [12, 11, 33]])
+</pre>
+
 ## Matrices mutliplication is distributive
 
 <div>
@@ -616,6 +674,8 @@ array([[28, 30],
 $\bs{x^{ \text{T}}y} = \bs{y^{\text{T}}x} $
 </div>
 
+Let's try with the following example:
+
 
 ```python
 x = np.array([[2], [6]])
@@ -665,64 +725,11 @@ y_tx
 array([[22]])
 </pre>
 
-
-## Simplification of the matrix product
+One way to see why the vector multiplication is commutative is to notice that the result of $\bs{x^{ \text{T}}y}$ is a scalar. We know that scalars are equal to their own transpose, so mathematically, we have:
 
 <div>
-$(\bs{AB})^{\text{T}} = \bs{B}^\text{T}\bs{A}^\text{T}$
+$\bs{x^{\text{T}}y} = (\bs{x^{\text{T}}y})^{\text{T}} = \bs{ y^{\text{T}} (x^{\text{T}})^{\text{T}} } = \bs{y^{\text{T}}x}$
 </div>
-
-
-```python
-A = np.array([[2, 3], [1, 4], [7, 6]])
-A
-```
-
-<pre class='output'>
-array([[2, 3],
-       [1, 4],
-       [7, 6]])
-</pre>
-
-
-
-```python
-B = np.array([[5, 3], [2, 2]])
-B
-```
-
-<pre class='output'>
-array([[5, 3],
-       [2, 2]])
-</pre>
-
-
-$(\bs{AB})^{\text{T}}$:
-
-
-```python
-AB_t = A.dot(B).T
-AB_t
-```
-
-<pre class='output'>
-array([[16, 13, 47],
-       [12, 11, 33]])
-</pre>
-
-
-is equivalent to $\bs{B}^\text{T}\bs{A}^\text{T}$:
-
-
-```python
-B_tA = B.T.dot(A.T)
-B_tA
-```
-
-<pre class='output'>
-array([[16, 13, 47],
-       [12, 11, 33]])
-</pre>
 
 
 # System of linear equations
