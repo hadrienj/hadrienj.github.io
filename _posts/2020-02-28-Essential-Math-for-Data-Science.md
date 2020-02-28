@@ -13,7 +13,7 @@ excerpt-image: <img src="../../assets/images/Essential-Math-for-Data-Science/ch0
 ---
 
 
-I'm very happy to introduce my work in progress for the book  <a href="https://learning.oreilly.com/library/view/essential-math-for/9781098115555/">"Essential Math for Data Science"</a> with O'Reilly (in Early Release for those who have access to the O'Reilly plateform).
+I'm very happy to introduce my work in progress for the book  <a href="https://learning.oreilly.com/library/view/essential-math-for/9781098115555/">"Essential Math for Data Science"</a> with O'Reilly (in Early Release for those who have access to the O'Reilly plateform). It should be available in September 2020.
 
 <a href="https://learning.oreilly.com/library/view/essential-math-for/9781098115555/">
 	<img src="../../assets/images/Essential-Math-for-Data-Science/cover.jpg" width="40%" alt="Cover of the book Essential Math for Data Science" title="Cover of the book Essential Math for Data Science">
@@ -21,11 +21,11 @@ I'm very happy to introduce my work in progress for the book  <a href="https://l
 </a>
 
 
-The goal of the book is to provide an introduction to the mathematics needed for data science and machine learning. The idea is to use a hands-on approach using examples in Python <img src="../../assets/images/icons/python.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="python icon" title="Python">, with Numpy <img src="../../assets/images/icons/np.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="numpy icon" title="Numpy">, Matplotlib <img src="../../assets/images/icons/matplotlib.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="Matplotlib icon" title="Matplotlib">, and Sklearn <img src="../../assets/images/icons/sklearn.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="sklearn icon" title="Scikit Learn"> to get mathematical insights that will ease the every day life of a data engineer or data scientist. You will be able to experiment on the math concepts and gain intuitino through code and visualizations.
+The goal of the book is to provide an introduction to the mathematics needed for data science and machine learning. The idea is to use a hands-on approach using examples in Python <img src="../../assets/images/icons/python.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="python icon" title="Python">, with Numpy <img src="../../assets/images/icons/np.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="numpy icon" title="Numpy">, Matplotlib <img src="../../assets/images/icons/matplotlib.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="Matplotlib icon" title="Matplotlib">, and Sklearn <img src="../../assets/images/icons/sklearn.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="sklearn icon" title="Scikit Learn"> to get mathematical insights that will ease the every day life of a data engineer or data scientist. You will be able to experiment on the math concepts and gain intuition through code and visualizations.
 
-What you'll learn in this book is selected to be actionable knowledge in the context of data science and machine learning / deep learning. The content is more about getting the intuition that will unlock your skills rather than providing mathematical proofs of theorems. It is aimed at people without a background in mathematics but who wants to understand tools and algorithms used in data science and machine learning, like developers moving towards data science.
+What you'll learn in this book is selected to be actionable knowledge in the context of data science and machine learning / deep learning. The content is more about getting the intuition that will unlock your skills rather than providing mathematical proofs of theorems. It is aimed at people without a background in mathematics but who want to understand tools and algorithms used in data science and machine learning, like developers moving towards data science.
 
-Here is some details about the first two parts of the book.
+Here are some details about the first two parts of the book.
 
 The first three chapters are about the basics, from equations and functions to integrals and derivatives, and they summarize what mathematical bedrock tools you need for data science and the next chapters.
 
