@@ -40,7 +40,7 @@ Unit vectors are an example of orthogonal vectors:
 
 ## Describing the problem
 
-The problem can be expressed as finding a function that converts a set of data points from $\mathbb{R}^n$ to $\mathbb{R}^l$: we want to change the number of dimensions of our dataset from $n$ to $l$. We also need a function that can decode back the transformed dataset into the initial one:
+The problem can be expressed as finding a function that converts a set of data points from $\mathbb{R}^n$ to $\mathbb{R}^l$: we want to change the number of dimensions of our dataset from $n$ to $l$. If $l<n$, the new dataset will be compressed because its number of features decreased. We also need a function that can decode back the transformed dataset into the initial one:
 
 <img src="../../assets/images/2.12/principal-components-analysis-PCA-change-coordinates.png" width="80%" alt="Principal components analysis (PCA)" title="Principal components analysis (PCA)">
 <em>Principal components analysis as a change of coordinate system</em>
@@ -338,7 +338,7 @@ The next step is to find the matrix $\bs{D}$. Recall that the purpose of the PCA
 
 ### The Frobenius norm
 
-Since we have to take all points into account (the same matrix $\bs{D}$ will be used for all points) we will use the Frobenius norm of the errors (see [2.5](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.5-Norms/)) which is the equivalent of the $L^2$ norm for matrices. Here the formula of the Frobenius norm:
+Since we have to take all points into account (the same matrix $\bs{D}$ will be used for all points) we will use the Frobenius norm of the errors (see [2.5](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.5-Norms/)) which is the equivalent of the $L^2$ norm for matrices. Here is the formula of the Frobenius norm:
 
 <div>
 $$
@@ -357,6 +357,9 @@ $$
 </div>
 
 With the constraint that $\bs{D}^\text{T}\bs{D}=\bs{I}_l$ because we have chosen the constraint of having the columns of $\bs{D}$ orthogonal.
+
+
+
 
 ### The first principal component
 
@@ -441,6 +444,9 @@ $$
 </div>
 
 with the constraint that $\bs{d}^\text{T}\bs{d}=1$.
+
+
+
 
 ### Using the Trace operator
 
@@ -536,6 +542,9 @@ $$
 $$
 </div>
 
+
+
+
 ### Eigendecomposition
 
 We will see that we can find the maximum of the function by calculating the eigenvectors of $\bs{X^\text{T}X}$.
@@ -549,7 +558,7 @@ If we have centered our data around 0 (see bellow for more details about centeri
 
 The covariance matrix is a $n$ by $n$ matrix ($n$ being the number of dimensions). Its diagonal is the variance of the corresponding dimensions and the other cells are the covariance between the two corresponding dimensions (the amount of redundancy).
 
-This means that the largest covariance we have between two dimensions the more redundancy exists between these dimensions. This also means that the best-fit line is associated with small errors if the covariance is hight. To maximize the variance and minimize the covariance (in order to decorrelate the dimensions) means that the ideal covariance matrix is a diagonal matrix (non-zero values in the diagonal only). Therefore the diagonalization of the covariance matrix will give us the optimal solution.
+This means that the largest covariance we have between two dimensions the more redundancy exists between these dimensions. This also means that the best-fit line is associated with small errors if the variance is hight. To maximize the variance and minimize the covariance (in order to decorrelate the dimensions) means that the ideal covariance matrix is a diagonal matrix (non-zero values in the diagonal only). Therefore the diagonalization of the covariance matrix will give us the optimal solution.
 
 ### Example 2.
 
