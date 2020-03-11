@@ -136,11 +136,17 @@ let hide;
     return "";
   }
 
+  const url = window.location.href;
+  if (url.split('/').includes('Essential-Math-for-Data-Science')) {
+    document.cookie = "essential-math-ribbon=1";
+  }
+
   setTimeout(() => {
     if (getCookie('essential-math-ribbon') !== "1") {
+      console.log(window.location)
       document.getElementsByClassName('essential-math-ribbon')[0].style.display = 'flex';
       document.cookie = "essential-math-ribbon=1";
     }
-  }, 1000);
+  }, 3000);
 
 })();
