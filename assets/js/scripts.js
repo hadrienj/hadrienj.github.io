@@ -138,14 +138,13 @@ let hide;
 
   const url = window.location.href;
   if (url.split('/').includes('Essential-Math-for-Data-Science')) {
-    document.cookie = "essential-math-ribbon=1";
+    document.cookie = "essential-math-ribbon=1; expires= Thu, 21 Aug 2020 20:00:00 UTC";
   }
 
   setTimeout(() => {
     if (getCookie('essential-math-ribbon') !== "1") {
-      console.log(window.location)
       document.getElementsByClassName('essential-math-ribbon')[0].style.display = 'flex';
-      document.cookie = "essential-math-ribbon=1";
+      document.cookie = "essential-math-ribbon=1; expires= Thu, 21 Aug 2014 20:00:00 UTC";
     }
   }, 3000);
 
