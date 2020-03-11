@@ -521,10 +521,10 @@ div > ul.share-buttons > li > a > img {
 
 .essential-math-ribbon {
   position: fixed;
-  left: 15em;
-  right: 15em;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  bottom: 8%;
+  bottom: 0;
   border: 2px solid #ddd;
   text-align: center;
   font-size: 1.2em;
@@ -534,33 +534,39 @@ div > ul.share-buttons > li > a > img {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  border-radius: 15px;
+  /*border-radius: 15px;*/
   box-shadow: 7px 10px 11px 0px rgba(0,0,0,.14);
   padding: 0.3em;
 }
 
 .text-popup {
   text-align: center;
-  flex: 0 0 60%;
+  flex: 0 0 85%;
   color: #2EBCE7;
   font-family: 'Indie Flower', cursive;
   font-size: 1.2em;
   font-weight: 600;
-  margin-top: 1em;
 }
 
 .img-popup {
   text-align: center;
   flex: 0 0 30%;
-  margin-top: 1em;
 }
 
 .close-popup {
   text-align: center;
-  flex: 0 0 10%;
+  flex: 0 0 5%;
   cursor: pointer;
-  margin-top: 0.5em;
+  font-size: 3em;
+  font-family: 'Indie Flower', cursive;
+  line-height: 0.5;
+  color: #F57F53;
 }
 
-
-
+.text-highlight {
+  color: #F57F53;
+  text-decoration-color: #F57F53;
+}
+.text-highlight:hover {
+  color: #00E64E;
+}

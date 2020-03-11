@@ -98,10 +98,10 @@
     display: none;
   }
 
-  .essential-math-ribbon {
+  /*.essential-math-ribbon {
     left: 5em;
     right: 5em;
-  }
+  }*/
   .text-popup {
     font-size: 1em;
   }
@@ -191,10 +191,10 @@
     margin-top: 3em;
   }
 
-  .essential-math-ribbon {
+  /*.essential-math-ribbon {
     left: 10em;
     right: 10em;
-  }
+  }*/
   .text-popup {
     font-size: 1em;
   }
@@ -212,10 +212,10 @@
 /***** Big Big screen *****/
 
 @media screen and (min-width: $lg-break-point) {
-  .essential-math-ribbon {
+  /*.essential-math-ribbon {
     left: 15em;
     right: 15em;
-  }
+  }*/
 
   #cover_col-popup-img, #close-popup-img  {
     width: 40%
@@ -292,10 +292,10 @@
     display: none;
   }
 
-  .essential-math-ribbon {
+  /*.essential-math-ribbon {
     left: 2em;
     right: 2em;
-  }
+  }*/
   .text-popup {
     font-size: 0.9em;
   }
@@ -391,10 +391,10 @@
     display: none;
   }
 
-  .essential-math-ribbon {
+  /*.essential-math-ribbon {
     left: 1em;
     right: 1em;
-  }
+  }*/
   .text-popup {
     font-size: 0.7em;
   }

@@ -142,7 +142,7 @@ let hide;
   }
 
   setTimeout(() => {
-    if (getCookie('essential-math-ribbon') !== "1") {
+    if (getCookie('essential-math-ribbon') !== "2") {
       console.log('asdf', document.cookie)
       document.getElementsByClassName('essential-math-ribbon')[0].style.display = 'flex';
       document.cookie = "essential-math-ribbon=1; path=/ ; expires= Thu, 21 Aug 2020 20:00:00 UTC; SameSite=Strict";
