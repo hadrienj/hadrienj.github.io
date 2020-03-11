@@ -114,7 +114,7 @@ let hide;
 (function() {
   hide = function() {
     document.getElementsByClassName('essential-math-ribbon')[0].style.display = 'none'; //gets the element and sets display to none
-    document.cookie = "essential-math-ribbon=1; expires= Thu, 21 Aug 2014 20:00:00 UTC";
+    document.cookie = "essential-math-ribbon=1; path=/ ; expires= Thu, 21 Aug 2020 20:00:00 UTC; SameSite=Strict";
   }
 })();
 
@@ -138,13 +138,14 @@ let hide;
 
   const url = window.location.href;
   if (url.split('/').includes('Essential-Math-for-Data-Science')) {
-    document.cookie = "essential-math-ribbon=1; expires= Thu, 21 Aug 2020 20:00:00 UTC";
+    document.cookie = "essential-math-ribbon=1; path=/ ; expires= Thu, 21 Aug 2020 20:00:00 UTC; SameSite=Strict";
   }
 
   setTimeout(() => {
     if (getCookie('essential-math-ribbon') !== "1") {
+      console.log('asdf', document.cookie)
       document.getElementsByClassName('essential-math-ribbon')[0].style.display = 'flex';
-      document.cookie = "essential-math-ribbon=1; expires= Thu, 21 Aug 2014 20:00:00 UTC";
+      document.cookie = "essential-math-ribbon=1; path=/ ; expires= Thu, 21 Aug 2020 20:00:00 UTC; SameSite=Strict";
     }
   }, 3000);
 
