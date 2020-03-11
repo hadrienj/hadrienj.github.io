@@ -114,7 +114,7 @@ let hide;
 (function() {
   hide = function() {
     document.getElementsByClassName('essential-math-ribbon')[0].style.display = 'none'; //gets the element and sets display to none
-    document.cookie = "essential-math-ribbon=1";
+    document.cookie = "essential-math-ribbon=1; expires= Thu, 21 Aug 2014 20:00:00 UTC";
   }
 })();
 
