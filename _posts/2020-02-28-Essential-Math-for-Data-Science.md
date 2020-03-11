@@ -16,7 +16,7 @@ excerpt-image: <img src="../../assets/images/Essential-Math-for-Data-Science/ch0
 I'm very happy to introduce my work in progress for the book  <a href="https://learning.oreilly.com/library/view/essential-math-for/9781098115555/">"Essential Math for Data Science"</a> with O'Reilly (in Early Release for those who have access to the O'Reilly plateform). It should be available in September 2020.
 
 <a href="https://learning.oreilly.com/library/view/essential-math-for/9781098115555/">
-	<img src="../../assets/images/Essential-Math-for-Data-Science/cover.jpg" width="40%" alt="Cover of the book Essential Math for Data Science" title="Cover of the book Essential Math for Data Science">
+	<img src="../../assets/images/cover_col.jpg" width="40%" alt="Cover of the book Essential Math for Data Science" title="Cover of the book Essential Math for Data Science">
 	<em>Essential Math for Data Science</em>
 </a>
 
