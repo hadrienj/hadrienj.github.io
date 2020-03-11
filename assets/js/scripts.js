@@ -105,3 +105,42 @@
   }
 })();
 
+
+
+/*
+* Popup Modal Ribbon
+* ========================================================================== */
+let hide;
+(function() {
+  hide = function() {
+    document.getElementsByClassName('essential-math-ribbon')[0].style.display = 'none'; //gets the element and sets display to none
+    document.cookie = "essential-math-ribbon=1";
+  }
+})();
+
+// Check cookies
+(function() {
+  function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  setTimeout(() => {
+    if (getCookie('essential-math-ribbon') !== "1") {
+      document.getElementsByClassName('essential-math-ribbon')[0].style.display = 'flex';
+      document.cookie = "essential-math-ribbon=1";
+    }
+  }, 1000);
+
+})();

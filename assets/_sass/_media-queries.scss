@@ -2,89 +2,7 @@
 * Media Queries
 * ========================================================================== */
 
-
-/***** Bigger screen *****/
-
-@media screen and (min-width: $break-point) {
-  table {
-    display: table;
-    min-width: 100%;
-  }
-
-  #switcher {
-    display: block;
-  }
-
-  .nav-main {
-    padding: 0;
-    text-align: left;
-    a {
-      font-size: 13px;
-      display: block;
-      padding-right: 2em;
-      margin: 0;
-    }
-  }
-
-  .sidebar {
-    width: $aside-width;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-attachment: scroll;
-    z-index: 200;
-    display: block;
-  }
-
-  .cover {
-    height: 100%;
-  }
-
-  .content-wrapper {
-    width: $content-wrapper-width;
-    max-width: $article-max-width;
-    margin-left: $post-margin-left;
-  }
-
-  main {
-    padding-top: 1em;
-  }
-
-  article {
-    h2:first-of-type {
-      margin-top: 0;
-    }
-  }
-
-  .blog-footer {
-    width: $content-wrapper-width;
-    max-width: $article-max-width;
-    margin-left: $post-margin-left;
-  }
-
-  .post-links {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .link-to-post {
-    margin: 50px auto;
-    padding: 2em;
-  }
-
-  .skills-col {
-    flex: 0 0 25%;
-  }
-
-  .about-h2 {
-    margin-top: 3em;
-  }
-}
-
-
-
+/***** Medium to Big screen *****/
 
 @media screen and (min-width: $md-break-point) {
   body { font-size: 17px; }
@@ -179,13 +97,134 @@
   .toggle-button {
     display: none;
   }
+
+  .essential-math-ribbon {
+    left: 5em;
+    right: 5em;
+  }
+  .text-popup {
+    font-size: 1em;
+  }
+  #cover_col-popup-img, #close-popup-img  {
+    width: 70%
+  }
+
+}
+
+
+/***** Big screen *****/
+
+@media screen and (min-width: $break-point) {
+  table {
+    display: table;
+    min-width: 100%;
+  }
+
+  #switcher {
+    display: block;
+  }
+
+  .nav-main {
+    padding: 0;
+    text-align: left;
+    a {
+      font-size: 13px;
+      display: block;
+      padding-right: 2em;
+      margin: 0;
+    }
+  }
+
+  .sidebar {
+    width: $aside-width;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-attachment: scroll;
+    z-index: 200;
+    display: block;
+  }
+
+  .cover {
+    height: 100%;
+  }
+
+  .content-wrapper {
+    width: $content-wrapper-width;
+    max-width: $article-max-width;
+    margin-left: $post-margin-left;
+  }
+
+  main {
+    padding-top: 1em;
+  }
+
+  article {
+    h2:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .blog-footer {
+    width: $content-wrapper-width;
+    max-width: $article-max-width;
+    margin-left: $post-margin-left;
+  }
+
+  .post-links {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .link-to-post {
+    margin: 50px auto;
+    padding: 2em;
+  }
+
+  .skills-col {
+    flex: 0 0 25%;
+  }
+
+  .about-h2 {
+    margin-top: 3em;
+  }
+
+  .essential-math-ribbon {
+    left: 10em;
+    right: 10em;
+  }
+  .text-popup {
+    font-size: 1em;
+  }
+  #cover_col-popup-img, #close-popup-img  {
+    width: 60%
+  }
+
+
 }
 
 
 
 
 
+/***** Big Big screen *****/
 
+@media screen and (min-width: $lg-break-point) {
+  .essential-math-ribbon {
+    left: 15em;
+    right: 15em;
+  }
+
+  #cover_col-popup-img, #close-popup-img  {
+    width: 40%
+  }
+
+}
+
+
+/***** Small Medium screen *****/
 
 @media screen and (min-width: $sm-break-point) and (max-width: $md-break-point) {
   .MathJax {
@@ -253,11 +292,23 @@
     display: none;
   }
 
+  .essential-math-ribbon {
+    left: 2em;
+    right: 2em;
+  }
+  .text-popup {
+    font-size: 0.9em;
+  }
+  #cover_col-popup-img, #close-popup-img  {
+    width: 90%
+  }
+
 }
 
 
 
 
+/***** Medium screen *****/
 
 @media screen and (max-width: $break-point) {
   .nav-main a {
@@ -287,6 +338,7 @@
 
 
 
+/***** Small screen *****/
 
 @media screen and (max-width: $sm-break-point) {
   .MathJax {
@@ -337,5 +389,16 @@
   }
   .subscribe-img {
     display: none;
+  }
+
+  .essential-math-ribbon {
+    left: 1em;
+    right: 1em;
+  }
+  .text-popup {
+    font-size: 0.7em;
+  }
+  #cover_col-popup-img, #close-popup-img  {
+    width: 100%
   }
 }

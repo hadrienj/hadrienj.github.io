@@ -513,3 +513,54 @@ div > ul.share-buttons > li > a > img {
   margin: auto;
   width: 50%;
 }
+
+
+/*
+* Essential Math ribbon
+* ========================================================================== */
+
+.essential-math-ribbon {
+  position: fixed;
+  left: 15em;
+  right: 15em;
+  z-index: 1000;
+  bottom: 8%;
+  border: 2px solid #ddd;
+  text-align: center;
+  font-size: 1.2em;
+  background: #fdfdfdf2;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  border-radius: 15px;
+  box-shadow: 7px 10px 11px 0px rgba(0,0,0,.14);
+  padding: 0.3em;
+}
+
+.text-popup {
+  text-align: center;
+  flex: 0 0 60%;
+  color: #2EBCE7;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+.img-popup {
+  text-align: center;
+  flex: 0 0 30%;
+  margin-top: 1em;
+}
+
+.close-popup {
+  text-align: center;
+  flex: 0 0 10%;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+
+
