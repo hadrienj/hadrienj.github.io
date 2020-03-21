@@ -15,7 +15,7 @@ excerpt-image: <img src="../../assets/images/2.7/unit-circle-eigenvectors.png" w
 deep-learning-book-toc: true
 ---
 
-*Last update: 11/07/2019*
+*Last update: 21/03/2020*
 
 # Introduction
 
@@ -1479,8 +1479,7 @@ $
 \begin{aligned}
 ||\bs{x}||^2 &= \bs{x^\text{T}x} \\\
 &= (\bs{Py})^\text{T}(\bs{Py}) \\\
-&= \bs{P^\text{T}y^\text{T}Py} \\\
-&= \bs{PP^\text{T}y^\text{T}y} \\\
+&= \bs{y^\text{T}P^\text{T}Py} \\\
 &= \bs{y^\text{T}y} = ||\bs{y}||^2
 \end{aligned}
 $
