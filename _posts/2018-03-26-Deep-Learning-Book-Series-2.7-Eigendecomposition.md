@@ -497,7 +497,7 @@ $
 &=
 \begin{bmatrix}
     6\\\
-    18
+    -18
 \end{bmatrix}\\\
 &= 2 \times
 \begin{bmatrix}
