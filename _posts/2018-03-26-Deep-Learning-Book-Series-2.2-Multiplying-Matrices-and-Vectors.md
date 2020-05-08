@@ -15,7 +15,7 @@ excerpt-image: <img src="../../assets/images/2.2/dot-product.png" width="400" al
 deep-learning-book-toc: true
 ---
 
-*Last update: 04/12/2019*
+*Last update: 08/05/2020*
 
 # Introduction
 
@@ -359,7 +359,7 @@ array([[16, 13, 47],
        [12, 11, 33]])
 </pre>
 
-## Matrices mutliplication is distributive
+## Matrix mutliplication is distributive
 
 <div>
 $\bs{A}(\bs{B}+\bs{C}) = \bs{AB}+\bs{AC}$
@@ -547,7 +547,7 @@ array([[33],
 </pre>
 
 
-## Matrices mutliplication is associative
+## Matrix mutliplication is associative
 
 <div>
 $\bs{A}(\bs{BC}) = (\bs{AB})\bs{C}$
