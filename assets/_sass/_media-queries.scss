@@ -334,6 +334,16 @@
     text-align: justify;
   }
 
+  .collapse-out {
+    display: block !important;
+  }
+  .collapse-in {
+    width: 100% !important;
+  }
+  .subsection-toc {
+    text-indent: 0;
+  }
+
 }
 
 
@@ -400,5 +410,15 @@
   }
   #cover_col-popup-img, #close-popup-img  {
     width: 100%
+  }
+
+  .collapse-out {
+    display: block !important;
+  }
+  .collapse-in {
+    width: 100% !important;
+  }
+  .subsection-toc {
+    text-indent: 0;
   }
 }

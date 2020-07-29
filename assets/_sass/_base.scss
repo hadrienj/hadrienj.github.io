@@ -575,3 +575,57 @@ div > ul.share-buttons > li > a > img {
   color: #2EBCE7;
   background-color: #00c4ff26;
 }
+
+
+.subsection-toc {
+  text-indent: 3em;
+  margin: 0.1em
+}
+.collapsible-body {
+  padding: 1rem !important;
+}
+
+.collapsible {
+  width: 90% !important;
+  margin: 1.5em auto !important;
+}
+.collapse-in {
+  box-shadow: none !important;
+  border: none !important;
+  margin: 0 auto !important;
+  width: 40% !important;
+}
+
+
+.no-click {
+  cursor: default;
+  pointer-events: none;
+}
+.collapsible-h1 {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.collapse-left {
+  flex: 0 0 45%;
+}
+.collapse-right {
+  flex: 0 0 55%;
+  text-align: left;
+  padding-left: 1em !important;
+}
+.collapse-out {
+  display: flex !important;
+}
+
+.col-blue {
+  color: #2EBCE7;
+  font-weight: 500;
+}
+.col-red {
+  color: #F57F53;
+  font-weight: 500;
+}
+.col-gray {
+  color: #A9A9A9;
+}

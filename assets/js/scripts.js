@@ -105,3 +105,19 @@
   }
 })();
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    console.log(elems)
+    var instances = M.Collapsible.init(elems, {
+      accordion: false
+    });
+  });
+
+$(document).ready(function(){
+  $( ".collapsible-header" ).click(function() {
+      $(".more",this).toggle()
+      $(".less", this).toggle()
+  });
+});
