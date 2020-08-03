@@ -7,7 +7,7 @@ crawlertitle: "Essential Math for Data Science Update"
 categories: posts
 tags: ['essential-math', 'python', 'numpy']
 author: hadrienj
-date: 2020-07-30 13:30:00
+date: 2020-08-03 13:30:00
 excerpt: Update concerning "Essential Math for Data Science" with O'Reilly and complete table of content of the book.
 excerpt-image: <img src="../../assets/images/Essential-Math-for-Data-Science-Update/output_ch06_139_0.png" width="500" alt="Contour L1 Regularization" title="L1 Regularization"><em>L1 Regularization</em>
 twitterImg: "Essential-Math-for-Data-Science-Update/output_ch06_139_0"
