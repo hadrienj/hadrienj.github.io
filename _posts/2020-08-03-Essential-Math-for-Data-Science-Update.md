@@ -27,7 +27,7 @@ For some of you that accessed the previous version of the book, you'll notice th
 - I restructured the table of content: I removed some content about very basic math (like what is an equation or a function) to have more space to cover slighly more advanced contents. The part *Statistics and Probability* is now at the beginning of the book (just after a first part on Calculus). Have a look at the new TOC below to have more details.
 - There is now <i class="material-icons right col-gray">build</i> *hands-on projects* for each chapter. Hands-on projects are sections where you can apply the math you just learned to a practical machine learning problem (like gradient descent or regularization, for instance). The difficulty of math and code in each of these hands-on project is variable, so you should find something at the right point of your learning curve.
 
-Here is the table of content. Chapters available in the Early Release are in blue and the other in red.
+Here is the table of content. Click on the chapters to see what's inside. Chapters available in the Early Release are in blue and the other in red.
 
 
 <!--
