@@ -8,26 +8,20 @@ categories: posts
 tags: ['essential-math', 'python', 'numpy']
 author: hadrienj
 date: 2020-08-03 13:30:00
-excerpt: Update concerning "Essential Math for Data Science" with O'Reilly and complete table of content of the book.
+excerpt: Update concerning "Essential Math for Data Science" and complete table of content of the book.
 excerpt-image: <img src="../../assets/images/Essential-Math-for-Data-Science-Update/output_ch06_139_0.png" width="500" alt="Contour L1 Regularization" title="L1 Regularization"><em>L1 Regularization</em>
 twitterImg: "Essential-Math-for-Data-Science-Update/output_ch06_139_0"
 ---
 
+I'm glad to announce a few updates concerning my book "Essential Math for Data Science":
 
-<a href="https://learning.oreilly.com/library/view/essential-math-for/9781098115555/">
-	<img src="../../assets/images/cover_col.jpg" width="20%" alt="Cover of the book Essential Math for Data Science" title="Cover of the book Essential Math for Data Science">
-	<em>Essential Math for Data Science</em>
-</a>
-
-I'm glad to announce a few updates concerning my book <a href="https://learning.oreilly.com/library/view/essential-math-for/9781098115555/">"Essential Math for Data Science"</a> with O'Reilly:
-- First, the first half of the book (chapters 02 to 06) is now available as Early Release on <a href="https://learning.oreilly.com/library/view/essential-math-for/9781098115555/">O'Reilly</a>. If you don't have an account, you can <a href="https://learning.oreilly.com/get-learning/?code=JEAN20">go here</a> to get a free 30-day access. The missing chapters (07 to 11) should be released in the next few weeks.
-
-For some of you that accessed the previous version of the book, you'll notice that the first chapter on basic algebra has been removed. Part of old chapter 02 has been merged in the linear algebra part.
+- First, I changed the structure of the book: a first chapter on basic algebra has been removed. Part of old chapter 02 has been merged in the linear algebra part.
 
 - I restructured the table of content: I removed some content about very basic math (like what is an equation or a function) to have more space to cover slighly more advanced contents. The part *Statistics and Probability* is now at the beginning of the book (just after a first part on Calculus). Have a look at the new TOC below to have more details.
+
 - There is now <i class="material-icons right col-gray">build</i> *hands-on projects* for each chapter. Hands-on projects are sections where you can apply the math you just learned to a practical machine learning problem (like gradient descent or regularization, for instance). The difficulty of math and code in each of these hands-on project is variable, so you should find something at the right point of your learning curve.
 
-Here is the table of content. Click on the chapters to see what's inside. Chapters available in the Early Release are in blue and the other in red.
+Here is the table of content. Click on the chapters to see what's inside.
 
 
 <!--
@@ -53,7 +47,7 @@ Chapter 01 is a very short introduction about the structure of the book, how to 
     	<div class="collapsible-header collapsible-h1 no-click">
     		<i class="material-icons right more white-text">expand_more</i>
 			<i class="material-icons right less white-text" style="display: none">expand_less</i>
-    		<span class="col-red">01</span>. How to use this Book
+    		<span>01</span>. How to use this Book
     	</div>
 	</li>
 </ul>
@@ -67,7 +61,7 @@ Machine learning and data science require some experience with calculus. You'll 
     	<div class="collapsible-header collapsible-h1">
     		<i class="material-icons right more">expand_more</i>
     		<i class="material-icons right less" style="display: none">expand_less</i>
-    		<span class="col-blue">02</span>. Calculus: Derivatives and Integrals
+    		<span>02</span>. Calculus: Derivatives and Integrals
     	</div>
     	<div class="collapsible-body">
 			<div class="collapse-out">
@@ -128,7 +122,7 @@ In machine learning and data science, probability and statistics are used to dea
     	<div class="collapsible-header collapsible-h1">
 	    	<i class="material-icons right more">expand_more</i>
 	    	<i class="material-icons right less" style="display: none">expand_less</i>
-	    	<span class="col-blue">03</span>. Statistics and Probability Theory
+	    	<span>03</span>. Statistics and Probability Theory
     	</div>
     	<div class="collapsible-body">
 			<div class="collapse-out">
@@ -221,7 +215,7 @@ In machine learning and data science, probability and statistics are used to dea
     	<div class="collapsible-header collapsible-h1">
 	    	<i class="material-icons right more">expand_more</i>
 	    	<i class="material-icons right less" style="display: none">expand_less</i>
-	    	<span class="col-blue">04</span>. Common Probability Distributions
+	    	<span>04</span>. Common Probability Distributions
 	    	</div>
     	<div class="collapsible-body">
 			<div class="collapse-out">
@@ -302,7 +296,7 @@ In machine learning and data science, probability and statistics are used to dea
     	<div class="collapsible-header collapsible-h1">
 	    	<i class="material-icons right more">expand_more</i>
 	    	<i class="material-icons right less" style="display: none">expand_less</i>
-	    	<span class="col-blue">05</span>. Bayesian Statistics and Information Theory
+	    	<span>05</span>. Bayesian Statistics and Information Theory
     	</div>
     	<div class="collapsible-body">
 			<div class="collapse-out">
@@ -373,7 +367,7 @@ Linear algebra is the core of many machine learning algorithms. The great news i
     	<div class="collapsible-header collapsible-h1">
 	    	<i class="material-icons right more">expand_more</i>
 	    	<i class="material-icons right less" style="display: none">expand_less</i>
-	    	<span class="col-blue">06</span>. Scalars and Vectors
+	    	<span>06</span>. Scalars and Vectors
     	</div>
     	<div class="collapsible-body">
 			<div class="collapse-out">
@@ -448,7 +442,7 @@ Linear algebra is the core of many machine learning algorithms. The great news i
     	<div class="collapsible-header collapsible-h1">
 	    	<i class="material-icons right more">expand_more</i>
 	    	<i class="material-icons right less" style="display: none">expand_less</i>
-	    	<span class="col-red">07</span>. Matrices and Tensors
+	    	<span>07</span>. Matrices and Tensors
     	</div>
     	<div class="collapsible-body">
 			<div class="collapse-out">
@@ -528,7 +522,7 @@ Linear algebra is the core of many machine learning algorithms. The great news i
     	<div class="collapsible-header collapsible-h1">
 	    	<i class="material-icons right more">expand_more</i>
 	    	<i class="material-icons right less" style="display: none">expand_less</i>
-	    	<span class="col-red">08</span>. Span, Linear Dependency, and Space Transformation
+	    	<span>08</span>. Span, Linear Dependency, and Space Transformation
     	</div>
     	<div class="collapsible-body">
 			<div class="collapse-out">
@@ -621,7 +615,7 @@ Linear algebra is the core of many machine learning algorithms. The great news i
     	<div class="collapsible-header collapsible-h1">
 	    	<i class="material-icons right more">expand_more</i>
 	    	<i class="material-icons right less" style="display: none">expand_less</i>
-	    	<span class="col-red">09</span>. Systems of Linear Equations
+	    	<span>09</span>. Systems of Linear Equations
     	</div>
     	<div class="collapsible-body">
 			<div class="collapse-out">
@@ -684,7 +678,7 @@ Linear algebra is the core of many machine learning algorithms. The great news i
     	<div class="collapsible-header collapsible-h1">
 	    	<i class="material-icons right more">expand_more</i>
 	    	<i class="material-icons right less" style="display: none">expand_less</i>
-	    	<span class="col-red">10</span>. Eigenvectors and Eigenvalues
+	    	<span>10</span>. Eigenvectors and Eigenvalues
     	</div>
     	<div class="collapsible-body">
 			<div class="collapse-out">
@@ -754,7 +748,7 @@ Linear algebra is the core of many machine learning algorithms. The great news i
     	<div class="collapsible-header collapsible-h1">
 	    	<i class="material-icons right more">expand_more</i>
 	    	<i class="material-icons right less" style="display: none">expand_less</i>
-	    	<span class="col-red">11</span>. Singular Value Decomposition
+	    	<span>11</span>. Singular Value Decomposition
     	</div>
     	<div class="collapsible-body">
     		<div class="collapse-out">

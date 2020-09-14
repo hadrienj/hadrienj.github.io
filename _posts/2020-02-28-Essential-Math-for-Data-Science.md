@@ -8,17 +8,12 @@ categories: posts
 tags: ['essential-math', 'python', 'numpy']
 author: hadrienj
 date: 2020-02-28 13:30:00
-excerpt: Introduction of my book "Essential Math for Data Science" for O'Reilly. The goal of the book is to provide an introduction to the mathematics needed for data science and machine learning. The idea is to use a hands-on approach using examples in Python to get insights on mathematical concepts used in the every day life of a data scientist.
+excerpt: Introduction of my book "Essential Math for Data Science". The goal of the book is to provide an introduction to the mathematics needed for data science and machine learning. The idea is to use a hands-on approach using examples in Python to get insights on mathematical concepts used in the every day life of a data scientist.
 excerpt-image: <img src="../../assets/images/Essential-Math-for-Data-Science/ch09_SVD_geometry.png" width="500" alt="SVD Geometry" title="SVD Geometry"><em>SVD Geometry</em>
 ---
 
 
-I'm very happy to introduce my work in progress for the book  <a href="https://learning.oreilly.com/library/view/essential-math-for/9781098115555/">"Essential Math for Data Science"</a> with O'Reilly (in Early Release for those who have access to the O'Reilly plateform). It should be available in September 2020.
-
-<a href="https://learning.oreilly.com/library/view/essential-math-for/9781098115555/">
-	<img src="../../assets/images/cover_col.jpg" width="40%" alt="Cover of the book Essential Math for Data Science" title="Cover of the book Essential Math for Data Science">
-	<em>Essential Math for Data Science</em>
-</a>
+I'm very happy to introduce my work in progress for the book "Essential Math for Data Science". It should be available in November 2020.
 
 
 The goal of the book is to provide an introduction to the mathematics needed for data science and machine learning. The idea is to use a hands-on approach using examples in Python <img src="../../assets/images/icons/python.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="python icon" title="Python">, with Numpy <img src="../../assets/images/icons/np.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="numpy icon" title="Numpy">, Matplotlib <img src="../../assets/images/icons/matplotlib.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="Matplotlib icon" title="Matplotlib">, and Sklearn <img src="../../assets/images/icons/sklearn.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="sklearn icon" title="Scikit Learn"> to get mathematical insights that will ease the every day life of a data engineer or data scientist. You will be able to experiment on the math concepts and gain intuition through code and visualizations.
