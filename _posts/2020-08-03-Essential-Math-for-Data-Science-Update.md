@@ -13,7 +13,9 @@ excerpt-image: <img src="../../assets/images/Essential-Math-for-Data-Science-Upd
 twitterImg: "Essential-Math-for-Data-Science-Update/output_ch06_139_0"
 ---
 
-I'm glad to announce a few updates concerning my book "Essential Math for Data Science":
+I'm glad to announce a few updates concerning my book "Essential Math for Data Science".
+
+{% include mailchimp.html %}
 
 - First, I changed the structure of the book: a first chapter on basic algebra has been removed. Part of old chapter 02 has been merged in the linear algebra part.
 
