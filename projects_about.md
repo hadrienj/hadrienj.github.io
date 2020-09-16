@@ -18,7 +18,8 @@ active: true
       <div class="avatar-txt">
         <!-- <b>Available for consulting in data science and machine learning and for technical training.</b><br> -->
         <ul>
-        <li>Currently working on a book: <a href="https://learning.oreilly.com/library/view/essential-math-for/9781098115555/">"Essential Math for Data Science"</a> for <a href="https://www.oreilly.com/"><img style="display: inline-block; margin: 0; padding: 0;" src="../../assets/images/icons/oreilly.svg" width="70" alt="oreilly icon" title="Oreilly"></a>.</li>
+        <li>Currently working on a book: <a href="https://www.essentialmathfordatascience.com/">"Essential Math for Data Science"</a>
+        </li>
         <li>Previously working as a Machine Learning Scientist at Ava Accessibility <a href="https://www.ava.me/"><img style="display: inline-block; margin: 0; padding: 0;" src="../../assets/images/icons/ava.png" width="40" alt="ava icon" title="Ava"></a>.</li>
         <li>Previously Ph.D student at the &Eacute;cole Normale Supérieure <a href="http://www.ens.fr/en"><img class="inline-icon" src="../../assets/images/icons/ens_crop.png" width="30" alt="ens icon" title="ENS"></a></li>
         </ul>

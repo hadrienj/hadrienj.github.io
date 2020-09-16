@@ -1,8 +1,11 @@
 
 
 #mc_embed_signup {
-  background-color: #ececec !important;
   margin: 0 !important;
+  background: #fdfdfd !important;
+  clear: left;
+  font: 14px;
+  width: 100%;
 }
 #mc-embedded-subscribe {
   background-color: #2EBCE7 !important;
@@ -14,9 +17,7 @@
 #mc-embedded-subscribe-form {
   padding: 25px 0 25px 0 !important;
 }
-#mc_embed_signup {
-  margin: 50px 0px 50px 0px;
-}
+
 #mce-EMAIL {
   font-size: 18px;
 }
