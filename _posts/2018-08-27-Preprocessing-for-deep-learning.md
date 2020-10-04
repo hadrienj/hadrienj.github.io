@@ -15,7 +15,7 @@ excerpt-image: '<img src="../../assets/images/Preprocessing-for-deep-learning/ro
 <em>The left plot shows correlated data. For instance, if you take a data point with a big $x$ value, chances are that $y$ will also be quite big. Now take all data points and do a rotation (maybe around 45 degrees counterclockwise): the new data (plotted on the right) is not correlated anymore.</em>'
 ---
 
-*Last update: 09/01/2020*
+*Last update: Jan. 2020*
 
 A notebook version of this post can be found [here](https://github.com/hadrienj/Preprocessing-for-deep-learning) on Github.
 

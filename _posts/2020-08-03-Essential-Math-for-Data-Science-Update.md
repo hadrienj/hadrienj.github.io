@@ -13,7 +13,7 @@ excerpt-image: <img src="../../assets/images/Essential-Math-for-Data-Science-Upd
 twitterImg: "Essential-Math-for-Data-Science-Update/output_ch06_139_0"
 ---
 
-I'm glad to announce a few updates concerning my book "Essential Math for Data Science".
+I'm glad to announce a few updates concerning my book <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>.
 
 {% include mailchimp.html %}
 

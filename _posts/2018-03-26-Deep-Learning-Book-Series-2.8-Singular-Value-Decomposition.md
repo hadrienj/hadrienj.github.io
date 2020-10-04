@@ -16,7 +16,7 @@ metaDescription: "Introduction to the Singular Value Decomposition (SVD). We wil
 deep-learning-book-toc: true
 ---
 
-*Last update: 11/07/2019*
+*Last update: Nov. 2019*
 
 # Introduction
 

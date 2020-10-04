@@ -12,15 +12,20 @@ excerpt: Introduction of my book "Essential Math for Data Science". The goal of 
 excerpt-image: <img src="../../assets/images/Essential-Math-for-Data-Science/ch09_SVD_geometry.png" width="500" alt="SVD Geometry" title="SVD Geometry"><em>SVD Geometry</em>
 ---
 
+*Last Update: Sept. 2020*
 
-I'm very happy to introduce my work in progress for the book "Essential Math for Data Science". It should be available in November 2020.
+I'm very happy to introduce my work in progress for the book <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>. It should be available in November 2020.
 
 {% include mailchimp.html %}
 
 
-The goal of the book is to provide an introduction to the mathematics needed for data science and machine learning. The idea is to use a hands-on approach using examples in Python <img src="../../assets/images/icons/python.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="python icon" title="Python">, with Numpy <img src="../../assets/images/icons/np.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="numpy icon" title="Numpy">, Matplotlib <img src="../../assets/images/icons/matplotlib.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="Matplotlib icon" title="Matplotlib">, and Sklearn <img src="../../assets/images/icons/sklearn.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="sklearn icon" title="Scikit Learn"> to get mathematical insights that will ease the every day life of a data engineer or data scientist. You will be able to experiment on the math concepts and gain intuition through code and visualizations.
+The goal of the book is to provide an introduction to the mathematics needed for data science and machine learning.
 
-What you'll learn in this book is selected to be actionable knowledge in the context of data science and machine learning / deep learning. The content is more about getting the intuition that will unlock your skills rather than providing mathematical proofs of theorems. It is aimed at people without a background in mathematics but who want to understand tools and algorithms used in data science and machine learning, like developers moving towards data science.
+The idea is to use a hands-on approach using examples in Python <img src="../../assets/images/icons/python.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="python icon" title="Python">, with Numpy <img src="../../assets/images/icons/np.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="numpy icon" title="Numpy">, Matplotlib <img src="../../assets/images/icons/matplotlib.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="Matplotlib icon" title="Matplotlib">, and Sklearn <img src="../../assets/images/icons/sklearn.png" style="display: inline-block; margin: 0; padding: 0;" width="30" alt="sklearn icon" title="Scikit Learn"> to get mathematical insights that will **ease the every day life of data engineers or data scientists**.
+
+You will be able to experiment on the math concepts and gain intuition through code and visualizations.
+
+What you'll learn in this book is selected to be actionable knowledge in the context of data science and machine learning / deep learning. The content is more about getting the intuition that will unlock your skills rather than providing mathematical proofs of theorems. It is aimed at **people without a deep background in mathematics** but who want to understand tools and algorithms used in data science and machine learning, like developers moving towards data science.
 
 Here are some details about the first two parts of the book.
 

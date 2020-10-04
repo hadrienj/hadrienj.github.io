@@ -15,7 +15,7 @@ excerpt-image: <img src="../../assets/images/2.4/number-solutions-system-equatio
 deep-learning-book-toc: true
 ---
 
-*Last update: 11/07/2019*
+*Last update: Nov. 2019*
 
 # Introduction
 

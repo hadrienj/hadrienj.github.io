@@ -15,7 +15,7 @@ excerpt-image: <img src="../../assets/images/2.7/unit-circle-eigenvectors.png" w
 deep-learning-book-toc: true
 ---
 
-*Last update: 21/03/2020*
+*Last update: Mar. 2020*
 
 # Introduction
 

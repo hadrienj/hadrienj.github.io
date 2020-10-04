@@ -15,7 +15,7 @@ excerpt-image: '<img src="../../assets/images/2.12/principal-component-analysis-
 deep-learning-book-toc: true
 ---
 
-*Last update: 11/07/2019*
+*Last update: Jan. 2020*
 
 # Introduction
 

@@ -15,7 +15,7 @@ excerpt-image: <img src="../../assets/images/2.2/dot-product.png" width="400" al
 deep-learning-book-toc: true
 ---
 
-*Last update: 08/05/2020*
+*Last update: May 2020*
 
 # Introduction
 
