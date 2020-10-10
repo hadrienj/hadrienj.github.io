@@ -186,6 +186,8 @@ array([[ 1.,  0., -0.],
 
 We will see that inverse of matrices can be very usefull, for instance to solve a set of linear equations. We must note however that non square matrices (matrices with more columns than rows or more rows than columns) don't have inverse.
 
+{% include essential-math-ribbon.html %}
+
 # Sovling a system of linear equations
 
 An introduction on system of linear equations can be found in [2.2](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.2-Multiplying-Matrices-and-Vectors/).

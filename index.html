@@ -11,7 +11,7 @@ mathjax: true
   <article class="index-page">
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     <p class="post-meta">
-      <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d-%m-%Y" }}</time>
+      <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%m-%d-%Y" }}</time>
 
       {% if post.author %}
         &nbsp;/&nbsp;

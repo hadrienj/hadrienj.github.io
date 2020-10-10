@@ -98,6 +98,8 @@ $$
 $$
 </div>
 
+{% include essential-math-ribbon.html %}
+
 ## Adding some constraints: the decoding function
 
 The encoding function $f(\bs{x})$ transforms $\bs{x}$ into $\bs{c}$ and the decoding function transforms back $\bs{c}$ into an approximation of $\bs{x}$. To keep things simple, PCA will respect some constraints:

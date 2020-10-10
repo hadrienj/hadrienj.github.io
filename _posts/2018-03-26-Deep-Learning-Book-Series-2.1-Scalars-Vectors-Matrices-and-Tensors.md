@@ -143,6 +143,7 @@ len(x)
 4
 </pre>
 
+{% include essential-math-ribbon.html %}
 
 # Transposition
 

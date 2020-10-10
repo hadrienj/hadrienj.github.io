@@ -285,6 +285,8 @@ array([[ 13,  29],
 
 It works!
 
+{% include essential-math-ribbon.html %}
+
 # Formalization of the dot product
 
 The dot product can be formalized through the following equation:

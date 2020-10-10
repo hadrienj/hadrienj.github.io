@@ -187,6 +187,8 @@ Note that associating one direction in space to one parameter is only one way to
 <img src="../../assets/images/2.4/representing-features.png" width="900" alt="Different ways of representing features" title="Feature representation">
 <em>Graphical representations of features</em>
 
+{% include essential-math-ribbon.html %}
+
 ### Overdetermined and underdetermined systems
 
 A linear system of equations can be viewed as a set of $(n-1)$-dimensional hyperplanes in a *n*-dimensional space. So the linear system can be characterized with its number of equations ($m$) and the number of unknown variables ($n$).

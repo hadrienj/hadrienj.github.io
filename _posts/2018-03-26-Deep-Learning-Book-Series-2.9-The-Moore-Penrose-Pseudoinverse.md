@@ -174,6 +174,8 @@ array([[ 0.16666667, -0.10606061,  0.03030303],
 
 In this case the result is the same as with the SVD way.
 
+{% include essential-math-ribbon.html %}
+
 ## Using the pseudoinverse to solve a overdetermined system of linear equations
 
 In general there is no solution to overdetermined systems (see [2.4](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.4-Linear-Dependence-and-Span/) ; [Overdetermined systems](https://en.wikipedia.org/wiki/Overdetermined_system)). In the following picture, there is no point at the intersection of the three lines corresponding to three equations:

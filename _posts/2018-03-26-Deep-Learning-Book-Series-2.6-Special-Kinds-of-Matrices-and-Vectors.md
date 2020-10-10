@@ -333,6 +333,8 @@ array([[ 1.,  0.,  0.,  0.],
 
 Great! This gives the identity matrix
 
+{% include essential-math-ribbon.html %}
+
 # Symmetric matrices
 
 <img src="../../assets/images/2.6/symmetric-matrix.png" width="150" alt="Illustration of a symmetric matrix" title="Symmetric matrix">

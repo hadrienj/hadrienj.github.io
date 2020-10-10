@@ -201,6 +201,7 @@ array([[ 2.66666667,  0.66666667, -2.66666667],
 Looks good!
 
 
+{% include essential-math-ribbon.html %}
 
 ### Finding the covariance matrix with the dot product
 

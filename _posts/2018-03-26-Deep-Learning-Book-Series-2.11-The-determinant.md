@@ -160,6 +160,8 @@ np.linalg.det(A)
 
 And yes, the transformation have multiplied the area of the unit square by 4. The lengths of $new_i$ and $new_j$ are $2$ (thus $2\cdot2=4$).
 
+{% include essential-math-ribbon.html %}
+
 ### Example 2.
 
 Let's see now an example of negative determinant.

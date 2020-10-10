@@ -137,6 +137,8 @@ We can see that applying the matrix $\bs{A}$ has the effect of modifying the vec
 
 You can think of matrices as linear transformation recipes. Let's see the case of a very special type of vector: the eigenvectors.
 
+{% include essential-math-ribbon.html %}
+
 # Eigenvectors and eigenvalues
 
 We have seen an example of a vector transformed by a matrix. Now imagine that the transformation of the initial vector gives us a new vector that has the exact same direction. The scale can be different but the direction is the same. Applying the matrix doesn't change the direction of the vector. This special vector is called an *eigenvector* of the matrix. We will see that finding the eigenvectors of a matrix can be very useful.

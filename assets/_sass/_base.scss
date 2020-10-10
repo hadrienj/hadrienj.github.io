@@ -399,7 +399,7 @@ div > ul.share-buttons > li > a > img {
 }
 
 .card-post:hover, .card-section:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 5px 8px 25px 0px rgba(0,0,0,0.2) !important;
 }
 
 .card-post-img, .card-section-img {
@@ -628,4 +628,20 @@ div > ul.share-buttons > li > a > img {
 }
 .col-gray {
   color: #A9A9A9;
+}
+
+
+
+
+.link-spanner{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+
+  /* edit: fixes overlap error in IE7/8,
+     make sure you have an empty gif
+  background-image: url('empty.gif');*/
 }

@@ -189,6 +189,8 @@ $
 
 We can see that the matrix doubled the size of the circle. But in some transformations, the change applied to the $x$ coordinate is different from the change applied to the $y$ coordinate. Let's see what it means graphically.
 
+{% include essential-math-ribbon.html %}
+
 ### Example 3.
 
 We will apply the matrix:

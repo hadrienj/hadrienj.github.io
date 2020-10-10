@@ -117,9 +117,11 @@ $$
 
 This means that the probability that $\text{x}=x$ is equal to the sum of the probabilities corresponding to $\text{x}=x$ over every $y$. The following example will clarify this statement.
 
+{% include essential-math-ribbon.html %}
 
 {::options parse_block_html="true" /}
 <div class="card-example">
+
 
 ### Example 2.
 

@@ -120,6 +120,8 @@ $$
 \Tr(\bs{A})=\Tr(\bs{A}^T)
 $$
 
+{% include essential-math-ribbon.html %}
+
 ## Trace of a product
 
 $$
