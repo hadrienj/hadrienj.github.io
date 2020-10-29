@@ -487,4 +487,3 @@ You now have all the tools to dive more into probability. The next part will be 
 
 I hope that this helped you to gain a better intuition on all of this! Feel free to contact me about any question/note/correction! 😀
 
-{% include mailchimp.html %}

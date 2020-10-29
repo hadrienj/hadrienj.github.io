@@ -468,8 +468,6 @@ array([[ 3,  4],
 
 You can find basics operations on matrices simply explained [here](https://www.mathsisfun.com/algebra/matrix-introduction.html).
 
-{% include mailchimp.html %}
-
 
 # References
 

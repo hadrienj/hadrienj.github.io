@@ -405,6 +405,13 @@
     left: 1em;
     right: 1em;
   }*/
+  .essential-math-img {
+    display: none;
+  }
+  .essential-math-text {
+    flex: 0 0 100% !important;
+    padding: 0;
+  }
   .text-popup {
     font-size: 0.7em;
   }

@@ -261,7 +261,6 @@ You can see that the transformation mirrored the initial shape.
 
 We have seen that the determinant of a matrix is a special value telling us a lot of things on the transformation corresponding to this matrix. Now hang on and go to the *last chapter* on the Principal Component Analysis (PCA).
 
-{% include mailchimp.html %}
 
 # References
 

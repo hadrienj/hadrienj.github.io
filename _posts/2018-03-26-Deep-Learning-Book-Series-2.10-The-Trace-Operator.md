@@ -233,8 +233,6 @@ $$
 $$
 </div>
 
-{% include mailchimp.html %}
-
 # References
 
 - [Trace (linear algebra) - Wikipedia](https://en.wikipedia.org/wiki/Trace_(linear_algebra))

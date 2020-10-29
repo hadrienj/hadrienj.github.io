@@ -662,7 +662,6 @@ Looks good!
 
 You can see that the pseudoinverse can be very useful for this kind of problems! The series is not completely finished since we still have 3 chapters to cover. However, we have done the hardest part! We will now see two very light chapters before going to a nice example using all the linear algebra we have learn: the PCA.
 
-{% include mailchimp.html %}
 
 # References
 

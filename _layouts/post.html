@@ -24,9 +24,12 @@ layout: default
 
   <div class="post-content">
 
-    {% if page.jupyter %}
+<!--     {% if page.jupyter %}
       {% include jupyter.html %}
-    {% endif %}
+    {% endif %} -->
+
+    {% include essential-math-ribbon.html %}
+
 
     {{ content }}
 
@@ -37,6 +40,8 @@ layout: default
     {% if page.comments %}
       {% include disqus.html %}
     {% endif %}
+
+    {% include essential-math-ribbon.html %}
 
     {% include share.html %}
 

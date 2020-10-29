@@ -1032,7 +1032,6 @@ The inverse of a matrix exists only if the set of equations has one and only one
 
 For more details about the row and the column figure, have a look at the books of Gilbert Strang (there are some ressources [here](http://math.mit.edu/~gs/dela/dela_4-1.pdf)). There are tons of really great examples and graphical explanations! And the *1.2 Geometry of linear equations* in 'Linear algebra and its applications' also from Gilbert Strang.
 
-{% include mailchimp.html %}
 
 
 # References

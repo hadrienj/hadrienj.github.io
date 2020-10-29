@@ -645,8 +645,6 @@ np.cos(np.deg2rad(45))*2*np.sqrt(8)
 4.0000000000000009
 </pre>
 
-{% include mailchimp.html %}
-
 # References
 
 - [Norm - Wikipedia](https://en.wikipedia.org/wiki/Norm_(mathematics))

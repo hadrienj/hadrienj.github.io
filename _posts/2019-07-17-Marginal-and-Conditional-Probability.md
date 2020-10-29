@@ -441,4 +441,3 @@ We also talked about conditional probability. It corresponds to probability unde
 
 I hope that this article helped you to use and read the mathematical notation underlying these concepts.
 
-{% include mailchimp.html %}

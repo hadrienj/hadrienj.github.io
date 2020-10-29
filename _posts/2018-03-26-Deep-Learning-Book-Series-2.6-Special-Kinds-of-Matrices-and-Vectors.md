@@ -808,7 +808,6 @@ In this chapter we saw different interesting type of matrices with specific prop
 
 In the next chapter we will saw a central idea in linear algebra: the eigendecomposition. Keep reading!
 
-{% include mailchimp.html %}
 
 # References
 

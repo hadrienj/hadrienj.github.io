@@ -435,7 +435,6 @@ Some matrices are not invertible. They are called **singular**.
 
 This introduces different cases according to the linear system because $\bs{A}^{-1}$ exists only if the equation $\bs{Ax}=\bs{b}$ has one and only one solution. [The next chapter](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.4-Linear-Dependence-and-Span/) is almost all about systems of linear equations and number of solutions.
 
-{% include mailchimp.html %}
 
 
 <span class='notes'>

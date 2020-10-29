@@ -1646,7 +1646,6 @@ linearTransformation(A)
 
 In this case, the eigenvectors are not orthogonal!
 
-{% include mailchimp.html %}
 
 # References
 

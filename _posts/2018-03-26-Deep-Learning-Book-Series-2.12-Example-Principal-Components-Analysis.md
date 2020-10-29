@@ -803,7 +803,6 @@ eigVecs[:,1].dot(eigVecs[:,1].T)
 
 And... This is the end! We have gone through a lot of things during this series on linear algebra! I hope that it was a useful introduction to this topic which is of large importance in the data science/machine learning/deep learning fields.
 
-{% include mailchimp.html %}
 
 # References
 

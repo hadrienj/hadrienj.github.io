@@ -13,9 +13,9 @@ excerpt-image: <img src="../../assets/images/Essential-Math-for-Data-Science-Upd
 twitterImg: "Essential-Math-for-Data-Science-Update/output_ch06_139_0"
 ---
 
+
 I'm glad to announce a few updates concerning my book <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>.
 
-{% include mailchimp.html %}
 
 - First, I changed the structure of the book: a first chapter on basic algebra has been removed. Part of old chapter 02 has been merged in the linear algebra part.
 
@@ -822,6 +822,9 @@ Linear algebra is the core of many machine learning algorithms. The great news i
 </ul>
 
 I hope that you'll find this content useful! Feel free to contact me if you have any question, request, or feedback!
+
+
+
 
 <!--
 

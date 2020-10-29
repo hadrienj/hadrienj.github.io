@@ -1099,7 +1099,6 @@ Whaou! Even with 50 components, the quality of the image is not bad!
 
 I like this chapter on the SVD because it uses what we have learned so far in a concrete application. The next chapter on the pseudo-inverse is quite cool as well so keep on reading! We will see how to find a near-solution of a system of equation that minimizes the error and at the end we will see an example that uses the pseudo-inverse to find the best fit line of a set of data points.
 
-{% include mailchimp.html %}
 
 # References
 
