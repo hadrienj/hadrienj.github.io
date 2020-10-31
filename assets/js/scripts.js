@@ -121,9 +121,7 @@ eventTag.addEventListener('click', handleClickEvent, false);
 
 function handleClickEvent(e) {
   const url = e.view.location.href;
-  console.log('handleClickEvent')
   if (document.location.hostname.search("hadrienj.github.io") !== -1) {
-    console.log('ev');
     gtag('event', 'click', {
       'event_category': 'click',
       'event_label': `to_essential_math_from_${url}`,
