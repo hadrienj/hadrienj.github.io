@@ -3,16 +3,15 @@ bg: "galoped.jpg"
 layout: post
 mathjax: true
 title: Deep Learning Book Series · 2.2 Multiplying Matrices and Vectors
-crawlertitle: "Introduction to Multiplying Matrices and Vectors using Python/Numpy examples and drawings"
+crawlertitle: "Introduction to Matrices and Vectors Multiplication using Python/Numpy"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.2%20Multiplying%20Matrices%20and%20Vectors/2.2%20Multiplying%20Matrices%20and%20Vectors.ipynb
 date: 2018-03-26 11:00:00
 excerpt: This short introduction will give you the intuition and Python/Numpy code behind matrices and vectors multiplication. Multiplying matrices and understanding the dot product is crucial to more advanced linear algebra needed for data science, machine learning and deep learning.
 excerpt-image: <img src="../../assets/images/2.2/dot-product.png" width="400" alt="Multiplying matrices. An example of how to calculate the dot product between a matrix and a vector" title="The dot product between a matrix and a vector">
   <em>The dot product between a matrix and a vector</em>
-deep-learning-book-toc: true
+essential-math: true
 ---
 
 *Last update: May 2020*
@@ -284,8 +283,6 @@ array([[ 13,  29],
 
 
 It works!
-
-{% include essential-math-ribbon.html %}
 
 # Formalization of the dot product
 

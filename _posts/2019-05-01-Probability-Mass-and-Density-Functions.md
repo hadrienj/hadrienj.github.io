@@ -7,12 +7,13 @@ crawlertitle: "Introduction to Probability Mass and Density Functions using Pyth
 categories: posts
 tags: ['probability', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/3.1-3.3%20Probability%20Mass%20and%20Density%20Functions
+<!-- jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/3.1-3.3%20Probability%20Mass%20and%20Density%20Functions-->
 date: 2019-05-01 17:00:00
 twitterImg: 3.1/density-function-small
 excerpt: The goal of probability is to deal with uncertainty. It gives ways to describe random events. A random variable is a variable that can take multiple values depending of the outcome of a random event. The possible outcomes are the possible values taken by the variable. If the outcomes are finite (for example the 6 possibilities in a die throwing event) the random variable is said to be discrete.
 excerpt-image: <img src="../../assets/images/3.1/probability-density-function-area-under-the-curve-2.png" width="300" alt="Illustration of the probability density function and the area under the curve corresponding to the range 0.5-0.7" title="Probability density function (pdf) and area under the curve">
     <em>Probability density function and area under the curve between 0.5 and 0.7.</em>
+essential-math: true
 ---
 
 <span class='notes'>

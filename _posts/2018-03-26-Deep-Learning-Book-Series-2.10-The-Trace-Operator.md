@@ -7,12 +7,12 @@ crawlertitle: "Introduction to The Trace Operator using Python/Numpy examples an
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.10%20The%20Trace%20Operator/2.10%20The%20Trace%20Operator.ipynb
+<!-- jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.10%20The%20Trace%20Operator/2.10%20The%20Trace%20Operator.ipynb-->
 date: 2018-03-26 17:00:00
 excerpt: This short post introduces you to the trace operator. We will see what is the Trace of a matrix and how to compute it.
 excerpt-image: <img src="../../assets/images/2.10/trace-matrix.png" width="200" alt="Calculating the trace of a matrix" title="Calculating the trace of a matrix">
     <em>The trace of matrix</em>
-deep-learning-book-toc: true
+essential-math: true
 ---
 
 # Introduction

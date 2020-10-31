@@ -7,12 +7,12 @@ crawlertitle: "Introduction to Principal Components Analysis (PCA) using Python/
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.12%20Example%20-%20Principal%20Components%20Analysis/2.12%20Example%20-%20Principal%20Components%20Analysis.ipynb
+<!-- jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.12%20Example%20-%20Principal%20Components%20Analysis/2.12%20Example%20-%20Principal%20Components%20Analysis.ipynb -->
 date: 2018-03-26 18:00:00
 excerpt: This post on linear algebra is about Principal Components Analysis (PCA). We will use Python/Numpy/Matplotlib to get a better intuition and understanding of this important data analysis tool!
 excerpt-image: '<img src="../../assets/images/2.12/principal-component-analysis-variance-explained.png" width="400" alt="Representation of the variance explained across directions" title="Maximizing the variance">
     <em>Projection of the data point: the line direction is the one with the largest variance</em>'
-deep-learning-book-toc: true
+essential-math: true
 ---
 
 *Last update: Jan. 2020*
@@ -98,7 +98,6 @@ $$
 $$
 </div>
 
-{% include essential-math-ribbon.html %}
 
 ## Adding some constraints: the decoding function
 

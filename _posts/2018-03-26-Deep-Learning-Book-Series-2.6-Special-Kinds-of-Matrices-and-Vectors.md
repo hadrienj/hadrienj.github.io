@@ -7,12 +7,12 @@ crawlertitle: "Introduction to diagonal and symmetric matrices, unit and orthogo
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.6%20Special%20Kinds%20of%20Matrices%20and%20Vectors/2.6%20Special%20Kinds%20of%20Matrices%20and%20Vectors.ipynb
+<!-- jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.6%20Special%20Kinds%20of%20Matrices%20and%20Vectors/2.6%20Special%20Kinds%20of%20Matrices%20and%20Vectors.ipynb -->
 date: 2018-03-26 15:00:00
 excerpt: "In this post, we will see special kinds of matrix and vectors the diagonal and symmetric matrices, the unit vector and the concept of orthogonality."
 excerpt-image: <img src="../../assets/images/2.6/diagonal-and-symmetric-matrices.png" width="400" alt="Diagonal and symmetric matrices" title="Diagonal and symmetric matrices">
     <em>Example of diagonal and symmetric matrices</em>
-deep-learning-book-toc: true
+essential-math: true
 ---
 
 # Introduction
@@ -333,7 +333,6 @@ array([[ 1.,  0.,  0.,  0.],
 
 Great! This gives the identity matrix
 
-{% include essential-math-ribbon.html %}
 
 # Symmetric matrices
 
@@ -813,9 +812,9 @@ In the next chapter we will saw a central idea in linear algebra: the eigendecom
 
 ## Inverse and transpose of orthogonal matrix
 
-- [https://math.stackexchange.com/questions/1936020/why-is-the-inverse-of-an-orthogonal-matrix-equal-to-its-transpose](https://math.stackexchange.com/questions/1936020/why-is-the-inverse-of-an-orthogonal-matrix-equal-to-its-transpose)
-
-- [https://dyinglovegrape.wordpress.com/2010/11/30/the-inverse-of-an-orthogonal-matrix-is-its-transpose/](https://dyinglovegrape.wordpress.com/2010/11/30/the-inverse-of-an-orthogonal-matrix-is-its-transpose/)
+<a href="https://math.stackexchange.com/questions/1936020/why-is-the-inverse-of-an-orthogonal-matrix-equal-to-its-transpose">
+  Why is the inverse of an orthogonal matrix equal to its transpose
+</a>
 
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).

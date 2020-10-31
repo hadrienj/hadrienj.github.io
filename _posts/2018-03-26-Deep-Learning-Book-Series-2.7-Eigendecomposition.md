@@ -7,12 +7,12 @@ crawlertitle: "Introduction to Eigendecomposition using Python/Numpy examples an
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.7%20Eigendecomposition/2.7%20Eigendecomposition.ipynb
+<!-- jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.7%20Eigendecomposition/2.7%20Eigendecomposition.ipynb-->
 date: 2018-03-26 15:30:00
 excerpt: This post introduces the concept of eigendecomposition. We will start with getting some intuitions on eigenvectors and eigenvalues. We will develop on the idea that a matrix can be seen as a linear transformation and that applying a matrix on its eigenvectors gives new vectors. We will also see how to visualize linear transformations in Python!
 excerpt-image: <img src="../../assets/images/2.7/unit-circle-eigenvectors.png" width="250" alt="Plot of the unit circle and its transformation by the matrix A" title="Transformation of the unit circle by the matrix A">
     <em>The unit circle and its transformation by the matrix A. The vectors are the eigenvectors of A.</em>
-deep-learning-book-toc: true
+essential-math: true
 ---
 
 *Last update: Mar. 2020*
@@ -137,7 +137,6 @@ We can see that applying the matrix $\bs{A}$ has the effect of modifying the vec
 
 You can think of matrices as linear transformation recipes. Let's see the case of a very special type of vector: the eigenvectors.
 
-{% include essential-math-ribbon.html %}
 
 # Eigenvectors and eigenvalues
 

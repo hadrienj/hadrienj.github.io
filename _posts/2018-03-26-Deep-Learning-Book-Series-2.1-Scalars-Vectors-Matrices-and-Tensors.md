@@ -7,12 +7,12 @@ crawlertitle: "Introduction to Scalars Vectors Matrices and Tensors using Python
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.1%20Scalars%2C%20Vectors%2C%20Matrices%20and%20Tensors/2.1%20Scalars%20Vectors%20Matrices%20and%20Tensors.ipynb
+<!-- jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.1%20Scalars%2C%20Vectors%2C%20Matrices%20and%20Tensors/2.1%20Scalars%20Vectors%20Matrices%20and%20Tensors.ipynb -->
 date: 2018-03-26 10:00:00
 excerpt: This introduction to scalars, vectors, matrices and tensors presents Python/Numpy code and drawings to build a better intuition behind these linear algebra basics.
 excerpt-image: <img src="../../assets/images/2.1/scalar-vector-matrix-tensor.png" width="400" alt="An example of a scalar, a vector, a matrix and a tensor" title="Difference between a scalar, a vector, a matrix and a tensor">
   <em>Difference between a scalar, a vector, a matrix and a tensor</em>
-deep-learning-book-toc: true
+essential-math: true
 ---
 
 # Introduction
@@ -143,7 +143,6 @@ len(x)
 4
 </pre>
 
-{% include essential-math-ribbon.html %}
 
 # Transposition
 

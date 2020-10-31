@@ -7,12 +7,12 @@ crawlertitle: "Introudction to Linear Dependence and Span using Python/Numpy exa
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.4%20Linear%20Dependence%20and%20Span/2.4%20Linear%20Dependence%20and%20Span.ipynb
+<!-- jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.4%20Linear%20Dependence%20and%20Span/2.4%20Linear%20Dependence%20and%20Span.ipynb-->
 date: 2018-03-26 13:00:00
 excerpt: We will see how to represent systems of equations graphically, how to interpret the number of solutions of a system, what is linear combination and more. As usual, we will use Numpy/Matplotlib as a tool to experiment these concepts and hopefully gain a more concrete understanding.
 excerpt-image: <img src="../../assets/images/2.4/number-solutions-system-equations.png" width="700" alt="Examples of systems of equations with 0, 1 and an infinite number of solutions" title="System of equations with 0, 1 and an infinite number of solutions">
     <em>A system of equations has no solution, 1 solution or an infinite number of solutions</em>
-deep-learning-book-toc: true
+essential-math: true
 ---
 
 *Last update: Nov. 2019*
@@ -187,7 +187,6 @@ Note that associating one direction in space to one parameter is only one way to
 <img src="../../assets/images/2.4/representing-features.png" width="900" alt="Different ways of representing features" title="Feature representation">
 <em>Graphical representations of features</em>
 
-{% include essential-math-ribbon.html %}
 
 ### Overdetermined and underdetermined systems
 

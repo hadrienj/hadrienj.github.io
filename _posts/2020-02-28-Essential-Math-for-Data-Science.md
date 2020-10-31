@@ -10,6 +10,7 @@ author: hadrienj
 date: 2020-02-28 13:30:00
 excerpt: Introduction of my book "Essential Math for Data Science". The goal of the book is to provide an introduction to the mathematics needed for data science and machine learning. The idea is to use a hands-on approach using examples in Python to get insights on mathematical concepts used in the every day life of a data scientist.
 excerpt-image: <img src="../../assets/images/Essential-Math-for-Data-Science/ch09_SVD_geometry.png" width="500" alt="SVD Geometry" title="SVD Geometry"><em>SVD Geometry</em>
+essential-math: true
 ---
 
 *Last Update: Sept. 2020*

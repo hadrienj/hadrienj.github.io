@@ -7,13 +7,13 @@ crawlertitle: "Introduction to Singular Value Decomposition using Python/Numpy e
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.8%20Singular%20Value%20Decomposition/2.8%20Singular%20Value%20Decomposition.ipynb
+<!-- jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.8%20Singular%20Value%20Decomposition/2.8%20Singular%20Value%20Decomposition.ipynb -->
 date: 2018-03-26 16:00:00
 excerpt: This post introduces the details Singular Value Decomposition or SVD. We will use code example (Python/Numpy) like the application of SVD to image processing. You can see matrices as linear transformation in space. With the SVD, you decompose a matrix in three other matrices. You can see these new matrices as *sub-transformations* of the space. Instead of doing the transformation in one movement, we decompose it in three movements.
 excerpt-image: <img src="../../assets/images/2.8/unit-circle-transformation1.png" width="400" alt="Plot of the unit circle and its transformation" title="Transformation of the unit circle">
     <em>The unit circle and its transformation by a matrix</em>
 metaDescription: "Introduction to the Singular Value Decomposition (SVD). We will use Python/Numpy to get a practical and visual intuition of the Singular Value Decomposition."
-deep-learning-book-toc: true
+essential-math: true
 ---
 
 *Last update: Nov. 2019*
@@ -189,7 +189,6 @@ $
 
 We can see that the matrix doubled the size of the circle. But in some transformations, the change applied to the $x$ coordinate is different from the change applied to the $y$ coordinate. Let's see what it means graphically.
 
-{% include essential-math-ribbon.html %}
 
 ### Example 3.
 

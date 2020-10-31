@@ -7,11 +7,12 @@ crawlertitle: "Deep Learning Book Series · Introduction"
 categories: posts
 tags: ['linear-algebra', 'deep-learning', 'machine-learning']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes
+<!-- jupyter: https://github.com/hadrienj/deepLearningBook-Notes-->
 date: 2018-03-26 09:00:00
 excerpt: I'd like to introduce a series of blog posts and their corresponding Python Notebooks gathering notes on the Deep Learning Book from Ian Goodfellow, Yoshua Bengio, and Aaron Courville (2016). The aim of these notebooks is to help beginners/advanced beginners to grasp linear algebra concepts underlying deep learning and machine learning. Acquiring these skills can boost your ability to understand and apply various data science algorithms. In my opinion, it is one of the bedrock of machine learning, deep learning and data science.
 excerpt-image: <img src="../../assets/images/deep-learning-book-goodfellow-cover.jpg" width="400" alt="Cover of the deep learning book by Goodfellow, Bengio and Courville" title="The Deep Learning Book - Goodfellow, I., Bengio, Y., and Courville, A. (2016)">
     <em>The Deep Learning Book - Goodfellow, I., Bengio, Y., and Courville, A. (2016)</em>
+essential-math: true
 ---
 
 <img src="../../assets/images/deep-learning-book-goodfellow-cover.jpg" width="400" alt="Cover of the deep learning book by Goodfellow, Bengio and Courville" title="The Deep Learning Book - Goodfellow, I., Bengio, Y., and Courville, A. (2016)">

@@ -7,12 +7,12 @@ crawlertitle: "Introduction to Identity and Inverse Matrices using Python/Numpy 
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.3%20Identity%20and%20Inverse%20Matrices/2.3%20Identity%20and%20Inverse%20Matrices.ipynb
+<!-- jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.3%20Identity%20and%20Inverse%20Matrices/2.3%20Identity%20and%20Inverse%20Matrices.ipynb-->
 date: 2018-03-26 12:00:00
 excerpt: "This post will introduce you to special kind of matrices: the identity matrix and the inverse matrix. We will use Python/Numpy as a tool to get a better intuition behind these concepts."
 excerpt-image: <img src="../../assets/images/2.3/identity-matrix.png" width="150" alt="Example of an identity matrix" title="Identity matrix">
   <em>A 3 by 3 identity matrix</em>
-deep-learning-book-toc: true
+essential-math: true
 ---
 
 # Introduction

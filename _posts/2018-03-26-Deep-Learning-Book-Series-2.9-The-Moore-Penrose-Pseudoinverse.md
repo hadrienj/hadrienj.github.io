@@ -7,12 +7,12 @@ crawlertitle: "Introduction to The Moore Penrose Pseudoinverse using Python/Nump
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.9%20The%20Moore-Penrose%20Pseudoinverse/2.9%20The%20Moore-Penrose%20Pseudoinverse.ipynb
+<!-- jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.9%20The%20Moore-Penrose%20Pseudoinverse/2.9%20The%20Moore-Penrose%20Pseudoinverse.ipynb-->
 date: 2018-03-26 16:30:00
 excerpt: In this post, we will learn about the Moore Penrose pseudoinverse as a way to find an approaching solution where no solution exists. In some cases, a system of equation has no solution, and thus the inverse doesn't exist. However it can be useful to find a value that is almost a solution (in term of minimizing the error). We will see for instance how we can find the best-fit line of a set of data points with the pseudoinverse.
 excerpt-image: <img src="../../assets/images/2.9/overdetermined-system-equations.png" width="300" alt="Example of three linear equations in 2 dimensions. This is an overdetermined system" title="Overdetermined system of equations">
   <em>There is more equations (3) than unknowns (2) so this is an overdetermined system of equations</em>
-deep-learning-book-toc: true
+essential-math: true
 ---
 
 # Introduction
@@ -174,7 +174,6 @@ array([[ 0.16666667, -0.10606061,  0.03030303],
 
 In this case the result is the same as with the SVD way.
 
-{% include essential-math-ribbon.html %}
 
 ## Using the pseudoinverse to solve a overdetermined system of linear equations
 

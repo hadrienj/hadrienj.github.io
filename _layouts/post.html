@@ -24,11 +24,17 @@ layout: default
 
   <div class="post-content">
 
-<!--     {% if page.jupyter %}
+    {% if page.jupyter %}
       {% include jupyter.html %}
-    {% endif %} -->
+    {% endif %}
 
-    {% include essential-math-ribbon.html %}
+    {% if page.essential-math %}
+      {% include essential-math-ribbon.html %}
+    {% endif %}
+
+    {% if page.essential-math-sample %}
+      {% include essential-math-sample.html %}
+    {% endif %}
 
 
     {{ content }}
@@ -41,7 +47,13 @@ layout: default
       {% include disqus.html %}
     {% endif %}
 
-    {% include essential-math-ribbon.html %}
+    {% if page.essential-math %}
+      {% include essential-math-ribbon.html %}
+    {% endif %}
+
+    {% if page.essential-math-sample %}
+      {% include essential-math-sample.html %}
+    {% endif %}
 
     {% include share.html %}
 

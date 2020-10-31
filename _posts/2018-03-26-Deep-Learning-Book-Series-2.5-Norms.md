@@ -7,12 +7,12 @@ crawlertitle: "Introduction to Norms using Python/Numpy examples and drawings"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
-jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.5%20Norms/2.5%20Norms.ipynb
+<!-- jupyter: https://github.com/hadrienj/deepLearningBook-Notes/blob/master/2.5%20Norms/2.5%20Norms.ipynb-->
 date: 2018-03-26 14:00:00
 excerpt: This post explains what is a norm using examples with Python/Numpy. The norm is what is generally used to evaluate the error of a model. You can think of the norm as the length of a vector. It is a function that maps a vector to a positive value.
 excerpt-image: <img src="../../assets/images/2.5/squared-L2-norm1.png" width="500" alt="Representation of the squared L2 norm" title="The squared L2 norm">
   <em>The squared L2 norm</em>
-deep-learning-book-toc: true
+essential-math: true
 ---
 
 # Introduction
