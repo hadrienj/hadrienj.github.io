@@ -108,12 +108,39 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.collapsible');
-    console.log(elems)
-    var instances = M.Collapsible.init(elems, {
-      accordion: false
-    });
+  var elems = document.querySelectorAll('.collapsible');
+  console.log(elems)
+  var instances = M.Collapsible.init(elems, {
+    accordion: false
   });
+});
+
+
+const eventTag = document.querySelector('.eventTag')
+eventTag.addEventListener('click', handleClickEvent, false);
+
+function handleClickEvent(e) {
+  const url = e.view.location.href;
+  if (url.search("hadrienj.github.io") !== -1) {
+    console.log('ev');
+    gtag('event', 'click', {
+      'event_category': 'click',
+      'event_label': 'to_essential_math_from',
+      'value': url
+    });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.collapsible');
+  console.log(elems)
+  var instances = M.Collapsible.init(elems, {
+    accordion: false
+  });
+});
+
+
+
 
 $(document).ready(function(){
   $( ".collapsible-header" ).click(function() {
@@ -121,3 +148,12 @@ $(document).ready(function(){
       $(".less", this).toggle()
   });
 });
+
+
+if (document.location.hostname.search("www.essentialmathfordatascience.com") !== -1) {
+      gtag('event', 'click', {
+        'event_category': 'get_product',
+        'event_label': 'product',
+        'value': product
+      });
+    }
