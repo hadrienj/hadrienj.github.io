@@ -164,8 +164,6 @@ We can see that the distribution looks like a uniform distribution and that each
 
 </div>
 
-{% include essential-math-ribbon.html %}
-
 ### Joint probability distribution
 
 Now let's see what happens if we roll two dice. For each die, the outcomes are associated with a certain probability. We need two random variables to describe the game, let's say that $\text{x}$ corresponds to the first die and $\text{y}$ to the second one. We also have two probability mass functions associated with the random variables: $P(\text{x})$ and $P(\text{y})$. Here the possible values of the random variables (1, 2, 3, 4, 5 or 6) and the probability mass functions are actually the same for both dice, but it doesn't need to be the case.

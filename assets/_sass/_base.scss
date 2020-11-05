@@ -645,3 +645,25 @@ div > ul.share-buttons > li > a > img {
      make sure you have an empty gif
   background-image: url('empty.gif');*/
 }
+
+
+.language-plaintext > .highlight, .language-plaintext > .highlight > pre, .language-plaintext > .highlight > pre > code {
+  background-color: #f4f4f4;
+  box-shadow: none;
+  color: #8d7387;
+}
+
+.language-plaintext > .highlight {
+  border-left: 10px solid #ffc802ed;
+  margin: 0;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
+    0 1px 5px 0 rgba(0,0,0,.12),
+    0 3px 1px -2px rgba(0,0,0,.2);
+}
+
+
+
+.essential-math-title {
+  color: #444362;
+}
+
