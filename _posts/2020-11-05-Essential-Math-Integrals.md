@@ -8,7 +8,7 @@ author: hadrienj
 date: 2020-11-05
 excerpt: ""
 excerpt-image: <img src="../../assets/images/ch02_integrals/ch02_area_under_the_curve.png" width=200><em>Area under the curve.</em>
-twitterImg: "Essential-Math-for-Data-Science-Update/output_ch06_139_0"
+twitterImg: "ch02_integrals/ch02_integrals_area_under_the_curve"
 title: "Essential Math for Data Science: Integrals And Area Under The Curve"
 crawlertitle: ""
 essential-math-sample: true
@@ -37,7 +37,7 @@ corresponds to the area under the curve in this interval.
 You'll see through this example how to understand the relationship
 between the integral of a function and the area under the curve. To
 illustrate the process, you'll approximate the integral of the function
-$g(x) = 2x$ using discretization of the area under the curve.
+$g(x) = 2x$ using a discretization of the area under the curve.
 
 #### Example Description
 
@@ -168,9 +168,9 @@ slice_area_all
 
     array([ 0.,  0.,  2.,  6., 12., 20., 30.])
 
-This is the estimated values of the area under the curve of $g(x)$ as a
+These are the estimated values of the area under the curve of $g(x)$ as a
 function of $x$. We know that the function $g(x)$ is the derivative of
-$f(x)=x^2$, so we should get back $f(x)$ by integration of $g(x)$.
+$f(x)=x^2$, so we should get back $f(x)$ by the integration of $g(x)$.
 
 Let's plot our estimation and $f(x)$, which we'll call the "true
 function", to compare them:
@@ -181,7 +181,7 @@ plt.plot(x, slice_area_all, label='Estimated')
 
 ```
 
-![Figure 4: Comparison of estimated and original
+![Figure 4: Comparison of the estimated and original
 function.](../../assets/images/ch02_integrals/ch02_integrals_14_0.png){:width="300px"}
 <em>Figure 4: Comparison of estimated and original
 function.</em>
@@ -205,7 +205,7 @@ function.</em>
 
 ### Riemann Sum {#sec:ch03_section_riemann_sum}
 
-Approximating of an integral using this slicing method is called a
+Approximating an integral using this slicing method is called a
 *Riemann sum*. Riemann sums can be calculated in different ways, as you
 can see in Figure 8.
 
@@ -224,7 +224,7 @@ trapezoid.
 
 ### Mathematical Definition
 
-In the last section, you saw the relationship between area under the
+In the last section, you saw the relationship between the area under the
 curve and integration (you got back the original function from the
 derivative). Let's see now the mathematical definition of integrals.
 
