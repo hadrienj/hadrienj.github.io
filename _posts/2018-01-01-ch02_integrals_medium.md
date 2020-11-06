@@ -5,17 +5,27 @@ mathjax: true
 categories: posts
 tags: ['essential-math', 'python', 'numpy']
 author: hadrienj
-date: 2020-11-05
+date: 2020-11-06
 excerpt: ""
-excerpt-image: <img src="../../assets/images/ch02_integrals/ch02_area_under_the_curve.png" width=200><em>Area under the curve.</em>
-twitterImg: "ch02_integrals/ch02_integrals_area_under_the_curve"
-title: "Essential Math for Data Science: Integrals And Area Under The Curve"
+excerpt-image: <img src="../../assets/images/ch02_integrals/ch02_wine_quality_pred.png" width=200><em>Illustration of wine quality modeling.</em>
+twitterImg: "Essential-Math-for-Data-Science-Update/output_ch06_139_0"
+title: "asdf"
 crawlertitle: ""
 essential-math-sample: true
 ---
 
+```python
+import pandas as pd
+import numpy as np
+
+np.set_printoptions(threshold=15)
+```
+
+Integrals and the Area Under The Curve
+--------------------------------------
+
 Calculus is a branch of mathematics that gives tools to study rate of
-change of functions through two main areas: derivatives and integrals. In
+change of functions trough two main areas: derivatives and integrals. In
 the context of machine learning and data science, you might use
 integrals to calculate area under the curve (for instance, to evaluate
 performance of a model with the ROC curve, or to calculate probability
@@ -30,7 +40,7 @@ Essential Math for Data Science).
 
 ### Practical Project
 
-Let's say that you would like to predict the quality of wines from
+Let's say say that you would like to predict the quality of wines from
 various of their chemical properties. You want to do a binary
 classification of the quality (distinguishing very good wines from not
 very good ones). You'll develop methods allowing you to evaluate your
@@ -146,7 +156,7 @@ been correctly classified. Should you be happy with this result?
 #### Imbalanced Dataset
 
 Since we separated the data into very good wines and not very good
-wines, the dataset is *imbalanced*: there are different quantities of data
+wines, the dataset is *imbalanced*: there are different quantity of data
 corresponding to each target class.
 
 Let's check how many observations you have in the negative (not very
@@ -397,9 +407,9 @@ Integrals
 ---------
 
 *Integration* is the inverse operation of differentiation. Take a
-function $f(x)$ and calculate its derivative $f'(x)$, the *indefinite
-integral* (also called *antiderivative*) of $f'(x)$ gives you back
-$f(x)$ (up to a constant, as you'll soon see).
+function <it>f(x)</it> and calculate its derivative <it>f'(x)</it>, the *indefinite
+integral* (also called *antiderivative*) of <it>f'(x)</it> gives you back
+<it>f(x)</it> (up to a constant, as you'll soon see).
 
 You can use integration to calculate the *area under the curve*, which
 is the area of the shape delimited by the function, as shown in Figure
@@ -418,7 +428,7 @@ corresponds to the area under the curve in this interval.
 You'll see through this example how to understand the relationship
 between the integral of a function and the area under the curve. To
 illustrate the process, you'll approximate the integral of the function
-$g(x) = 2x$ using discretization of the area under the curve.
+<it>g(x) = 2x</it> using discretization of the area under the curve.
 
 #### Example Description
 
@@ -426,21 +436,21 @@ Let's take again the example of the moving train. You saw that speed as
 a function of time was the derivative of distance as a function of time.
 These functions are represented in Figure 6.
 
-![Figure 6: The left panel shows $f(x)$ which is the distance as a
-function of time, and the right panel its derivative $g(x)$, which is
+![Figure 6: The left panel shows <it>f(x)</it> which is the distance as a
+function of time, and the right panel its derivative <it>g(x)</it>, which is
 the speed as a function of
 time.](../../assets/images/ch02_integrals/ch02_distance_speed.png){:width="500px"}
-<em>Figure 6: The left panel shows $f(x)$ which is the distance as a
-function of time, and the right panel its derivative $g(x)$, which is
+<em>Figure 6: The left panel shows <it>f(x)</it> which is the distance as a
+function of time, and the right panel its derivative <it>g(x)</it>, which is
 the speed as a function of
 time.</em>
 
 The function shown in the left panel of Figure
-6 is defined as $f(x) = x^2$. Its derivative
-is defined as $g(x)=2x$.
+6 is defined as <it>f(x) = x^2</it>. Its derivative
+is defined as <it>g(x)=2x</it>.
 
 In this example, you'll learn how to find an approximation of the area
-under the curve of $g(x)$.
+under the curve of <it>g(x)</it>.
 
 #### Slicing the Function
 
@@ -449,7 +459,7 @@ cut the shape into small slices with an easy shape like rectangles,
 calculate the area of each of these slices and sum them.
 
 You'll do exactly that to find an approximation of the area under the
-curve of $g(x)$.
+curve of <it>g(x)</it>.
 
 ![Figure 7: Approximation of the area under the curve by discretizing
 the area under the curve of speed as a function of
@@ -459,24 +469,24 @@ the area under the curve of speed as a function of
 time.</em>
 
 Figure 7 shows the area under the
-curve of $f'(x)$ sliced as one-second rectangles (let's call this
-difference $\Delta x$). Note that we underestimate the area (look at the
+curve of <it>f'(x)</it> sliced as one-second rectangles (let's call this
+difference <it>\Delta x</it>). Note that we underestimate the area (look at the
 missing triangles), but we'll fix that later.
 
 Let's try to understand the meaning of the slices. Take the first one:
-its area is defined as $2 \cdot 1$. The height of the slice is the speed
+its area is defined as <it>2 \cdot 1</it>. The height of the slice is the speed
 at one second (the value is 2). So there are two units of speed by one
 unit of time for this first slice. The area corresponds to a
 multiplication between speed and time: this is a distance.
 
 For instance, if you drive at 50 miles per hour (speed) for two hour
-(time), you traveled $50 \cdot 2 = 100$ miles (distance). This is
+(time), you traveled <it>50 \cdot 2 = 100</it> miles (distance). This is
 because the unit of speed corresponds to a ratio between distance and
 time (like miles *per* hour). You get:
 
-$$
+<it></it>
 \frac{\text{distance}}{\text{time}} \cdot \text{time} = \text{distance}
-$$
+<it></it>
 
 To summarize, the derivative of the distance by time function is the
 speed by time function, and the area under the curve of the speed by
@@ -485,8 +495,8 @@ derivatives and integrals are related.
 
 #### Implementation
 
-Let's use slicing to approximate the integral of the function $g(x)=2x$.
-First, let's define the function $g(x)$:
+Let's use slicing to approximate the integral of the function <it>g(x)=2x</it>.
+First, let's define the function <it>g(x)</it>:
 
 ```python
 def g_2x(x):
@@ -495,7 +505,7 @@ def g_2x(x):
 
 As illustrated in Figure 7, you'll
 consider that the function is discrete and take a step of
-$\Delta x = 1$. You can create an $x$-axis with values from zero to six,
+<it>\Delta x = 1</it>. You can create an <it>x</it>-axis with values from zero to six,
 and apply the function `g_2x()` for each of these values. You can use
 the Numpy method `arange(start, stop, step)` to create an array filled
 with values from `start` to `stop` (not included):
@@ -516,15 +526,15 @@ y
     array([ 0,  2,  4,  6,  8, 10, 12])
 
 You can then calculate the slice's areas by iterating and multiplying
-the width ($\Delta_x$) by the height (the value of $y$ at this point).
+the width (<it>\Delta_x</it>) by the height (the value of <it>y</it> at this point).
 of the slice. As you saw, this area (`delta_x * y[i-1]` in the code
 below) corresponds to a distance (the distance of the moving train
-traveled during the $i$th slice). You can finally append the results to
+traveled during the <it>i</it>th slice). You can finally append the results to
 an array (`slice_area_all` in the code below).
 
 Note that the index of `y` is `i-1` because the rectangle is on the left
-of the $x$ value we estimate. For instance, the area is zero for $x=0$
-and $x=1$.
+of the <it>x</it> value we estimate. For instance, the area is zero for <it>x=0</it>
+and <it>x=1</it>.
 
 ```python
 slice_area_all = np.zeros(y.shape[0])
@@ -549,11 +559,11 @@ slice_area_all
 
     array([ 0.,  0.,  2.,  6., 12., 20., 30.])
 
-This is the estimated values of the area under the curve of $g(x)$ as a
-function of $x$. We know that the function $g(x)$ is the derivative of
-$f(x)=x^2$, so we should get back $f(x)$ by integration of $g(x)$.
+This is the estimated values of the area under the curve of <it>g(x)</it> as a
+function of <it>x</it>. We know that the function <it>g(x)</it> is the derivative of
+<it>f(x)=x^2</it>, so we should get back <it>f(x)</it> by integration of <it>g(x)</it>.
 
-Let's plot our estimation and $f(x)$, which we'll call the "true
+Let's plot our estimation and <it>f(x)</it>, which we'll call the "true
 function", to compare them:
 
 ```python
@@ -574,17 +584,17 @@ The estimation represented in Figure
 bad, but could be improved. This is because we missed all these
 triangles represented in red in Figure
 9. One way to reduce the error
-is to take a smaller value for $\Delta x$, as illustrated in the right
+is to take a smaller value for <it>\Delta x</it>, as illustrated in the right
 panel in Figure 9.
 
 ![Figure 9: Missing parts in slices of the speed function (in red). The
 error is smaller with a smaller
-$\Delta x$.](../../assets/images/ch02_integrals/ch02_speed_function_slices_misses.png){:width="300px"}
+<it>\Delta x</it>.](../../assets/images/ch02_integrals/ch02_speed_function_slices_misses.png){:width="300px"}
 <em>Figure 9: Missing parts in slices of the speed function (in red). The
 error is smaller with a smaller
-$\Delta x$.</em>
+<it>\Delta x</it>.</em>
 
-Let's estimate the integral function with $\Delta x = 0.1$:
+Let's estimate the integral function with <it>\Delta x = 0.1</it>:
 
 ```python
 delta_x = 0.1
@@ -609,7 +619,7 @@ whose derivative we integrated.
 
 #### Extension
 
-In our previous example, you integrated the function $2x$, which is a
+In our previous example, you integrated the function <it>2x</it>, which is a
 linear function, but the principle is the same for any continuous
 function (see Figure 11 for
 instance).
@@ -646,24 +656,24 @@ In the last section, you saw the relationship between area under the
 curve and integration (you got back the original function from the
 derivative). Let's see now the mathematical definition of integrals.
 
-The integrals of the function $f(x)$ with respect to $x$ is denoted as
+The integrals of the function <it>f(x)</it> with respect to <it>x</it> is denoted as
 following:
 
-$$
+<it></it>
 \int f(x) \: dx
-$$
+<it></it>
 
-The symbol $dx$ is called the *differential* of $x$ and refers to the
-idea of an infinitesimal change of $x$. It is a difference in $x$ that
+The symbol <it>dx</it> is called the *differential* of <it>x</it> and refers to the
+idea of an infinitesimal change of <it>x</it>. It is a difference in <it>x</it> that
 approaches 0. The main idea of integrals is to sum an infinite number of
 slices which have an infinitely small width.
 
-The symbol $\int$ is the integral sign and refers to the sum of an
+The symbol <it>\int</it> is the integral sign and refers to the sum of an
 infinite number of slices.
 
-The height of each slice is the value $f(x)$. The multiplication of
-$f(x)$ and $dx$ is thus the area of each slice. Finally,
-$\int f(x) \: dx$ is the sum of the slice areas over an infinite number
+The height of each slice is the value <it>f(x)</it>. The multiplication of
+<it>f(x)</it> and <it>dx</it> is thus the area of each slice. Finally,
+<it>\int f(x) \: dx</it> is the sum of the slice areas over an infinite number
 of slices (the width of the slices tending to zero). This is the *area
 under the curve*.
 
@@ -671,26 +681,26 @@ You saw in the last section how to approximate function integrals. But
 if you know the derivative of a function, you can retrieve the integral
 knowing that it is the inverse operation. For example, if you know that:
 
-$$
+<it></it>
 \frac{d (x^2)}{dx} = 2x
-$$
+<it></it>
 
-You can conclude that the integral of $2x$ is $x^2$. However, there is a
+You can conclude that the integral of <it>2x</it> is <it>x^2</it>. However, there is a
 problem. If you add a constant to our function the derivative is the
 same because the derivative of a constant is zero. For instance,
 
-$$
+<it></it>
 \frac{d (x^2 + 3)}{dx} = 2x
-$$
+<it></it>
 
 It is impossible to know the value of the constant. For this reason, you
 need to add an unknown constant to the expression, as following:
 
-$$
+<it></it>
 \int 2x \: dx = x^2 + c
-$$
+<it></it>
 
-with $c$ being a constant.
+with <it>c</it> being a constant.
 
 ##### Definite Integrals
 
@@ -698,18 +708,18 @@ In the case of *definite integrals*, you denote the interval of
 integration with numbers below and above the integral symbol, as
 following:
 
-$$
+<it></it>
 \int _{a}^{b} f(x) \: dx
-$$
+<it></it>
 
-It corresponds to the area under the curve of the function $f(x)$
-between $x=a$ and $x=b$, as illustrated in Figure
+It corresponds to the area under the curve of the function <it>f(x)</it>
+between <it>x=a</it> and <it>x=b</it>, as illustrated in Figure
 13.
 
-![Figure 13: Area under the curve between $x=a$ and
-$x=b$.](../../assets/images/ch02_integrals/ch02_integrals_area_under_the_curve.png){:width="150px"}
-<em>Figure 13: Area under the curve between $x=a$ and
-$x=b$.</em>
+![Figure 13: Area under the curve between <it>x=a</it> and
+<it>x=b</it>.](../../assets/images/ch02_integrals/ch02_integrals_area_under_the_curve.png){:width="150px"}
+<em>Figure 13: Area under the curve between <it>x=a</it> and
+<it>x=b</it>.</em>
 
 Area Under the ROC Curve
 ------------------------
@@ -737,7 +747,7 @@ regression model
 
 
 Let's start with the random model. You want to sum each value of true
-positive rate multiplied by the width on the $x$-axis that is the
+positive rate multiplied by the width on the <it>x</it>-axis that is the
 difference between the corresponding value of false positive rate and
 the one before. You can obtain these differences with:
 
@@ -767,7 +777,7 @@ roc_auc_score(y_test, y_pred_random_proba)
 
     0.5743302591128678
 
-An area under the ROC curve of 0.5 corresponds to a model which is not
+A area under the ROC curve of 0.5 corresponds to a model which is not
 better than random and an area of 1 corresponds to perfect predictions.
 
 Now, let's compare this value to the area under the ROC curve of your
