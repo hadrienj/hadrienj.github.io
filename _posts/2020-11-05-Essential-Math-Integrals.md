@@ -14,17 +14,17 @@ crawlertitle: ""
 essential-math-sample: true
 ---
 
-Calculus is a branch of mathematics that gives tools to study rate of
+Calculus is a branch of mathematics that gives tools to study the rate of
 change of functions through two main areas: derivatives and integrals. In
 the context of machine learning and data science, you might use
-integrals to calculate area under the curve (for instance, to evaluate
-performance of a model with the ROC curve, or to calculate probability
+integrals to calculate the area under the curve (for instance, to evaluate
+the performance of a model with the ROC curve, or to calculate probability
 from densities.
 
 In this article, you'll learn about integrals and the area under the
 curve using the practical data science example of the area under the ROC
 curve used to compare the performances of two machine learning models.
-Building from this example, you'll see the notion of area under the
+Building from this example, you'll see the notion of the area under the
 curve and integrals from a mathematical point of view (from my book
 Essential Math for Data Science).
 
@@ -107,7 +107,7 @@ As a first step, let's standardize the data to help the convergence of
 the algorithm. You can use the class `StandardScaler` from Sklearn.
 
 Note that you don't want to consider the data from the test set to do
-the standardization. The method `fit_transform()` calculate the
+the standardization. The method `fit_transform()` calculates the
 parameters needed for the standardization and apply it at the same time.
 Then, you can apply the same standardization to the test set without
 fitting again.
@@ -164,14 +164,13 @@ good wines) and positive classes (very good wines):
 
     0.13494191242180517
 
-It shows that there are around 86.5% of the examples corresponding to
-the class 0 and 13.5% in to class 1.
+It shows that there are around 86.5% of the examples corresponding to class 0 and 13.5% to class 1.
 
 #### Simple Model
 
 To illustrate this point about accuracy and imbalanced datasets, let's
 creates a model as a baseline and look at its performance. It will help
-you to see the advantages to use other metrics than the accuracy.
+you to see the advantages to use other metrics than accuracy.
 
 A very simple model using the fact that the dataset is imbalanced would
 always estimate the class with the largest number of observations. In
@@ -179,8 +178,8 @@ your case, such a model would always estimate that all wines are bad and
 get a decent accuracy doing that.
 
 Let's simulate this model by creating random probabilities below 0.5
-(for instance, a probability of 0.15 means that there is 15% chance that
-the class is positive). We need these probability to calculate both the
+(for instance, a probability of 0.15 means that there is a 15% chance that
+the class is positive). We need these probabilities to calculate both the
 accuracy and other metrics.
 
 ```python
@@ -220,7 +219,7 @@ all: it doesn't mean that the model is good.
 To summarize, having a different number of observations corresponding to
 each class, you can't rely on the accuracy to evaluate your model's
 performance. In our example, the model could output only zeros and you
-would get around 86% of accuracy.
+would get around 86% accuracy.
 
 You need other metrics to assess the performance of models with
 imbalanced datasets.
@@ -247,7 +246,7 @@ categories:
 
 Let's calculate these values for your first logistic regression model.
 You can use the function `confusion_matrix` from Sklearn. It presents a
-table organized as following:
+table organized as follows:
 
 ![Figure 2: Illustration of a confusion
 matrix.](../../assets/images/ch02_integrals/ch02_confusion_matrix.png){:width="250px"}
@@ -385,7 +384,7 @@ model.</em>
 
 You can see in Figure 4 that your model is
 actually better than a random model, which is not something you were
-able to know from the models accuracies (they were equivalent: around
+able to know from the model accuracies (they were equivalent: around
 0.86 for the random model and 0.87 for your model).
 
 Visual inspection is good, but it would also be crucial to have a single
@@ -418,7 +417,7 @@ corresponds to the area under the curve in this interval.
 You'll see through this example how to understand the relationship
 between the integral of a function and the area under the curve. To
 illustrate the process, you'll approximate the integral of the function
-$g(x) = 2x$ using discretization of the area under the curve.
+$g(x) = 2x$ using a discretization of the area under the curve.
 
 #### Example Description
 
@@ -469,7 +468,7 @@ at one second (the value is 2). So there are two units of speed by one
 unit of time for this first slice. The area corresponds to a
 multiplication between speed and time: this is a distance.
 
-For instance, if you drive at 50 miles per hour (speed) for two hour
+For instance, if you drive at 50 miles per hour (speed) for two hours
 (time), you traveled $50 \cdot 2 = 100$ miles (distance). This is
 because the unit of speed corresponds to a ratio between distance and
 time (like miles *per* hour). You get:
@@ -551,7 +550,7 @@ slice_area_all
 
 This is the estimated values of the area under the curve of $g(x)$ as a
 function of $x$. We know that the function $g(x)$ is the derivative of
-$f(x)=x^2$, so we should get back $f(x)$ by integration of $g(x)$.
+$f(x)=x^2$, so we should get back $f(x)$ by the integration of $g(x)$.
 
 Let's plot our estimation and $f(x)$, which we'll call the "true
 function", to compare them:
@@ -562,7 +561,7 @@ plt.plot(x, slice_area_all, label='Estimated')
 
 ```
 
-![Figure 8: Comparison of estimated and original
+![Figure 8: Comparison of the estimated and original
 function.](../../assets/images/ch02_integrals/ch02_integrals_67_0.png){:width="250px"}
 <em>Figure 8: Comparison of estimated and original
 function.</em>
@@ -623,7 +622,7 @@ functions.</em>
 
 ### Riemann Sum {#sec:ch03_section_riemann_sum}
 
-Approximating of an integral using this slicing method is called a
+Approximating an integral using this slicing method is called a
 *Riemann sum*. Riemann sums can be calculated in different ways, as you
 can see in Figure 12.
 
@@ -642,7 +641,7 @@ trapezoid.
 
 ### Mathematical Definition
 
-In the last section, you saw the relationship between area under the
+In the last section, you saw the relationship between the area under the
 curve and integration (you got back the original function from the
 derivative). Let's see now the mathematical definition of integrals.
 
@@ -684,7 +683,7 @@ $$
 $$
 
 It is impossible to know the value of the constant. For this reason, you
-need to add an unknown constant to the expression, as following:
+need to add an unknown constant to the expression, as follows:
 
 $$
 \int 2x \: dx = x^2 + c
@@ -767,7 +766,7 @@ roc_auc_score(y_test, y_pred_random_proba)
 
     0.5743302591128678
 
-An area under the ROC curve of 0.5 corresponds to a model which is not
+An area under the ROC curve of 0.5 corresponds to a model that is not
 better than random and an area of 1 corresponds to perfect predictions.
 
 Now, let's compare this value to the area under the ROC curve of your
@@ -780,10 +779,10 @@ roc_auc_score(y_test, y_pred_proba[:, 1])
     0.8752378861074513
 
 This shows that your model is actually not bad and your predictions of
-the quality of wine is not random.
+the quality of the wine are not random.
 
 In machine learning, you can use a few lines of code to train complex
 algorithms. However, as you saw here, a bit of math can help you to make
 the most of it and speed up your work. It will give you more ease in
-various aspects of your discipline, even for instance, understanding the
+various aspects of your discipline, even, for instance, understanding the
 documentation of machine learning libraries like Sklearn.
