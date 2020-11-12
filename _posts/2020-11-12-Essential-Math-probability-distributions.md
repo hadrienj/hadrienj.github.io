@@ -8,7 +8,7 @@ author: hadrienj
 date: 2020-11-12
 excerpt: ""
 excerpt-image: <img src="../../assets/images/ch03_probability_distributions/ch03_probability_density_function_area.png" width=400><em>The probability to draw a number between 0 and 0.2 is the highlighted area under the curve.</em>
-twitterImg: "ch03_probability_distributions/ch03_probability_distributions"
+twitterImg: "ch03_probability_distributions/ch03_probability_distr"
 title: "Essential Math for Data Science: Probability Density and Probability Mass Functions"
 crawlertitle: ""
 essential-math-sample: true
