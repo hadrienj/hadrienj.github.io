@@ -8,7 +8,7 @@ author: hadrienj
 date: 2020-11-24
 excerpt: ""
 excerpt-image: <img src="../../assets/images/ch04_poisson_distribution/ch04_poisson_ex.png" width=400><em>Emails received by Sarah in one-hour intervals for the last 100 hours.</em>
-twitterImg: "Essential-Math-for-Data-Science-Update/output_ch06_139_0"
+twitterImg: "ch04_poisson_distribution/ch04_poisson_distribution"
 title: "Essential Math for Data Science: The Poisson Distribution"
 crawlertitle: "Introduction to the Poisson Distribution"
 essential-math-sample: true
