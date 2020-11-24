@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ch04_poisson_distribution_medium</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="im">from</span> matplotlib <span class="im">import</span> ticker</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a><span class="co"># Display options</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>pd.options.display.max_columns <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>np.set_printoptions(threshold<span class="op">=</span><span class="dv">15</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a><span class="co"># Plots style</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a><span class="im">import</span> matplotlib <span class="im">as</span> mpl</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a><span class="im">from</span> cycler <span class="im">import</span> cycler</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>mpl.rcParams[<span class="st">&#39;lines.linewidth&#39;</span>] <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>mpl.rcParams[<span class="st">&#39;lines.markersize&#39;</span>] <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a>mpl.rcParams[<span class="st">&#39;xtick.labelsize&#39;</span>] <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a>mpl.rcParams[<span class="st">&#39;xtick.color&#39;</span>] <span class="op">=</span> <span class="st">&#39;#A9A9A9&#39;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a>mpl.rcParams[<span class="st">&#39;ytick.labelsize&#39;</span>] <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a>mpl.rcParams[<span class="st">&#39;ytick.color&#39;</span>] <span class="op">=</span> <span class="st">&#39;#A9A9A9&#39;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a>mpl.rcParams[<span class="st">&#39;grid.color&#39;</span>] <span class="op">=</span> <span class="st">&#39;#ffffff&#39;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true"></a>mpl.rcParams[<span class="st">&#39;axes.facecolor&#39;</span>] <span class="op">=</span> <span class="st">&#39;#ffffff&#39;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true"></a>mpl.rcParams[<span class="st">&#39;axes.spines.left&#39;</span>] <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true"></a>mpl.rcParams[<span class="st">&#39;axes.spines.right&#39;</span>] <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true"></a>mpl.rcParams[<span class="st">&#39;axes.spines.top&#39;</span>] <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true"></a>mpl.rcParams[<span class="st">&#39;axes.spines.bottom&#39;</span>] <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true"></a>mpl.rcParams[<span class="st">&#39;axes.prop_cycle&#39;</span>] <span class="op">=</span> cycler(color<span class="op">=</span>[<span class="st">&#39;#2EBCE7&#39;</span>, <span class="st">&#39;#84EE29&#39;</span>, <span class="st">&#39;#FF8177&#39;</span>])</span></code></pre></div>
+<h2 id="poisson-distribution">Poisson Distribution</h2>
+<p>The <em>Poisson distribution</em>, named after the French mathematician Denis Simon Poisson, is a discrete distribution function describing the probability that an event will occur a certain number of times in a fixed time (or space) interval. It is used to model count-based data, like the number of emails arriving in your mailbox in one hour or the number of customers walking into a shop in one day, for instance.</p>
+<h3 id="mathematical-definition">Mathematical Definition</h3>
+<p>Let’s start with an example, Figure 1 shows the number of emails received by Sarah in intervals of one hour.</p>
+<p><img src="../../assets/images/ch04_poisson_distribution/ch04_poisson_ex.png" alt="Figure 1: Emails received by Sarah in one-hour intervals for the last 100 hours." />{:width=“350px”} <em>Figure 1: Emails received by Sarah in one-hour intervals for the last 100 hours.</em></p>
+<p>The bar heights show the number of one-hour intervals in which Sarah observed the corresponding number of emails. For instance, the highlighted bar shows that there were around 15 one-hour slots where she received a single email.</p>
+<p>The Poisson distribution is parametrized by the expected number of events <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn000.png" style="vertical-align: -1.00px; margin: 0;" width="21.00" alt="\lambda" class="inlinemath" /> (pronounced “lambda”) in a time or space window. The distribution is a function that takes the number of occurrences of the event as input (the integer called <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn001.png" style="vertical-align: -0.00px; margin: 0;" width="20.00" alt="k" class="inlinemath" /> in the next formula) and outputs the corresponding probability (the probability that there are <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn001.png" style="vertical-align: -0.00px; margin: 0;" width="20.00" alt="k" class="inlinemath" /> events occurring).</p>
+<p>The Poisson distribution, denoted as <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn002.png" style="vertical-align: -0.00px; margin: 0;" width="54.00" alt="\text{Poi}" class="inlinemath" /> is expressed as follows:</p>
+<p><img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn003.png" style="vertical-align: -0.00px; margin: 0;" width="386.00" alt="
+\text{Poi}(k ; \lambda) = \frac{\lambda^k e^{-\lambda}}{k!}
+" class="displaymath" /></p>
+<p>for <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn004.png" style="vertical-align: -8.00px; margin: 0;" width="206.00" alt="k=0, 1, 2, ..." class="inlinemath" />.</p>
+<p>The formula of <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn005.png" style="vertical-align: -10.00px; margin: 0;" width="139.00" alt="\text{Poi}(k ; \lambda)" class="inlinemath" /> returns the probability of observing <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn001.png" style="vertical-align: -0.00px; margin: 0;" width="20.00" alt="k" class="inlinemath" /> events given the parameter <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn000.png" style="vertical-align: -1.00px; margin: 0;" width="21.00" alt="\lambda" class="inlinemath" /> which corresponds to the expected number of occurrences in that time slot.</p>
+<div class="card-section" style="display: block">
+<p> </p>
+<p>Note that both the binomial and the Poisson distributions are discrete: they give probabilities of discrete outcomes: the number of times an event occurs for the Poisson distribution and the number of successes for the binomial distribution. However, while the binomial calculates this discrete number for a discrete number of trials (like a number of coin toss), the Poisson considers an infinite number of trials (each trial corresponds to a very small portion of time) leading to a very small probability associated with each event.</p>
+</div>
+<p>You can refer to <a href="#sec:ch03_section_bonus_deriving_the_poisson_distribution">0.1.3</a> to see how the Poisson distribution is derived from the binomial distribution.</p>
+<h3 id="example">Example</h3>
+<p>Priya is recording birds in a national park, using a microphone placed in a tree. She is counting the number of times a bird is recorded singing and wants to model the number of birds singing in a minute. For this task, she’ll assume independence of the detected birds.</p>
+<p>Looking at the data of the last few hours, Priya observes that in average, there are two birds detected in an interval of one minute. So the value 2 could be a good candidate for the parameter of the distribution <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn000.png" style="vertical-align: -1.00px; margin: 0;" width="21.00" alt="\lambda" class="inlinemath" />. Her goal is to know the probability that a specific number of birds will sing in the next minute.</p>
+<p>Let’s implement the Poisson distribution function from the formula you saw above:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">def</span> poisson_distribution(k, lambd):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>    <span class="cf">return</span> (lambd <span class="op">**</span> k <span class="op">*</span> np.exp(<span class="op">-</span>lambd)) <span class="op">/</span> np.math.factorial(k)</span></code></pre></div>
+<p>Remember that <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn000.png" style="vertical-align: -1.00px; margin: 0;" width="21.00" alt="\lambda" class="inlinemath" /> is the expected number of times a bird sings in a one-minute interval, so in this example, you have <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn006.png" style="vertical-align: -1.00px; margin: 0;" width="89.00" alt="\lambda=2" class="inlinemath" />. The function <code>poisson_distribution(k, lambd)</code> takes the value of <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn001.png" style="vertical-align: -0.00px; margin: 0;" width="20.00" alt="k" class="inlinemath" /> and <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn000.png" style="vertical-align: -1.00px; margin: 0;" width="21.00" alt="\lambda" class="inlinemath" /> and returns the probability to observe <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn001.png" style="vertical-align: -0.00px; margin: 0;" width="20.00" alt="k" class="inlinemath" /> occurrences (that is, to record <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn001.png" style="vertical-align: -0.00px; margin: 0;" width="20.00" alt="k" class="inlinemath" /> birds singing).</p>
+<p>For instance, the probability of Priya observing 5 birds in the next minute would be:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>poisson_distribution(k<span class="op">=</span><span class="dv">5</span>, lambd<span class="op">=</span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>0.03608940886309672</code></pre>
+<p>The probability that 5 birds will sing in the next minute is around 0.036 (3.6%).</p>
+<p>As with the binomial function, this will overflow for larger values of <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn001.png" style="vertical-align: -0.00px; margin: 0;" width="20.00" alt="k" class="inlinemath" />. For this reason, you might want to use <code>poisson</code> from the module <code>scipy.stats</code>, as follows:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="im">from</span> scipy.stats <span class="im">import</span> poisson</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>poisson.pmf(<span class="dv">5</span>, <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>0.03608940886309672</code></pre>
+<p>Let’s plot the distribution for various values of <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn001.png" style="vertical-align: -0.00px; margin: 0;" width="20.00" alt="k" class="inlinemath" />:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>lambd<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>k_axis <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">25</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>distribution <span class="op">=</span> np.zeros(k_axis.shape[<span class="dv">0</span>])</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(k_axis.shape[<span class="dv">0</span>]):</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a>    distribution[i] <span class="op">=</span> poisson.pmf(i, lambd)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true"></a>plt.bar(k_axis, distribution)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true"></a><span class="co"># [...] Add axes, labels...</span></span></code></pre></div>
+<p><img src="../../assets/images/ch04_poisson_distribution/ch04_poisson_distribution_15_0.png" alt="Figure 2: Poisson distribution for \lambda=2." />{:width=“250px”} <em>Figure 2: Poisson distribution for <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn006.png" style="vertical-align: -1.00px; margin: 0;" width="89.00" alt="\lambda=2" class="inlinemath" />.</em></p>
+<p>The probabilities corresponding to the values of <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn001.png" style="vertical-align: -0.00px; margin: 0;" width="20.00" alt="k" class="inlinemath" /> are summarized in the probability mass function shown in Figure 2. You can see that it is most probable that Priya will hear one or two birds singing in the next minute.</p>
+<p>Finally, you can plot the function for different values of <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn000.png" style="vertical-align: -1.00px; margin: 0;" width="21.00" alt="\lambda" class="inlinemath" />:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a>f, axes <span class="op">=</span> plt.subplots(<span class="dv">6</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">8</span>), sharex<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a><span class="cf">for</span> lambd <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>):</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>    k_axis <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">20</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>    distribution <span class="op">=</span> np.zeros(k_axis.shape[<span class="dv">0</span>])</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(k_axis.shape[<span class="dv">0</span>]):</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a>        distribution[i] <span class="op">=</span> poisson.pmf(i, lambd)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true"></a>    axes[lambd<span class="op">-</span><span class="dv">1</span>].bar(k_axis, distribution)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true"></a>    axes[lambd<span class="op">-</span><span class="dv">1</span>].set_xticks(np.arange(<span class="dv">0</span>, <span class="dv">20</span>, <span class="dv">2</span>))</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true"></a>    axes[lambd<span class="op">-</span><span class="dv">1</span>].set_title(<span class="ss">f&quot;$\lambda$: </span><span class="sc">{</span>lambd<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true"></a>    </span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true"></a><span class="co"># Add axes labels etc.</span></span></code></pre></div>
+<p><img src="../../assets/images/ch04_poisson_distribution/ch04_poisson_distribution_18_0.png" alt="Figure 3: Poisson distribution for various values of \lambda." />{:width=“250px”} <em>Figure 3: Poisson distribution for various values of <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn000.png" style="vertical-align: -1.00px; margin: 0;" width="21.00" alt="\lambda" class="inlinemath" />.</em></p>
+<p>Figure 3 shows the Poisson distribution for various values of <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn000.png" style="vertical-align: -1.00px; margin: 0;" width="21.00" alt="\lambda" class="inlinemath" />, which looks a bit like a normal distribution in some cases. However, the Poisson distribution is discrete, not symmetric when the value of <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn000.png" style="vertical-align: -1.00px; margin: 0;" width="21.00" alt="\lambda" class="inlinemath" /> is low, and bounded to zero.</p>
+<h3 id="sec:ch03_section_bonus_deriving_the_poisson_distribution">Bonus: Deriving the Poisson Distribution</h3>
+<p>Let’s see how the Poisson distribution is derived from the Binomial distribution.</p>
+<p>You saw in <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a> that if you run a random experiment multiple times, the probability to get <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn007.png" style="vertical-align: -0.00px; margin: 0;" width="32.00" alt="m" class="inlinemath" /> successes over <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn008.png" style="vertical-align: -0.00px; margin: 0;" width="33.00" alt="N" class="inlinemath" /> trials, with a probability of a success <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn009.png" style="vertical-align: -8.00px; margin: 0;" width="22.00" alt="\mu" class="inlinemath" /> at each trial, is calculated through the binomial distribution:</p>
+<p><img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn010.png" style="vertical-align: 1.00px; margin: 0;" width="647.00" alt="
+\text{Bin}(k ;N, \mu)  = \binom{N}{k} \mu^k (1-\mu)^{N-k}
+" class="displaymath" /></p>
+<h4 id="problem-statement">Problem Statement</h4>
+<p>How can you use the binomial formula to model the probability to observe an event a certain number of times <em>in a given time interval</em> instead of in a certain number of trials? There are a few problems:</p>
+<ol type="1">
+<li><p>You don’t know <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn008.png" style="vertical-align: -0.00px; margin: 0;" width="33.00" alt="N" class="inlinemath" />, since there is no specific number of trials, only a time window.</p></li>
+<li><p>You don’t know <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn009.png" style="vertical-align: -8.00px; margin: 0;" width="22.00" alt="\mu" class="inlinemath" />, but you have the expected number of times the event will occur. For instance, you know that in the past 100 hours, you received an average of 3 emails per hour, and you want to know the probability of receiving 5 emails in the next hour.</p></li>
+</ol>
+<p>Let’s handle these issues mathematically.</p>
+<p>To address the first point, you can consider time as small discrete chunks. Let’s call these chunck <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn011.png" style="vertical-align: -0.00px; margin: 0;" width="15.00" alt="\epsilon" class="inlinemath" /> (pronounced “epsilon”), as shown in Figure 4. If you consider each chunk as a trial, you have <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn008.png" style="vertical-align: -0.00px; margin: 0;" width="33.00" alt="N" class="inlinemath" /> chunks.</p>
+<p><img src="../../assets/images/ch04_poisson_distribution/appC_split_time.png" alt="Figure 4: You can split the continuous time in segments of length \epsilon." />{:width=“200px”} <em>Figure 4: You can split the continuous time in segments of length <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn011.png" style="vertical-align: -0.00px; margin: 0;" width="15.00" alt="\epsilon" class="inlinemath" />.</em></p>
+<p>The estimation of a continuous time scale is more accurate when <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn011.png" style="vertical-align: -0.00px; margin: 0;" width="15.00" alt="\epsilon" class="inlinemath" /> is very small. If <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn011.png" style="vertical-align: -0.00px; margin: 0;" width="15.00" alt="\epsilon" class="inlinemath" /> is small, the number of segments <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn008.png" style="vertical-align: -0.00px; margin: 0;" width="33.00" alt="N" class="inlinemath" /> will be large. In addition, since the segments are small, the probability of success in each segment is also small.</p>
+<p>To summarize, you want to modify the binomial distribution to be able model a very large number of trials, each with a very small probability of success. The trick is to consider that <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn008.png" style="vertical-align: -0.00px; margin: 0;" width="33.00" alt="N" class="inlinemath" /> tends toward infinity (because continuous time is approximated by having a value of <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn011.png" style="vertical-align: -0.00px; margin: 0;" width="15.00" alt="\epsilon" class="inlinemath" /> that tends toward zero).</p>
+<h4 id="update-the-binomial-formula">Update the Binomial Formula</h4>
+<p>Let’s find <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn009.png" style="vertical-align: -8.00px; margin: 0;" width="22.00" alt="\mu" class="inlinemath" /> in this case and replace it in the binomial formula. You know the expected number of event in a period of time <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn012.png" style="vertical-align: -0.00px; margin: 0;" width="13.00" alt="t" class="inlinemath" />, which we’ll call <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn000.png" style="vertical-align: -1.00px; margin: 0;" width="21.00" alt="\lambda" class="inlinemath" /> (pronounced “lambda”). Since you split <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn012.png" style="vertical-align: -0.00px; margin: 0;" width="13.00" alt="t" class="inlinemath" /> into small intervals of length <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn011.png" style="vertical-align: -0.00px; margin: 0;" width="15.00" alt="\epsilon" class="inlinemath" />, you have the number of trials:</p>
+<p><img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn013.png" style="vertical-align: -0.00px; margin: 0;" width="235.00" alt="
+N=t \cdot \epsilon
+" class="displaymath" /></p>
+<p>You have <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn000.png" style="vertical-align: -1.00px; margin: 0;" width="21.00" alt="\lambda" class="inlinemath" /> as the number of successes in the <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn008.png" style="vertical-align: -0.00px; margin: 0;" width="33.00" alt="N" class="inlinemath" /> trials. So the probability <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn009.png" style="vertical-align: -8.00px; margin: 0;" width="22.00" alt="\mu" class="inlinemath" /> to have a success in one trial is:</p>
+<p><img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn014.png" style="vertical-align: -0.00px; margin: 0;" width="206.00" alt="
+\mu = \frac{\lambda}{N}
+" class="displaymath" /></p>
+<p>Replacing <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn009.png" style="vertical-align: -8.00px; margin: 0;" width="22.00" alt="\mu" class="inlinemath" /> in the binomial formula, you get:</p>
+<p><img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn015.png" style="vertical-align: 1.00px; margin: 0;" width="535.00" alt="
+\binom{N}{k} (\frac{\lambda}{N} )^k (1 - \frac{\lambda}{N} )^{N-k}
+" class="displaymath" /></p>
+<p>Developing the expression, writing the binomial coefficient as factorials (as you did in <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>), and using the fact <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn016.png" style="vertical-align: -0.00px; margin: 0;" width="228.00" alt="a^{b-c}=a^b-a^c" class="inlinemath" />, you have:</p>
+<p><a href="build/ch04_poisson_distribution/book_eq_png/outsourced-descriptions.html#form_.frac_N__-Nk-k_-.frac_.lambda__N_-,k-1.frac_.lambda__N_-,_N_-1.frac_.lambda__N_-,_k_"><img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn017.png" style="vertical-align: -0.00px; margin: 0;" width="797.00" alt="
+\frac{N!}{(N-k)!k!} (\frac{\lambda}{N} )^k (1 - \frac{\lambda}{N} )^{N} (1 - \frac{\lambda}{N} )^{-..." class="displaymath" /></a></p>
+<p>Let’s consider the first element of this expression. If you state that <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn008.png" style="vertical-align: -0.00px; margin: 0;" width="33.00" alt="N" class="inlinemath" /> tends toward infinity (because <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn011.png" style="vertical-align: -0.00px; margin: 0;" width="15.00" alt="\epsilon" class="inlinemath" /> tends toward zero), you have:</p>
+<p><img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn018.png" style="vertical-align: -0.00px; margin: 0;" width="448.00" alt="
+\lim_{N \to +\infty} \frac{N!}{(N-k)!} = N^k
+" class="displaymath" /></p>
+<p>This is because <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn001.png" style="vertical-align: -0.00px; margin: 0;" width="20.00" alt="k" class="inlinemath" /> can be ignored when it is small in comparison to <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn008.png" style="vertical-align: -0.00px; margin: 0;" width="33.00" alt="N" class="inlinemath" />. For instance, you have:</p>
+<p><img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn019.png" style="vertical-align: -0.00px; margin: 0;" width="902.00" alt="
+\frac{1,000,000!}{(1,000,000-3)!} = 1,000,000 \cdot 999,999 \cdot 999,998
+" class="displaymath" /></p>
+<p>which approximates <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn020.png" style="vertical-align: -8.00px; margin: 0;" width="550.00" alt="1,000,000 \cdot 1,000,000 \cdot 1,000,000" class="inlinemath" /></p>
+<p>So you the first ratio becomes:</p>
+<p><img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn021.png" style="vertical-align: -0.00px; margin: 0;" width="439.00" alt="
+\frac{N!}{(N-k)!k!} =  N^k \cdot \frac{1}{k!}
+" class="displaymath" /></p>
+<p>Then, using the fact that <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn022.png" style="vertical-align: -13.00px; margin: 0;" width="388.00" alt="\lim_{N \to +\infty}(1+\frac{\lambda}{N})^N=e^{\lambda}" class="inlinemath" />, you have:</p>
+<p><img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn023.png" style="vertical-align: 1.00px; margin: 0;" width="493.00" alt="
+\lim_{N \to +\infty} (1 - \frac{\lambda}{N} )^{N} = e^{-\lambda}
+" class="displaymath" /></p>
+<p>Finally, since <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn024.png" style="vertical-align: -13.00px; margin: 0;" width="127.00" alt=" (1- \frac{\lambda}{N} )" class="inlinemath" /> tends toward 1 when <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn008.png" style="vertical-align: -0.00px; margin: 0;" width="33.00" alt="N" class="inlinemath" /> tends toward the infinity:</p>
+<p><img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn025.png" style="vertical-align: 1.00px; margin: 0;" width="575.00" alt="
+\lim_{N \to +\infty} (1- \frac{\lambda}{N} )^{-k} = 1^{-k} = 1
+" class="displaymath" /></p>
+<p>Let’s replace all of this in the formula of the binomial distribution:</p>
+<p><a href="build/ch04_poisson_distribution/book_eq_png/outsourced-descriptions.html#form_.begin_aligned_.lim_N.to.infty_.frac_N__-Nk-k_-.frac_.lambda__N_-,k-1.frac_.lambda__N_-,_N_-1.frac_.lambda__N_-,_k_..lim_N.to.infty_N,k.cdot.frac"><img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn026.png" style="vertical-align: 59.00px; margin: 0;" width="909.00" alt="
+\begin{aligned}
+&\lim_{N \to +\infty} \frac{N!}{(N-k)!k!} (\frac{\lambda}{N} )^k (1 - \frac{\lambda..." class="displaymath" /></a></p>
+<p>This is the Poisson distribution, denoted as <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn002.png" style="vertical-align: -0.00px; margin: 0;" width="54.00" alt="\text{Poi}" class="inlinemath" />:</p>
+<p><img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn003.png" style="vertical-align: -0.00px; margin: 0;" width="386.00" alt="
+\text{Poi}(k ; \lambda) = \frac{\lambda^k e^{-\lambda}}{k!}
+" class="displaymath" /></p>
+<p>for <img src="../../assets/images/ch04_poisson_distribution/book_eq_png/eqn004.png" style="vertical-align: -8.00px; margin: 0;" width="206.00" alt="k=0, 1, 2, ..." class="inlinemath" />.</p>
+<div style="text-align: center; font-size: 3.5rem; font-weight: bold; color: #c9c9c9">
+…
+</div>
+</body>
+</html>
