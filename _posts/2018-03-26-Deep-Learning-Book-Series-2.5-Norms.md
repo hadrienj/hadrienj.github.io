@@ -168,7 +168,6 @@ plt.close()
     Geometrically, this simply means that the shortest path between two points is a line
 </span>
 
-{% include essential-math-ribbon.html %}
 
 # P-norms: general rules
 
