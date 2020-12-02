@@ -471,8 +471,8 @@ Let's manually calculate the cross entropy between these two
 distributions:
 
 \begin{aligned}
-H(P, Q) &= -\sum_x P(x)\log Q(x) \\\\\
-&= -(1.0 \log 0.7 + 0.0 \log 0.2 + 0.0 \log 0.1) \\\\\
+H(P, Q) &= -\sum_x P(x)\log Q(x) \\
+&= -(1.0 \log 0.7 + 0.0 \log 0.2 + 0.0 \log 0.1) \\
 &= -\log 0.7
 \end{aligned}
 
@@ -500,7 +500,7 @@ From the formula of the cross entropy, $\sum_x$ corresponds here to the
 sum over the two possible outcomes ($y$ and $1-y$). You have:
 
 \begin{aligned}
-H(P, Q) &= -\sum_x P(x)\log Q(x) \\\\\
+H(P, Q) &= -\sum_x P(x)\log Q(x) \\
 &= - (y \log (\hat{y}) + (1-y) \log (1 - \hat{y})
 \end{aligned}
 
@@ -534,8 +534,8 @@ Replacing with the expressions of the cross entropy and the entropy, you
 get:
 
 \begin{aligned}
-D_{KL}(P || Q) &= H(P, Q) - H(P) \\\\\
-&= -\sum_x P(x)\log_2 Q(x) - (-\sum_x P(x)\log_2 P(x)) \\\\\
+D_{KL}(P || Q) &= H(P, Q) - H(P) \\
+&= -\sum_x P(x)\log_2 Q(x) - (-\sum_x P(x)\log_2 P(x)) \\
 &= \sum_x P(x)\log_2 P(x) - \sum_x P(x)\log_2 Q(x)
 \end{aligned}
 
