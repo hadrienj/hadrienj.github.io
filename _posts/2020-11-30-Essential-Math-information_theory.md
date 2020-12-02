@@ -470,11 +470,11 @@ $Q(x)$.</em>
 Let's manually calculate the cross entropy between these two
 distributions:
 
-\begin{align*}
-H(P, Q) &= -\sum_x P(x)\log Q(x) \\\
-&= -(1.0 \log 0.7 + 0.0 \log 0.2 + 0.0 \log 0.1) \\\
+\begin{aligned}
+H(P, Q) &= -\sum_x P(x)\log Q(x)\\\
+&= -(1.0 \log 0.7 + 0.0 \log 0.2 + 0.0 \log 0.1)\\\
 &= -\log 0.7
-\end{align*}
+\end{aligned}
 
 The natural logarithm is used in the cross-entropy loss instead of the
 base-two logarithm, but the principle is the same. In addition, note the
@@ -499,10 +499,10 @@ probability of the second class $1 - \hat{y}$.
 From the formula of the cross entropy, $\sum_x$ corresponds here to the
 sum over the two possible outcomes ($y$ and $1-y$). You have:
 
-\begin{align*}
-H(P, Q) &= -\sum_x P(x)\log Q(x) \\\
+\begin{aligned}
+H(P, Q) &= -\sum_x P(x)\log Q(x)\\\
 &= - (y \log (\hat{y}) + (1-y) \log (1 - \hat{y})
-\end{align*}
+\end{aligned}
 
 which is the formula of the log loss.
 
@@ -533,11 +533,11 @@ $$
 Replacing with the expressions of the cross entropy and the entropy, you
 get:
 
-\begin{align*}
-D_{KL}(P || Q) &= H(P, Q) - H(P) \\\
-&= -\sum_x P(x)\log_2 Q(x) - (-\sum_x P(x)\log_2 P(x)) \\\
+\begin{aligned}
+D_{KL}(P || Q) &= H(P, Q) - H(P)\\\
+&= -\sum_x P(x)\log_2 Q(x) - (-\sum_x P(x)\log_2 P(x))\\\
 &= \sum_x P(x)\log_2 P(x) - \sum_x P(x)\log_2 Q(x)
-\end{align*}
+\end{aligned}
 
 The KL divergence is always non-negative. Since the entropy $H(P)$ is
 identical to the cross entropy $H(P, P)$, and because the smallest cross
