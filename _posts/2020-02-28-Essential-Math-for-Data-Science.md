@@ -15,7 +15,7 @@ essential-math: true
 
 *Last Update: Sept. 2020*
 
-I'm very happy to introduce my work in progress for the book <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>. It should be available in November 2020.
+I'm very happy to introduce my work in progress for the book <a href="https://bit.ly/3gDOTKe">Essential Math for Data Science</a>. It should be available in November 2020.
 
 {% include mailchimp.html %}
 

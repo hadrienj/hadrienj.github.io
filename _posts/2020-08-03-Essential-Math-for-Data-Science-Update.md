@@ -15,7 +15,7 @@ essential-math: true
 ---
 
 
-I'm glad to announce a few updates concerning my book <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>.
+I'm glad to announce a few updates concerning my book <a href="https://bit.ly/3n87Max">Essential Math for Data Science</a>.
 
 
 - First, I changed the structure of the book: a first chapter on basic algebra has been removed. Part of old chapter 02 has been merged in the linear algebra part.

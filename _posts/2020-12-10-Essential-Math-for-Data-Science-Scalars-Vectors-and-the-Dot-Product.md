@@ -58,7 +58,7 @@ height of ten people as a vector containing ten values.
 ##### Notation
 
 We'll use lowercase, boldface letters to name vectors (such as $\vv$).
-As usual, refer to the Appendix in <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a> to have the summary of the notations
+As usual, refer to the Appendix in <a href="https://bit.ly/3gB7p5Z">Essential Math for Data Science</a> to have the summary of the notations
 used in this book.
 
 ### Geometric and Coordinate Vectors {#sec:ch02_section_coordinates_and_vectors}
@@ -410,7 +410,7 @@ $$
 \norm{\vu}_2^2 = \vu \cdot \vu
 $$
 
-This is an important property in machine learning, as you saw in <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>.
+This is an important property in machine learning, as you saw in <a href="https://bit.ly/3gB7p5Z">Essential Math for Data Science</a>.
 
 #### Special Cases {#sec:ch04_section_special_case}
 
@@ -421,7 +421,7 @@ addition, the dot product between a unit vector and itself is equal to
 ### Geometric interpretation: Projections {#sec:ch04_section_geometric_interpretation}
 
 How can you interpret the dot product operation with geometric vectors.
-You have seen in <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a> the geometric interpretation of the addition and
+You have seen in <a href="https://bit.ly/3gB7p5Z">Essential Math for Data Science</a> the geometric interpretation of the addition and
 scalar multiplication of vectors, but what about the dot product?
 
 Let's take the two following vectors:
@@ -489,7 +489,7 @@ $$
 $$
 
 The projection of $\vu$ onto $\vv$ is defined as follows (you can refer
-to <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a> to see the mathematical details about the projection of a vector
+to <a href="https://bit.ly/3gB7p5Z">Essential Math for Data Science</a> to see the mathematical details about the projection of a vector
 onto a line):
 
 $$

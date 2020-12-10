@@ -119,7 +119,7 @@ The logarithm of a product is equal to the sum of the elements:
 $\log_2(ab)=\log_2(a)+\log_2(b)$. This property is useful to encode the
 additive property of the Shannon information. The probability of
 occurrence of two events is their individual probabilities multiplied
-together (because they are independent, as you saw in <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>):
+together (because they are independent, as you saw in <a href="https://bit.ly/3njFklS">Essential Math for Data Science</a>):
 
 $$
 I(x, y)=-\log_2 P(x, y)=-(\log_2 P(x) + \log_2 P(y))
@@ -224,7 +224,7 @@ distribution:
 #### Mathematical Formulation
 
 The entropy is the expectation of the information with respect to the
-probability distribution. Remember from <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a> that the expectation is the
+probability distribution. Remember from <a href="https://bit.ly/3njFklS">Essential Math for Data Science</a> that the expectation is the
 mean value you'll get if you draw a large number of samples from the
 distribution:
 
@@ -281,7 +281,7 @@ is associated with less information (1.32 bits as shown in Figure
 #### Binary Entropy Function
 
 In the example of a biased coin, you calculated the entropy of a
-Bernoulli process (more details about the Bernoulli distribution in <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>).
+Bernoulli process (more details about the Bernoulli distribution in <a href="https://bit.ly/3njFklS">Essential Math for Data Science</a>).
 In this special case, the entropy is called the *binary entropy
 function*.
 
@@ -358,7 +358,7 @@ H(P) = -\int p(x)\log_2 p(x)\; dx
 $$
 
 Differential entropy can be negative. The reason is that, as you saw in
-<a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>, continuous distributions are not probabilities but probability
+<a href="https://bit.ly/3njFklS">Essential Math for Data Science</a>, continuous distributions are not probabilities but probability
 densities, meaning that they don't satisfy the requirements of
 probabilities. For instance, they are not constrained to be lower than 1.
 This has the consequence that $p(x)$ can take positive values larger

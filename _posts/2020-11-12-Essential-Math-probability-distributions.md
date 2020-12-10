@@ -14,7 +14,7 @@ crawlertitle: ""
 essential-math-sample: true
 ---
 
-In the chapter 02 of <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>, you can learn about basic descriptive statistics and probability theory. We'll cover probability mass and probability density function in this sample. You'll see how to understand and represent these distribution functions and their link with histograms.
+In the chapter 02 of <a href="https://bit.ly/3n8G25F">Essential Math for Data Science</a>, you can learn about basic descriptive statistics and probability theory. We'll cover probability mass and probability density function in this sample. You'll see how to understand and represent these distribution functions and their link with histograms.
 
 *Deterministic* processes give the same results when they are repeated
 multiple times. This is not the case for random variables, which
@@ -167,7 +167,7 @@ called *probability density functions* (or PDF).
 The integral of the probability density function over a particular
 interval gives you the probability that a random variable takes a value
 in this interval. This probability is thus given by the area under the
-curve in this interval (as you can see in <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>).
+curve in this interval (as you can see in <a href="https://bit.ly/3n8G25F">Essential Math for Data Science</a>).
 
 #### Notation
 
@@ -180,7 +180,7 @@ the value $x$.
 Let's inspect an example of probability density function. You can
 randomly draw data from a normal distribution using the Numpy function
 `np.random.normal` (you'll find more details about the normal
-distribution in <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>).
+distribution in <a href="https://bit.ly/3n8G25F">Essential Math for Data Science</a>).
 
 You can choose the parameters of the normal distribution (the mean and
 the standard deviation) and the number of samples. Let's create a

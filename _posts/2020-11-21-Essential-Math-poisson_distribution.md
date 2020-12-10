@@ -198,7 +198,7 @@ to zero.
 Let's see how the Poisson distribution is derived from the Binomial
 distribution.
 
-You saw in <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a> that if you run a random experiment multiple times, the
+You saw in <a href="https://bit.ly/3n8O2n1">Essential Math for Data Science</a> that if you run a random experiment multiple times, the
 probability to get $m$ successes over $N$ trials, with a probability of
 a success $\mu$ at each trial, is calculated through the binomial
 distribution:
@@ -269,7 +269,7 @@ $$
 $$
 
 Developing the expression, writing the binomial coefficient as
-factorials (as you did in <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>), and using the fact $a^{b-c}=a^b-a^c$, you
+factorials (as you did in <a href="https://bit.ly/3n8O2n1">Essential Math for Data Science</a>), and using the fact $a^{b-c}=a^b-a^c$, you
 have:
 
 $$
