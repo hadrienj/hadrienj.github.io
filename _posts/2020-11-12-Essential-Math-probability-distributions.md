@@ -1,5 +1,5 @@
 ---
-bg: "Essential-Math-for-Data-Science-Update/bridge.jpg"
+bg: "ch03_probability_distributions/silverlake.jpg"
 layout: post
 mathjax: true
 categories: posts

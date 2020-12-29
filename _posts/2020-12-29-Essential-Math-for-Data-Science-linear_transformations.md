@@ -1,5 +1,5 @@
 ---
-bg: "Essential-Math-for-Data-Science-Update/bridge.jpg"
+bg: "ch08_linear_equations/street.jpg"
 layout: post
 mathjax: true
 categories: posts

@@ -1,5 +1,5 @@
 ---
-bg: "Essential-Math-for-Data-Science-Update/bridge.jpg"
+bg: "ch04_poisson_distribution/pelicans.jpg"
 layout: post
 mathjax: true
 categories: posts

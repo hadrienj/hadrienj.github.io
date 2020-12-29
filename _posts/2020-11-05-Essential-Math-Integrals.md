@@ -1,5 +1,5 @@
 ---
-bg: "Essential-Math-for-Data-Science-Update/bridge.jpg"
+bg: "ch02_integrals/pilones.jpg"
 layout: post
 mathjax: true
 categories: posts

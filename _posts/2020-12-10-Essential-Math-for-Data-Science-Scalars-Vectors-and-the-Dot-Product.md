@@ -1,5 +1,5 @@
 ---
-bg: "Essential-Math-for-Data-Science-Update/bridge.jpg"
+bg: "ch06_scalars_and_vectors/palms.jpg"
 layout: post
 mathjax: true
 categories: posts
