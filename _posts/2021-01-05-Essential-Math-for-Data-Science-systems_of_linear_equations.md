@@ -8,7 +8,7 @@ author: hadrienj
 date: 2021-01-13
 excerpt: ""
 excerpt-image: <img src="../../assets/images/ch09_system_of_linear_equations/ch09_system_of_linear_equations_3_0.png" width=300><em>Plot of the equation $y=2x+1$.</em>
-twitterImg: "Essential-Math-for-Data-Science-Update/output_ch06_139_0"
+twitterImg: "ch09_system_of_linear_equations/ch09_solutions_systems_equations"
 title: "Essential Math for Data Science: Introduction to Systems of Linear Equations"
 crawlertitle: ""
 essential-math-sample: true
