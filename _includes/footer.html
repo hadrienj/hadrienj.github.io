@@ -15,9 +15,10 @@
       jax: ["input/TeX", "output/SVG"],
       TeX: {
         Macros: {
-          var: "{\text{Var}",
-          corr: "{\text{Corr}",
-          cov: "{\text{Cov}",
+          bs: ["\\boldsymbol{#1}", 1],
+          var: "{\\text{Var}",
+          corr: "{\\text{Corr}",
+          cov: "{\\text{Cov}",
           expval: "\\mathbb{E}",
           norm: ["\\lVert #1 \\rVert", 1],
           setR: "{\\rm I\\!R}",

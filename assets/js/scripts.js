@@ -4,15 +4,6 @@
 
 (function() {
 
-  window.MathJax.Hub.Config({
-  TeX: {
-    Macros: {
-      rx: "{\\bf R}",
-      bold: ["{\\bf #1}",1]
-    }
-  }
-});
-
 
   /* variables */
   var shadow = document.getElementById('shadow');
