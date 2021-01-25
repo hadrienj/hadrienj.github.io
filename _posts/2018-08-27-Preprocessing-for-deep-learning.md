@@ -52,59 +52,59 @@ The variance of a variable describes how much the values are spread. The covaria
 The covariance matrix is a matrix that summarizes the variances and covariances of a set of vectors and it can tell a lot of things about your variables. The diagonal corresponds to the variance of each vector:
 
 <img src="../../assets/images/Preprocessing-for-deep-learning/covariance1.png" width="400" alt="Variance in the matrix of covariance" title="Variance in the matrix of covariance is on the diagonal">
-<em>A matrix $\bs{A}$ and its matrix of covariance. The diagonal corresponds to the variance of each column vector.</em>
+<em>A matrix $\boldsymbol{A}$ and its matrix of covariance. The diagonal corresponds to the variance of each column vector.</em>
 
 Let's just check with the formula of the variance:
 
 <div>
 $
-V(\bs{X}) = \frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2
+V(\boldsymbol{X}) = \frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2
 $
 </div>
 
-with $n$ the length of the vector, and $\bar{x}$ the mean of the vector. For instance, the variance of the first column vector of $\bs{A}$ is:
+with $n$ the length of the vector, and $\bar{x}$ the mean of the vector. For instance, the variance of the first column vector of $\boldsymbol{A}$ is:
 
 <div>
 $
-V(\bs{A}_{:,1}) = \frac{(1-3)^2+(5-3)^2+(3-3)^2}{3} = 2.67
+V(\boldsymbol{A}_{:,1}) = \frac{(1-3)^2+(5-3)^2+(3-3)^2}{3} = 2.67
 $
 </div>
 
 
 
-This is the first cell of our covariance matrix. The second element on the diagonal corresponds of the variance of the second column vector from $\bs{A}$ and so on.
+This is the first cell of our covariance matrix. The second element on the diagonal corresponds of the variance of the second column vector from $\boldsymbol{A}$ and so on.
 
-*Note*: the vectors extracted from the matrix $\bs{A}$ correspond to the columns of $\bs{A}$.
+*Note*: the vectors extracted from the matrix $\boldsymbol{A}$ correspond to the columns of $\boldsymbol{A}$.
 
 ### Covariance
 
-The other cells correspond to the covariance between two column vectors from $\bs{A}$. For instance, the covariance between the first and the third column is located in the covariance matrix as the column 1 and the row 3 (or the column 3 and the row 1).
+The other cells correspond to the covariance between two column vectors from $\boldsymbol{A}$. For instance, the covariance between the first and the third column is located in the covariance matrix as the column 1 and the row 3 (or the column 3 and the row 1).
 
 <img src="../../assets/images/Preprocessing-for-deep-learning/covariance2.png" width="400" alt="Covariance in the matrix of covariance" title="The position in the covariance matrix.">
-<em>The position in the covariance matrix. Column corresponds to the first variable and row to the second (or the opposite). The covariance between the first and the third column vector of $\bs{A}$ is the element in column 1 and row 3 (or the opposite = same value).</em>
+<em>The position in the covariance matrix. Column corresponds to the first variable and row to the second (or the opposite). The covariance between the first and the third column vector of $\boldsymbol{A}$ is the element in column 1 and row 3 (or the opposite = same value).</em>
 
 
 
 
-Let's check that the covariance between the first and the third column vector of $\bs{A}$ is equal to $-2.67$. The formula of the covariance between two variables $\bs{X}$ and $\bs{Y}$ is:
+Let's check that the covariance between the first and the third column vector of $\boldsymbol{A}$ is equal to $-2.67$. The formula of the covariance between two variables $\boldsymbol{X}$ and $\boldsymbol{Y}$ is:
 
 <div>
 $
-cov(\bs{X},\bs{Y}) = \frac{1}{n} \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})
+cov(\boldsymbol{X},\boldsymbol{Y}) = \frac{1}{n} \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})
 $
 </div>
 
-The variables $\bs{X}$ and $\bs{Y}$ are the first and the third column vectors in the last example. Let's split this formula to be sure that it is crystal clear:
+The variables $\boldsymbol{X}$ and $\boldsymbol{Y}$ are the first and the third column vectors in the last example. Let's split this formula to be sure that it is crystal clear:
 
-1. $(x_1-\bar{x})$. The sum symbol means that we will iterate on the elements of the vectors. We will start with the first element ($i=1$) and calculate the first element of $\bs{X}$ minus the mean of the vector $\bs{X}$.
-2. $(x_1-\bar{x})(y_1-\bar{y})$. Multiply the result with the first element of $\bs{Y}$ minus the mean of the vector $\bs{Y}$.
+1. $(x_1-\bar{x})$. The sum symbol means that we will iterate on the elements of the vectors. We will start with the first element ($i=1$) and calculate the first element of $\boldsymbol{X}$ minus the mean of the vector $\boldsymbol{X}$.
+2. $(x_1-\bar{x})(y_1-\bar{y})$. Multiply the result with the first element of $\boldsymbol{Y}$ minus the mean of the vector $\boldsymbol{Y}$.
 3. $\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})$. Reiterate the process for each element of the vectors and calculate the sum of all results.
 4. $\frac{1}{n} \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})$. Divide by the number of elements in the vector.
 
 
 #### Example 1.
 
-Let's start with the matrix $\bs{A}$:
+Let's start with the matrix $\boldsymbol{A}$:
 
 <div>
 $
@@ -205,8 +205,8 @@ Looks good!
 
 ### Finding the covariance matrix with the dot product
 
-There is another way to compute the covariance matrix of $\bs{A}$. You can center $
-\bs{A}$ around 0 (subtract the mean of the vector to each element of the vector to have a vector of mean equal to 0, *cf*. below), multiply it with its own transpose and divide by the number of observations. Let's start with an implementation and then we'll try to understand the link with the previous equation:
+There is another way to compute the covariance matrix of $\boldsymbol{A}$. You can center $
+\boldsymbol{A}$ around 0 (subtract the mean of the vector to each element of the vector to have a vector of mean equal to 0, *cf*. below), multiply it with its own transpose and divide by the number of observations. Let's start with an implementation and then we'll try to understand the link with the previous equation:
 
 
 
@@ -252,7 +252,7 @@ The explanation is simple. The dot product between two vectors can be expressed:
 
 <div>
 $
-\bs{X^\text{T}Y}= \sum_{i=1}^{n}(x_i)(y_i)
+\boldsymbol{X^\text{T}Y}= \sum_{i=1}^{n}(x_i)(y_i)
 $
 </div>
 
@@ -265,7 +265,7 @@ If $n$ is the number of elements in our vectors and that we divide by $n$:
 
 <div>
 $
-\frac{1}{n}\bs{X^\text{T}Y}= \frac{1}{n}\sum_{i=1}^{n}(x_i)(y_i)
+\frac{1}{n}\boldsymbol{X^\text{T}Y}= \frac{1}{n}\sum_{i=1}^{n}(x_i)(y_i)
 $
 </div>
 
@@ -273,13 +273,13 @@ You can note that this is not too far from the formula of the covariance we have
 
 <div>
 $
-cov(\bs{X},\bs{Y}) = \frac{1}{n} \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})
+cov(\boldsymbol{X},\boldsymbol{Y}) = \frac{1}{n} \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})
 $
 </div>
 
 The only difference is that in the covariance formula we subtract the mean of a vector to each of its elements. This is why we need to center the data before doing the dot product.
 
-Now if we have a matrix $\bs{A}$, the dot product between $\bs{A}$ and its transpose will give you a new matrix:
+Now if we have a matrix $\boldsymbol{A}$, the dot product between $\boldsymbol{A}$ and its transpose will give you a new matrix:
 
 <img src="../../assets/images/Preprocessing-for-deep-learning/covariance-dot-product.png" width="400" alt="Covariance matrix and dot product" title="Covariance matrix and dot product.">
 <em>If you start with a zero-centered matrix, the dot product between this matrix and its transpose will give you the variance of each vector and covariance between them, that is to say the covariance matrix.</em>
@@ -503,11 +503,11 @@ Mean normalization is just removing the mean from each observation.
 
 <div>
 $
-\bs{X'} = \bs{X} - \bar{x}
+\boldsymbol{X'} = \boldsymbol{X} - \bar{x}
 $
 </div>
 
-where $\bs{X'}$ is the normalized dataset, $\bs{X}$ the original dataset and $\bar{x}$ the mean of $\bs{X}$.
+where $\boldsymbol{X'}$ is the normalized dataset, $\boldsymbol{X}$ the original dataset and $\bar{x}$ the mean of $\boldsymbol{X}$.
 
 It will have the effect of centering the data around 0. We will create the function `center()` to do that:
 
@@ -523,7 +523,7 @@ def center(X):
 
 
 
-Let's give it a try with the matrix $\bs{B}$ we have created above:
+Let's give it a try with the matrix $\boldsymbol{B}$ we have created above:
 
 
 
@@ -580,7 +580,7 @@ Covariance matrix:
 
 
 
-The first plot shows again the original data $\bs{B}$ and the second plot shows the centered data (look at the scale).
+The first plot shows again the original data $\boldsymbol{B}$ and the second plot shows the centered data (look at the scale).
 
 
 
@@ -590,11 +590,11 @@ The standardization is used to put all features on the same scale. The way to do
 
 <div>
 $
-\bs{X'} = \frac{\bs{X} - \bar{x}}{\sigma_{\bs{X}}}
+\boldsymbol{X'} = \frac{\boldsymbol{X} - \bar{x}}{\sigma_{\boldsymbol{X}}}
 $
 </div>
 
-where $\bs{X'}$ is the standardized dataset, $\bs{X}$ the original dataset, $\bar{x}$ the mean of $\bs{X}$ and $\sigma_{\bs{X}}$ the standard deviation of $\bs{X}$.
+where $\boldsymbol{X'}$ is the standardized dataset, $\boldsymbol{X}$ the original dataset, $\bar{x}$ the mean of $\boldsymbol{X}$ and $\sigma_{\boldsymbol{X}}$ the standard deviation of $\boldsymbol{X}$.
 
 
 
@@ -673,7 +673,7 @@ Covariance matrix:
 
 
 
-Looks good! You can see that the scales are the same and that the dataset is zero-centered according to both axes. Now, have a look at the covariance matrix: you can see that the variance of each coordinate (the top-left cell and the bottom-right cell) is equal to 1. By the way, this new covariance matrix is actually the correlation matrix!💥 The Pearson correlation coefficient between the two variables ($\bs{c1}$ and $\bs{c2}$) is 0.54220151.
+Looks good! You can see that the scales are the same and that the dataset is zero-centered according to both axes. Now, have a look at the covariance matrix: you can see that the variance of each coordinate (the top-left cell and the bottom-right cell) is equal to 1. By the way, this new covariance matrix is actually the correlation matrix!💥 The Pearson correlation coefficient between the two variables ($\boldsymbol{c1}$ and $\boldsymbol{c2}$) is 0.54220151.
 
 
 
@@ -687,7 +687,7 @@ Whitening is a bit more complicated but we now have all the tools that we need t
     2- Decorrelate the data
     3- Rescale the data
 
-Let's take again $\bs{C}$ and try to do these steps.
+Let's take again $\boldsymbol{C}$ and try to do these steps.
 
 #### 1. Zero-centering
 
@@ -758,7 +758,7 @@ def decorrelate(X):
 
 
 
-Let's try to decorrelate our zero-centered matrix $\bs{C}$ to see it in action:
+Let's try to decorrelate our zero-centered matrix $\boldsymbol{C}$ to see it in action:
 
 
 
@@ -1113,7 +1113,7 @@ This is not exactly 0 but it is small enough that we can consider that it worked
 
 Now we want to calculate the covariance matrix of the zero-centered data. Like we have seen above, we can calculate it with the `np.cov()` function from Numpy.
 
-There are two possible correlation matrices that we can calculate from the matrix $\bs{X}$: either the correlation between rows or between columns. In our case, each row of the matrix $\bs{X}$ is an image, so the rows of the matrix correspond to the observations and the columns of the matrix corresponds to the features (the images pixels). We want to calculate the correlation between the pixels because the goal of the whitening is to remove these correlations to force the algorithm to focus on higher-order relations.
+There are two possible correlation matrices that we can calculate from the matrix $\boldsymbol{X}$: either the correlation between rows or between columns. In our case, each row of the matrix $\boldsymbol{X}$ is an image, so the rows of the matrix correspond to the observations and the columns of the matrix corresponds to the features (the images pixels). We want to calculate the correlation between the pixels because the goal of the whitening is to remove these correlations to force the algorithm to focus on higher-order relations.
 
 To do so, we will tell this to Numpy with the parameter `rowvar=False` (see the [doc](https://docs.scipy.org/doc/numpy/reference/generated/numpy.cov.html)): it will use the columns as variables (or features) and the rows as observations.
 
@@ -1152,11 +1152,11 @@ In the paper, they used the following equation:
 
 <div>
 $
-\bs{X}_{ZCA} = \bs{U}.diag(\frac{1}{\sqrt{diag(\bs{S}) + \epsilon}}).\bs{U^\text{T}.X}
+\boldsymbol{X}_{ZCA} = \boldsymbol{U}.diag(\frac{1}{\sqrt{diag(\boldsymbol{S}) + \epsilon}}).\boldsymbol{U^\text{T}.X}
 $
 </div>
 
-with $\bs{U}$ the left singular vectors, and $\bs{S}$ the singular values of the covariance of the initial normalized dataset of images and $\bs{X}$ the normalized dataset. $\epsilon$ (*epsilon*) is an hyper-parameter called the whitening coefficient. $diag(a)$ corresponds to a matrix with the vector $a$ as a diagonal and 0 in all other cells.
+with $\boldsymbol{U}$ the left singular vectors, and $\boldsymbol{S}$ the singular values of the covariance of the initial normalized dataset of images and $\boldsymbol{X}$ the normalized dataset. $\epsilon$ (*epsilon*) is an hyper-parameter called the whitening coefficient. $diag(a)$ corresponds to a matrix with the vector $a$ as a diagonal and 0 in all other cells.
 
 We will try to implement this equation. Let's start by checking the dimensions of the SVD:
 
@@ -1176,7 +1176,7 @@ print U.shape, S.shape
 
 
 
-$\bs{S}$ is a vector containing 3072 elements (the singular values). $diag(\bs{S})$ will thus be of shape (3072, 3072) with $\bs{S}$ as the diagonal:
+$\boldsymbol{S}$ is a vector containing 3072 elements (the singular values). $diag(\boldsymbol{S})$ will thus be of shape (3072, 3072) with $\boldsymbol{S}$ as the diagonal:
 
 
 
@@ -1208,7 +1208,7 @@ shape: (3072, 3072)
 
 
 
-$diag(\frac{1}{\sqrt{diag(\bs{S}) + \epsilon}})$ is also of shape (3072, 3072) as well as $\bs{U}$ and $\bs{U^{\text{T}}}$. We have seen also that $\bs{X}$ has the shape (1000, 3072) and we need to transpose it to have (3072, 1000). The shape of $\bs{X}_{ZCA}$ is thus:
+$diag(\frac{1}{\sqrt{diag(\boldsymbol{S}) + \epsilon}})$ is also of shape (3072, 3072) as well as $\boldsymbol{U}$ and $\boldsymbol{U^{\text{T}}}$. We have seen also that $\boldsymbol{X}$ has the shape (1000, 3072) and we need to transpose it to have (3072, 1000). The shape of $\boldsymbol{X}_{ZCA}$ is thus:
 
 $$
 (3072, 3072) . (3072, 3072) . (1000, 3072)^{\text{T}} = (3072, 3072) . (3072, 1000) = (3072, 1000)
