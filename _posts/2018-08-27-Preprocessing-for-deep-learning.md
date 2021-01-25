@@ -673,7 +673,7 @@ Covariance matrix:
 
 
 
-Looks good! You can see that the scales are the same and that the dataset is zero-centered according to both axes. Now, have a look at the covariance matrix: you can see that the variance of each coordinate (the top-left cell and the bottom-right cell) is equal to 1. By the way, this new covariance matrix is actually the correlation matrix!💥 The Pearson correlation coefficient between the two variables ($\boldsymbol{c1}$ and $\boldsymbol{c2}$) is 0.54220151.
+Looks good! You can see that the scales are the same and that the dataset is zero-centered according to both axes. Now, have a look at the covariance matrix: you can see that the variance of each coordinate (the top-left cell and the bottom-right cell) is equal to 1. By the way, this new covariance matrix is actually the correlation matrix!💥 The Pearson correlation coefficient between the two variables ($\boldsymbol{c}_1$ and $\boldsymbol{c}_2$) is 0.54220151.
 
 
 
@@ -681,7 +681,7 @@ Looks good! You can see that the scales are the same and that the dataset is zer
 
 Whitening or sphering data means that we want to transform it in a way to have a covariance matrix that is the identity matrix (1 in the diagonal and 0 for the other cells; [more details on the identity matrix](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/)). It is called whitening in reference to white noise.
 
-Whitening is a bit more complicated but we now have all the tools that we need to do it. It involves the following steps:
+We now have all the tools that we need to do it. It involves the following steps:
 
     1- Zero-center the data
     2- Decorrelate the data
@@ -747,8 +747,8 @@ Let's pack that into a function:
 
 ```python
 def decorrelate(X):
-    newX = center(X)
-    cov = X.T.dot(X)/float(X.shape[0])
+    XCentered = center(X)
+    cov = XCentered.T.dot(XCentered)/float(XCentered.shape[0])
     # Calculate the eigenvalues and eigenvectors of the covariance matrix
     eigVals, eigVecs = np.linalg.eig(cov)
     # Apply the eigenvectors to X
@@ -769,7 +769,7 @@ plotDataAndCov(C)
 plt.show()
 plt.close()
 
-CDecorrelated = decorrelate(CCentered)
+CDecorrelated = decorrelate(C)
 plotDataAndCov(CDecorrelated)
 plt.xlim(-5,5)
 plt.ylim(-5,5)
@@ -822,8 +822,8 @@ The next step is to scale the uncorrelated matrix in order to obtain a covarianc
 
 ```python
 def whiten(X):
-    newX = center(X)
-    cov = X.T.dot(X)/float(X.shape[0])
+    XCentered = center(X)
+    cov = XCentered.T.dot(XCentered)/float(XCentered.shape[0])
     # Calculate the eigenvalues and eigenvectors of the covariance matrix
     eigVals, eigVecs = np.linalg.eig(cov)
     # Apply the eigenvectors to X
@@ -842,7 +842,7 @@ def whiten(X):
 
 
 ```python
-CWhitened = whiten(CCentered)
+CWhitened = whiten(C)
 
 plotDataAndCov(CWhitened)
 plt.xlim(-5,5)
