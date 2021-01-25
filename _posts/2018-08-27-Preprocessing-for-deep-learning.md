@@ -16,7 +16,7 @@ excerpt-image: '<img src="../../assets/images/Preprocessing-for-deep-learning/ro
 essential-math: true
 ---
 
-*Last update: Jan. 2020*
+*Last update: Jan. 2021*
 
 A notebook version of this post can be found [here](https://github.com/hadrienj/Preprocessing-for-deep-learning) on Github.
 
