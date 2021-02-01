@@ -8,7 +8,7 @@ author: hadrienj
 date: 2021-02-01
 excerpt: ""
 excerpt-image: <img src="../../assets/images/ch10_change_of_basis/ch08_basis_vectors.png" width=200><em>The basis vectors in the Cartesian plane.</em>
-twitterImg: "Essential-Math-for-Data-Science-Update/output_ch06_139_0"
+twitterImg: "ch10_change_of_basis/ch08_basis_vectors"
 title: "Essential Math for Data Science: Basis and Change of Basis"
 crawlertitle: ""
 essential-math-sample: true
