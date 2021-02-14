@@ -41,7 +41,6 @@ x = np.linspace(-2, 2, 100)
 y = 2 * x + 1
 plt.plot(x, y)
 # [...] Add axes and styles
-
 ```
 
 ![Figure 1: Plot of the equation
@@ -105,7 +104,6 @@ y1 = -0.5 * x + 3
 plt.plot(x, y)
 plt.plot(x, y1)
 # [...]
-
 ```
 
 ![Figure 2: Representation of the two equations from our
@@ -343,7 +341,6 @@ y1 = 2 * x + 3
 plt.plot(x, y)
 plt.plot(x, y1)
 # [...] Add axes, styles...
-
 ```
 
 ![Figure 5: Parallel equation
@@ -423,7 +420,6 @@ y1 = (4 * x + 2) / 2
 plt.plot(x, y)
 plt.plot(x, y1, alpha=0.3)
 # [...] Add axes, styles...
-
 ```
 
 ![Figure 7: The equation lines are

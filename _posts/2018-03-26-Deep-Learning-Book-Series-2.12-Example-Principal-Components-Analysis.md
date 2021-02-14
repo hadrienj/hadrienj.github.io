@@ -15,7 +15,7 @@ excerpt-image: '<img src="../../assets/images/2.12/principal-component-analysis-
 essential-math: true
 ---
 
-*Last update: Jan. 2020*
+*Last update: Feb. 2021*
 
 # Introduction
 
@@ -45,7 +45,7 @@ The problem can be expressed as finding a function that converts a set of data p
 <img src="../../assets/images/2.12/principal-components-analysis-PCA-change-coordinates.png" width="80%" alt="Principal components analysis (PCA)" title="Principal components analysis (PCA)">
 <em>Principal components analysis as a change of coordinate system</em>
 
-The first step is to understand the shape of the data. $x^{(i)}$ is one data point containing $n$ dimensions. Let's have $m$ data points organized as column vectors (one column per point):
+The first step is to understand the shape of the data. $x^{(i)}$ is one data point containing $n$ dimensions. Let's have $m$ data points:
 
 <div>
 $
@@ -76,24 +76,24 @@ We can also write:
 $$
 \bs{x}=
 \begin{bmatrix}
-    x_1\\\\
-    x_2\\\\
+    \bs{x_1}\\\\
+    \bs{x_2}\\\\
     \cdots\\\\
-    x_n
+    \bs{x_n}
 \end{bmatrix}
 $$
 </div>
 
-$c$ will have the shape:
+where $\bs{x_1} \cdots \bs{x_n}$ are vectors containing each the $m$ observations. In addition, $c$ will have the shape:
 
 <div>
 $$
 \bs{c}=
 \begin{bmatrix}
-    c_1\\\\
-    c_2\\\\
+    \bs{c_1}\\\\
+    \bs{c_2}\\\\
     \cdots\\\\
-    c_l
+    \bs{c_l}
 \end{bmatrix}
 $$
 </div>
@@ -125,12 +125,14 @@ The columns of $\bs{D}$ must have unit norm (see [2.6](https://hadrienj.github.i
 
 ## Finding the encoding function
 
-Important: For now we will consider only **one data point**. Thus we will have the following dimensions for these matrices (note that $\bs{x}$ and $\bs{c}$ are column vectors):
+Important: For now we will consider only **one data point**. Thus we will have the following dimensions for these matrices:
 
 <img src="../../assets/images/2.12/principal-components-analysis-PCA-decoding-function.png" width="250" alt="Principal components analysis (PCA) - the decoding function" title="The decoding function">
 <em>The decoding function</em>
 
-We want a decoding function which is a simple matrix multiplication. For that reason, we have $g(\bs{c})=\bs{Dc}$. We will then find the encoding function from the decoding function. We want to minimize the error between the decoded data point and the actual data point. With our previous notation, this means reducing the distance between $\bs{x}$ and $g(\bs{c})$. As an indicator of this distance, we will use the squared $L^2$ norm (see [2.5](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.5-Norms/)):
+We want a decoding function which is a simple matrix multiplication. For that reason, we have $g(\bs{c})=\bs{Dc}$. We will then find the encoding function from the decoding function.
+
+We want to minimize the error between the decoded data point and the actual data point. With our previous notation, this means reducing the distance between $\bs{x}$ and $g(\bs{c})$. As an indicator of this distance, we will use the squared $L^2$ norm (see [2.5](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.5-Norms/)):
 
 <div>
 $$
@@ -138,7 +140,7 @@ $$
 $$
 </div>
 
-This is what we want to minimize. Let's call $\bs{c}^*$ the optimal $\bs{c}$. Mathematically it can be written:
+This is what we want to minimize. Let's call $\bs{c}^*$ (pronounced "c-star") the optimal $\bs{c}$. Mathematically it can be written:
 
 <div>
 $$
@@ -148,7 +150,7 @@ $$
 
 This means that we want to find the values of the vector $\bs{c}$ such that $\norm{\bs{x} - g(\bs{c})}_2^2$ is as small as possible.
 
-If you have a look back to [2.5](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.5-Norms/) you can see that the squared $L^2$ norm can be expressed as:
+If you have a look back to [2.5](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.5-Norms/) you can see that the squared $L^2$ norm of a vector $\bs{y}$ can be expressed as:
 
 <div>
 $$
@@ -235,7 +237,7 @@ $$
 
 ### Minimizing the function
 
-So far so good! Now the goal is to find the minimum of the function $- 2\bs{x}^\text{T}\bs{Dc} + \bs{c}^\text{T}\bs{c}$. One widely used way of doing that is to use the **gradient descent** algorithm. It is not the focus of this chapter but we will say a word about it (see [4.3](http://www.deeplearningbook.org/contents/numerical.html) of the Deep Learning Book for more details). The main idea is that the sign of the derivative of the function at a specific value of $x$ tells you if you need to increase or decrease $x$ to reach the minimum. When the slope is near $0$, the minimum should have been reached.
+So far so good! Now the goal is to find the minimum of the function $- 2\bs{x}^\text{T}\bs{Dc} + \bs{c}^\text{T}\bs{c}$. One widely used way of doing that is to use the **gradient descent** algorithm. It is not the focus of this chapter but let's say a word about it (see [4.3](http://www.deeplearningbook.org/contents/numerical.html) of the Deep Learning Book for more details). The main idea is that the value derivative of the function at a specific value of $x$ tells you if you need to increase or decrease $x$ to reach the minimum. When the slope is near $0$, the minimum should have been reached.
 
 <img src="../../assets/images/2.12/gradient-descent.png" width="400" alt="Mechanism of the gradient descent algorithm" title="Mechanism of the gradient descent algorithm">
 <em>Gradient descent</em>
@@ -530,7 +532,7 @@ $
 \begin{aligned}
 \bs{d}^* &= \argmin{d} -2\Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})} + \Tr{(\bs{X}^\text{T}\bs{Xd}\bs{d}^\text{T})}\textrm{ subject to }\bs{d}^\text{T}\bs{d}=1 \\\
 &= \argmin{d} -\Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}\textrm{ subject to }\bs{d}^\text{T}\bs{d}=1 \\\
-&=\argmax{d} \Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}\textrm{ subject to }\bs{d}^\text{T}\bs{d}=1
+&= \argmax{d} \Tr{(\bs{X}^\text{T}\bs{Xdd}^\text{T})}\textrm{ subject to }\bs{d}^\text{T}\bs{d}=1
 \end{aligned}
 $
 </div>
