@@ -34,7 +34,7 @@ basis vectors are the eigenvectors.
 Eigenvectors and Eigenvalues
 ----------------------------
 
-As you can see in Chapter 7 of <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a> you can consider matrices as linear
+As you can see in Chapter 7 of <a href="https://www.essentialmathfordatascience.com/?utm_source=hadrienj&utm_medium=blog&utm_campaign=hadrienj_2021-02-01-Essential-Math-for-Data-Science-Eigendecomposition.md">Essential Math for Data Science</a> you can consider matrices as linear
 transformations. This means that if you take any vector $\vu$ and apply
 the matrix $\mA$ to it, you obtain a transformed vector $\vv$.
 
@@ -245,7 +245,7 @@ purposes: high dimensional data is hard to visualize and it can be
 useful to decrease the number of dimensions to plot your data.
 
 In this hands-on project, you'll use various concepts that you can learn
-in the book <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>, as change of basis (Sections 7.5 and 9.2,
+in the book <a href="https://www.essentialmathfordatascience.com/?utm_source=hadrienj&utm_medium=blog&utm_campaign=hadrienj_2021-02-01-Essential-Math-for-Data-Science-Eigendecomposition.md">Essential Math for Data Science</a>, as change of basis (Sections 7.5 and 9.2,
 some samples [here](https://hadrienj.github.io/posts/Essential-Math-for-Data-Science-Change-of-Basis/)), eigendecomposition (Chapter 9) or
 covariance matrices (Section 2.1.3) to understand how PCA is working.
 
@@ -253,7 +253,7 @@ In the first part, you'll learn about the relationship between
 projections, explained variance and error minimization, first with a bit
 of theory, and then by coding a PCA on the beer dataset (consumption of
 beer as a function of temperature). Note that you'll also find another
-example in <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>
+example in <a href="https://www.essentialmathfordatascience.com/?utm_source=hadrienj&utm_medium=blog&utm_campaign=hadrienj_2021-02-01-Essential-Math-for-Data-Science-Eigendecomposition.md">Essential Math for Data Science</a>
 where you'll use Sklearn
 to use PCA on audio data to visualize audio samples according to their
 category, and then to compress these audio samples.
@@ -342,7 +342,7 @@ between features close to zero (as for instance in Figure
 transformed dataset has a diagonal covariance matrix: the covariance
 between each pair of principal components is equal to zero.
 
-You can see in Chapter 9 of <a href="https://www.essentialmathfordatascience.com">Essential Math for Data Science</a>, that you can use eigendecomposition to diagonalize
+You can see in Chapter 9 of <a href="https://www.essentialmathfordatascience.com/?utm_source=hadrienj&utm_medium=blog&utm_campaign=hadrienj_2021-02-01-Essential-Math-for-Data-Science-Eigendecomposition.md">Essential Math for Data Science</a>, that you can use eigendecomposition to diagonalize
 a matrix (make the matrix diagonal). Thus, you can calculate the eigenvectors of the covariance
 matrix of the dataset. They will give you the directions of the new
 basis in which the covariance matrix is diagonal.
