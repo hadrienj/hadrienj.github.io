@@ -5,12 +5,12 @@ mathjax: true
 categories: posts
 tags: ['essential-math', 'python', 'numpy']
 author: hadrienj
-date: 2021-02-18
+date: 2021-02-23
 excerpt: ""
 excerpt-image: <img src="../../assets/images/ch11_eigendecomposition/ch10_pca_variance.png" width=300><em>The variance of the data in the direction of the vector $\vu$ (red) is larger than in the direction of the vector $\vv$ (green).</em>
 twitterImg: "ch11_eigendecomposition/ch10_pca_variance"
 title: "Essential Math for Data Science: Eigenvectors and application to PCA"
-crawlertitle: ""
+crawlertitle: "Essential Math for Data Science: Eigenvectors and application to PCA"
 essential-math-sample: true
 ---
 
