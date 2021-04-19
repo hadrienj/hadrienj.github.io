@@ -9,7 +9,7 @@ date: 2020-12-28
 excerpt: ""
 excerpt-image: <img src="../../assets/images/ch08_linear_equations/ch08_linear_equations_15_0.png" width=200><em>Each point corresponds to the combination of x and y values.</em>
 twitterImg: "ch08_linear_equations/ch08_linear_equations_40_0"
-title: "Essential Math for Data Science: Linear Transformation with Matrices."
+title: "Essential Math for Data Science: Linear Transformation with Matrices"
 crawlertitle: ""
 essential-math-sample: true
 ---
