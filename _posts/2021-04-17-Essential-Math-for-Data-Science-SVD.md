@@ -267,7 +267,7 @@ A = np.array([
 ])
 ```
 
-To visualize the effect of $\mA$, you'll use again the unit circle in two dimensions and calculate the output of the transformation for some points on this circle. Each point is considered as an input vector and you can observe the effect of $\mA$ on each of these vectors.
+To visualize the effect of $\mA$, you'll use again the unit circle in two dimensions and calculate the output of the transformation for some points on this circle. Each point is considered as an input vector and you can observe the effect of $\mA$ on each of these vectors. The function `matrix_3_by_2_effect()` can be found [here](https://gist.github.com/hadrienj/a70c476826cb9ea2489a773d6e84bc6c).
 
 ```python
 ax = matrix_3_by_2_effect(A)
