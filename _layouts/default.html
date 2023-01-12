@@ -4,22 +4,27 @@ layout: compress
 <!DOCTYPE html>
 <html lang="{{ site.lang }}">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
-    <div id="shadow"></div>
+<body>
+  <div id="shadow"></div>
 
-      {% include header.html %}
+  {% include header.html %}
 
-      {% unless page.exclude %}
-        {% include aside.html %}
-      {% endunless %}
+  {% if page.essential-math %}
+  {% include essential-math-ribbon.html %}
+  {% endif %}
 
-    <main class="content-wrapper">
-      {{ content }}
-    </main>
+  {% unless page.exclude %}
+  {% include aside.html %}
+  {% endunless %}
 
-    {% include footer.html %}
+  <main class="content-wrapper">
+    {{ content }}
+  </main>
 
-  </body>
+  {% include footer.html %}
+
+</body>
+
 </html>

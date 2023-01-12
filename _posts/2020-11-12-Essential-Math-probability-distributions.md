@@ -12,6 +12,7 @@ twitterImg: "ch03_probability_distributions/ch03_probability_distr"
 title: "Essential Math for Data Science: Probability Density and Probability Mass Functions"
 crawlertitle: ""
 essential-math-sample: true
+essential-math: true
 ---
 
 In the chapter 02 of <a href="https://bit.ly/3n8G25F">Essential Math for Data Science</a>, you can learn about basic descriptive statistics and probability theory. We'll cover probability mass and probability density function in this sample. You'll see how to understand and represent these distribution functions and their link with histograms.

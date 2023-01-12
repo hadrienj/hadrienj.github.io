@@ -12,6 +12,7 @@ twitterImg: "ch06_scalars_and_vectors/ch06_dot_product_vectors_geo"
 title: "Essential Math for Data Science: Scalars and Vectors"
 crawlertitle: ""
 essential-math-sample: true
+essential-math: true
 ---
 
 Machines only understand numbers. For instance, if you want to create a

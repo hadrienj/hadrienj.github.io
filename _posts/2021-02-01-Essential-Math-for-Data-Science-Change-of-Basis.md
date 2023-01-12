@@ -12,6 +12,7 @@ twitterImg: "ch10_change_of_basis/ch08_basis_vectors"
 title: "Essential Math for Data Science: Basis and Change of Basis"
 crawlertitle: ""
 essential-math-sample: true
+essential-math: true
 ---
 
 

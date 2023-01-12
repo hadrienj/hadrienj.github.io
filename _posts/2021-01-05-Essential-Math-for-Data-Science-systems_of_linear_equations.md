@@ -12,6 +12,7 @@ twitterImg: "ch09_system_of_linear_equations/ch09_solutions_systems_equations"
 title: "Essential Math for Data Science: Introduction to Systems of Linear Equations"
 crawlertitle: ""
 essential-math-sample: true
+essential-math: true
 ---
 
 

@@ -12,6 +12,7 @@ twitterImg: "ch02_integrals/ch02_integrals_area_under_the_curve"
 title: "Essential Math for Data Science: Integrals And Area Under The Curve"
 crawlertitle: ""
 essential-math-sample: true
+essential-math: true
 ---
 
 Calculus is a branch of mathematics that gives tools to study the rate of

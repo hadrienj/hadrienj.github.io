@@ -12,6 +12,7 @@ twitterImg: "ch07_matrices/ch07_matrix_vector_dot_product"
 title: "Essential Math for Data Science - Introduction to Matrices and the Matrix Product"
 crawlertitle: ""
 essential-math-sample: true
+essential-math: true
 ---
 
 

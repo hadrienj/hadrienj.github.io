@@ -12,6 +12,7 @@ twitterImg: "ch11_eigendecomposition/ch10_pca_variance"
 title: "Essential Math for Data Science: Eigenvectors and application to PCA"
 crawlertitle: "Essential Math for Data Science: Eigenvectors and application to PCA"
 essential-math-sample: true
+essential-math: true
 ---
 
 

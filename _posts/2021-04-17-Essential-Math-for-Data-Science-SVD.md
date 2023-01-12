@@ -12,6 +12,7 @@ twitterImg: "ch12_svd/ch12_svd_38_0"
 title: "Essential Math for Data Science: Visual Introduction to Singular Value Decomposition (SVD)"
 crawlertitle: "Essential Math for Data Science: Visual Introduction to Singular Value Decomposition (SVD)"
 essential-math-sample: true
+essential-math: true
 ---
 
 In this article, you'll learn about Singular value decomposition (SVD), which is a major topic of linear algebra, data science, and machine learning. It is for instance used to calculate the Principal Component Analysis (PCA). You'll need some understanding of linear algebra basics (feel free to check the previous article and the book <a href="https://bit.ly/3alObze">Essential Math for Data Science</a>.

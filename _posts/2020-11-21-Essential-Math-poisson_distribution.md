@@ -12,6 +12,7 @@ twitterImg: "ch04_poisson_distribution/ch04_poisson_distribution"
 title: "Essential Math for Data Science: The Poisson Distribution"
 crawlertitle: "Introduction to the Poisson Distribution"
 essential-math-sample: true
+essential-math: true
 ---
 
 

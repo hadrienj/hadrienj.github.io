@@ -12,6 +12,7 @@ twitterImg: "ch05_information_theory/ch05_cross_entropy"
 title: "Essential Math for Data Science: Information Theory"
 crawlertitle: "Essential Math for Data Science: Information Theory"
 essential-math-sample: true
+essential-math: true
 ---
 
 

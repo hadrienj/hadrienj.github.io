@@ -12,6 +12,7 @@ twitterImg: "ch08_linear_equations/ch08_linear_equations_40_0"
 title: "Essential Math for Data Science: Linear Transformation with Matrices"
 crawlertitle: ""
 essential-math-sample: true
+essential-math: true
 ---
 
 As you can see in <a href="https://bit.ly/3puRUQ5">Essential Math for Data Science</a>, being able to manipulate vectors and matrices

@@ -141,13 +141,81 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Cookies
+function createCookie(name, value, days) {
+  if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      var expires = "; expires=" + date.toGMTString();
+  }
+  else var expires = "";               
+  console.log("create")
+  document.cookie = name + "=" + value + expires + "; path=/";
+}
 
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+function eraseCookie(name) {
+  createCookie(name, "", -1);
+}
+
+function collapseEssentialMathRibbon() {
+  createCookie("essentialMathAlreadySeen", 1, days=10);
+  $('.card-section-ribbon').css({
+    'transform': 'none',
+    'top': 'inherit',
+    'bottom': '0',
+    'left': '0',
+    'right': '',
+    'margin': '0',
+    'justify-content': 'center',
+    'width': '100%',
+    'padding': '0.5em 0 0 0',
+    'border-radius': '0'
+  });
+  $('.card-section-ribbon-img').css({'flex': '0 0 5%', 'text-align': 'center', 'display': 'none'});
+  $('.essential-math-text').css({'flex': '0 0 30%', 'display': 'none'});
+  $('.button-get-the-book').css({'font-size': '1rem'}).html("<b>GET THE BOOK</b><br>Essential Math for Data Science");
+
+  $('.offer').css({
+      'display': 'none'
+  });
+  $('.get-book').css({
+      'display': 'none'
+  });
+  $('.more-math').css({
+      'display': 'none'
+  });
+  
+};
 
 $(document).ready(function(){
   $( ".collapsible-header" ).click(function() {
       $(".more",this).toggle()
       $(".less", this).toggle()
   });
+
+  let essentialMathAlreadySeen = readCookie("essentialMathAlreadySeen");
+  console.log("essentialMathAlreadySeen", essentialMathAlreadySeen)
+  if (essentialMathAlreadySeen === '1') {
+    collapseEssentialMathRibbon();
+  }
+  // setTimeout(function(){
+    $('.card-section-ribbon').addClass('show-inline-flex');
+  // }, 2000);
+  
+
+  $('body').click(collapseEssentialMathRibbon);
+
 });
 
 
