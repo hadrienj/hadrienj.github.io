@@ -249,7 +249,7 @@ $(document).ready(function(){
   }
   $('.card-section-ribbon').addClass('show-inline-flex');
 
-  $('body').click(collapseEssentialMathRibbon);
+  $('.content-wrapper,.sidebar').click(collapseEssentialMathRibbon);
 
 });
 
