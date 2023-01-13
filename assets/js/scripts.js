@@ -192,11 +192,44 @@ function collapseEssentialMathRibbon() {
   $('.get-book').css({
       'display': 'none'
   });
-  $('.more-math').css({
-      'display': 'none'
+  $('.content-wrapper,.sidebar').css({
+      'filter': 'blur(0px)'
   });
-  
+  $('.more-math').css({
+    'display': 'none'
+  });
 };
+
+// function expandEssentialMathRibbon() {
+//   $('.card-section-ribbon').css({
+//     'transform': 'translate(-50%, -50%)',
+//     'top': '50%',
+//     // 'bottom': '0',
+//     'left': '50%',
+//     'right': '-20%',
+//     // 'margin': '0',
+//     // 'justify-content': 'center',
+//     // 'width': '100%',
+//     // 'padding': '0.5em 0 0 0',
+//     'border-radius': '13px'
+//   });
+//   $('.card-section-ribbon-img').css({'flex': '0 0 5%', 'text-align': 'center', 'display': 'none'});
+//   $('.essential-math-text').css({'flex': '0 0 30%', 'display': 'none'});
+//   $('.button-get-the-book').css({'font-size': '1rem'}).html("<b>GET THE BOOK</b><br>Essential Math for Data Science");
+
+//   $('.offer').css({
+//       'display': 'none'
+//   });
+//   $('.get-book').css({
+//       'display': 'none'
+//   });
+//   $('.content-wrapper,.sidebar').css({
+//       'filter': 'blur(0px)'
+//   });
+//   $('.more-math').css({
+//     'display': 'none'
+//   });
+// };
 
 $(document).ready(function(){
   $( ".collapsible-header" ).click(function() {
@@ -208,11 +241,13 @@ $(document).ready(function(){
   console.log("essentialMathAlreadySeen", essentialMathAlreadySeen)
   if (essentialMathAlreadySeen === '1') {
     collapseEssentialMathRibbon();
+  } else {
+    $('.content-wrapper,.sidebar').css({
+      'filter': 'blur(5px)'
+    })
+
   }
-  // setTimeout(function(){
-    $('.card-section-ribbon').addClass('show-inline-flex');
-  // }, 2000);
-  
+  $('.card-section-ribbon').addClass('show-inline-flex');
 
   $('body').click(collapseEssentialMathRibbon);
 
