@@ -5,17 +5,39 @@
 /***** Medium to Big screen *****/
 
 @media screen and (min-width: $md-break-point) {
-  body { font-size: 17px; }
-  h1 { font-size: 2em; }
-  h2 { font-size: 1.8em; }
-  h3 { font-size: 1.6em; }
-  h4 { font-size: 1.3em; }
-  h5 { font-size: 1em; }
-  h6 { font-size: .8em; }
+  body {
+    font-size: 17px;
+  }
 
-  main { padding-top: 0; }
+  h1 {
+    font-size: 2em;
+  }
 
-  #menu-checkbox:checked + .nav-main {
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.6em;
+  }
+
+  h4 {
+    font-size: 1.3em;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
+  h6 {
+    font-size: .8em;
+  }
+
+  main {
+    padding-top: 0;
+  }
+
+  #menu-checkbox:checked+.nav-main {
     -webkit-flex-flow: row nowrap;
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
@@ -34,9 +56,13 @@
     display: block;
   }
 
-  .sidebar { display: block; }
+  .sidebar {
+    display: block;
+  }
 
-  .alingleft, .alignright, .aligncenter {
+  .alingleft,
+  .alignright,
+  .aligncenter {
     display: inline-block;
   }
 
@@ -50,7 +76,9 @@
     margin: .5em 1em .25em 0;
   }
 
-  .aligncenter { margin: 1em auto; }
+  .aligncenter {
+    margin: 1em auto;
+  }
 
   .elements-wrapper {
     -webkit-flex-flow: row wrap;
@@ -63,11 +91,14 @@
 
   }
 
-  .date { display: block;}
+  .date {
+    display: block;
+  }
 
   .work {
     display: flex;
     flex-flow: row wrap;
+
     &-item {
       width: 50%;
       min-height: 300px;
@@ -76,8 +107,13 @@
         border-right: 1px solid #ddd;
       }
 
-      &:first-child { border-top-width: 0; }
-      &:nth-child(2) { border-top-width: 0; }
+      &:first-child {
+        border-top-width: 0;
+      }
+
+      &:nth-child(2) {
+        border-top-width: 0;
+      }
     }
 
     &-item-small {
@@ -90,6 +126,7 @@
   .skills-col {
     flex: 0 0 20%;
   }
+
   .about-h2 {
     margin-top: 3em;
   }
@@ -105,7 +142,9 @@
   .text-popup {
     font-size: 1em;
   }
-  #cover_col-popup-img, #close-popup-img  {
+
+  #cover_col-popup-img,
+  #close-popup-img {
     width: 70%
   }
 
@@ -127,6 +166,7 @@
   .nav-main {
     padding: 0;
     text-align: left;
+
     a {
       font-size: 13px;
       display: block;
@@ -198,7 +238,9 @@
   .text-popup {
     font-size: 1em;
   }
-  #cover_col-popup-img, #close-popup-img  {
+
+  #cover_col-popup-img,
+  #close-popup-img {
     width: 60%
   }
 
@@ -217,7 +259,8 @@
     right: 15em;
   }*/
 
-  #cover_col-popup-img, #close-popup-img  {
+  #cover_col-popup-img,
+  #close-popup-img {
     width: 40%
   }
 
@@ -230,32 +273,42 @@
   .MathJax {
     font-size: 60% !important;
   }
+
   .pquote {
     width: 80%;
     font-size: 1em;
   }
+
   body {
     text-align: left;
   }
+
   .grid-container {
     display: grid;
     grid-template-columns: 33% 33% 33%;
   }
-   .grid-item {
+
+  .grid-item {
     margin: 12px;
   }
+
   .card-post {
     height: 130px;
     width: 130px;
     margin: 0.5em 0.5em 0.5em 0;
   }
-  .card-post > div > p > img, .card-post-text-description {
-    display: none;
-  }
+
+  .card-post>div>p>img,
   .card-post-text-description {
     display: none;
   }
-  .card-post-text-title, .card-title {
+
+  .card-post-text-description {
+    display: none;
+  }
+
+  .card-post-text-title,
+  .card-title {
     font-size: 0.8em;
     overflow-wrap: break-word;
   }
@@ -263,16 +316,20 @@
   .avatar {
     margin: 0;
   }
+
   .avatar-img {
     margin: 1em 1em 0 0;
   }
+
   .avatar-txt {
     flex: 0 0 60%;
     margin-left: 5%;
   }
+
   .skills-col {
     flex: 0 0 50%;
   }
+
   .about-h2 {
     margin-top: 3em;
   }
@@ -288,6 +345,7 @@
     font-size: 10pt;
     margin-top: 1em;
   }
+
   .subscribe-img {
     display: none;
   }
@@ -299,8 +357,27 @@
   .text-popup {
     font-size: 0.9em;
   }
-  #cover_col-popup-img, #close-popup-img  {
+
+  #cover_col-popup-img,
+  #close-popup-img {
     width: 90%
+  }
+
+  .card-section-ribbon {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .card-section-ribbon-offer {
+    flex: auto !important;
+  }
+
+  .card-section-ribbon-img {
+    display: none !important;
+  }
+
+  .more-math {
+    display: none;
   }
 
 }
@@ -318,6 +395,7 @@
   .toggle-button {
     display: none;
   }
+
   .nav-main a:not(.blog-logo) {
     display: block;
   }
@@ -326,10 +404,12 @@
     display: inline-block;
     padding: 0.5em;
   }
+
   .card-section-img {
     width: 70%;
     margin: auto;
   }
+
   .card-section-text-description {
     text-align: justify;
   }
@@ -337,11 +417,26 @@
   .collapse-out {
     display: block !important;
   }
+
   .collapse-in {
     width: 100% !important;
   }
+
   .subsection-toc {
     text-indent: 0;
+  }
+
+  .card-section-ribbon {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .card-section-ribbon-offer {
+    flex: auto !important;
+  }
+
+  .more-math {
+    display: none;
   }
 
 }
@@ -354,13 +449,16 @@
   .MathJax {
     font-size: 40% !important;
   }
+
   .grid-container {
     display: grid;
     grid-template-columns: 50% 50%;
   }
+
   .grid-item {
     font-size: 12px;
   }
+
   .card-post {
     padding: 0;
   }
@@ -372,6 +470,7 @@
   .skills-col {
     flex: 0 0 100%;
   }
+
   .about-h2 {
     margin-top: 3em;
   }
@@ -397,6 +496,7 @@
     font-size: 10pt;
     margin-top: 1em;
   }
+
   .subscribe-img {
     display: none;
   }
@@ -408,24 +508,47 @@
   .essential-math-img {
     display: none;
   }
+
   .essential-math-text {
     flex: 0 0 100% !important;
     padding: 0;
   }
+
   .text-popup {
     font-size: 0.7em;
   }
-  #cover_col-popup-img, #close-popup-img  {
+
+  #cover_col-popup-img,
+  #close-popup-img {
     width: 100%
   }
 
   .collapse-out {
     display: block !important;
   }
+
   .collapse-in {
     width: 100% !important;
   }
+
   .subsection-toc {
     text-indent: 0;
+  }
+
+  .card-section-ribbon {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .card-section-ribbon-offer {
+    flex: auto !important;
+  }
+
+  .card-section-ribbon-img {
+    display: none !important;
+  }
+
+  .more-math {
+    display: none;
   }
 }
