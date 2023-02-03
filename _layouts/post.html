@@ -7,16 +7,16 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
 
   <p class="post-meta">
-    <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d-%m-%Y" }}</time>
+    <time datetime="{{ page.date | date: " %Y-%m-%d" }}">{{ page.date | date: "%d-%m-%Y" }}</time>
 
     {% if page.author %}
-      &nbsp;|&nbsp;
-      <span>{{ page.author }}</span>
-      {% include twitter_follow.html %}
+    &nbsp;|&nbsp;
+    <span>{{ page.author }}</span>
+    {% include twitter_follow.html %}
     {% endif %}
 
     {% if page.tags %} | {% for tag in page.tags %}
-      <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+    <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
     {% endfor %}
     {% endif %}
 
@@ -25,32 +25,29 @@ layout: default
   <div class="post-content">
 
     {% if page.jupyter %}
-      {% include jupyter.html %}
+    {% include jupyter.html %}
     {% endif %}
 
 
 
     {% if page.essential-math-sample %}
-      {% include essential-math-sample.html %}
+    {% include essential-math-sample.html %}
     {% endif %}
 
 
     {{ content }}
 
     {% if page.deep-learning-book-toc %}
-      {% include deep-learning-book-toc.html %}
+    {% include deep-learning-book-toc.html %}
     {% endif %}
 
     {% if page.comments %}
-      {% include disqus.html %}
+    {% include disqus.html %}
     {% endif %}
 
-    {% if page.essential-math %}
-      {% include essential-math-ribbon.html %}
-    {% endif %}
 
     {% if page.essential-math-sample %}
-      {% include essential-math-sample.html %}
+    {% include essential-math-sample.html %}
     {% endif %}
 
     {% include share.html %}
@@ -58,17 +55,17 @@ layout: default
 
     <div class="post-links">
       {% if page.previous.url %}
-        <a class="link-to-post" href="{{ page.previous.url | relative_url}}">
-          <span class="link-to-post__prev">&#10016; &nbsp;Previous</span>
-          <span class="link-to-post__title">{{ page.previous.title }}</span>
-        </a>
+      <a class="link-to-post" href="{{ page.previous.url | relative_url}}">
+        <span class="link-to-post__prev">&#10016; &nbsp;Previous</span>
+        <span class="link-to-post__title">{{ page.previous.title }}</span>
+      </a>
       {% endif %}
 
       {% if page.next.url %}
-        <a class="link-to-post" href="{{ page.next.url | relative_url}}">
-          <span class="link-to-post__next">&#10016; &nbsp;Next</span>
-          <span class="link-to-post__title">{{ page.next.title }}</span>
-        </a>
+      <a class="link-to-post" href="{{ page.next.url | relative_url}}">
+        <span class="link-to-post__next">&#10016; &nbsp;Next</span>
+        <span class="link-to-post__title">{{ page.next.title }}</span>
+      </a>
       {% endif %}
     </div>
 
