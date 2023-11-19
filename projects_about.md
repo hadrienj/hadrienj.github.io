@@ -18,7 +18,7 @@ active: true
       <div class="avatar-txt">
         <!-- <b>Available for consulting in data science and machine learning and for technical training.</b><br> -->
         <ul>
-        <li>Currently working as a Machine Learning Scientist at My Medical Assistant
+        <li>Currently working as a Machine Learning Scientist at iAudiogram (My Medical Assistant SAS)
         </li>
         <li>Previously released the book: <a href="https://www.essentialmathfordatascience.com/">"Essential Math for Data Science" <img style="display: inline-block; margin: 0; padding: 0;" src="../../assets/images/icons/essential_math.png" width="20" alt="essential math icon" title="Essential Math for Data Science"></a>
         </li>
