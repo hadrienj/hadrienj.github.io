@@ -27,33 +27,4 @@ layout: compress
 
 </body>
 
-  <script>
-    console.log("Script is loaded");
-
-    function updateOfferDetails() {
-      const currentDate = new Date();
-      const currentMonth = currentDate.toLocaleString("default", { month: "short" }).toUpperCase(); // e.g., "NOV"
-      const currentYear = currentDate.getFullYear().toString().slice(-2); // last two digits of the year
-      const offerDate = `29 ${currentMonth} ${currentYear}`;
-      const offerCode = `${currentMonth}${currentYear}`; // e.g., "NOV24"
-      console.log("Updating offer:", offerCode, offerDate);
-
-      // Set the date and offer code in the HTML
-      document.getElementById("offer-date").innerText = offerDate;
-      document.getElementById("offer-code").innerText = offerCode;
-    }
-
-    // Try DOMContentLoaded first
-    document.addEventListener("DOMContentLoaded", function() {
-      console.log("DOMContentLoaded event triggered");
-      updateOfferDetails();
-    });
-
-    // Fallback to window.onload if DOMContentLoaded doesn't work
-    window.onload = function() {
-      console.log("window.onload event triggered");
-      updateOfferDetails();
-    };
-  </script>
-
 </html>
