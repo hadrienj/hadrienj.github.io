@@ -11,7 +11,7 @@
     </div>
 
     <!--           <div style='text-align: center'>
-            Use the offer code <span style="color: #F96CFA; font-weight: bold;">hadrienj2020</span> and benefit from a <b>BIG DISCOUNT</b>!
+            Use the offer code <span style="color: #F96CFA; font-weight: bold;">hadrienj2020</span> and benefit from a <b>big discount</b>!
           </div> -->
   </div>
 
@@ -24,7 +24,7 @@
 
   <div class="card-section-ribbon-offer" style="flex: 0 0 30%">
     <div class="offer" style="margin-bottom: 0.3rem; font-size: 1.3rem;">
-      Great offer before:</br><b>29 MAR 24</b>
+      Great offer before:</br><b id="offer-date"></b>
     </div>
     <div>
       <a href="https://www.essentialmathfordatascience.com"
@@ -35,3 +35,16 @@
   </div>
 
 </div>
+
+<script>
+  // Get the current date
+  const currentDate = new Date();
+  const currentMonth = currentDate.toLocaleString("default", { month: "short" }).toUpperCase(); // e.g., "NOV"
+  const currentYear = currentDate.getFullYear().toString().slice(-2); // last two digits of the year
+  const offerDate = `29 ${currentMonth} ${currentYear}`;
+  const offerCode = `${currentMonth}${currentYear}`; // e.g., "NOV24"
+
+  // Set the date and offer code in the HTML
+  document.getElementById("offer-date").innerText = offerDate;
+  document.getElementById("offer-code").innerText = offerCode;
+</script>
