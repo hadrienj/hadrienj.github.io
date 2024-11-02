@@ -28,16 +28,16 @@ layout: compress
 </body>
 
 <script>
-  console.log(offerCode, offerDate, "asdf")
+
   // Ensure the script runs only after the DOM is fully loaded
   document.addEventListener("DOMContentLoaded", function() {
-    console.log(offerCode, offerDate, "asdf1")
     // Get the current date
     const currentDate = new Date();
     const currentMonth = currentDate.toLocaleString("default", { month: "short" }).toUpperCase(); // e.g., "NOV"
     const currentYear = currentDate.getFullYear().toString().slice(-2); // last two digits of the year
     const offerDate = `29 ${currentMonth} ${currentYear}`;
     const offerCode = `${currentMonth}${currentYear}`; // e.g., "NOV24"
+    console.log(offerCode, offerDate, "asdf1")
 
     // Set the date and offer code in the HTML
     document.getElementById("offer-date").innerText = offerDate;
