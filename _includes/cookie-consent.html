@@ -32,8 +32,14 @@
     }
 
     if(readCookie('cookie-notice-dismissed')=='true') {
+        // User has consented - grant analytics storage
+        if (typeof gtag !== 'undefined') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+
         {% include cookies.js %}
-        console.log("boooo");
 
         setTimeout(() => {
             document.getElementsByTagName("article")[0].style.padding = "2em 1em";
@@ -48,6 +54,14 @@
     document.getElementById('cookie-notice-accept').addEventListener("click",function() {
         createCookie('cookie-notice-dismissed','true',31);
         document.getElementById('cookie-notice').style.display = 'none';
+
+        // Update Google Analytics consent
+        if (typeof gtag !== 'undefined') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+
         location.reload();
     });
 

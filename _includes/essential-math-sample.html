@@ -14,7 +14,8 @@
 
       <p>
         <a href="https://www.essentialmathfordatascience.com/?utm_source=hadrienj&utm_medium=blog&utm_campaign=hadrienj{{page.path | replace: 'posts/', ''}}"
-          class="waves-effect waves-light btn" style="text-decoration: none; background-color: #f87188">
+          class="waves-effect waves-light btn" style="text-decoration: none; background-color: #f87188"
+          onclick="gtag('event', 'click', {'event_category': 'outbound', 'event_label': 'landing_page', 'value': 'blog_cta'});">
           <b>GET THE BOOK</b>
         </a>
       </p>
@@ -22,8 +23,10 @@
   </div>
 
   <div class="card-section-img" style="flex: 0 0 40%">
-    <a href="https://www.essentialmathfordatascience.com"><img src="../../assets/images/cover_free_sample.jpg"
-        width="200px" /></a>
+    <a href="https://www.essentialmathfordatascience.com/?utm_source=hadrienj&utm_medium=blog&utm_campaign=hadrienj{{page.path | replace: 'posts/', ''}}"
+      onclick="gtag('event', 'click', {'event_category': 'outbound', 'event_label': 'landing_page', 'value': 'blog_cover_image'});">
+      <img src="../../assets/images/cover_free_sample.jpg" width="200px" />
+    </a>
   </div>
 
 </div>

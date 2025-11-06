@@ -1,12 +1,22 @@
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116497768-1"></script>
+  <!-- Google tag (gtag.js) - GA4 with Consent Mode -->
   <script>
+    // Default consent mode - before GA4 loads
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'UA-116497768-1', { 'anonymize_ip': true });
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'wait_for_update': 500
+    });
+
+    gtag('js', new Date());
+    gtag('config', 'G-JPKDCYC7QD', {
+      'anonymize_ip': true
+    });
   </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPKDCYC7QD"></script>
 
   <!-- <script>
       (function(h,o,t,j,a,r){
