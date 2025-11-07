@@ -50,15 +50,18 @@
       const offerDateElement = document.getElementById('offer-date');
       if (offerDateElement) {
         offerDateElement.textContent = `29 ${currentMonth} ${currentYear}`;
+      } else {
+        // Element not found, retry after a short delay
+        setTimeout(updateOfferDate, 100);
       }
     }
 
-    // Run immediately
-    updateOfferDate();
-
-    // Also run on DOMContentLoaded to be sure
+    // Run when DOM is ready
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', updateOfferDate);
+    } else {
+      // DOM already loaded
+      updateOfferDate();
     }
   })();
 </script>
