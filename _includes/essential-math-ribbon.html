@@ -25,7 +25,7 @@
 
   <div class="card-section-ribbon-offer" style="flex: 0 0 30%">
     <div class="offer" style="margin-bottom: 0.3rem; font-size: 1.3rem;">
-      Great offer before:</br><b>29 APR 25</b>
+      Great offer before:</br><b id="offer-date">29 DEC 25</b>
     </div>
     <div>
       <a href="https://www.essentialmathfordatascience.com/?utm_source=hadrienj&utm_medium=blog&utm_campaign=ribbon"
@@ -37,3 +37,18 @@
   </div>
 
 </div>
+
+<script>
+  // Update offer date to 29th of current month
+  (function() {
+    const now = new Date();
+    const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+    const currentMonth = months[now.getMonth()];
+    const currentYear = now.getFullYear().toString().slice(-2);
+
+    const offerDateElement = document.getElementById('offer-date');
+    if (offerDateElement) {
+      offerDateElement.textContent = `29 ${currentMonth} ${currentYear}`;
+    }
+  })();
+</script>
