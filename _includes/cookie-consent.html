@@ -40,8 +40,8 @@
         }
     }
 
-    // Wait for DOM to be fully loaded
-    document.addEventListener('DOMContentLoaded', function() {
+    // Main initialization function
+    function initCookieBanner() {
         if(readCookie('cookie-notice-dismissed')=='true') {
             {% include cookies.js %}
 
@@ -77,6 +77,13 @@
                 location.reload();
             });
         }
-    });
+    }
+
+    // Execute immediately if DOM is ready, otherwise wait
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCookieBanner);
+    } else {
+        initCookieBanner();
+    }
 
 </script>
