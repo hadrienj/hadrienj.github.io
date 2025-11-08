@@ -31,16 +31,18 @@
         createCookie(name,"",-1);
     }
 
-    // Wait for DOM to be ready
-    (function() {
-        if(readCookie('cookie-notice-dismissed')=='true') {
-            // User has consented - grant analytics storage
-            if (typeof gtag !== 'undefined') {
-                gtag('consent', 'update', {
-                    'analytics_storage': 'granted'
-                });
-            }
+    // Grant consent immediately if already approved
+    if(readCookie('cookie-notice-dismissed')=='true') {
+        if (typeof gtag !== 'undefined') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+    }
 
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        if(readCookie('cookie-notice-dismissed')=='true') {
             {% include cookies.js %}
 
             setTimeout(() => {
@@ -75,6 +77,6 @@
                 location.reload();
             });
         }
-    })();
+    });
 
 </script>
