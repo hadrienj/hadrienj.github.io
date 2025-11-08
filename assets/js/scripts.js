@@ -119,7 +119,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 const eventTag = document.querySelector('.eventTag')
-eventTag.addEventListener('click', handleClickEvent, false);
+if (eventTag) {
+  eventTag.addEventListener('click', handleClickEvent, false);
+}
 
 function handleClickEvent(e) {
   const url = e.view.location.href;
