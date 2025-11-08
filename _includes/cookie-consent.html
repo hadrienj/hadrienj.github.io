@@ -8,7 +8,7 @@
 </style>
 <div id="cookie-notice"><span>We would like to use cookies to improve your use of the website</span><a id="cookie-notice-accept" class="btn btn-primary btn-sm">Approve</a><a href="/privacy" class="btn btn-primary btn-sm">More info</a></div>
 <script>
-    function createCookie(name,value,days) {
+    function cookieConsentCreateCookie(name,value,days) {
         var expires = "";
         if (days) {
             var date = new Date();
@@ -17,7 +17,7 @@
         }
         document.cookie = name + "=" + value + expires + "; path=/";
     }
-    function readCookie(name) {
+    function cookieConsentReadCookie(name) {
         var nameEQ = name + "=";
         var ca = document.cookie.split(';');
         for(var i=0;i < ca.length;i++) {
@@ -27,12 +27,9 @@
         }
         return null;
     }
-    function eraseCookie(name) {
-        createCookie(name,"",-1);
-    }
 
     // Grant consent immediately if already approved
-    if(readCookie('cookie-notice-dismissed')=='true') {
+    if(cookieConsentReadCookie('cookie-notice-dismissed')=='true') {
         if (typeof gtag !== 'undefined') {
             gtag('consent', 'update', {
                 'analytics_storage': 'granted'
@@ -42,7 +39,7 @@
 
     // Main initialization function
     function initCookieBanner() {
-        if(readCookie('cookie-notice-dismissed')=='true') {
+        if(cookieConsentReadCookie('cookie-notice-dismissed')=='true') {
             setTimeout(() => {
                 var article = document.getElementsByTagName("article")[0];
                 if (article) article.style.padding = "2em 1em";
@@ -61,7 +58,7 @@
         var acceptButton = document.getElementById('cookie-notice-accept');
         if (acceptButton) {
             acceptButton.addEventListener("click", function() {
-                createCookie('cookie-notice-dismissed','true',31);
+                cookieConsentCreateCookie('cookie-notice-dismissed','true',31);
                 var cookieNotice = document.getElementById('cookie-notice');
                 if (cookieNotice) cookieNotice.style.display = 'none';
 
@@ -85,7 +82,7 @@
     }
 
     // Load ribbon script only if consent was given
-    if(readCookie('cookie-notice-dismissed')=='true') {
+    if(cookieConsentReadCookie('cookie-notice-dismissed')=='true') {
         {% include cookies.js %}
     }
 
