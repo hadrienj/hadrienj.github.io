@@ -43,8 +43,6 @@
     // Main initialization function
     function initCookieBanner() {
         if(readCookie('cookie-notice-dismissed')=='true') {
-            {% include cookies.js %}
-
             setTimeout(() => {
                 var article = document.getElementsByTagName("article")[0];
                 if (article) article.style.padding = "2em 1em";
@@ -84,6 +82,11 @@
         document.addEventListener('DOMContentLoaded', initCookieBanner);
     } else {
         initCookieBanner();
+    }
+
+    // Load ribbon script only if consent was given
+    if(readCookie('cookie-notice-dismissed')=='true') {
+        {% include cookies.js %}
     }
 
 </script>

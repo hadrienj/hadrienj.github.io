@@ -5,8 +5,11 @@
 let hide;
 (function() {
   hide = function() {
-    document.getElementsByClassName('essential-math-ribbon')[0].style.display = 'none';
-    document.cookie = "essential-math-ribbon=1; path=/ ; expires= Thu, 21 Aug 2040 20:00:00 UTC; SameSite=Strict";
+    var ribbon = document.getElementsByClassName('essential-math-ribbon')[0];
+    if (ribbon) {
+      ribbon.style.display = 'none';
+      document.cookie = "essential-math-ribbon=1; path=/ ; expires= Thu, 21 Aug 2040 20:00:00 UTC; SameSite=Strict";
+    }
   }
 })();
 
@@ -35,9 +38,11 @@ let hide;
 
   setTimeout(() => {
     if (getCookie('essential-math-ribbon') !== "1") {
-      console.log('asdf', document.cookie);
-      document.getElementsByClassName('essential-math-ribbon')[0].style.display = 'flex';
-      document.cookie = "essential-math-ribbon=1; path=/ ; expires= Thu, 21 Aug 2040 20:00:00 UTC; SameSite=Strict";
+      var ribbon = document.getElementsByClassName('essential-math-ribbon')[0];
+      if (ribbon) {
+        ribbon.style.display = 'flex';
+        document.cookie = "essential-math-ribbon=1; path=/ ; expires= Thu, 21 Aug 2040 20:00:00 UTC; SameSite=Strict";
+      }
     }
   }, 3000);
 
